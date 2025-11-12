@@ -1,0 +1,531 @@
+#TopNav {
+  width: 100%;
+  background: var(--primaryColor);
+}
+#TopNav .TopNavMain {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#TopNav .TopNavMain .TopNavMainLeft {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#TopNav .TopNavMain .TopNavMainLeft .EmargancyCall,
+#TopNav .TopNavMain .TopNavMainLeft .EmargancyMail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#TopNav .TopNavMain .TopNavMainLeft .EmargancyCall .TopNavIcon,
+#TopNav .TopNavMain .TopNavMainLeft .EmargancyMail .TopNavIcon {
+  color: #fff;
+  font-size: 18px;
+}
+#TopNav .TopNavMain .TopNavMainLeft .EmargancyCall p,
+#TopNav .TopNavMain .TopNavMainLeft .EmargancyMail p {
+  margin: 0;
+}
+#TopNav .TopNavMain .TopNavMainLeft .EmargancyCall p a,
+#TopNav .TopNavMain .TopNavMainLeft .EmargancyMail p a {
+  color: #fff;
+  font-size: 15px;
+  font-family: myFont1;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+#TopNav .TopNavMain .TopNavMainRight {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#TopNav .TopNavMain .TopNavMainRight .TopNavSocialBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#TopNav .TopNavMain .TopNavMainRight .TopNavSocialBox .social-icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+#TopNav .TopNavMain .TopNavMainRight .TopNavEnquiryBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#TopNav .TopNavMain .TopNavMainRight .TopNavEnquiryBtn button {
+  border: none;
+  background: #f0efe4;
+  padding: 15px 25px;
+  color: #000;
+  font-size: 15px;
+  font-family: myFont1;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#Nav {
+  width: 100%;
+  background: #fff;
+}
+#Nav .NavMain {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+#Nav .NavMain .NavLogo {
+  width: 80px;
+}
+#Nav .NavMain .NavLogo img {
+  width: 100%;
+  height: auto;
+}
+#Nav .NavMain .NavLink {
+  padding: 0 20px;
+  border-right: 1px solid #f0efe4;
+}
+#Nav .NavMain .NavLink ul {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+#Nav .NavMain .NavLink ul li {
+  list-style: none;
+}
+#Nav .NavMain .NavLink ul li a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: myFont1;
+  color: var(--primaryColor);
+  padding: 5px 10px 5px 0px;
+  transition: all 0.3s ease;
+}
+#Nav .NavMain .NavLink ul li a:hover {
+  color: var(--secondaryColor);
+  padding: 5px 10px 5px 0px;
+}
+#Nav .NavMain .NavLink ul li a.active {
+  background: #f0efe4;
+  padding: 5px 10px 5px 0px;
+  color: var(--secondaryColor);
+}
+#Nav .NavMain .NavSearchMenu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+#Nav .NavMain .NavSearchMenu .Searchicon,
+#Nav .NavMain .NavSearchMenu .NavToogleMenu {
+  color: var(--primaryColor);
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#Nav .NavMain .NavSearchMenu .Searchicon:hover,
+#Nav .NavMain .NavSearchMenu .NavToogleMenu:hover {
+  color: var(--secondaryColor);
+}
+
+#HomeBanner {
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#HomeBanner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+#HomeBanner .BannerMain {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+  position: relative;
+  z-index: 2;
+}
+#HomeBanner .BannerMain .BannerMainLeft {
+  width: 70%;
+  padding-top: 80px;
+}
+#HomeBanner .BannerMain .BannerMainLeft .MainShortTitle p {
+  font-size: 16px;
+  font-family: myFont1;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 35px;
+}
+#HomeBanner .BannerMain .BannerMainLeft .MainTitle h1 {
+  font-size: 70px;
+  font-family: myFont1;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 50px;
+}
+#HomeBanner .BannerMain .BannerMainLeft .MainDesc p {
+  font-size: 16px;
+  font-family: myFont1;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.6;
+  margin-bottom: 50px;
+  line-height: 1.5;
+}
+#HomeBanner .BannerMain .BannerMainLeft .MainBannerBtn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+#HomeBanner .BannerMain .BannerMainLeft .MainBannerBtn a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+#HomeBanner .BannerMain .BannerMainLeft .MainBannerBtn a button {
+  border: none;
+  outline: none;
+  background: none;
+  font-family: myFont1;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+#HomeBanner .BannerMain .BannerMainLeft .MainBannerBtn a svg {
+  font-size: 18px;
+}
+#HomeBanner .BannerMain .BannerMainLeft .MainBannerBtn .MainCourseBtn {
+  background: var(--primaryColor);
+  padding: 15px 20px;
+  transition: 0.3s;
+}
+#HomeBanner .BannerMain .BannerMainLeft .MainBannerBtn .MainCourseBtn button,
+#HomeBanner .BannerMain .BannerMainLeft .MainBannerBtn .MainCourseBtn svg {
+  color: #fff;
+}
+#HomeBanner .BannerMain .BannerMainLeft .MainBannerBtn .MainCourseBtn:hover {
+  background: var(--secondaryColor);
+}
+#HomeBanner .BannerMain .BannerMainLeft .MainBannerBtn .MainWhyChooseBtn {
+  background: #fff;
+  padding: 15px 20px;
+  transition: 0.3s;
+}
+#HomeBanner .BannerMain .BannerMainLeft .MainBannerBtn .MainWhyChooseBtn button,
+#HomeBanner .BannerMain .BannerMainLeft .MainBannerBtn .MainWhyChooseBtn svg {
+  color: var(--primaryColor);
+}
+#HomeBanner .BannerMain .BannerMainLeft .MainBannerBtn .MainWhyChooseBtn:hover {
+  background: var(--primaryColor);
+}
+#HomeBanner .BannerMain .BannerMainLeft .MainBannerBtn .MainWhyChooseBtn:hover button,
+#HomeBanner .BannerMain .BannerMainLeft .MainBannerBtn .MainWhyChooseBtn:hover svg {
+  color: #fff;
+}
+#HomeBanner .BannerMain .BannerMainLeft .BannerMainService {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+#HomeBanner .BannerMain .BannerMainLeft .BannerMainService .BannerServiceBox {
+  width: 33.3333333333%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.3s ease;
+  border-right: 1px solid #e4e4e4;
+}
+#HomeBanner .BannerMain .BannerMainLeft .BannerMainService .BannerServiceBox:last-child {
+  border-right: none;
+}
+#HomeBanner .BannerMain .BannerMainLeft .BannerMainService .BannerServiceBox.dark {
+  background: var(--primaryColor);
+  color: #fff;
+}
+#HomeBanner .BannerMain .BannerMainLeft .BannerMainService .BannerServiceBox.light {
+  background: #fff;
+  color: #000;
+}
+#HomeBanner .BannerMain .BannerMainLeft .BannerMainService .BannerServiceBox .BannerServiceTitle h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+#HomeBanner .BannerMain .BannerMainLeft .BannerMainService .BannerServiceBox .BannerServiceDesc p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+#HomeBanner .BannerMain .BannerMainLeft .BannerMainService .BannerServiceBox .LearnMoreBox {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #f0efe4;
+  background: #f0efe4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+#HomeBanner .BannerMain .BannerMainLeft .BannerMainService .BannerServiceBox .LearnMoreBox svg {
+  color: var(--primaryColor);
+  font-size: 18px;
+}
+#HomeBanner .BannerMain .BannerMainRight {
+  width: 30%;
+  background: var(--primaryColor);
+  padding: 40px 30px;
+  position: relative;
+  z-index: 3;
+  margin-top: 100px;
+}
+#HomeBanner .BannerMain .BannerMainRight .FormTitle {
+  margin-bottom: 25px;
+}
+#HomeBanner .BannerMain .BannerMainRight .FormTitle h2 {
+  font-size: 20px;
+  font-family: myFont1;
+  font-weight: 500;
+  color: #fff;
+  border-bottom: 1px solid #e1dfd7;
+  padding-bottom: 10px;
+}
+#HomeBanner .BannerMain .BannerMainRight .FormGroup {
+  width: 100%;
+}
+#HomeBanner .BannerMain .BannerMainRight .FormGroup form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#HomeBanner .BannerMain .BannerMainRight .FormGroup form .contactDetailGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#HomeBanner .BannerMain .BannerMainRight .FormGroup form .contactDetailGroup label {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: myFont1;
+  color: #fff;
+}
+#HomeBanner .BannerMain .BannerMainRight .FormGroup form .contactDetailGroup input,
+#HomeBanner .BannerMain .BannerMainRight .FormGroup form .contactDetailGroup textarea {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-family: myFont1;
+  color: #fff;
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  transition: border-color 0.3s ease;
+}
+#HomeBanner .BannerMain .BannerMainRight .FormGroup form .contactDetailGroup input:focus,
+#HomeBanner .BannerMain .BannerMainRight .FormGroup form .contactDetailGroup textarea:focus {
+  border-bottom-color: #fff;
+}
+#HomeBanner .BannerMain .BannerMainRight .FormGroup form .contactDetailGroup input::-moz-placeholder, #HomeBanner .BannerMain .BannerMainRight .FormGroup form .contactDetailGroup textarea::-moz-placeholder {
+  color: #fff;
+}
+#HomeBanner .BannerMain .BannerMainRight .FormGroup form .contactDetailGroup input::placeholder,
+#HomeBanner .BannerMain .BannerMainRight .FormGroup form .contactDetailGroup textarea::placeholder {
+  color: #fff;
+}
+#HomeBanner .BannerMain .BannerMainRight .FormGroup form .contactDetailGroup textarea {
+  resize: none;
+  height: 100px;
+  line-height: 1.5;
+}
+#HomeBanner .BannerMain .BannerMainRight .FormGroup form .FormBtn {
+  text-align: center;
+  margin-top: 10px;
+}
+#HomeBanner .BannerMain .BannerMainRight .FormGroup form .FormBtn button {
+  width: 100%;
+  padding: 12px 0;
+  background: #fff;
+  color: var(--primaryColor);
+  border: none;
+  outline: none;
+  font-size: 15px;
+  font-family: myFont1;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#HomeBanner .BannerMain .BannerMainRight .FormGroup form .FormBtn button:hover {
+  background: var(--secondaryColor);
+  color: #fff;
+}
+
+#HomeAbout {
+  width: 100%;
+  padding: 100px 0;
+  background: #fff;
+}
+#HomeAbout .HomeAboutHead {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+#HomeAbout .HomeAboutHead h2 {
+  font-size: 60px;
+  font-family: MyFont1;
+  font-weight: 600;
+  color: #000;
+  text-transform: capitalize;
+  position: relative;
+  display: inline-block;
+}
+#HomeAbout .HomeAboutHead h2 span {
+  color: var(--primaryColor);
+}
+#HomeAbout .HomeAboutHead h2::after {
+  content: "";
+  width: 50%;
+  height: 4px;
+  background: var(--primaryColor);
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  border-radius: 2px;
+}
+#HomeAbout .AboutMain {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+#HomeAbout .AboutMain .AboutMainLeft {
+  width: 40%;
+  position: relative;
+}
+#HomeAbout .AboutMain .AboutMainLeft .HomeAboutImg {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+#HomeAbout .AboutMain .AboutMainLeft .HomeAboutImg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#HomeAbout .AboutMain .AboutMainLeft .HomeAboutImg .ShortAboutContentBox {
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  background: var(--primaryColor);
+  color: #fff;
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 15px;
+}
+#HomeAbout .AboutMain .AboutMainLeft .HomeAboutImg .ShortAboutContentBox p {
+  font-size: 14px;
+  font-family: MyFont1;
+  font-weight: 400;
+  line-height: 1.5;
+  width: 85%;
+}
+#HomeAbout .AboutMain .AboutMainLeft .HomeAboutImg .ShortAboutContentBox .AboutRightArrow {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #f0efe4;
+  background: #f0efe4;
+  color: var(--primaryColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+#HomeAbout .AboutMain .AboutMainRight {
+  width: 60%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+#HomeAbout .AboutMain .AboutMainRight .AboutContentBox {
+  width: 100%;
+}
+#HomeAbout .AboutMain .AboutMainRight .AboutContentBox .AboutTitle h2 {
+  font-size: 28px;
+  font-weight: 600;
+  font-family: MyFont1;
+  color: var(--primaryColor);
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+#HomeAbout .AboutMain .AboutMainRight .AboutContentBox .AboutDesc p {
+  font-size: 15px;
+  font-weight: 400;
+  font-family: MyFont1;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+#HomeAbout .AboutMain .AboutMainRight .AboutContentBox .AboutStats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+#HomeAbout .AboutMain .AboutMainRight .AboutContentBox .AboutStats .StatBox {
+  width: 30%;
+  background: #f9f9f9;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+#HomeAbout .AboutMain .AboutMainRight .AboutContentBox .AboutStats .StatBox svg {
+  font-size: 30px;
+  color: var(--primaryColor);
+  margin-bottom: 10px;
+}
+#HomeAbout .AboutMain .AboutMainRight .AboutContentBox .AboutStats .StatBox h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+}
+#HomeAbout .AboutMain .AboutMainRight .AboutContentBox .AboutStats .StatBox p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #555;
+}/*# sourceMappingURL=style.css.map */

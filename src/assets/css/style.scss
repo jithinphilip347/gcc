@@ -1,0 +1,567 @@
+#TopNav {
+    width: 100%;
+    background: var(--primaryColor);
+    //   padding: 0 40px;
+    .TopNavMain {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .TopNavMainLeft {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            .EmargancyCall,
+            .EmargancyMail {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .TopNavIcon {
+                    color: #fff;
+                    font-size: 18px;
+                }
+                p {
+                    margin: 0;
+                    a {
+                        color: #fff;
+                        font-size: 15px;
+                        font-family: myFont1;
+                        font-weight: 500;
+                        text-decoration: none;
+                        transition: 0.3s;
+                    }
+                }
+            }
+        }
+        .TopNavMainRight {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            .TopNavSocialBox {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .social-icon {
+                    width: 30px;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid #fff;
+                    border-radius: 50%;
+                    color: #fff;
+                    transition: all 0.3s ease;
+                }
+            }
+            .TopNavEnquiryBtn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                button {
+                    border: none;
+                    background: #f0efe4;
+                    padding: 15px 25px;
+                    color: #000;
+                    font-size: 15px;
+                    font-family: myFont1;
+                    font-weight: 500;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+    }
+}
+
+#Nav {
+    width: 100%;
+    background: #fff;
+    .NavMain {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+        .NavLogo {
+            width: 80px;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .NavLink {
+            padding: 0 20px;
+            border-right: 1px solid #f0efe4;
+            ul {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+
+                li {
+                    list-style: none;
+
+                    a {
+                        text-decoration: none;
+                        font-size: 15px;
+                        font-weight: 500;
+                        font-family: myFont1;
+                        color: var(--primaryColor);
+                        padding: 5px 10px 5px 0px;
+                        transition: all 0.3s ease;
+                        &:hover {
+                            color: var(--secondaryColor);
+                            padding: 5px 10px 5px 0px;
+                        }
+                        &.active {
+                            background: #f0efe4;
+                            padding: 5px 10px 5px 0px;
+                            color: var(--secondaryColor);
+                        }
+                    }
+                }
+            }
+        }
+        .NavSearchMenu {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            .Searchicon,
+            .NavToogleMenu {
+                color: var(--primaryColor);
+                font-size: 22px;
+                cursor: pointer;
+                transition: 0.3s;
+
+                &:hover {
+                    color: var(--secondaryColor);
+                }
+            }
+        }
+    }
+}
+
+#HomeBanner {
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+    }
+    .BannerMain {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 30px;
+        position: relative;
+        z-index: 2;
+        .BannerMainLeft {
+            width: 70%;
+            padding-top: 80px;
+            .MainShortTitle {
+                p {
+                    font-size: 16px;
+                    font-family: myFont1;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    color: #fff;
+                    margin-bottom: 35px;
+                }
+            }
+            .MainTitle {
+                h1 {
+                    font-size: 70px;
+                    font-family: myFont1;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                    color: #fff;
+                    line-height: 1.1;
+                    margin-bottom: 50px;
+                }
+            }
+            .MainDesc {
+                p {
+                    font-size: 16px;
+                    font-family: myFont1;
+                    font-weight: 500;
+                    color: #fff;
+                    line-height: 1.6;
+                    margin-bottom: 50px;
+                    line-height: 1.5;
+                }
+            }
+            .MainBannerBtn {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                margin-bottom: 50px;
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    text-decoration: none;
+                    button {
+                        border: none;
+                        outline: none;
+                        background: none;
+                        font-family: myFont1;
+                        font-size: 15px;
+                        font-weight: 500;
+                        cursor: pointer;
+                    }
+                    svg {
+                        font-size: 18px;
+                    }
+                }
+                .MainCourseBtn {
+                    background: var(--primaryColor);
+                    padding: 15px 20px;
+                    transition: 0.3s;
+                    button,
+                    svg {
+                        color: #fff;
+                    }
+                    &:hover {
+                        background: var(--secondaryColor);
+                    }
+                }
+                .MainWhyChooseBtn {
+                    background: #fff;
+                    padding: 15px 20px;
+                    transition: 0.3s;
+                    button,
+                    svg {
+                        color: var(--primaryColor);
+                    }
+                    &:hover {
+                        background: var(--primaryColor);
+
+                        button,
+                        svg {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            .BannerMainService {
+                display: flex;
+                align-items: stretch;
+                width: 100%;
+                .BannerServiceBox {
+                    width: calc(100% / 3);
+                    padding: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    transition: 0.3s ease;
+                    border-right: 1px solid #e4e4e4;
+                    &:last-child {
+                        border-right: none;
+                    }
+                    &.dark {
+                        background: var(--primaryColor);
+                        color: #fff;
+                    }
+                    &.light {
+                        background: #fff;
+                        color: #000;
+                    }
+                    .BannerServiceTitle h2 {
+                        font-size: 18px;
+                        font-weight: 600;
+                        margin-bottom: 10px;
+                    }
+                    .BannerServiceDesc p {
+                        font-size: 14px;
+                        line-height: 1.5;
+                    }
+                    .LearnMoreBox {
+                        width: 35px;
+                        height: 35px;
+                        border: 1px solid #f0efe4;
+                        background: #f0efe4;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        margin-top: 20px;
+                        svg {
+                            color: var(--primaryColor);
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+        .BannerMainRight {
+            width: 30%;
+            background: var(--primaryColor);
+            padding: 40px 30px;
+            position: relative;
+            z-index: 3;
+            margin-top: 100px;
+            .FormTitle {
+                margin-bottom: 25px;
+
+                h2 {
+                    font-size: 20px;
+                    font-family: myFont1;
+                    font-weight: 500;
+                    color: #fff;
+                    border-bottom: 1px solid #e1dfd7;
+                    padding-bottom: 10px;
+                }
+            }
+
+            .FormGroup {
+                width: 100%;
+
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    .contactDetailGroup {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+
+                        label {
+                            font-size: 14px;
+                            font-weight: 500;
+                            font-family: myFont1;
+                            color: #fff;
+                        }
+
+                        input,
+                        textarea {
+                            width: 100%;
+                            padding: 12px 0;
+                            border: none;
+                            outline: none;
+                            font-size: 14px;
+                            font-family: myFont1;
+                            color: #fff;
+                            background: transparent;
+                            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+                            transition: border-color 0.3s ease;
+
+                            &:focus {
+                                border-bottom-color: #fff;
+                            }
+
+                            &::placeholder {
+                                color: #fff;
+                            }
+                        }
+
+                        textarea {
+                            resize: none;
+                            height: 100px;
+                            line-height: 1.5;
+                        }
+                    }
+
+                    .FormBtn {
+                        text-align: center;
+                        margin-top: 10px;
+
+                        button {
+                            width: 100%;
+                            padding: 12px 0;
+                            background: #fff;
+                            color: var(--primaryColor);
+                            border: none;
+                            outline: none;
+                            font-size: 15px;
+                            font-family: myFont1;
+                            font-weight: 500;
+                            cursor: pointer;
+                            transition: all 0.3s ease;
+
+                            &:hover {
+                                background: var(--secondaryColor);
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#HomeAbout {
+    width: 100%;
+    padding: 100px 0;
+    background: #fff;
+    .HomeAboutHead {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+
+        h2 {
+            font-size: 60px;
+            font-family: MyFont1;
+            font-weight: 600;
+            color: #000;
+            text-transform: capitalize;
+            position: relative;
+            display: inline-block;
+
+            span {
+                color: var(--primaryColor);
+            }
+
+            &::after {
+                content: "";
+                width: 50%;
+                height: 4px;
+                background: var(--primaryColor);
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                border-radius: 2px;
+            }
+        }
+    }
+
+    .AboutMain {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 40px;
+
+        .AboutMainLeft {
+            width: 40%;
+            position: relative;
+
+            .HomeAboutImg {
+                position: relative;
+                width: 100%;
+                height: auto;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                .ShortAboutContentBox {
+                    position: absolute;
+                    left: 0;
+                    bottom: -15px;
+                    background: var(--primaryColor);
+                    color: #fff;
+                    width: 50%;
+                    padding: 20px;
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    gap: 15px;
+                    p {
+                        font-size: 14px;
+                        font-family: MyFont1;
+                        font-weight: 400;
+                        line-height: 1.5;
+                        width: 85%;
+                    }
+
+                    .AboutRightArrow {
+                        width: 30px;
+                        height: 30px;
+                        border: 1px solid #f0efe4;
+                        background: #f0efe4;
+                        color: var(--primaryColor);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        font-size: 18px;
+                        flex-shrink: 0;
+                    }
+                }
+            }
+        }
+
+        .AboutMainRight {
+            width: 60%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+
+            .AboutContentBox {
+                width: 100%;
+
+                .AboutTitle {
+                    h2 {
+                        font-size: 28px;
+                        font-weight: 600;
+                        font-family: MyFont1;
+                        color: var(--primaryColor);
+                        margin-bottom: 20px;
+                        line-height: 1.4;
+                    }
+                }
+
+                .AboutDesc {
+                    p {
+                        font-size: 15px;
+                        font-weight: 400;
+                        font-family: MyFont1;
+                        color: #555;
+                        line-height: 1.7;
+                        margin-bottom: 40px;
+                    }
+                }
+
+                .AboutStats {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    gap: 20px;
+
+                    .StatBox {
+                        width: 30%;
+                        background: #f9f9f9;
+                        padding: 20px;
+                        text-align: center;
+                        transition: all 0.3s ease;
+
+                        svg {
+                            font-size: 30px;
+                            color: var(--primaryColor);
+                            margin-bottom: 10px;
+                        }
+
+                        h3 {
+                            font-size: 22px;
+                            font-weight: 600;
+                            color: #000;
+                        }
+
+                        p {
+                            font-size: 14px;
+                            font-weight: 400;
+                            color: #555;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
