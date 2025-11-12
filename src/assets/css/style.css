@@ -249,55 +249,6 @@
 #HomeBanner .BannerMain .BannerMainLeft .MainBannerBtn .MainWhyChooseBtn:hover svg {
   color: #fff;
 }
-#HomeBanner .BannerMain .BannerMainLeft .BannerMainService {
-  display: flex;
-  align-items: stretch;
-  width: 100%;
-}
-#HomeBanner .BannerMain .BannerMainLeft .BannerMainService .BannerServiceBox {
-  width: 33.3333333333%;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: 0.3s ease;
-  border-right: 1px solid #e4e4e4;
-}
-#HomeBanner .BannerMain .BannerMainLeft .BannerMainService .BannerServiceBox:last-child {
-  border-right: none;
-}
-#HomeBanner .BannerMain .BannerMainLeft .BannerMainService .BannerServiceBox.dark {
-  background: var(--primaryColor);
-  color: #fff;
-}
-#HomeBanner .BannerMain .BannerMainLeft .BannerMainService .BannerServiceBox.light {
-  background: #fff;
-  color: #000;
-}
-#HomeBanner .BannerMain .BannerMainLeft .BannerMainService .BannerServiceBox .BannerServiceTitle h2 {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-#HomeBanner .BannerMain .BannerMainLeft .BannerMainService .BannerServiceBox .BannerServiceDesc p {
-  font-size: 14px;
-  line-height: 1.5;
-}
-#HomeBanner .BannerMain .BannerMainLeft .BannerMainService .BannerServiceBox .LearnMoreBox {
-  width: 35px;
-  height: 35px;
-  border: 1px solid #f0efe4;
-  background: #f0efe4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  margin-top: 20px;
-}
-#HomeBanner .BannerMain .BannerMainLeft .BannerMainService .BannerServiceBox .LearnMoreBox svg {
-  color: var(--primaryColor);
-  font-size: 18px;
-}
 #HomeBanner .BannerMain .BannerMainRight {
   width: 30%;
   background: var(--primaryColor);
@@ -595,7 +546,7 @@
 }
 #HomeCourse .CourseMain .CourseBox {
   width: 32%;
-  background: #F3F8F6;
+  background: #f3f8f6;
   padding: 30px 25px;
   border-radius: 8px;
   transition: all 0.3s ease;
@@ -666,4 +617,83 @@
   font-weight: 400;
   color: #444;
   line-height: 1.4;
+}
+
+#HomeWhyCoose {
+  width: 100%;
+  padding: 100px 0;
+  background: #fff;
+}
+#HomeWhyCoose .HomeAboutHead {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+#HomeWhyCoose .HomeAboutHead h2 {
+  font-size: 60px;
+  font-family: MyFont1;
+  font-weight: 600;
+  color: #000;
+  text-transform: capitalize;
+  position: relative;
+  display: inline-block;
+}
+#HomeWhyCoose .HomeAboutHead h2 span {
+  color: var(--primaryColor);
+}
+#HomeWhyCoose .HomeAboutHead h2::after {
+  content: "";
+  width: 50%;
+  height: 4px;
+  background: var(--primaryColor);
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  border-radius: 2px;
+}
+#HomeWhyCoose .HomeWhyCooseMain .WhyChooseGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+#HomeWhyCoose .HomeWhyCooseMain .WhyChooseGrid .WhyChooseBox {
+  background: #f3f8f6;
+  padding: 30px 25px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  justify-content: flex-start;
+}
+#HomeWhyCoose .HomeWhyCooseMain .WhyChooseGrid .WhyChooseBox .IconBox {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  background: var(--primaryColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+#HomeWhyCoose .HomeWhyCooseMain .WhyChooseGrid .WhyChooseBox .IconBox svg {
+  font-size: 28px;
+  color: #fff;
+}
+#HomeWhyCoose .HomeWhyCooseMain .WhyChooseGrid .WhyChooseBox .WhyChooseTitle h3 {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: MyFont1;
+  color: #000;
+  margin-bottom: 10px;
+}
+#HomeWhyCoose .HomeWhyCooseMain .WhyChooseGrid .WhyChooseBox .WhyChooseDesc p {
+  font-size: 14px;
+  font-family: MyFont1;
+  font-weight: 400;
+  color: #444;
+  line-height: 1.6;
 }/*# sourceMappingURL=style.css.map */
