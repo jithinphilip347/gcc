@@ -565,3 +565,163 @@
         }
     }
 }
+
+#HomeCourse {
+  width: 100%;
+  padding: 100px 0;
+  background: #fff;
+
+     .HomeAboutHead {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+
+        h2 {
+            font-size: 60px;
+            font-family: MyFont1;
+            font-weight: 600;
+            color: #000;
+            text-transform: capitalize;
+            position: relative;
+            display: inline-block;
+
+            span {
+                color: var(--primaryColor);
+            }
+
+            &::after {
+                content: "";
+                width: 50%;
+                height: 4px;
+                background: var(--primaryColor);
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                border-radius: 2px;
+            }
+        }
+    }
+    .ViewAll {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-bottom: 20px;
+      a {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: MyFont1;
+        color: var(--primaryColor);
+        text-decoration: none;
+        transition: 0.3s;
+
+        svg {
+          font-size: 18px;
+        }
+
+        &:hover {
+          color: var(--secondaryColor);
+        }
+      }
+    }
+
+  .CourseMain {
+    display: flex;
+    align-items: flex-start;
+    // justify-content: space-between;
+    gap: 30px;
+    // flex-wrap: wrap;
+
+    .CourseBox {
+      width: 32%;
+      background: #F3F8F6;
+      padding: 30px 25px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      height: 500px;
+      .CourseIcon {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-bottom: 20px;
+
+        img {
+          width: 180px;
+          height: auto;
+          object-fit: contain;
+        }
+      }
+
+      .CourseTitle
+       p {
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--primaryColor);
+        text-align: start;
+        margin-bottom: 10px;
+      }
+
+      .CourseDesc p {
+        font-size: 15px;
+        font-family: MyFont1;
+        font-weight: 400;
+        color: #555;
+        line-height: 1.6;
+        text-align: start;
+        margin-bottom: 20px;
+      }
+
+      .Eligibility {
+        .EligibilityTitle p {
+          font-size: 16px;
+          font-weight: 600;
+          color: #000;
+          margin-bottom: 10px;
+        }
+
+        .CriteriaBox {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+
+          .Box {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+
+            .CheckmarkIcon {
+              width: 18px;
+              height: 18px;
+              min-width: 18px;
+              background: var(--primaryColor);
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              svg {
+                color: #fff;
+                font-size: 12px;
+              }
+            }
+
+            p {
+              font-size: 14px;
+              font-family: MyFont1;
+              font-weight: 400;
+              color: #444;
+              line-height: 1.4;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
