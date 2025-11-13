@@ -21,8 +21,7 @@ const Footer = () => {
             </div>
 
             <p className="FooterDesc">
-              Sed ut perspiciatis unde omnis iste natus error voluptatem
-              accusantium doloremque laudantium.
+              Providing trusted coaching for DHA, HAAD, PROMETRIC, OMAN, MOH, and other healthcare licensing exams in Kerala.
             </p>
             <p className="FollowHead">Follow Us</p>
             <div className="FooterSocialIcons">

@@ -16,11 +16,11 @@ const HomeContact = () => {
           {/* LEFT SIDE */}
           <div className="ContactMainLeft">
             <p className="ContactTitle">
-              For Further Info, Please Contact Us With This Line
+              Get in Touch With GCC Academy
             </p>
 
             <p className="ContactDesc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+             Kerala’s leading institute for DHA, HAAD, PROMETRIC, SPLE, OMAN, and MOH exam preparation.
             </p>
 
             <div className="ContactAddressBox">
