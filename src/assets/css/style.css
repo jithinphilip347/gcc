@@ -364,11 +364,11 @@
 }
 #HomeAbout .HomeAboutHead h2::after {
   content: "";
-  width: 50%;
+  width: 100%;
   height: 4px;
   background: var(--primaryColor);
   position: absolute;
-  bottom: -10px;
+  bottom: -6px;
   left: 0;
   border-radius: 2px;
 }
@@ -507,11 +507,11 @@
 }
 #HomeCourse .HomeAboutHead h2::after {
   content: "";
-  width: 50%;
+  width: 100%;
   height: 4px;
   background: var(--primaryColor);
   position: absolute;
-  bottom: -10px;
+  bottom: -6px;
   left: 0;
   border-radius: 2px;
 }
@@ -645,11 +645,11 @@
 }
 #HomeWhyCoose .HomeAboutHead h2::after {
   content: "";
-  width: 50%;
+  width: 100%;
   height: 4px;
   background: var(--primaryColor);
   position: absolute;
-  bottom: -10px;
+  bottom: -6px;
   left: 0;
   border-radius: 2px;
 }
@@ -661,7 +661,6 @@
 #HomeWhyCoose .HomeWhyCooseMain .WhyChooseGrid .WhyChooseBox {
   background: #f3f8f6;
   padding: 30px 25px;
-  border-radius: 8px;
   transition: 0.3s ease;
   text-align: start;
   display: flex;
@@ -696,4 +695,381 @@
   font-weight: 400;
   color: #444;
   line-height: 1.6;
+}
+
+#HomeTestimonial {
+  width: 100%;
+  padding: 100px 0;
+  background: #fff;
+}
+#HomeTestimonial .HomeAboutHead {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+#HomeTestimonial .HomeAboutHead h2 {
+  font-size: 60px;
+  font-family: MyFont1;
+  font-weight: 600;
+  color: #000;
+  position: relative;
+  text-transform: capitalize;
+}
+#HomeTestimonial .HomeAboutHead h2 span {
+  color: var(--primaryColor);
+}
+#HomeTestimonial .HomeAboutHead h2::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: var(--primaryColor);
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  border-radius: 2px;
+}
+#HomeTestimonial .TestimonialMain {
+  width: 100%;
+}
+#HomeTestimonial .TestimonialMain .testimonialSwiper {
+  width: 100%;
+}
+#HomeTestimonial .TestimonialMain .TestimonialBox {
+  width: 100%;
+  padding: 20px;
+  background: #f3f8f6;
+  height: 300px;
+}
+#HomeTestimonial .TestimonialMain .TestimonialBox .TestimonialProfileBox {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+#HomeTestimonial .TestimonialMain .TestimonialBox .TestimonialProfileBox .StudentPhoto {
+  width: 80px;
+  height: 80px;
+}
+#HomeTestimonial .TestimonialMain .TestimonialBox .TestimonialProfileBox .StudentPhoto img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+#HomeTestimonial .TestimonialMain .TestimonialBox .TestimonialProfileBox .StudentNameDateBox {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#HomeTestimonial .TestimonialMain .TestimonialBox .TestimonialProfileBox .StudentNameDateBox .StudentName {
+  font-size: 16px;
+  font-family: MyFont1;
+  font-weight: 500;
+  color: #000;
+}
+#HomeTestimonial .TestimonialMain .TestimonialBox .TestimonialProfileBox .StudentNameDateBox .StudentDate {
+  font-size: 12px;
+  color: #555;
+  font-family: MyFont1;
+}
+#HomeTestimonial .TestimonialMain .TestimonialBox .TestimonialRateBox {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+#HomeTestimonial .TestimonialMain .TestimonialBox .TestimonialRateBox .star {
+  color: var(--secondaryColor);
+  font-size: 18px;
+}
+#HomeTestimonial .TestimonialMain .TestimonialBox .TestimonialTitleBox {
+  margin-bottom: 10px;
+}
+#HomeTestimonial .TestimonialMain .TestimonialBox .TestimonialTitleBox p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  font-family: MyFont1;
+}
+#HomeTestimonial .TestimonialMain .TestimonialBox .TestimonialDescBox p {
+  font-size: 14px;
+  font-family: MyFont1;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #555;
+}
+
+#HomeContact {
+  width: 100%;
+  background: #fff;
+}
+#HomeContact .HomeAboutHead {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+#HomeContact .HomeAboutHead h2 {
+  font-size: 60px;
+  font-family: MyFont1;
+  font-weight: 600;
+  color: #000;
+  position: relative;
+}
+#HomeContact .HomeAboutHead h2 span {
+  color: var(--primaryColor);
+}
+#HomeContact .HomeAboutHead h2::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: var(--primaryColor);
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  border-radius: 2px;
+}
+#HomeContact .ContactMain {
+  width: 100%;
+  display: flex;
+  gap: 50px;
+}
+#HomeContact .ContactMain .ContactMainLeft {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+#HomeContact .ContactMain .ContactMainLeft .ContactTitle {
+  font-size: 26px;
+  font-family: MyFont1;
+  font-weight: 600;
+  color: #000;
+}
+#HomeContact .ContactMain .ContactMainLeft .ContactDesc {
+  font-size: 15px;
+  font-family: MyFont1;
+  color: #555;
+  line-height: 1.5;
+}
+#HomeContact .ContactMain .ContactMainLeft .ContactAddressBox {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+#HomeContact .ContactMain .ContactMainLeft .ContactAddressBox .ConnectBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#HomeContact .ContactMain .ContactMainLeft .ContactAddressBox .ConnectBox svg {
+  font-size: 22px;
+  color: var(--primaryColor);
+}
+#HomeContact .ContactMain .ContactMainLeft .ContactAddressBox .ConnectBox a {
+  font-size: 15px;
+  color: #000;
+  font-family: MyFont1;
+  text-decoration: none;
+}
+#HomeContact .ContactMain .ContactMainRight {
+  width: 65%;
+}
+#HomeContact .ContactMain .ContactMainRight .ContactFormGroup {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+#HomeContact .ContactMain .ContactMainRight .ContactFormGroup .ContactFormBox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#HomeContact .ContactMain .ContactMainRight .ContactFormGroup .ContactFormBox label {
+  font-size: 14px;
+  font-family: MyFont1;
+  color: #000;
+}
+#HomeContact .ContactMain .ContactMainRight .ContactFormGroup .ContactFormBox input,
+#HomeContact .ContactMain .ContactMainRight .ContactFormGroup .ContactFormBox textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background: transparent;
+  padding: 8px 0;
+  font-size: 15px;
+  font-family: MyFont1;
+  outline: none;
+}
+#HomeContact .ContactMain .ContactMainRight .ContactFormGroup .ContactFormBox textarea {
+  height: 100px;
+  resize: none;
+}
+#HomeContact .ContactMain .ContactMainRight .ContactFormGroup .ContactBtn {
+  margin-top: 10px;
+}
+#HomeContact .ContactMain .ContactMainRight .ContactFormGroup .ContactBtn button {
+  background: var(--primaryColor);
+  padding: 15px 30px;
+  color: #fff;
+  border: none;
+  font-family: MyFont1;
+  font-size: 15px;
+  cursor: pointer;
+}
+#HomeContact .ContactMap {
+  width: 100%;
+  margin-top: 60px;
+}
+#HomeContact .ContactMap iframe {
+  width: 100%;
+}
+
+#Footer {
+  width: 100%;
+  background: var(--primaryColor);
+  padding: 80px 0 0;
+}
+#Footer .FooterMain {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  padding-bottom: 60px;
+}
+#Footer .FooterMain .FooterLeft {
+  width: 33.33%;
+}
+#Footer .FooterMain .FooterLeft .FooterLogo {
+  width: 80px;
+  margin-bottom: 20px;
+}
+#Footer .FooterMain .FooterLeft .FooterLogo img {
+  width: 100%;
+  height: auto;
+}
+#Footer .FooterMain .FooterLeft .FooterDesc {
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+#Footer .FooterMain .FooterLeft .FollowHead {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #fff;
+}
+#Footer .FooterMain .FooterLeft .FooterSocialIcons {
+  display: flex;
+  gap: 15px;
+}
+#Footer .FooterMain .FooterLeft .FooterSocialIcons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+#Footer .FooterMain .FooterLeft .FooterSocialIcons a svg {
+  font-size: 18px;
+  color: #fff;
+  transition: 0.3s;
+}
+#Footer .FooterMain .FooterLeft .FooterSocialIcons a:hover {
+  color: var(--secondaryColor);
+}
+#Footer .FooterMain .FooterCenter {
+  width: 33.33%;
+}
+#Footer .FooterMain .FooterCenter .FooterHead {
+  font-size: 20px;
+  font-family: MyFont1;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #fff;
+}
+#Footer .FooterMain .FooterCenter ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+#Footer .FooterMain .FooterCenter ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  color: #fff;
+}
+#Footer .FooterMain .FooterCenter ul li svg {
+  font-size: 12px;
+}
+#Footer .FooterMain .FooterCenter ul li:hover {
+  color: var(--secondaryColor);
+}
+#Footer .FooterMain .FooterRight {
+  width: 33.33%;
+}
+#Footer .FooterMain .FooterRight .FooterHead {
+  font-size: 20px;
+  font-family: MyFont1;
+  font-weight: 0;
+  margin-bottom: 20px;
+  color: #fff;
+}
+#Footer .FooterMain .FooterRight .ContactAddressBox {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+#Footer .FooterMain .FooterRight .ContactAddressBox .ConnectBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#Footer .FooterMain .FooterRight .ContactAddressBox .ConnectBox p {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 15px;
+  color: #fff;
+}
+#Footer .FooterMain .FooterRight .ContactAddressBox .ConnectBox svg {
+  color: #fff;
+}
+#Footer .FooterMain .FooterRight .ContactAddressBox .ConnectBox a {
+  text-decoration: none;
+  color: #fff;
+}
+#Footer .FooterBottom {
+  background: #000;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+#Footer .FooterBottom .FooterMainBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#Footer .FooterBottom .FooterMainBottom .CopyRightBox p {
+  color: #fff;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+#Footer .FooterBottom .FooterMainBottom .DesignWith {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+#Footer .FooterBottom .FooterMainBottom .DesignWith p {
+  color: #fff;
+  font-size: 14px;
+}
+#Footer .FooterBottom .FooterMainBottom .DesignWith .DesignLogo {
+  width: 100px;
+  height: auto;
 }/*# sourceMappingURL=style.css.map */

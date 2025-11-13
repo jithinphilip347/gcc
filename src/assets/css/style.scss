@@ -428,11 +428,11 @@
 
             &::after {
                 content: "";
-                width: 50%;
+                width: 100%;
                 height: 4px;
                 background: var(--primaryColor);
                 position: absolute;
-                bottom: -10px;
+                bottom: -6px;
                 left: 0;
                 border-radius: 2px;
             }
@@ -593,11 +593,11 @@
 
             &::after {
                 content: "";
-                width: 50%;
+                width: 100%;
                 height: 4px;
                 background: var(--primaryColor);
                 position: absolute;
-                bottom: -10px;
+                bottom: -6px;
                 left: 0;
                 border-radius: 2px;
             }
@@ -723,93 +723,518 @@
 }
 
 #HomeWhyCoose {
-  width: 100%;
-  padding: 100px 0;
-  background: #fff;
-
-  .HomeAboutHead {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 50px;
+    padding: 100px 0;
+    background: #fff;
 
-    h2 {
-      font-size: 60px;
-      font-family: MyFont1;
-      font-weight: 600;
-      color: #000;
-      text-transform: capitalize;
-      position: relative;
-      display: inline-block;
-
-      span {
-        color: var(--primaryColor);
-      }
-
-      &::after {
-        content: "";
-        width: 50%;
-        height: 4px;
-        background: var(--primaryColor);
-        position: absolute;
-        bottom: -10px;
-        left: 0;
-        border-radius: 2px;
-      }
-    }
-  }
-
-  .HomeWhyCooseMain {
-    .WhyChooseGrid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-
-      .WhyChooseBox {
-        background: #f3f8f6;
-        padding: 30px 25px;
-        border-radius: 8px;
-        transition: 0.3s ease;
-        text-align: start;
+    .HomeAboutHead {
+        width: 100%;
         display: flex;
-        flex-direction: column;
-        align-items: self-start;
-        justify-content: flex-start;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
 
-        .IconBox {
-          width: 60px;
-          height: 60px;
-          border-radius: 5px;
-          background: var(--primaryColor);
-          display: flex;
-          align-items:center;
-          justify-content: center;
-          margin-bottom: 20px;
+        h2 {
+            font-size: 60px;
+            font-family: MyFont1;
+            font-weight: 600;
+            color: #000;
+            text-transform: capitalize;
+            position: relative;
+            display: inline-block;
 
-          svg {
-            font-size: 28px;
-            color: #fff;
-          }
+            span {
+                color: var(--primaryColor);
+            }
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 4px;
+                background: var(--primaryColor);
+                position: absolute;
+                bottom: -6px;
+                left: 0;
+                border-radius: 2px;
+            }
         }
-
-        .WhyChooseTitle h3 {
-          font-size: 18px;
-          font-weight: 600;
-          font-family: MyFont1;
-          color: #000;
-          margin-bottom: 10px;
-        }
-
-        .WhyChooseDesc p {
-          font-size: 14px;
-          font-family: MyFont1;
-          font-weight: 400;
-          color: #444;
-          line-height: 1.6;
-        }
-      }
     }
-  }
+
+    .HomeWhyCooseMain {
+        .WhyChooseGrid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+
+            .WhyChooseBox {
+                background: #f3f8f6;
+                padding: 30px 25px;
+                transition: 0.3s ease;
+                text-align: start;
+                display: flex;
+                flex-direction: column;
+                align-items: self-start;
+                justify-content: flex-start;
+
+                .IconBox {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 5px;
+                    background: var(--primaryColor);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 20px;
+
+                    svg {
+                        font-size: 28px;
+                        color: #fff;
+                    }
+                }
+
+                .WhyChooseTitle h3 {
+                    font-size: 18px;
+                    font-weight: 600;
+                    font-family: MyFont1;
+                    color: #000;
+                    margin-bottom: 10px;
+                }
+
+                .WhyChooseDesc p {
+                    font-size: 14px;
+                    font-family: MyFont1;
+                    font-weight: 400;
+                    color: #444;
+                    line-height: 1.6;
+                }
+            }
+        }
+    }
 }
 
+#HomeTestimonial {
+    width: 100%;
+    padding: 100px 0;
+    background: #fff;
+
+    .HomeAboutHead {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+
+        h2 {
+            font-size: 60px;
+            font-family: MyFont1;
+            font-weight: 600;
+            color: #000;
+            position: relative;
+            text-transform: capitalize;
+
+            span {
+                color: var(--primaryColor);
+            }
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 4px;
+                background: var(--primaryColor);
+                position: absolute;
+                bottom: -6px;
+                left: 0;
+                border-radius: 2px;
+            }
+        }
+    }
+
+    .TestimonialMain {
+        width: 100%;
+
+        .testimonialSwiper {
+            width: 100%;
+        }
+
+        .TestimonialBox {
+            width: 100%;
+            padding: 20px;
+            background: #f3f8f6;
+            height: 300px;
+            .TestimonialProfileBox {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                margin-bottom: 15px;
+                .StudentPhoto {
+                    width: 80px;
+                    height: 80px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 50%;
+                    }
+                }
+
+                .StudentNameDateBox {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+
+                    .StudentName {
+                        font-size: 16px;
+                        font-family: MyFont1;
+                        font-weight: 500;
+                        color: #000;
+                    }
+
+                    .StudentDate {
+                        font-size: 12px;
+                        color: #555;
+                        font-family: MyFont1;
+                    }
+                }
+            }
+
+            .TestimonialRateBox {
+                display: flex;
+                gap: 5px;
+                margin-bottom: 10px;
+
+                .star {
+                    color: var(--secondaryColor);
+                    font-size: 18px;
+                }
+            }
+
+            .TestimonialTitleBox {
+                margin-bottom: 10px;
+
+                p {
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: #000;
+                    font-family: MyFont1;
+                }
+            }
+
+            .TestimonialDescBox {
+                p {
+                    font-size: 14px;
+                    font-family: MyFont1;
+                    font-weight: 400;
+                    line-height: 1.5;
+                    color: #555;
+                }
+            }
+        }
+    }
+}
+
+#HomeContact {
+    width: 100%;
+    background: #fff;
+    .HomeAboutHead {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+        h2 {
+            font-size: 60px;
+            font-family: MyFont1;
+            font-weight: 600;
+            color: #000;
+            position: relative;
+            span {
+                color: var(--primaryColor);
+            }
+            &::after {
+                content: "";
+                width: 100%;
+                height: 4px;
+                background: var(--primaryColor);
+                position: absolute;
+                bottom: -6px;
+                left: 0;
+                border-radius: 2px;
+            }
+        }
+    }
+
+    .ContactMain {
+        width: 100%;
+        display: flex;
+        gap: 50px;
+
+        .ContactMainLeft {
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+
+            .ContactTitle {
+                font-size: 26px;
+                font-family: MyFont1;
+                font-weight: 600;
+                color: #000;
+            }
+
+            .ContactDesc {
+                font-size: 15px;
+                font-family: MyFont1;
+                color: #555;
+                line-height: 1.5;
+            }
+
+            .ContactAddressBox {
+                display: flex;
+                flex-direction: column;
+                gap: 18px;
+
+                .ConnectBox {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    svg {
+                        font-size: 22px;
+                        color: var(--primaryColor);
+                    }
+
+                    a {
+                        font-size: 15px;
+                        color: #000;
+                        font-family: MyFont1;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .ContactMainRight {
+            width: 65%;
+
+            .ContactFormGroup {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                .ContactFormBox {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+
+                    label {
+                        font-size: 14px;
+                        font-family: MyFont1;
+                        color: #000;
+                    }
+
+                    input,
+                    textarea {
+                        width: 100%;
+                        border: none;
+                        border-bottom: 1px solid #ccc;
+                        background: transparent;
+                        padding: 8px 0;
+                        font-size: 15px;
+                        font-family: MyFont1;
+                        outline: none;
+                    }
+
+                    textarea {
+                        height: 100px;
+                        resize: none;
+                    }
+                }
+
+                .ContactBtn {
+                    margin-top: 10px;
+
+                    button {
+                        background: var(--primaryColor);
+                        padding: 15px 30px;
+                        color: #fff;
+                        border: none;
+                        font-family: MyFont1;
+                        font-size: 15px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    .ContactMap {
+        width: 100%;
+        margin-top: 60px;
+
+        iframe {
+            width: 100%;
+        }
+    }
+}
+
+#Footer {
+    width: 100%;
+    background: var(--primaryColor);
+    padding: 80px 0 0;
+    .FooterMain {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+        padding-bottom: 60px;
+        .FooterLeft {
+            width: 33.33%;
+
+            .FooterLogo {
+                width: 80px;
+                margin-bottom: 20px;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .FooterDesc {
+                font-size: 14px;
+                color: #fff;
+                line-height: 1.5;
+                margin-bottom: 30px;
+            }
+
+            .FollowHead {
+                font-size: 16px;
+                font-weight: 500;
+                margin-bottom: 15px;
+                color: #fff;
+            }
+
+            .FooterSocialIcons {
+                display: flex;
+                gap: 15px;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid #fff;
+                    border-radius: 50%;
+                    width: 30px;
+                    height: 30px;
+                    svg {
+                        font-size: 18px;
+                        color: #fff;
+                        transition: 0.3s;
+                    }
+                    &:hover {
+                        color: var(--secondaryColor);
+                    }
+                }
+            }
+        }
+        .FooterCenter {
+            width: 33.33%;
+            .FooterHead {
+                font-size: 20px;
+                font-family: MyFont1;
+                font-weight: 500;
+                margin-bottom: 20px;
+                color: #fff;
+            }
+
+            ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 15px;
+                    cursor: pointer;
+                    color: #fff;
+
+                    svg {
+                        font-size: 12px;
+                    }
+
+                    &:hover {
+                        color: var(--secondaryColor);
+                    }
+                }
+            }
+        }
+        .FooterRight {
+            width:33.33%;
+            .FooterHead {
+                font-size: 20px;
+                font-family: MyFont1;
+                font-weight: 00;
+                margin-bottom: 20px;
+                color: #fff;
+            }
+            .ContactAddressBox {
+                display: flex;
+                flex-direction: column;
+                gap: 18px;
+                .ConnectBox {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    p {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                        font-size: 15px;
+                        color: #fff;
+                    }
+                    svg {
+                        color: #fff;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .FooterBottom {
+        background: #000;
+        padding: 20px 0;
+        margin-top: 20px;
+        .FooterMainBottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .CopyRightBox p {
+                color: #fff;
+                font-size: 14px;
+                text-transform: capitalize;
+            }
+
+            .DesignWith {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                p {
+                    color: #fff;
+                    font-size: 14px;
+                }
+
+                .DesignLogo {
+                    width: 100px;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
