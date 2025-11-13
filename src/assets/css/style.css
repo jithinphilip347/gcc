@@ -273,6 +273,12 @@
     margin-bottom: 30px;
   }
 }
+@media (max-width: 480px) {
+  #HomeBanner .BannerMain .BannerMainLeft .MainTitle h1 {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+}
 #HomeBanner .BannerMain .BannerMainLeft .MainDesc p {
   font-size: 16px;
   font-family: myFont1;
@@ -313,6 +319,11 @@
   font-weight: 500;
   cursor: pointer;
 }
+@media (max-width: 480px) {
+  #HomeBanner .BannerMain .BannerMainLeft .MainBannerBtn a button {
+    font-size: 13px;
+  }
+}
 #HomeBanner .BannerMain .BannerMainLeft .MainBannerBtn a svg {
   font-size: 18px;
 }
@@ -320,6 +331,11 @@
   background: var(--primaryColor);
   padding: 15px 20px;
   transition: 0.3s;
+}
+@media (max-width: 480px) {
+  #HomeBanner .BannerMain .BannerMainLeft .MainBannerBtn .MainCourseBtn {
+    padding: 15px 10px;
+  }
 }
 #HomeBanner .BannerMain .BannerMainLeft .MainBannerBtn .MainCourseBtn button,
 #HomeBanner .BannerMain .BannerMainLeft .MainBannerBtn .MainCourseBtn svg {
@@ -332,6 +348,11 @@
   background: #fff;
   padding: 15px 20px;
   transition: 0.3s;
+}
+@media (max-width: 480px) {
+  #HomeBanner .BannerMain .BannerMainLeft .MainBannerBtn .MainWhyChooseBtn {
+    padding: 15px 10px;
+  }
 }
 #HomeBanner .BannerMain .BannerMainLeft .MainBannerBtn .MainWhyChooseBtn button,
 #HomeBanner .BannerMain .BannerMainLeft .MainBannerBtn .MainWhyChooseBtn svg {
@@ -611,6 +632,11 @@
   margin-bottom: 20px;
   line-height: 1.4;
 }
+@media (max-width: 480px) {
+  #HomeAbout .AboutMain .AboutMainRight .AboutContentBox .AboutTitle h2 {
+    font-size: 24px;
+  }
+}
 #HomeAbout .AboutMain .AboutMainRight .AboutContentBox .AboutDesc p {
   font-size: 15px;
   font-weight: 400;
@@ -807,6 +833,11 @@
   line-height: 1.6;
   text-align: start;
   margin-bottom: 20px;
+}
+@media (max-width: 480px) {
+  #HomeCourse .CourseMain .CourseBox .CourseDesc p {
+    font-size: 14px;
+  }
 }
 #HomeCourse .CourseMain .CourseBox .Eligibility .EligibilityTitle p {
   font-size: 16px;
@@ -1193,6 +1224,11 @@
   align-items: center;
   gap: 10px;
 }
+#HomeContact .ContactMain .ContactMainLeft .ContactAddressBox .ConnectBox .numberBox {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
 #HomeContact .ContactMain .ContactMainLeft .ContactAddressBox .ConnectBox svg {
   font-size: 22px;
   color: var(--primaryColor);
@@ -1277,6 +1313,16 @@
 #Footer .FooterMain .FooterLeft {
   width: 33.33%;
 }
+@media (max-width: 768px) {
+  #Footer .FooterMain .FooterLeft {
+    width: 50%;
+  }
+}
+@media (max-width: 480px) {
+  #Footer .FooterMain .FooterLeft {
+    width: 100%;
+  }
+}
 #Footer .FooterMain .FooterLeft .FooterLogo {
   width: 80px;
   margin-bottom: 20px;
@@ -1321,6 +1367,16 @@
 #Footer .FooterMain .FooterCenter {
   width: 33.33%;
 }
+@media (max-width: 768px) {
+  #Footer .FooterMain .FooterCenter {
+    width: 50%;
+  }
+}
+@media (max-width: 480px) {
+  #Footer .FooterMain .FooterCenter {
+    width: 100%;
+  }
+}
 #Footer .FooterMain .FooterCenter .FooterHead {
   font-size: 20px;
   font-family: MyFont1;
@@ -1350,6 +1406,16 @@
 }
 #Footer .FooterMain .FooterRight {
   width: 33.33%;
+}
+@media (max-width: 768px) {
+  #Footer .FooterMain .FooterRight {
+    width: 50%;
+  }
+}
+@media (max-width: 480px) {
+  #Footer .FooterMain .FooterRight {
+    width: 100%;
+  }
 }
 #Footer .FooterMain .FooterRight .FooterHead {
   font-size: 20px;

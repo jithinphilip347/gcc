@@ -26,17 +26,20 @@ const HomeContact = () => {
             <div className="ContactAddressBox">
               <div className="ConnectBox">
                 <HiOutlineLocationMarker />
-                <a>234 Triumph, Los Angeles, California, US</a>
+                <a>Building No. 625/10Keezhillam, Pin - 683541, Kerala India</a>
               </div>
 
               <div className="ConnectBox">
                 <HiOutlinePhone />
-                <a>+1 876 43987 247</a>
+                    <p className="numberBox">
+                    <a href=""> +91-79079 74340</a>
+                    <a href="">+91-70125 84203</a>
+                  </p>
               </div>
 
               <div className="ConnectBox">
                 <HiOutlineMail />
-                <a>helo@thriveminds.ca</a>
+                <a>info@gccacademy.net</a>
               </div>
             </div>
           </div>
