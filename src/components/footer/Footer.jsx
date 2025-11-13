@@ -90,7 +90,7 @@ const Footer = () => {
             </div>
 
             <div className="DesignWith">
-              <p>Design With</p>
+              <p>Design By</p>
               <Image src={DesignLogo} alt="" className="DesignLogo" />
             </div>
           </div>
