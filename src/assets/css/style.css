@@ -1035,6 +1035,11 @@
 #HomeTestimonial .TestimonialMain .testimonialSwiper {
   width: 100%;
 }
+@media (max-width: 480px) {
+  #HomeTestimonial .TestimonialMain .swiper-slide {
+    width: 100% !important;
+  }
+}
 #HomeTestimonial .TestimonialMain .TestimonialBox {
   width: 100%;
   padding: 20px;
