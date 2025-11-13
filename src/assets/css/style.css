@@ -8,10 +8,20 @@
   align-items: center;
   justify-content: space-between;
 }
+@media (max-width: 768px) {
+  #TopNav .TopNavMain {
+    justify-content: flex-end;
+  }
+}
 #TopNav .TopNavMain .TopNavMainLeft {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+@media (max-width: 768px) {
+  #TopNav .TopNavMain .TopNavMainLeft {
+    display: none;
+  }
 }
 #TopNav .TopNavMain .TopNavMainLeft .EmargancyCall,
 #TopNav .TopNavMain .TopNavMainLeft .EmargancyMail {
@@ -58,6 +68,12 @@
   color: #fff;
   transition: all 0.3s ease;
 }
+@media (max-width: 768px) {
+  #TopNav .TopNavMain .TopNavMainRight .TopNavSocialBox .social-icon {
+    width: 25px;
+    height: 25px;
+  }
+}
 #TopNav .TopNavMain .TopNavMainRight .TopNavEnquiryBtn {
   display: flex;
   align-items: center;
@@ -74,6 +90,12 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
+@media (max-width: 768px) {
+  #TopNav .TopNavMain .TopNavMainRight .TopNavEnquiryBtn button {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
 
 #Nav {
   width: 100%;
@@ -86,8 +108,18 @@
   justify-content: space-between;
   height: 80px;
 }
+@media (max-width: 768px) {
+  #Nav .NavMain {
+    height: 55px;
+  }
+}
 #Nav .NavMain .NavLogo {
   width: 80px;
+}
+@media (max-width: 768px) {
+  #Nav .NavMain .NavLogo {
+    width: 55px;
+  }
 }
 #Nav .NavMain .NavLogo img {
   width: 100%;
@@ -123,20 +155,50 @@
   padding: 5px 10px 5px 0px;
   color: var(--secondaryColor);
 }
-#Nav .NavMain .NavSearchMenu {
+@media (max-width: 1024px) {
+  #Nav .NavMain .NavLink {
+    display: none;
+  }
+}
+#Nav .NavMain .NavSearcTooglehMenu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+#Nav .NavMain .NavSearcTooglehMenu .MainsideNavMenuIcon {
+  color: var(--primaryColor);
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: none;
+}
+#Nav .NavMain .NavSearcTooglehMenu .MainsideNavMenuIcon:hover {
+  color: var(--secondaryColor);
+}
+@media (max-width: 1024px) {
+  #Nav .NavMain .NavSearcTooglehMenu .MainsideNavMenuIcon {
+    display: block;
+  }
+}
+#Nav .NavMain .NavSearcTooglehMenu .NavSearchMenu {
   display: flex;
   align-items: center;
   gap: 15px;
 }
-#Nav .NavMain .NavSearchMenu .Searchicon,
-#Nav .NavMain .NavSearchMenu .NavToogleMenu {
+@media (max-width: 768px) {
+  #Nav .NavMain .NavSearcTooglehMenu .NavSearchMenu {
+    display: none;
+  }
+}
+#Nav .NavMain .NavSearcTooglehMenu .NavSearchMenu .Searchicon,
+#Nav .NavMain .NavSearcTooglehMenu .NavSearchMenu .NavToogleMenu {
   color: var(--primaryColor);
   font-size: 22px;
   cursor: pointer;
   transition: 0.3s;
 }
-#Nav .NavMain .NavSearchMenu .Searchicon:hover,
-#Nav .NavMain .NavSearchMenu .NavToogleMenu:hover {
+#Nav .NavMain .NavSearcTooglehMenu .NavSearchMenu .Searchicon:hover,
+#Nav .NavMain .NavSearcTooglehMenu .NavSearchMenu .NavToogleMenu:hover {
   color: var(--secondaryColor);
 }
 
@@ -167,9 +229,20 @@
   position: relative;
   z-index: 2;
 }
+@media (max-width: 1024px) {
+  #HomeBanner .BannerMain {
+    flex-direction: column;
+  }
+}
 #HomeBanner .BannerMain .BannerMainLeft {
   width: 70%;
   padding-top: 80px;
+}
+@media (max-width: 1024px) {
+  #HomeBanner .BannerMain .BannerMainLeft {
+    width: 100%;
+    padding-top: 48px;
+  }
 }
 #HomeBanner .BannerMain .BannerMainLeft .MainShortTitle p {
   font-size: 16px;
@@ -178,6 +251,12 @@
   text-transform: uppercase;
   color: #fff;
   margin-bottom: 35px;
+}
+@media (max-width: 1024px) {
+  #HomeBanner .BannerMain .BannerMainLeft .MainShortTitle p {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
 }
 #HomeBanner .BannerMain .BannerMainLeft .MainTitle h1 {
   font-size: 70px;
@@ -188,6 +267,12 @@
   line-height: 1.1;
   margin-bottom: 50px;
 }
+@media (max-width: 1024px) {
+  #HomeBanner .BannerMain .BannerMainLeft .MainTitle h1 {
+    font-size: 46px;
+    margin-bottom: 30px;
+  }
+}
 #HomeBanner .BannerMain .BannerMainLeft .MainDesc p {
   font-size: 16px;
   font-family: myFont1;
@@ -197,11 +282,21 @@
   margin-bottom: 50px;
   line-height: 1.5;
 }
+@media (max-width: 1024px) {
+  #HomeBanner .BannerMain .BannerMainLeft .MainDesc p {
+    font-size: 15px;
+  }
+}
 #HomeBanner .BannerMain .BannerMainLeft .MainBannerBtn {
   display: flex;
   align-items: center;
   gap: 15px;
   margin-bottom: 50px;
+}
+@media (max-width: 1024px) {
+  #HomeBanner .BannerMain .BannerMainLeft .MainBannerBtn {
+    margin-bottom: 0px;
+  }
 }
 #HomeBanner .BannerMain .BannerMainLeft .MainBannerBtn a {
   display: flex;
@@ -256,6 +351,12 @@
   position: relative;
   z-index: 3;
   margin-top: 100px;
+}
+@media (max-width: 1024px) {
+  #HomeBanner .BannerMain .BannerMainRight {
+    width: 100%;
+    margin-top: 0px;
+  }
 }
 #HomeBanner .BannerMain .BannerMainRight .FormTitle {
   margin-bottom: 25px;
@@ -343,6 +444,21 @@
   padding: 100px 0;
   background: #fff;
 }
+@media (max-width: 1024px) {
+  #HomeAbout {
+    padding: 80px 0;
+  }
+}
+@media (max-width: 768px) {
+  #HomeAbout {
+    padding: 60px 0;
+  }
+}
+@media (max-width: 480px) {
+  #HomeAbout {
+    padding: 30px 0;
+  }
+}
 #HomeAbout .HomeAboutHead {
   width: 100%;
   display: flex;
@@ -351,13 +467,28 @@
   margin-bottom: 50px;
 }
 #HomeAbout .HomeAboutHead h2 {
-  font-size: 60px;
+  font-size: 80px;
   font-family: MyFont1;
   font-weight: 600;
   color: #000;
   text-transform: capitalize;
   position: relative;
   display: inline-block;
+}
+@media (max-width: 1024px) {
+  #HomeAbout .HomeAboutHead h2 {
+    font-size: 60px;
+  }
+}
+@media (max-width: 768px) {
+  #HomeAbout .HomeAboutHead h2 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 480px) {
+  #HomeAbout .HomeAboutHead h2 {
+    font-size: 30px;
+  }
 }
 #HomeAbout .HomeAboutHead h2 span {
   color: var(--primaryColor);
@@ -378,9 +509,19 @@
   justify-content: space-between;
   gap: 40px;
 }
+@media (max-width: 1024px) {
+  #HomeAbout .AboutMain {
+    flex-direction: column;
+  }
+}
 #HomeAbout .AboutMain .AboutMainLeft {
   width: 40%;
   position: relative;
+}
+@media (max-width: 1024px) {
+  #HomeAbout .AboutMain .AboutMainLeft {
+    width: 100%;
+  }
 }
 #HomeAbout .AboutMain .AboutMainLeft .HomeAboutImg {
   position: relative;
@@ -406,12 +547,34 @@
   flex-direction: column;
   gap: 15px;
 }
+@media (max-width: 1024px) {
+  #HomeAbout .AboutMain .AboutMainLeft .HomeAboutImg .ShortAboutContentBox {
+    padding: 40px 20px;
+  }
+}
+@media (max-width: 480px) {
+  #HomeAbout .AboutMain .AboutMainLeft .HomeAboutImg .ShortAboutContentBox {
+    padding: 20px 20px;
+    width: 90%;
+  }
+}
 #HomeAbout .AboutMain .AboutMainLeft .HomeAboutImg .ShortAboutContentBox p {
   font-size: 14px;
   font-family: MyFont1;
   font-weight: 400;
   line-height: 1.5;
   width: 85%;
+}
+@media (max-width: 1024px) {
+  #HomeAbout .AboutMain .AboutMainLeft .HomeAboutImg .ShortAboutContentBox p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  #HomeAbout .AboutMain .AboutMainLeft .HomeAboutImg .ShortAboutContentBox p {
+    font-size: 14px;
+    width: 100%;
+  }
 }
 #HomeAbout .AboutMain .AboutMainLeft .HomeAboutImg .ShortAboutContentBox .AboutRightArrow {
   width: 30px;
@@ -431,6 +594,11 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
+}
+@media (max-width: 1024px) {
+  #HomeAbout .AboutMain .AboutMainRight {
+    width: 100%;
+  }
 }
 #HomeAbout .AboutMain .AboutMainRight .AboutContentBox {
   width: 100%;
@@ -459,11 +627,15 @@
   gap: 20px;
 }
 #HomeAbout .AboutMain .AboutMainRight .AboutContentBox .AboutStats .StatBox {
-  width: 30%;
+  width: calc(33.3333333333% - 20px);
   background: #f9f9f9;
   padding: 20px;
-  text-align: center;
   transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+  #HomeAbout .AboutMain .AboutMainRight .AboutContentBox .AboutStats .StatBox {
+    width: calc(50% - 10px);
+  }
 }
 #HomeAbout .AboutMain .AboutMainRight .AboutContentBox .AboutStats .StatBox svg {
   font-size: 30px;
@@ -486,6 +658,21 @@
   padding: 100px 0;
   background: #fff;
 }
+@media (max-width: 1024px) {
+  #HomeCourse {
+    padding: 80px 0;
+  }
+}
+@media (max-width: 768px) {
+  #HomeCourse {
+    padding: 60px 0;
+  }
+}
+@media (max-width: 480px) {
+  #HomeCourse {
+    padding: 30px 0;
+  }
+}
 #HomeCourse .HomeAboutHead {
   width: 100%;
   display: flex;
@@ -494,13 +681,28 @@
   margin-bottom: 50px;
 }
 #HomeCourse .HomeAboutHead h2 {
-  font-size: 60px;
+  font-size: 80px;
   font-family: MyFont1;
   font-weight: 600;
   color: #000;
   text-transform: capitalize;
   position: relative;
   display: inline-block;
+}
+@media (max-width: 1024px) {
+  #HomeCourse .HomeAboutHead h2 {
+    font-size: 60px;
+  }
+}
+@media (max-width: 768px) {
+  #HomeCourse .HomeAboutHead h2 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 480px) {
+  #HomeCourse .HomeAboutHead h2 {
+    font-size: 30px;
+  }
 }
 #HomeCourse .HomeAboutHead h2 span {
   color: var(--primaryColor);
@@ -525,16 +727,21 @@
 #HomeCourse .ViewAll a {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+  background: var(--primaryColor);
+  padding: 10px 20px;
+}
+#HomeCourse .ViewAll a p {
   font-size: 16px;
   font-weight: 500;
   font-family: MyFont1;
-  color: var(--primaryColor);
-  text-decoration: none;
-  transition: 0.3s;
+  color: #fff;
 }
 #HomeCourse .ViewAll a svg {
   font-size: 18px;
+  color: #fff;
 }
 #HomeCourse .ViewAll a:hover {
   color: var(--secondaryColor);
@@ -543,14 +750,34 @@
   display: flex;
   align-items: flex-start;
   gap: 30px;
+  flex-wrap: wrap;
+}
+@media (max-width: 1024px) {
+  #HomeCourse .CourseMain {
+    gap: 60px;
+  }
+}
+@media (max-width: 768px) {
+  #HomeCourse .CourseMain {
+    gap: 30px;
+  }
 }
 #HomeCourse .CourseMain .CourseBox {
-  width: 32%;
+  width: calc(33.3333333333% - 30px);
   background: #f3f8f6;
   padding: 30px 25px;
-  border-radius: 8px;
   transition: all 0.3s ease;
   height: 500px;
+}
+@media (max-width: 1024px) {
+  #HomeCourse .CourseMain .CourseBox {
+    width: calc(50% - 30px);
+  }
+}
+@media (max-width: 768px) {
+  #HomeCourse .CourseMain .CourseBox {
+    width: 100%;
+  }
 }
 #HomeCourse .CourseMain .CourseBox .CourseIcon {
   width: 100%;
@@ -624,6 +851,21 @@
   padding: 100px 0;
   background: #fff;
 }
+@media (max-width: 1024px) {
+  #HomeWhyCoose {
+    padding: 80px 0;
+  }
+}
+@media (max-width: 768px) {
+  #HomeWhyCoose {
+    padding: 60px 0;
+  }
+}
+@media (max-width: 480px) {
+  #HomeWhyCoose {
+    padding: 30px 0;
+  }
+}
 #HomeWhyCoose .HomeAboutHead {
   width: 100%;
   display: flex;
@@ -632,13 +874,28 @@
   margin-bottom: 50px;
 }
 #HomeWhyCoose .HomeAboutHead h2 {
-  font-size: 60px;
+  font-size: 80px;
   font-family: MyFont1;
   font-weight: 600;
   color: #000;
   text-transform: capitalize;
   position: relative;
   display: inline-block;
+}
+@media (max-width: 1024px) {
+  #HomeWhyCoose .HomeAboutHead h2 {
+    font-size: 60px;
+  }
+}
+@media (max-width: 768px) {
+  #HomeWhyCoose .HomeAboutHead h2 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 480px) {
+  #HomeWhyCoose .HomeAboutHead h2 {
+    font-size: 30px;
+  }
 }
 #HomeWhyCoose .HomeAboutHead h2 span {
   color: var(--primaryColor);
@@ -653,12 +910,15 @@
   left: 0;
   border-radius: 2px;
 }
-#HomeWhyCoose .HomeWhyCooseMain .WhyChooseGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+#HomeWhyCoose .HomeWhyCooseMain {
+  width: 100%;
+  display: flex;
+  align-items: center;
   gap: 30px;
+  flex-wrap: wrap;
 }
-#HomeWhyCoose .HomeWhyCooseMain .WhyChooseGrid .WhyChooseBox {
+#HomeWhyCoose .HomeWhyCooseMain .WhyChooseBox {
+  width: calc(33.3333333333% - 20px);
   background: #f3f8f6;
   padding: 30px 25px;
   transition: 0.3s ease;
@@ -668,7 +928,17 @@
   align-items: self-start;
   justify-content: flex-start;
 }
-#HomeWhyCoose .HomeWhyCooseMain .WhyChooseGrid .WhyChooseBox .IconBox {
+@media (max-width: 768px) {
+  #HomeWhyCoose .HomeWhyCooseMain .WhyChooseBox {
+    width: calc(50% - 15px);
+  }
+}
+@media (max-width: 480px) {
+  #HomeWhyCoose .HomeWhyCooseMain .WhyChooseBox {
+    width: 100%;
+  }
+}
+#HomeWhyCoose .HomeWhyCooseMain .WhyChooseBox .IconBox {
   width: 60px;
   height: 60px;
   border-radius: 5px;
@@ -678,18 +948,18 @@
   justify-content: center;
   margin-bottom: 20px;
 }
-#HomeWhyCoose .HomeWhyCooseMain .WhyChooseGrid .WhyChooseBox .IconBox svg {
+#HomeWhyCoose .HomeWhyCooseMain .WhyChooseBox .IconBox svg {
   font-size: 28px;
   color: #fff;
 }
-#HomeWhyCoose .HomeWhyCooseMain .WhyChooseGrid .WhyChooseBox .WhyChooseTitle h3 {
+#HomeWhyCoose .HomeWhyCooseMain .WhyChooseBox .WhyChooseTitle h3 {
   font-size: 18px;
   font-weight: 600;
   font-family: MyFont1;
   color: #000;
   margin-bottom: 10px;
 }
-#HomeWhyCoose .HomeWhyCooseMain .WhyChooseGrid .WhyChooseBox .WhyChooseDesc p {
+#HomeWhyCoose .HomeWhyCooseMain .WhyChooseBox .WhyChooseDesc p {
   font-size: 14px;
   font-family: MyFont1;
   font-weight: 400;
@@ -702,6 +972,21 @@
   padding: 100px 0;
   background: #fff;
 }
+@media (max-width: 1024px) {
+  #HomeTestimonial {
+    padding: 80px 0;
+  }
+}
+@media (max-width: 768px) {
+  #HomeTestimonial {
+    padding: 60px 0;
+  }
+}
+@media (max-width: 480px) {
+  #HomeTestimonial {
+    padding: 30px 0;
+  }
+}
 #HomeTestimonial .HomeAboutHead {
   width: 100%;
   display: flex;
@@ -709,12 +994,27 @@
   margin-bottom: 50px;
 }
 #HomeTestimonial .HomeAboutHead h2 {
-  font-size: 60px;
+  font-size: 80px;
   font-family: MyFont1;
   font-weight: 600;
   color: #000;
   position: relative;
   text-transform: capitalize;
+}
+@media (max-width: 1024px) {
+  #HomeTestimonial .HomeAboutHead h2 {
+    font-size: 60px;
+  }
+}
+@media (max-width: 768px) {
+  #HomeTestimonial .HomeAboutHead h2 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 480px) {
+  #HomeTestimonial .HomeAboutHead h2 {
+    font-size: 30px;
+  }
 }
 #HomeTestimonial .HomeAboutHead h2 span {
   color: var(--primaryColor);
@@ -810,11 +1110,26 @@
   margin-bottom: 50px;
 }
 #HomeContact .HomeAboutHead h2 {
-  font-size: 60px;
+  font-size: 80px;
   font-family: MyFont1;
   font-weight: 600;
   color: #000;
   position: relative;
+}
+@media (max-width: 1024px) {
+  #HomeContact .HomeAboutHead h2 {
+    font-size: 60px;
+  }
+}
+@media (max-width: 768px) {
+  #HomeContact .HomeAboutHead h2 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 480px) {
+  #HomeContact .HomeAboutHead h2 {
+    font-size: 30px;
+  }
 }
 #HomeContact .HomeAboutHead h2 span {
   color: var(--primaryColor);
@@ -834,11 +1149,22 @@
   display: flex;
   gap: 50px;
 }
+@media (max-width: 1024px) {
+  #HomeContact .ContactMain {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 #HomeContact .ContactMain .ContactMainLeft {
   width: 35%;
   display: flex;
   flex-direction: column;
   gap: 25px;
+}
+@media (max-width: 1024px) {
+  #HomeContact .ContactMain .ContactMainLeft {
+    width: 100%;
+  }
 }
 #HomeContact .ContactMain .ContactMainLeft .ContactTitle {
   font-size: 26px;
@@ -874,6 +1200,11 @@
 }
 #HomeContact .ContactMain .ContactMainRight {
   width: 65%;
+}
+@media (max-width: 1024px) {
+  #HomeContact .ContactMain .ContactMainRight {
+    width: 100%;
+  }
 }
 #HomeContact .ContactMain .ContactMainRight .ContactFormGroup {
   width: 100%;
@@ -936,6 +1267,7 @@
   justify-content: space-between;
   gap: 50px;
   padding-bottom: 60px;
+  flex-wrap: wrap;
 }
 #Footer .FooterMain .FooterLeft {
   width: 33.33%;
@@ -1054,6 +1386,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 768px) {
+  #Footer .FooterBottom .FooterMainBottom {
+    flex-direction: column;
+  }
 }
 #Footer .FooterBottom .FooterMainBottom .CopyRightBox p {
   color: #fff;

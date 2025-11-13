@@ -7,10 +7,16 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media (max-width: 768px) {
+            justify-content: flex-end;
+        }
         .TopNavMainLeft {
             display: flex;
             align-items: center;
             gap: 20px;
+            @media (max-width: 768px) {
+                display: none;
+            }
             .EmargancyCall,
             .EmargancyMail {
                 display: flex;
@@ -51,6 +57,10 @@
                     border-radius: 50%;
                     color: #fff;
                     transition: all 0.3s ease;
+                    @media (max-width: 768px) {
+                        width: 25px;
+                        height: 25px;
+                    }
                 }
             }
             .TopNavEnquiryBtn {
@@ -67,6 +77,10 @@
                     font-weight: 500;
                     cursor: pointer;
                     transition: all 0.3s ease;
+                    @media (max-width: 768px) {
+                        padding: 10px 15px;
+                        font-size: 14px;
+                    }
                 }
             }
         }
@@ -82,8 +96,14 @@
         align-items: center;
         justify-content: space-between;
         height: 80px;
+        @media (max-width: 768px) {
+            height: 55px;
+        }
         .NavLogo {
             width: 80px;
+            @media (max-width: 768px) {
+                width: 55px;
+            }
             img {
                 width: 100%;
                 height: auto;
@@ -120,21 +140,44 @@
                     }
                 }
             }
+            @media (max-width: 1024px) {
+                display: none;
+            }
         }
-        .NavSearchMenu {
+        .NavSearcTooglehMenu {
             display: flex;
             align-items: center;
-            gap: 15px;
-
-            .Searchicon,
-            .NavToogleMenu {
+            gap: 40px;
+            .MainsideNavMenuIcon {
                 color: var(--primaryColor);
                 font-size: 22px;
                 cursor: pointer;
                 transition: 0.3s;
-
+                display: none;
                 &:hover {
                     color: var(--secondaryColor);
+                }
+                @media (max-width: 1024px) {
+                    display: block;
+                }
+            }
+            .NavSearchMenu {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                @media (max-width: 768px) {
+                    display: none;
+                }
+                .Searchicon,
+                .NavToogleMenu {
+                    color: var(--primaryColor);
+                    font-size: 22px;
+                    cursor: pointer;
+                    transition: 0.3s;
+
+                    &:hover {
+                        color: var(--secondaryColor);
+                    }
                 }
             }
         }
@@ -149,6 +192,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
     .overlay {
         position: absolute;
         top: 0;
@@ -166,9 +210,16 @@
         gap: 30px;
         position: relative;
         z-index: 2;
+        @media (max-width: 1024px) {
+            flex-direction: column;
+        }
         .BannerMainLeft {
             width: 70%;
             padding-top: 80px;
+            @media (max-width: 1024px) {
+                width: 100%;
+                padding-top: 48px;
+            }
             .MainShortTitle {
                 p {
                     font-size: 16px;
@@ -177,6 +228,10 @@
                     text-transform: uppercase;
                     color: #fff;
                     margin-bottom: 35px;
+                    @media (max-width: 1024px) {
+                        font-size: 15px;
+                        margin-bottom: 20px;
+                    }
                 }
             }
             .MainTitle {
@@ -188,6 +243,10 @@
                     color: #fff;
                     line-height: 1.1;
                     margin-bottom: 50px;
+                    @media (max-width: 1024px) {
+                        font-size: 46px;
+                        margin-bottom: 30px;
+                    }
                 }
             }
             .MainDesc {
@@ -199,6 +258,9 @@
                     line-height: 1.6;
                     margin-bottom: 50px;
                     line-height: 1.5;
+                    @media (max-width: 1024px) {
+                        font-size: 15px;
+                    }
                 }
             }
             .MainBannerBtn {
@@ -206,6 +268,9 @@
                 align-items: center;
                 gap: 15px;
                 margin-bottom: 50px;
+                @media (max-width: 1024px) {
+                    margin-bottom: 0px;
+                }
                 a {
                     display: flex;
                     align-items: center;
@@ -311,6 +376,10 @@
             position: relative;
             z-index: 3;
             margin-top: 100px;
+            @media (max-width: 1024px) {
+                width: 100%;
+                margin-top: 0px;
+            }
             .FormTitle {
                 margin-bottom: 25px;
 
@@ -406,6 +475,15 @@
     width: 100%;
     padding: 100px 0;
     background: #fff;
+    @media (max-width: 1024px) {
+        padding: 80px 0;
+    }
+    @media (max-width: 768px) {
+        padding: 60px 0;
+    }
+    @media (max-width: 480px) {
+        padding: 30px 0;
+    }
     .HomeAboutHead {
         width: 100%;
         display: flex;
@@ -414,14 +492,22 @@
         margin-bottom: 50px;
 
         h2 {
-            font-size: 60px;
+            font-size: 80px;
             font-family: MyFont1;
             font-weight: 600;
             color: #000;
             text-transform: capitalize;
             position: relative;
             display: inline-block;
-
+            @media (max-width: 1024px) {
+                font-size: 60px;
+            }
+            @media (max-width: 768px) {
+                font-size: 40px;
+            }
+            @media (max-width: 480px) {
+                font-size: 30px;
+            }
             span {
                 color: var(--primaryColor);
             }
@@ -444,11 +530,15 @@
         align-items: flex-start;
         justify-content: space-between;
         gap: 40px;
-
+        @media(max-width:1024px){
+            flex-direction: column;
+        }
         .AboutMainLeft {
             width: 40%;
             position: relative;
-
+            @media(max-width:1024px){
+                width: 100%;
+            }
             .HomeAboutImg {
                 position: relative;
                 width: 100%;
@@ -472,12 +562,26 @@
                     align-items: flex-start;
                     flex-direction: column;
                     gap: 15px;
+                    @media(max-width:1024px){
+                        padding: 40px 20px;
+                    }
+                        @media(max-width:480px){
+                        padding: 20px 20px;
+                        width: 90%;
+                    }
                     p {
                         font-size: 14px;
                         font-family: MyFont1;
                         font-weight: 400;
                         line-height: 1.5;
                         width: 85%;
+                        @media(max-width:1024px){
+                           font-size: 16px;
+                        }
+                            @media(max-width:480px){
+                           font-size: 14px;
+                           width: 100%;
+                        }
                     }
 
                     .AboutRightArrow {
@@ -502,7 +606,9 @@
             display: flex;
             align-items: flex-start;
             justify-content: center;
-
+            @media(max-width:1024px){
+                width: 100%;
+            }
             .AboutContentBox {
                 width: 100%;
 
@@ -536,11 +642,14 @@
                     gap: 20px;
 
                     .StatBox {
-                        width: 30%;
+                        width:  calc(100% / 3 - 20px);
                         background: #f9f9f9;
                         padding: 20px;
-                        text-align: center;
+                        // text-align: center;
                         transition: all 0.3s ease;
+                        @media(max-width:768px){
+                         width:  calc(100% / 2 - 10px);
+                        }
 
                         svg {
                             font-size: 30px;
@@ -570,7 +679,15 @@
     width: 100%;
     padding: 100px 0;
     background: #fff;
-
+    @media (max-width: 1024px) {
+        padding: 80px 0;
+    }
+    @media (max-width: 768px) {
+        padding: 60px 0;
+    }
+    @media (max-width: 480px) {
+        padding: 30px 0;
+    }
     .HomeAboutHead {
         width: 100%;
         display: flex;
@@ -579,14 +696,22 @@
         margin-bottom: 50px;
 
         h2 {
-            font-size: 60px;
+            font-size: 80px;
             font-family: MyFont1;
             font-weight: 600;
             color: #000;
             text-transform: capitalize;
             position: relative;
             display: inline-block;
-
+            @media (max-width: 1024px) {
+                font-size: 60px;
+            }
+            @media (max-width: 768px) {
+                font-size: 40px;
+            }
+            @media (max-width: 480px) {
+                font-size: 30px;
+            }
             span {
                 color: var(--primaryColor);
             }
@@ -612,16 +737,20 @@
         a {
             display: flex;
             align-items: center;
-            gap: 8px;
-            font-size: 16px;
-            font-weight: 500;
-            font-family: MyFont1;
-            color: var(--primaryColor);
+            gap: 10px;
             text-decoration: none;
             transition: 0.3s;
-
+            background: var(--primaryColor);
+            padding: 10px 20px;
+            p{
+                font-size: 16px;
+                font-weight: 500;
+                font-family: MyFont1;
+                color: #fff;
+            }
             svg {
                 font-size: 18px;
+                color: #fff;
             }
 
             &:hover {
@@ -634,14 +763,25 @@
         display: flex;
         align-items: flex-start;
         gap: 30px;
-
+        flex-wrap: wrap;
+        @media(max-width:1024px){
+            gap: 60px;
+        }
+          @media(max-width:768px){
+            gap: 30px;
+        }
         .CourseBox {
-            width: 32%;
+            width: calc(100% / 3 - 30px);
             background: #f3f8f6;
             padding: 30px 25px;
-            border-radius: 8px;
             transition: all 0.3s ease;
             height: 500px;
+            @media(max-width:1024px){
+             width: calc(100% / 2 - 30px);
+            }
+            @media(max-width:768px){
+             width: 100%;
+            }
             .CourseIcon {
                 width: 100%;
                 display: flex;
@@ -726,7 +866,15 @@
     width: 100%;
     padding: 100px 0;
     background: #fff;
-
+    @media (max-width: 1024px) {
+        padding: 80px 0;
+    }
+    @media (max-width: 768px) {
+        padding: 60px 0;
+    }
+    @media (max-width: 480px) {
+        padding: 30px 0;
+    }
     .HomeAboutHead {
         width: 100%;
         display: flex;
@@ -735,14 +883,22 @@
         margin-bottom: 50px;
 
         h2 {
-            font-size: 60px;
+            font-size: 80px;
             font-family: MyFont1;
             font-weight: 600;
             color: #000;
             text-transform: capitalize;
             position: relative;
             display: inline-block;
-
+            @media (max-width: 1024px) {
+                font-size: 60px;
+            }
+            @media (max-width: 768px) {
+                font-size: 40px;
+            }
+            @media (max-width: 480px) {
+                font-size: 30px;
+            }
             span {
                 color: var(--primaryColor);
             }
@@ -761,12 +917,18 @@
     }
 
     .HomeWhyCooseMain {
-        .WhyChooseGrid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        // .WhyChooseGrid {
+        //     display: grid;
+        //     grid-template-columns: repeat(3, 1fr);
+        //     gap: 30px;
 
             .WhyChooseBox {
+                width: calc(100% / 3 - 20px);
                 background: #f3f8f6;
                 padding: 30px 25px;
                 transition: 0.3s ease;
@@ -775,7 +937,12 @@
                 flex-direction: column;
                 align-items: self-start;
                 justify-content: flex-start;
-
+                @media(max-width:768px){
+                     width: calc(100% / 2 - 15px);
+                }
+                @media(max-width:480px){
+                     width: 100%;
+                }
                 .IconBox {
                     width: 60px;
                     height: 60px;
@@ -808,7 +975,7 @@
                     line-height: 1.6;
                 }
             }
-        }
+        // }
     }
 }
 
@@ -816,7 +983,15 @@
     width: 100%;
     padding: 100px 0;
     background: #fff;
-
+    @media (max-width: 1024px) {
+        padding: 80px 0;
+    }
+    @media (max-width: 768px) {
+        padding: 60px 0;
+    }
+    @media (max-width: 480px) {
+        padding: 30px 0;
+    }
     .HomeAboutHead {
         width: 100%;
         display: flex;
@@ -824,13 +999,21 @@
         margin-bottom: 50px;
 
         h2 {
-            font-size: 60px;
+            font-size: 80px;
             font-family: MyFont1;
             font-weight: 600;
             color: #000;
             position: relative;
             text-transform: capitalize;
-
+            @media (max-width: 1024px) {
+                font-size: 60px;
+            }
+            @media (max-width: 768px) {
+                font-size: 40px;
+            }
+            @media (max-width: 480px) {
+                font-size: 30px;
+            }
             span {
                 color: var(--primaryColor);
             }
@@ -854,7 +1037,12 @@
         .testimonialSwiper {
             width: 100%;
         }
+        //  .swiper-slide{
+        //     @media(max-width:480px){
+        //     width: 100%!important;
 
+        //     }
+        //  }
         .TestimonialBox {
             width: 100%;
             padding: 20px;
@@ -940,11 +1128,20 @@
         justify-content: center;
         margin-bottom: 50px;
         h2 {
-            font-size: 60px;
+            font-size: 80px;
             font-family: MyFont1;
             font-weight: 600;
             color: #000;
             position: relative;
+            @media (max-width: 1024px) {
+                font-size: 60px;
+            }
+            @media (max-width: 768px) {
+                font-size: 40px;
+            }
+            @media (max-width: 480px) {
+                font-size: 30px;
+            }
             span {
                 color: var(--primaryColor);
             }
@@ -965,13 +1162,18 @@
         width: 100%;
         display: flex;
         gap: 50px;
-
+        @media(max-width:1024px){
+            flex-direction: column;
+            gap: 20px;
+        }
         .ContactMainLeft {
             width: 35%;
             display: flex;
             flex-direction: column;
             gap: 25px;
-
+            @media(max-width:1024px){
+                width: 100%;
+            }
             .ContactTitle {
                 font-size: 26px;
                 font-family: MyFont1;
@@ -1013,7 +1215,9 @@
 
         .ContactMainRight {
             width: 65%;
-
+            @media(max-width:1024px){
+                width: 100%;
+            }
             .ContactFormGroup {
                 width: 100%;
                 display: flex;
@@ -1085,6 +1289,7 @@
         justify-content: space-between;
         gap: 50px;
         padding-bottom: 60px;
+        flex-wrap: wrap;
         .FooterLeft {
             width: 33.33%;
 
@@ -1170,7 +1375,7 @@
             }
         }
         .FooterRight {
-            width:33.33%;
+            width: 33.33%;
             .FooterHead {
                 font-size: 20px;
                 font-family: MyFont1;
@@ -1213,7 +1418,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-
+            @media(max-width:768px){
+                flex-direction: column;
+            }
             .CopyRightBox p {
                 color: #fff;
                 font-size: 14px;

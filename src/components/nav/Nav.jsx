@@ -4,12 +4,12 @@ import React, { useState } from "react";
 import NavLogo from "../../assets/images/logo/logo.png";
 import { RiSearchLine } from "react-icons/ri";
 import { CgMenuRight } from "react-icons/cg";
+import { VscMenu } from "react-icons/vsc";
 
 const Nav = () => {
   const [showSearch, setShowSearch] = useState(false);
   const [activeLink, setActiveLink] = useState("Home");
 
-  // 👉 Prevent default link reload behavior
   const handleClick = (e, link) => {
     e.preventDefault();
     setActiveLink(link);
@@ -65,12 +65,17 @@ const Nav = () => {
               </ul>
             </div>
 
-            <div className="NavSearchMenu">
+            <div className="NavSearcTooglehMenu">
+              <div className="MainsideNavMenuIcon">
+                <VscMenu />
+              </div>
+              <div  className="NavSearchMenu">
               <div className="Searchicon" onClick={() => setShowSearch(true)}>
                 <RiSearchLine />
               </div>
               <div className="NavToogleMenu">
                 <CgMenuRight />
+              </div>
               </div>
             </div>
           </div>

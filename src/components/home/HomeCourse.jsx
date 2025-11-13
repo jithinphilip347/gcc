@@ -19,7 +19,8 @@ const HomeCourse = () => {
           </div>
         <div className="ViewAll">
             <a href="/courses">
-              View All <VscArrowRight />
+            <p>View All</p>
+              <VscArrowRight />
             </a>
           </div>
         <div className="CourseMain">

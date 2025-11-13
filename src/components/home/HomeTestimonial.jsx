@@ -55,9 +55,23 @@ const HomeTestimonial = () => {
         <div className="TestimonialMain">
           <Swiper
             loop={true}
-            slidesPerView={4}
             spaceBetween={20}
+            slidesPerView={4}
             className="testimonialSwiper"
+            breakpoints={{
+              1440:{
+                slidesPerView: 4,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              480: {
+                slidesPerView: 1,
+              },
+            }}
           >
             {testimonials.map((item, index) => (
               <SwiperSlide key={index}>

@@ -21,8 +21,7 @@ const HomeWhyCoose = () => {
         </div>
 
         <div className="HomeWhyCooseMain">
-          <div className="WhyChooseGrid">
-            {/* 1️⃣ Study Materials */}
+          {/* <div className="WhyChooseGrid"> */}
             <div className="WhyChooseBox">
               <div className="IconBox">
                 <FaBookOpen />
@@ -37,8 +36,6 @@ const HomeWhyCoose = () => {
                 </p>
               </div>
             </div>
-
-            {/* 2️⃣ Language Support */}
             <div className="WhyChooseBox">
               <div className="IconBox">
                 <FaLanguage />
@@ -53,8 +50,6 @@ const HomeWhyCoose = () => {
                 </p>
               </div>
             </div>
-
-            {/* 3️⃣ Chapter-wise Quiz */}
             <div className="WhyChooseBox">
               <div className="IconBox">
                 <FaClipboardList />
@@ -69,8 +64,6 @@ const HomeWhyCoose = () => {
                 </p>
               </div>
             </div>
-
-            {/* 4️⃣ Weekly Assessments */}
             <div className="WhyChooseBox">
               <div className="IconBox">
                 <FaChartLine />
@@ -85,8 +78,6 @@ const HomeWhyCoose = () => {
                 </p>
               </div>
             </div>
-
-            {/* 5️⃣ Workshops */}
             <div className="WhyChooseBox">
               <div className="IconBox">
                 <FaChalkboardTeacher />
@@ -101,8 +92,6 @@ const HomeWhyCoose = () => {
                 </p>
               </div>
             </div>
-
-            {/* 6️⃣ Community Support */}
             <div className="WhyChooseBox">
               <div className="IconBox">
                 <FaUsers />
@@ -117,8 +106,6 @@ const HomeWhyCoose = () => {
                 </p>
               </div>
             </div>
-
-            {/* 7️⃣ Practice Sessions */}
             <div className="WhyChooseBox">
               <div className="IconBox">
                 <FaLaptopCode />
@@ -133,7 +120,7 @@ const HomeWhyCoose = () => {
                 </p>
               </div>
             </div>
-          </div>
+          {/* </div> */}
         </div>
       </div>
     </div>
