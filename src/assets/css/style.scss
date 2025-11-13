@@ -288,7 +288,7 @@
                         font-size: 15px;
                         font-weight: 500;
                         cursor: pointer;
-                        @media(max-width:480px){
+                        @media (max-width: 480px) {
                             font-size: 13px;
                         }
                     }
@@ -300,8 +300,8 @@
                     background: var(--primaryColor);
                     padding: 15px 20px;
                     transition: 0.3s;
-                    @media(max-width:480px){
-                         padding: 15px 10px;
+                    @media (max-width: 480px) {
+                        padding: 15px 10px;
                     }
                     button,
                     svg {
@@ -315,7 +315,7 @@
                     background: #fff;
                     padding: 15px 20px;
                     transition: 0.3s;
-                    @media(max-width:480px){
+                    @media (max-width: 480px) {
                         padding: 15px 10px;
                     }
                     button,
@@ -543,13 +543,13 @@
         align-items: flex-start;
         justify-content: space-between;
         gap: 40px;
-        @media(max-width:1024px){
+        @media (max-width: 1024px) {
             flex-direction: column;
         }
         .AboutMainLeft {
             width: 40%;
             position: relative;
-            @media(max-width:1024px){
+            @media (max-width: 1024px) {
                 width: 100%;
             }
             .HomeAboutImg {
@@ -575,10 +575,10 @@
                     align-items: flex-start;
                     flex-direction: column;
                     gap: 15px;
-                    @media(max-width:1024px){
+                    @media (max-width: 1024px) {
                         padding: 40px 20px;
                     }
-                        @media(max-width:480px){
+                    @media (max-width: 480px) {
                         padding: 20px 20px;
                         width: 90%;
                     }
@@ -588,12 +588,12 @@
                         font-weight: 400;
                         line-height: 1.5;
                         width: 85%;
-                        @media(max-width:1024px){
-                           font-size: 16px;
+                        @media (max-width: 1024px) {
+                            font-size: 16px;
                         }
-                            @media(max-width:480px){
-                           font-size: 14px;
-                           width: 100%;
+                        @media (max-width: 480px) {
+                            font-size: 14px;
+                            width: 100%;
                         }
                     }
 
@@ -619,7 +619,7 @@
             display: flex;
             align-items: flex-start;
             justify-content: center;
-            @media(max-width:1024px){
+            @media (max-width: 1024px) {
                 width: 100%;
             }
             .AboutContentBox {
@@ -633,7 +633,7 @@
                         color: var(--primaryColor);
                         margin-bottom: 20px;
                         line-height: 1.4;
-                        @media(max-width:480px){
+                        @media (max-width: 480px) {
                             font-size: 24px;
                         }
                     }
@@ -658,13 +658,13 @@
                     gap: 20px;
 
                     .StatBox {
-                        width:  calc(100% / 3 - 20px);
+                        width: calc(100% / 3 - 20px);
                         background: #f9f9f9;
                         padding: 20px;
                         // text-align: center;
                         transition: all 0.3s ease;
-                        @media(max-width:768px){
-                         width:  calc(100% / 2 - 10px);
+                        @media (max-width: 768px) {
+                            width: calc(100% / 2 - 10px);
                         }
 
                         svg {
@@ -758,7 +758,7 @@
             transition: 0.3s;
             background: var(--primaryColor);
             padding: 10px 20px;
-            p{
+            p {
                 font-size: 16px;
                 font-weight: 500;
                 font-family: MyFont1;
@@ -780,10 +780,10 @@
         align-items: flex-start;
         gap: 30px;
         flex-wrap: wrap;
-        @media(max-width:1024px){
+        @media (max-width: 1024px) {
             gap: 60px;
         }
-          @media(max-width:768px){
+        @media (max-width: 768px) {
             gap: 30px;
         }
         .CourseBox {
@@ -792,11 +792,11 @@
             padding: 30px 25px;
             transition: all 0.3s ease;
             height: 500px;
-            @media(max-width:1024px){
-             width: calc(100% / 2 - 30px);
+            @media (max-width: 1024px) {
+                width: calc(100% / 2 - 30px);
             }
-            @media(max-width:768px){
-             width: 100%;
+            @media (max-width: 768px) {
+                width: 100%;
             }
             .CourseIcon {
                 width: 100%;
@@ -828,7 +828,7 @@
                 line-height: 1.6;
                 text-align: start;
                 margin-bottom: 20px;
-                @media(max-width:480px){
+                @media (max-width: 480px) {
                     font-size: 14px;
                 }
             }
@@ -946,54 +946,54 @@
         //     grid-template-columns: repeat(3, 1fr);
         //     gap: 30px;
 
-            .WhyChooseBox {
-                width: calc(100% / 3 - 20px);
-                background: #f3f8f6;
-                padding: 30px 25px;
-                transition: 0.3s ease;
-                text-align: start;
+        .WhyChooseBox {
+            width: calc(100% / 3 - 20px);
+            background: #f3f8f6;
+            padding: 30px 25px;
+            transition: 0.3s ease;
+            text-align: start;
+            display: flex;
+            flex-direction: column;
+            align-items: self-start;
+            justify-content: flex-start;
+            @media (max-width: 768px) {
+                width: calc(100% / 2 - 15px);
+            }
+            @media (max-width: 480px) {
+                width: 100%;
+            }
+            .IconBox {
+                width: 60px;
+                height: 60px;
+                border-radius: 5px;
+                background: var(--primaryColor);
                 display: flex;
-                flex-direction: column;
-                align-items: self-start;
-                justify-content: flex-start;
-                @media(max-width:768px){
-                     width: calc(100% / 2 - 15px);
-                }
-                @media(max-width:480px){
-                     width: 100%;
-                }
-                .IconBox {
-                    width: 60px;
-                    height: 60px;
-                    border-radius: 5px;
-                    background: var(--primaryColor);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    margin-bottom: 20px;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 20px;
 
-                    svg {
-                        font-size: 28px;
-                        color: #fff;
-                    }
-                }
-
-                .WhyChooseTitle h3 {
-                    font-size: 18px;
-                    font-weight: 600;
-                    font-family: MyFont1;
-                    color: #000;
-                    margin-bottom: 10px;
-                }
-
-                .WhyChooseDesc p {
-                    font-size: 14px;
-                    font-family: MyFont1;
-                    font-weight: 400;
-                    color: #444;
-                    line-height: 1.6;
+                svg {
+                    font-size: 28px;
+                    color: #fff;
                 }
             }
+
+            .WhyChooseTitle h3 {
+                font-size: 18px;
+                font-weight: 600;
+                font-family: MyFont1;
+                color: #000;
+                margin-bottom: 10px;
+            }
+
+            .WhyChooseDesc p {
+                font-size: 14px;
+                font-family: MyFont1;
+                font-weight: 400;
+                color: #444;
+                line-height: 1.6;
+            }
+        }
         // }
     }
 }
@@ -1056,12 +1056,11 @@
         .testimonialSwiper {
             width: 100%;
         }
-         .swiper-slide{
-            @media(max-width:480px){
-            width: 100%!important;
-
+        .swiper-slide {
+            @media (max-width: 480px) {
+                width: 100% !important;
             }
-         }
+        }
         .TestimonialBox {
             width: 100%;
             padding: 20px;
@@ -1139,10 +1138,19 @@
     }
 }
 
-
 #HomeContact {
     width: 100%;
     background: #fff;
+    padding: 100px 0px;
+    @media (max-width: 1024px) {
+        padding: 80px 0;
+    }
+    @media (max-width: 768px) {
+        padding: 60px 0;
+    }
+    @media (max-width: 480px) {
+        padding: 30px 0;
+    }
     .HomeAboutHead {
         display: flex;
         justify-content: center;
@@ -1182,7 +1190,7 @@
         width: 100%;
         display: flex;
         gap: 50px;
-        @media(max-width:1024px){
+        @media (max-width: 1024px) {
             flex-direction: column;
             gap: 20px;
         }
@@ -1191,7 +1199,7 @@
             display: flex;
             flex-direction: column;
             gap: 25px;
-            @media(max-width:1024px){
+            @media (max-width: 1024px) {
                 width: 100%;
             }
             .ContactTitle {
@@ -1217,7 +1225,7 @@
                     display: flex;
                     align-items: center;
                     gap: 10px;
-                    .numberBox{
+                    .numberBox {
                         display: flex;
                         flex-direction: column;
                         gap: 5px;
@@ -1239,7 +1247,7 @@
 
         .ContactMainRight {
             width: 65%;
-            @media(max-width:1024px){
+            @media (max-width: 1024px) {
                 width: 100%;
             }
             .ContactFormGroup {
@@ -1311,15 +1319,19 @@
     .FooterMain {
         display: flex;
         justify-content: space-between;
-        gap: 50px;
+        gap: 70px;
         padding-bottom: 60px;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
         .FooterLeft {
             width: 33.33%;
-                 @media(max-width:768px){
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            @media (max-width: 768px) {
                 width: 50%;
             }
-            @media(max-width:480px){
+            @media (max-width: 480px) {
                 width: 100%;
             }
             .FooterLogo {
@@ -1371,10 +1383,14 @@
         }
         .FooterCenter {
             width: 33.33%;
-                 @media(max-width:768px){
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            @media (max-width: 768px) {
                 width: 50%;
             }
-               @media(max-width:480px){
+            @media (max-width: 480px) {
                 width: 100%;
             }
             .FooterHead {
@@ -1411,10 +1427,14 @@
         }
         .FooterRight {
             width: 33.33%;
-            @media(max-width:768px){
+                display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            @media (max-width: 768px) {
                 width: 50%;
             }
-               @media(max-width:480px){
+            @media (max-width: 480px) {
                 width: 100%;
             }
             .FooterHead {
@@ -1459,7 +1479,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            @media(max-width:768px){
+            @media (max-width: 768px) {
                 flex-direction: column;
             }
             .CopyRightBox p {

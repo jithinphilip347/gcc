@@ -75,7 +75,7 @@ const HomeContact = () => {
         </div>
        
       </div>
-       <div className="ContactMap">
+       {/* <div className="ContactMap">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18..."
             width="100%"
@@ -83,7 +83,7 @@ const HomeContact = () => {
             style={{ border: 0 }}
             loading="lazy"
           ></iframe>
-        </div>
+        </div> */}
     </div>
   );
 };
