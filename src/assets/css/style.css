@@ -1887,4 +1887,180 @@
   cursor: pointer;
   font-size: 15px;
   outline: none;
+}
+
+#HomeTeam {
+  width: 100%;
+  padding: 100px 0;
+}
+@media (max-width: 1024px) {
+  #HomeTeam {
+    padding: 80px 0;
+  }
+}
+@media (max-width: 768px) {
+  #HomeTeam {
+    padding: 60px 0;
+  }
+}
+@media (max-width: 480px) {
+  #HomeTeam {
+    padding: 40px 0;
+  }
+}
+#HomeTeam .HomeAboutHead {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+#HomeTeam .HomeAboutHead h2 {
+  font-size: 80px;
+  font-family: MyFont1;
+  font-weight: 600;
+  color: #000;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  #HomeTeam .HomeAboutHead h2 {
+    font-size: 60px;
+  }
+}
+@media (max-width: 768px) {
+  #HomeTeam .HomeAboutHead h2 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 480px) {
+  #HomeTeam .HomeAboutHead h2 {
+    font-size: 30px;
+  }
+}
+#HomeTeam .HomeAboutHead h2 span {
+  color: var(--primaryColor);
+}
+#HomeTeam .HomeAboutHead h2::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: var(--primaryColor);
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  border-radius: 2px;
+}
+#HomeTeam .HomeTeamMain {
+  padding: 40px 0px;
+  background: #f3f8f6;
+}
+#HomeTeam .HomeTeamMain .HomeTeamMainBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  /* LEFT IMAGE BOX */
+  /* RIGHT DETAILS BOX */
+}
+@media (max-width: 1024px) {
+  #HomeTeam .HomeTeamMain .HomeTeamMainBox {
+    gap: 30px;
+  }
+}
+@media (max-width: 768px) {
+  #HomeTeam .HomeTeamMain .HomeTeamMainBox {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+#HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamImgBox {
+  width: 40%;
+  height: 400px;
+}
+@media (max-width: 768px) {
+  #HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamImgBox {
+    width: 100%;
+    height: 530px;
+  }
+}
+@media (max-width: 480px) {
+  #HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamImgBox {
+    width: 100%;
+    height: 350px;
+  }
+}
+#HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamImgBox .teamimg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamDetailsBox {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  #HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamDetailsBox {
+    width: 100%;
+  }
+}
+#HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamDetailsBox .OurTeamNameBox h2 {
+  font-size: 36px;
+  font-weight: 600;
+  font-family: MyFont1;
+  color: #000;
+}
+@media (max-width: 1024px) {
+  #HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamDetailsBox .OurTeamNameBox h2 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 768px) {
+  #HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamDetailsBox .OurTeamNameBox h2 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 480px) {
+  #HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamDetailsBox .OurTeamNameBox h2 {
+    font-size: 24px;
+  }
+}
+#HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamDetailsBox .OurTeamNameBox p {
+  font-size: 18px;
+  color: var(--primaryColor);
+  font-family: MyFont1;
+}
+@media (max-width: 480px) {
+  #HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamDetailsBox .OurTeamNameBox p {
+    font-size: 16px;
+  }
+}
+#HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamDetailsBox .LearnMoreOurTeam p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+  font-family: MyFont1;
+}
+@media (max-width: 480px) {
+  #HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamDetailsBox .LearnMoreOurTeam p {
+    font-size: 15px;
+  }
+}
+#HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamDetailsBox .OurTeamContactBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamDetailsBox .OurTeamContactBox a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+  font-family: MyFont1;
+}
+#HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamDetailsBox .OurTeamContactBox a svg {
+  font-size: 20px;
+  color: var(--primaryColor);
 }/*# sourceMappingURL=style.css.map */

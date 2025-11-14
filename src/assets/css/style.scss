@@ -2011,3 +2011,164 @@
         }
     }
 }
+
+#HomeTeam {
+    width: 100%;
+    padding: 100px 0;
+
+    @media (max-width: 1024px) {
+        padding: 80px 0;
+    }
+    @media (max-width: 768px) {
+        padding: 60px 0;
+    }
+    @media (max-width: 480px) {
+        padding: 40px 0;
+    }
+    .HomeAboutHead {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+        h2 {
+            font-size: 80px;
+            font-family: MyFont1;
+            font-weight: 600;
+            color: #000;
+            position: relative;
+            @media (max-width: 1024px) {
+                font-size: 60px;
+            }
+            @media (max-width: 768px) {
+                font-size: 40px;
+            }
+            @media (max-width: 480px) {
+                font-size: 30px;
+            }
+            span {
+                color: var(--primaryColor);
+            }
+            &::after {
+                content: "";
+                width: 100%;
+                height: 4px;
+                background: var(--primaryColor);
+                position: absolute;
+                bottom: -6px;
+                left: 0;
+                border-radius: 2px;
+            }
+        }
+    }
+    .HomeTeamMain {
+        padding: 40px 0px;
+        background: #f3f8f6;
+
+        .HomeTeamMainBox {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            @media (max-width: 1024px) {
+                gap: 30px;
+            }
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+                gap: 20px;
+            }
+            /* LEFT IMAGE BOX */
+            .OurTeamImgBox {
+                width: 40%;
+                height: 400px;
+                @media (max-width: 768px) {
+                    width: 100%;
+                    height: 530px;
+                }
+                   @media (max-width: 480px) {
+                    width: 100%;
+                    height: 350px;
+                }
+                .teamimg {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            /* RIGHT DETAILS BOX */
+            .OurTeamDetailsBox {
+                width: 60%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
+
+                .OurTeamNameBox {
+                    h2 {
+                        font-size: 36px;
+                        font-weight: 600;
+                        font-family: MyFont1;
+                        color: #000;
+
+                        @media (max-width: 1024px) {
+                            font-size: 30px;
+                        }
+                        @media (max-width: 768px) {
+                            font-size: 28px;
+                        }
+                        @media (max-width: 480px) {
+                            font-size: 24px;
+                        }
+                    }
+
+                    p {
+                        font-size: 18px;
+                        color: var(--primaryColor);
+                        font-family: MyFont1;
+
+                        @media (max-width: 480px) {
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+                .LearnMoreOurTeam {
+                    p {
+                        font-size: 16px;
+                        color: #444;
+                        line-height: 1.6;
+                        font-family: MyFont1;
+
+                        @media (max-width: 480px) {
+                            font-size: 15px;
+                        }
+                    }
+                }
+
+                .OurTeamContactBox {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        text-decoration: none;
+                        color: #000;
+                        font-size: 15px;
+                        font-family: MyFont1;
+
+                        svg {
+                            font-size: 20px;
+                            color: var(--primaryColor);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

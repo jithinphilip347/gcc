@@ -17,7 +17,11 @@ const SideNav = ({ show, onClose }) => {
         <div className="SideNavLink">
           <ul>
             <li>
-              <Link href="/" className={pathname === "/" ? "active" : ""}>
+              <Link
+                href="/"
+                className={pathname === "/" ? "active" : ""}
+                onClick={onClose}
+              >
                 Home
               </Link>
             </li>
@@ -26,26 +30,29 @@ const SideNav = ({ show, onClose }) => {
               <Link
                 href="/course"
                 className={pathname === "/course" ? "active" : ""}
+                onClick={onClose}
               >
                 Course
               </Link>
             </li>
 
             <li>
-              <Link href="#HomeAbout">About</Link>
+              <Link href="#HomeAbout" onClick={onClose}>
+                About
+              </Link>
             </li>
 
             <li>
               <Link
                 href="/contact"
                 className={pathname === "/contact" ? "active" : ""}
+                onClick={onClose}
               >
                 Contact
               </Link>
             </li>
           </ul>
         </div>
-
       </div>
     </div>
   );
