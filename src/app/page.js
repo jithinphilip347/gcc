@@ -1,3 +1,4 @@
+import CourseList from "@/components/course/CourseList";
 import HomeAbout from "@/components/home/HomeAbout";
 import HomeBanner from "@/components/home/HomeBanner";
 import HomeContact from "@/components/home/HomeContact";
@@ -14,6 +15,7 @@ export default function Home() {
     <HomeWhyCoose />
     <HomeTestimonial />
     <HomeContact />
+    <CourseList />
    </div>
   );
 }
