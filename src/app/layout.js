@@ -3,6 +3,7 @@ import '../assets/css/main.css'
 import '../assets/css/style.css'
 import Nav from '@/components/nav/Nav';
 import Footer from '@/components/footer/Footer';
+import { Toaster } from "react-hot-toast";
 
 export const metadata = {
   title: "",
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
         <TopNav />
         <Nav />
         {children}
+        <Toaster position="top-right" reverseOrder={false} />
         <Footer />
       </body>
     </html>

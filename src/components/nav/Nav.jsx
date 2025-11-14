@@ -5,15 +5,15 @@ import NavLogo from "../../assets/images/logo/logo.png";
 import { RiSearchLine } from "react-icons/ri";
 import { CgMenuRight } from "react-icons/cg";
 import { VscMenu } from "react-icons/vsc";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import ContactSideNav from "../nav/ContactSideNav";
+import SideNav from "../nav/SideNav"; 
 
 const Nav = () => {
-  const [showSearch, setShowSearch] = useState(false);
-  const [activeLink, setActiveLink] = useState("Home");
-
-  const handleClick = (e, link) => {
-    e.preventDefault();
-    setActiveLink(link);
-  };
+  const [showContact, setShowContact] = useState(false);
+  const [showLeftNav, setShowLeftNav] = useState(false);
+  const pathname = usePathname();
 
   return (
     <>
@@ -27,60 +27,79 @@ const Nav = () => {
             <div className="NavLink">
               <ul>
                 <li>
-                  <a
-                    href="#"
-                    className={activeLink === "Home" ? "active" : ""}
-                    onClick={(e) => handleClick(e, "Home")}
-                  >
+                  <Link href="/" className={pathname === "/" ? "active" : ""}>
                     Home
-                  </a>
+                  </Link>
                 </li>
+
                 <li>
-                  <a
-                    href="#"
-                    className={activeLink === "Course" ? "active" : ""}
-                    onClick={(e) => handleClick(e, "Course")}
+                  <Link
+                    href="/course"
+                    className={pathname === "/course" ? "active" : ""}
                   >
                     Course
-                  </a>
+                  </Link>
                 </li>
+
                 <li>
-                  <a
-                    href="#"
-                    className={activeLink === "About" ? "active" : ""}
-                    onClick={(e) => handleClick(e, "About")}
-                  >
-                    About
-                  </a>
+                  <Link href="#HomeAbout">About</Link>
                 </li>
+
                 <li>
-                  <a
-                    href="#"
-                    className={activeLink === "Contact" ? "active" : ""}
-                    onClick={(e) => handleClick(e, "Contact")}
+                  <Link
+                    href="/contact"
+                    className={pathname === "/contact" ? "active" : ""}
                   >
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
 
             <div className="NavSearcTooglehMenu">
-              <div className="MainsideNavMenuIcon">
+
+              <div
+                className="MainsideNavMenuIcon"
+                onClick={() => setShowLeftNav(true)}
+              >
                 <VscMenu />
               </div>
-              <div  className="NavSearchMenu">
-              <div className="Searchicon" onClick={() => setShowSearch(true)}>
-                <RiSearchLine />
+
+              <div className="NavSearchMenu">
+                <div className="Searchicon">
+                  <RiSearchLine />
+                </div>
+
+                <div
+                  className="NavToogleMenu"
+                  onClick={() => setShowContact(true)}
+                >
+                  <CgMenuRight />
+                </div>
               </div>
-              <div className="NavToogleMenu">
-                <CgMenuRight />
-              </div>
-              </div>
+
             </div>
           </div>
         </div>
       </div>
+
+      {showLeftNav && (
+        <div
+          className="LeftNavOverlay"
+          onClick={() => setShowLeftNav(false)}
+        ></div>
+      )}
+
+      <SideNav show={showLeftNav} onClose={() => setShowLeftNav(false)} />
+
+      {showContact && (
+        <div
+          className="MenuRightOverlay"
+          onClick={() => setShowContact(false)}
+        ></div>
+      )}
+
+      <ContactSideNav show={showContact} onClose={() => setShowContact(false)} />
     </>
   );
 };

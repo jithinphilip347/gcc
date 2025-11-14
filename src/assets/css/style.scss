@@ -787,7 +787,7 @@
             gap: 30px;
         }
         .CourseBox {
-            width: calc(100% / 3 - 30px);
+            width: calc(100% / 3 - 20px);
             background: #f3f8f6;
             padding: 30px 25px;
             transition: all 0.3s ease;
@@ -1307,6 +1307,125 @@
     }
 }
 
+#CourseList {
+    width: 100%;
+    padding: 100px 0;
+    background: #fff;
+    @media (max-width: 1024px) {
+        padding: 80px 0;
+    }
+    @media (max-width: 768px) {
+        padding: 60px 0;
+    }
+    @media (max-width: 480px) {
+        padding: 30px 0;
+    }
+    .CourseMain {
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+        flex-wrap: wrap;
+        @media (max-width: 1024px) {
+            gap: 60px;
+        }
+        @media (max-width: 768px) {
+            gap: 30px;
+        }
+        .CourseBox {
+            width: calc(100% / 3 - 20px);
+            background: #f3f8f6;
+            padding: 30px 25px;
+            transition: all 0.3s ease;
+            height: 500px;
+            @media (max-width: 1024px) {
+                width: calc(100% / 2 - 30px);
+            }
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+            .CourseIcon {
+                width: 100%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                margin-bottom: 20px;
+
+                img {
+                    width: 180px;
+                    height: auto;
+                    object-fit: contain;
+                }
+            }
+
+            .CourseTitle p {
+                font-size: 20px;
+                font-weight: 600;
+                color: var(--primaryColor);
+                text-align: start;
+                margin-bottom: 10px;
+            }
+
+            .CourseDesc p {
+                font-size: 15px;
+                font-family: MyFont1;
+                font-weight: 400;
+                color: #555;
+                line-height: 1.6;
+                text-align: start;
+                margin-bottom: 20px;
+                @media (max-width: 480px) {
+                    font-size: 14px;
+                }
+            }
+
+            .Eligibility {
+                .EligibilityTitle p {
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: #000;
+                    margin-bottom: 10px;
+                }
+
+                .CriteriaBox {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+
+                    .Box {
+                        display: flex;
+                        align-items: flex-start;
+                        gap: 10px;
+
+                        .CheckmarkIcon {
+                            width: 18px;
+                            height: 18px;
+                            min-width: 18px;
+                            background: var(--primaryColor);
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            svg {
+                                color: #fff;
+                                font-size: 12px;
+                            }
+                        }
+
+                        p {
+                            font-size: 14px;
+                            font-family: MyFont1;
+                            font-weight: 400;
+                            color: #444;
+                            line-height: 1.4;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 #Footer {
     width: 100%;
     background: var(--primaryColor);
@@ -1318,7 +1437,7 @@
         padding-bottom: 60px;
         flex-wrap: wrap;
         .FooterBox {
-            width:calc(100% / 3 - 40px);
+            width: calc(100% / 3 - 40px);
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -1352,7 +1471,7 @@
                 margin-bottom: 15px;
                 color: #fff;
             }
-            
+
             .FooterHead {
                 font-size: 20px;
                 font-family: MyFont1;
@@ -1555,6 +1674,339 @@
                     width: 100px;
                     height: auto;
                 }
+            }
+        }
+    }
+}
+
+#ContactSideNav {
+    position: fixed;
+    top: 0;
+    right: -450px;
+    width: 450px;
+    height: 100vh;
+    background: #ffffff;
+    z-index: 1000;
+    transition: all 0.4s ease;
+    padding: 30px;
+    overflow-y: auto;
+    &.active {
+        right: 0;
+    }
+
+    .SideNavContainer {
+        position: relative;
+        height: 100%;
+    }
+
+    .CloseIcon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 32px;
+        cursor: pointer;
+        color: #000;
+    }
+    .ContactMain {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 80px 0px;
+        .ContactMainTop {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            .ContactTitle {
+                font-size: 26px;
+                font-family: MyFont1;
+                font-weight: 600;
+                color: #000;
+            }
+
+            .ContactDesc {
+                font-size: 15px;
+                font-family: MyFont1;
+                color: #555;
+                line-height: 1.5;
+            }
+
+            .ContactAddressBox {
+                display: flex;
+                flex-direction: column;
+                gap: 18px;
+
+                .ConnectBox {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    .numberBox {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                    }
+                    svg {
+                        font-size: 22px;
+                        color: var(--primaryColor);
+                    }
+
+                    a {
+                        font-size: 15px;
+                        color: #000;
+                        font-family: MyFont1;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .ContactMainBottom {
+            width: 100%;
+            .ContactFormGroup {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                .ContactFormBox {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+
+                    label {
+                        font-size: 14px;
+                        font-family: MyFont1;
+                        color: #000;
+                    }
+
+                    input,
+                    textarea {
+                        width: 100%;
+                        border: none;
+                        border-bottom: 1px solid #ccc;
+                        background: transparent;
+                        padding: 8px 0;
+                        font-size: 15px;
+                        font-family: MyFont1;
+                        outline: none;
+                    }
+
+                    textarea {
+                        height: 100px;
+                        resize: none;
+                    }
+                }
+
+                .ContactBtn {
+                    margin-top: 10px;
+
+                    button {
+                        background: var(--primaryColor);
+                        padding: 15px 30px;
+                        color: #fff;
+                        border: none;
+                        font-family: MyFont1;
+                        font-size: 15px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+.MenuRightOverlay {
+    position: fixed;
+    inset: 0;
+    background: #f0efe4ad;
+    z-index: 999;
+}
+
+.LeftNavOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(51, 51, 51, 0.5);
+    z-index: 997;
+}
+#SideNav {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100vh;
+    background: #fff;
+    z-index: 998;
+    transition: all 0.4s ease;
+    border-right: 1px solid #eaeaea;
+    padding-top: 20px;
+
+    &.active {
+        left: 0;
+    }
+
+    .SidenavMain {
+        height: 100%;
+    }
+
+    .SideNavClose {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 32px;
+        cursor: pointer;
+        color: #000;
+    }
+
+    .SideNavLink {
+        margin-top: 60px;
+        padding: 0 20px;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            li {
+                list-style-type: none;
+                padding: 5px 10px;
+                a {
+                    text-decoration: none;
+                    font-size: 15px;
+                    font-weight: 500;
+                    font-family: myFont1;
+                    color: var(--primaryColor);
+                    padding: 5px 10px;
+                    transition: 0.3s ease;
+
+                    &:hover {
+                        color: var(--secondaryColor);
+                        background: #f0efe4;
+                    }
+
+                    &.active {
+                        background: #f0efe4;
+                        color: var(--secondaryColor);
+                    }
+                }
+            }
+        }
+    }
+}
+
+#Enquiry {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+
+    .EnquiryOverlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(51, 51, 51, 0.5);
+        z-index: 998;
+    }
+
+    .EnquiryPopup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        background: rgba(240, 239, 228, 0.6784313725);
+        transform: translate(-50%, -50%);
+        z-index: 999;
+        animation: popupIn 0.3s ease;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @keyframes popupIn {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -45%);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .EnquiryClose {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            font-size: 32px;
+            cursor: pointer;
+            color: #000;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            width: 50%;
+
+            .enquiryFieldBox {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                // label {
+                //   font-size: 14px;
+                //   color: #333;
+                // }
+
+                input {
+                    border: none;
+                    border-bottom: 1px solid #000;
+                    padding: 8px 0;
+                    font-size: 15px;
+                    background: transparent;
+                    outline: none;
+                    &::placeholder {
+                        color: #000;
+                    }
+                }
+            }
+            .customDropdown {
+                position: relative;
+
+                .dropdownHeader {
+                    border-bottom: 1px solid #000;
+                    padding: 8px 0;
+                    cursor: pointer;
+                }
+
+                .dropdownList {
+                    background: #f0efe4;
+                    position: absolute;
+                    top: 55px;
+                    left: 0;
+                    width: 100%;
+                    border: 1px solid #ddd;
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+                    z-index: 1000;
+
+                    li {
+                        padding: 10px;
+                        cursor: pointer;
+                        transition: 0.2s ease;
+                        list-style-type: none;
+                        &:hover {
+                            background: var(--primaryColor);
+                        }
+                    }
+                }
+            }
+
+            .EnquiryBtn button {
+                background: var(--primaryColor);
+                color: #fff;
+                border: none;
+                padding: 12px 25px;
+                cursor: pointer;
+                font-size: 15px;
+                outline: none;
             }
         }
     }

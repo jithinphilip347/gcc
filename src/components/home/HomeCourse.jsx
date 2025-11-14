@@ -7,6 +7,7 @@ import { VscArrowRight } from "react-icons/vsc";
 import Logo1 from "../../assets/images/DHA.svg";
 import Logo2 from "../../assets/images/moh-uae.webp";
 import Logo3 from "../../assets/images/moh-kuwait.png";
+import Link from "next/link";
 
 const HomeCourse = () => {
   return (
@@ -18,10 +19,10 @@ const HomeCourse = () => {
             </h2>
           </div>
         <div className="ViewAll">
-            <a href="/courses">
+            <Link href="/course">
             <p>View All</p>
               <VscArrowRight />
-            </a>
+            </Link>
           </div>
         <div className="CourseMain">
           <div className="CourseBox">
