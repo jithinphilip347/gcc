@@ -576,7 +576,7 @@
 @media (max-width: 480px) {
   #HomeAbout .AboutMain .AboutMainLeft .HomeAboutImg .ShortAboutContentBox {
     padding: 20px 20px;
-    width: 90%;
+    width: 100%;
   }
 }
 #HomeAbout .AboutMain .AboutMainLeft .HomeAboutImg .ShortAboutContentBox p {
@@ -1321,52 +1321,79 @@
 }
 #Footer .FooterMain {
   display: flex;
-  justify-content: space-between;
-  gap: 70px;
+  gap: 40px;
   padding-bottom: 60px;
+  flex-wrap: wrap;
 }
-#Footer .FooterMain .FooterLeft {
-  width: 33.33%;
+#Footer .FooterMain .FooterBox {
+  width: calc(33.3333333333% - 40px);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
 }
 @media (max-width: 768px) {
-  #Footer .FooterMain .FooterLeft {
+  #Footer .FooterMain .FooterBox {
     width: 50%;
   }
 }
 @media (max-width: 480px) {
-  #Footer .FooterMain .FooterLeft {
+  #Footer .FooterMain .FooterBox {
     width: 100%;
   }
 }
-#Footer .FooterMain .FooterLeft .FooterLogo {
+#Footer .FooterMain .FooterBox .FooterLogo {
   width: 80px;
   margin-bottom: 20px;
 }
-#Footer .FooterMain .FooterLeft .FooterLogo img {
+#Footer .FooterMain .FooterBox .FooterLogo img {
   width: 100%;
   height: auto;
 }
-#Footer .FooterMain .FooterLeft .FooterDesc {
+#Footer .FooterMain .FooterBox .FooterDesc {
   font-size: 14px;
   color: #fff;
   line-height: 1.5;
   margin-bottom: 30px;
 }
-#Footer .FooterMain .FooterLeft .FollowHead {
+#Footer .FooterMain .FooterBox .FollowHead {
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 15px;
   color: #fff;
 }
-#Footer .FooterMain .FooterLeft .FooterSocialIcons {
+#Footer .FooterMain .FooterBox .FooterHead {
+  font-size: 20px;
+  font-family: MyFont1;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #fff;
+}
+#Footer .FooterMain .FooterBox ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+#Footer .FooterMain .FooterBox ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  color: #fff;
+}
+#Footer .FooterMain .FooterBox ul li svg {
+  font-size: 12px;
+}
+#Footer .FooterMain .FooterBox ul li:hover {
+  color: var(--secondaryColor);
+}
+#Footer .FooterMain .FooterBox .FooterSocialIcons {
   display: flex;
   gap: 15px;
 }
-#Footer .FooterMain .FooterLeft .FooterSocialIcons a {
+#Footer .FooterMain .FooterBox .FooterSocialIcons a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1375,103 +1402,35 @@
   width: 30px;
   height: 30px;
 }
-#Footer .FooterMain .FooterLeft .FooterSocialIcons a svg {
+#Footer .FooterMain .FooterBox .FooterSocialIcons a svg {
   font-size: 18px;
   color: #fff;
   transition: 0.3s;
 }
-#Footer .FooterMain .FooterLeft .FooterSocialIcons a:hover {
+#Footer .FooterMain .FooterBox .FooterSocialIcons a:hover {
   color: var(--secondaryColor);
 }
-#Footer .FooterMain .FooterCenter {
-  width: 33.33%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-@media (max-width: 768px) {
-  #Footer .FooterMain .FooterCenter {
-    width: 50%;
-  }
-}
-@media (max-width: 480px) {
-  #Footer .FooterMain .FooterCenter {
-    width: 100%;
-  }
-}
-#Footer .FooterMain .FooterCenter .FooterHead {
-  font-size: 20px;
-  font-family: MyFont1;
-  font-weight: 500;
-  margin-bottom: 20px;
-  color: #fff;
-}
-#Footer .FooterMain .FooterCenter ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-#Footer .FooterMain .FooterCenter ul li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 15px;
-  cursor: pointer;
-  color: #fff;
-}
-#Footer .FooterMain .FooterCenter ul li svg {
-  font-size: 12px;
-}
-#Footer .FooterMain .FooterCenter ul li:hover {
-  color: var(--secondaryColor);
-}
-#Footer .FooterMain .FooterRight {
-  width: 33.33%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-@media (max-width: 768px) {
-  #Footer .FooterMain .FooterRight {
-    width: 50%;
-  }
-}
-@media (max-width: 480px) {
-  #Footer .FooterMain .FooterRight {
-    width: 100%;
-  }
-}
-#Footer .FooterMain .FooterRight .FooterHead {
-  font-size: 20px;
-  font-family: MyFont1;
-  font-weight: 0;
-  margin-bottom: 20px;
-  color: #fff;
-}
-#Footer .FooterMain .FooterRight .ContactAddressBox {
+#Footer .FooterMain .FooterBox .ContactAddressBox {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
-#Footer .FooterMain .FooterRight .ContactAddressBox .ConnectBox {
+#Footer .FooterMain .FooterBox .ContactAddressBox .ConnectBox {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-#Footer .FooterMain .FooterRight .ContactAddressBox .ConnectBox p {
+#Footer .FooterMain .FooterBox .ContactAddressBox .ConnectBox p {
   display: flex;
   flex-direction: column;
   gap: 5px;
   font-size: 15px;
   color: #fff;
 }
-#Footer .FooterMain .FooterRight .ContactAddressBox .ConnectBox svg {
+#Footer .FooterMain .FooterBox .ContactAddressBox .ConnectBox svg {
   color: #fff;
 }
-#Footer .FooterMain .FooterRight .ContactAddressBox .ConnectBox a {
+#Footer .FooterMain .FooterBox .ContactAddressBox .ConnectBox a {
   text-decoration: none;
   color: #fff;
 }

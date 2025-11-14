@@ -15,7 +15,7 @@ const Footer = () => {
     <div id="Footer">
       <div className="container">
         <div className="FooterMain">
-          <div className="FooterLeft">
+          <div className="FooterBox">
             <div className="FooterLogo">
               <Image src={FooterLogo} alt="" />
             </div>
@@ -37,7 +37,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="FooterCenter">
+          <div className="FooterBox">
             <h4 className="FooterHead">Quicklinks</h4>
             <ul>
               <li>
@@ -55,7 +55,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="FooterRight">
+          <div className="FooterBox">
             <h4 className="FooterHead">Contact</h4>
 
             <div className="ContactAddressBox">

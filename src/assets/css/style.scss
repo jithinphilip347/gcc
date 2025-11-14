@@ -580,7 +580,7 @@
                     }
                     @media (max-width: 480px) {
                         padding: 20px 20px;
-                        width: 90%;
+                        width: 100%;
                     }
                     p {
                         font-size: 14px;
@@ -1318,12 +1318,12 @@
     padding: 80px 0 0;
     .FooterMain {
         display: flex;
-        justify-content: space-between;
-        gap: 70px;
+        // justify-content: space-between;
+        gap: 40px;
         padding-bottom: 60px;
-        // flex-wrap: wrap;
-        .FooterLeft {
-            width: 33.33%;
+        flex-wrap: wrap;
+        .FooterBox {
+            width:calc(100% / 3 - 40px);
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -1357,42 +1357,7 @@
                 margin-bottom: 15px;
                 color: #fff;
             }
-
-            .FooterSocialIcons {
-                display: flex;
-                gap: 15px;
-
-                a {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border: 1px solid #fff;
-                    border-radius: 50%;
-                    width: 30px;
-                    height: 30px;
-                    svg {
-                        font-size: 18px;
-                        color: #fff;
-                        transition: 0.3s;
-                    }
-                    &:hover {
-                        color: var(--secondaryColor);
-                    }
-                }
-            }
-        }
-        .FooterCenter {
-            width: 33.33%;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            @media (max-width: 768px) {
-                width: 50%;
-            }
-            @media (max-width: 480px) {
-                width: 100%;
-            }
+            
             .FooterHead {
                 font-size: 20px;
                 font-family: MyFont1;
@@ -1424,26 +1389,30 @@
                     }
                 }
             }
-        }
-        .FooterRight {
-            width: 33.33%;
+
+            .FooterSocialIcons {
                 display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            @media (max-width: 768px) {
-                width: 50%;
+                gap: 15px;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid #fff;
+                    border-radius: 50%;
+                    width: 30px;
+                    height: 30px;
+                    svg {
+                        font-size: 18px;
+                        color: #fff;
+                        transition: 0.3s;
+                    }
+                    &:hover {
+                        color: var(--secondaryColor);
+                    }
+                }
             }
-            @media (max-width: 480px) {
-                width: 100%;
-            }
-            .FooterHead {
-                font-size: 20px;
-                font-family: MyFont1;
-                font-weight: 00;
-                margin-bottom: 20px;
-                color: #fff;
-            }
+
             .ContactAddressBox {
                 display: flex;
                 flex-direction: column;
@@ -1470,6 +1439,95 @@
                 }
             }
         }
+        // .FooterCenter {
+        //     width: 33.33%;
+        //     display: flex;
+        //     flex-direction: column;
+        //     align-items: flex-start;
+        //     justify-content: center;
+        //     @media (max-width: 768px) {
+        //         width: 50%;
+        //     }
+        //     @media (max-width: 480px) {
+        //         width: 100%;
+        //     }
+        //     .FooterHead {
+        //         font-size: 20px;
+        //         font-family: MyFont1;
+        //         font-weight: 500;
+        //         margin-bottom: 20px;
+        //         color: #fff;
+        //     }
+
+        //     ul {
+        //         list-style: none;
+        //         display: flex;
+        //         flex-direction: column;
+        //         gap: 12px;
+
+        //         li {
+        //             display: flex;
+        //             align-items: center;
+        //             gap: 10px;
+        //             font-size: 15px;
+        //             cursor: pointer;
+        //             color: #fff;
+
+        //             svg {
+        //                 font-size: 12px;
+        //             }
+
+        //             &:hover {
+        //                 color: var(--secondaryColor);
+        //             }
+        //         }
+        //     }
+        // }
+        // .FooterRight {
+        //     width: 33.33%;
+        //         display: flex;
+        //     flex-direction: column;
+        //     align-items: flex-start;
+        //     justify-content: center;
+        //     @media (max-width: 768px) {
+        //         width: 50%;
+        //     }
+        //     @media (max-width: 480px) {
+        //         width: 100%;
+        //     }
+        //     .FooterHead {
+        //         font-size: 20px;
+        //         font-family: MyFont1;
+        //         font-weight: 00;
+        //         margin-bottom: 20px;
+        //         color: #fff;
+        //     }
+        //     .ContactAddressBox {
+        //         display: flex;
+        //         flex-direction: column;
+        //         gap: 18px;
+        //         .ConnectBox {
+        //             display: flex;
+        //             align-items: center;
+        //             gap: 10px;
+        //             p {
+        //                 display: flex;
+        //                 flex-direction: column;
+        //                 gap: 5px;
+        //                 font-size: 15px;
+        //                 color: #fff;
+        //             }
+        //             svg {
+        //                 color: #fff;
+        //             }
+
+        //             a {
+        //                 text-decoration: none;
+        //                 color: #fff;
+        //             }
+        //         }
+        //     }
+        // }
     }
     .FooterBottom {
         background: #000;
