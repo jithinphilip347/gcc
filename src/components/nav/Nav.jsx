@@ -8,11 +8,13 @@ import { VscMenu } from "react-icons/vsc";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ContactSideNav from "../nav/ContactSideNav";
-import SideNav from "../nav/SideNav"; 
+import SideNav from "../nav/SideNav";
+import SearchPopup from "../SearchPopup/SearchPopup";
 
 const Nav = () => {
   const [showContact, setShowContact] = useState(false);
   const [showLeftNav, setShowLeftNav] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
   const pathname = usePathname();
 
   return (
@@ -57,7 +59,6 @@ const Nav = () => {
             </div>
 
             <div className="NavSearcTooglehMenu">
-
               <div
                 className="MainsideNavMenuIcon"
                 onClick={() => setShowLeftNav(true)}
@@ -66,10 +67,9 @@ const Nav = () => {
               </div>
 
               <div className="NavSearchMenu">
-                <div className="Searchicon">
+                <div className="Searchicon" onClick={() => setShowSearch(true)}>
                   <RiSearchLine />
                 </div>
-
                 <div
                   className="NavToogleMenu"
                   onClick={() => setShowContact(true)}
@@ -77,7 +77,6 @@ const Nav = () => {
                   <CgMenuRight />
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -92,6 +91,8 @@ const Nav = () => {
 
       <SideNav show={showLeftNav} onClose={() => setShowLeftNav(false)} />
 
+      {showSearch && <SearchPopup onClose={() => setShowSearch(false)} />}
+
       {showContact && (
         <div
           className="MenuRightOverlay"
@@ -99,7 +100,10 @@ const Nav = () => {
         ></div>
       )}
 
-      <ContactSideNav show={showContact} onClose={() => setShowContact(false)} />
+      <ContactSideNav
+        show={showContact}
+        onClose={() => setShowContact(false)}
+      />
     </>
   );
 };

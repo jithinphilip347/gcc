@@ -14,12 +14,11 @@ const HomeContact = () => {
 
         <div className="ContactMain">
           <div className="ContactMainLeft">
-            <p className="ContactTitle">
-              Get in Touch With GCC Academy
-            </p>
+            <p className="ContactTitle">Get in Touch With GCC Academy</p>
 
             <p className="ContactDesc">
-             Kerala’s leading institute for DHA, HAAD, PROMETRIC, SPLE, OMAN, and MOH exam preparation.
+              Kerala’s leading institute for DHA, HAAD, PROMETRIC, SPLE, OMAN,
+              and MOH exam preparation.
             </p>
 
             <div className="ContactAddressBox">
@@ -30,10 +29,10 @@ const HomeContact = () => {
 
               <div className="ConnectBox">
                 <HiOutlinePhone />
-                    <p className="numberBox">
-                    <a href=""> +91-79079 74340</a>
-                    <a href="">+91-70125 84203</a>
-                  </p>
+                <p className="numberBox">
+                  <a href=""> +91-79079 74340</a>
+                  <a href="">+91-70125 84203</a>
+                </p>
               </div>
 
               <div className="ConnectBox">
@@ -43,26 +42,21 @@ const HomeContact = () => {
             </div>
           </div>
 
-          {/* RIGHT SIDE FORM */}
           <div className="ContactMainRight">
             <form className="ContactFormGroup">
               <div className="ContactFormBox">
-                {/* <label>Your Name</label> */}
                 <input type="text" placeholder="Name" />
               </div>
 
               <div className="ContactFormBox">
-                {/* <label>Email Address</label> */}
                 <input type="email" placeholder="Your Email" />
               </div>
 
               <div className="ContactFormBox">
-                {/* <label>Phone Number</label> */}
                 <input type="text" placeholder="Your Phone Number" />
               </div>
 
               <div className="ContactFormBox">
-                {/* <label>Additional Info</label> */}
                 <textarea placeholder="Additional Info"></textarea>
               </div>
 
@@ -72,17 +66,7 @@ const HomeContact = () => {
             </form>
           </div>
         </div>
-       
       </div>
-       {/* <div className="ContactMap">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18..."
-            width="100%"
-            height="450"
-            style={{ border: 0 }}
-            loading="lazy"
-          ></iframe>
-        </div> */}
     </div>
   );
 };

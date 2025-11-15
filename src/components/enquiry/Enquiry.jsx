@@ -12,7 +12,7 @@ const Enquiry = ({ show, onClose }) => {
 
     toast.success("Enquiry Sent Successfully!");
 
-    onClose(); 
+    onClose();
   };
 
   return (
@@ -38,7 +38,6 @@ const Enquiry = ({ show, onClose }) => {
           </div>
 
           <div className="enquiryFieldBox customDropdown">
-
             <div
               className="dropdownHeader"
               onClick={() => setCourseOpen(!courseOpen)}

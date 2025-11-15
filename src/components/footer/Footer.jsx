@@ -21,7 +21,8 @@ const Footer = () => {
             </div>
 
             <p className="FooterDesc">
-              Providing trusted coaching for DHA, HAAD, PROMETRIC, OMAN, MOH, and other healthcare licensing exams in Kerala.
+              Providing trusted coaching for DHA, HAAD, PROMETRIC, OMAN, MOH,
+              and other healthcare licensing exams in Kerala.
             </p>
             <p className="FollowHead">Follow Us</p>
             <div className="FooterSocialIcons">
@@ -66,11 +67,10 @@ const Footer = () => {
 
               <div className="ConnectBox">
                 <HiOutlinePhone />
-                  <p className="numberBox">
-                    <a href=""> +91-79079 74340</a>
-                    <a href="">+91-70125 84203</a>
-                  </p>
-                
+                <p className="numberBox">
+                  <a href=""> +91-79079 74340</a>
+                  <a href="">+91-70125 84203</a>
+                </p>
               </div>
 
               <div className="ConnectBox">

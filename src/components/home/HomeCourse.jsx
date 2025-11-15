@@ -13,17 +13,17 @@ const HomeCourse = () => {
   return (
     <div id="HomeCourse">
       <div className="container">
-          <div className="HomeAboutHead">
-            <h2>
-              Our <span>Courses</span>
-            </h2>
-          </div>
+        <div className="HomeAboutHead">
+          <h2>
+            Our <span>Courses</span>
+          </h2>
+        </div>
         <div className="ViewAll">
-            <Link href="/course">
+          <Link href="/course">
             <p>View All</p>
-              <VscArrowRight />
-            </Link>
-          </div>
+            <VscArrowRight />
+          </Link>
+        </div>
         <div className="CourseMain">
           <div className="CourseBox">
             <div className="CourseIcon">
@@ -78,7 +78,6 @@ const HomeCourse = () => {
             </div>
           </div>
 
-          {/* BOX 2 - MOH (UAE) */}
           <div className="CourseBox">
             <div className="CourseIcon">
               <Image src={Logo2} alt="MOH UAE" />
@@ -133,7 +132,6 @@ const HomeCourse = () => {
             </div>
           </div>
 
-          {/* BOX 3 - KUWAIT MOH */}
           <div className="CourseBox">
             <div className="CourseIcon">
               <Image src={Logo3} alt="KUWAIT MOH" />

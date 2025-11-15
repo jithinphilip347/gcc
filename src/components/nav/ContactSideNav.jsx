@@ -66,7 +66,6 @@ const ContactSideNav = ({ show, onClose }) => {
               </div>
             </form>
           </div>
-
         </div>
       </div>
     </div>

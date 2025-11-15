@@ -1,29 +1,28 @@
-// "use client";
-// import React from "react";
-// import { RiSearchLine } from "react-icons/ri";
-// import { IoClose } from "react-icons/io5";
+"use client";
+import React from "react";
+import { RiSearchLine } from "react-icons/ri";
+import { IoMdClose } from "react-icons/io";
 
-// const SearchPopup = ({ onClose }) => {
-//   return (
-//     <div className="SearchPopup">
-//       <div className="SearchPopupOverlay" onClick={onClose}></div>
-//       <div className="SearchPopupContent animate__animated animate__fadeInDown">
-//         <div className="SearchBarWrapper">
-//           <input
-//             type="text"
-//             placeholder="Search Course..."
-//             className="SearchInput"
-//           />
-//           <div className="SearchIcons">
-//             <RiSearchLine className="searchIcon" />
-//             <button className="CloseBtn" onClick={onClose}>
-//               <IoClose />
-//             </button>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
+const SearchPopup = ({ onClose }) => {
+  return (
+    <div id="SearchPopup">
+      <div className="SearchPopupOverlay" onClick={onClose}></div>
 
-// export default SearchPopup;
+      <div className="SearchPopupContainer">
+        <button className="SearchCloseIcon" onClick={onClose}>
+          <IoMdClose />
+        </button>
+
+        <div className="SearchBarWrapper">
+          <input type="text" placeholder="Search..." className="SearchInput" />
+
+          <button className="SearchBtn">
+            <RiSearchLine />
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default SearchPopup;

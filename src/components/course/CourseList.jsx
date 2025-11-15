@@ -13,8 +13,6 @@ const CourseList = () => {
     <div id="CourseList">
       <div className="container">
         <div className="CourseMain">
-
-          {/* BOX 1 - DHA */}
           <div className="CourseBox">
             <div className="CourseIcon">
               <Image src={Logo1} alt="DHA Course" />
@@ -35,30 +33,39 @@ const CourseList = () => {
               </div>
               <div className="CriteriaBox">
                 <div className="Box">
-                  <div className="CheckmarkIcon"><IoMdCheckmark /></div>
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
                   <p>D pharm/B pharm (Minimum)</p>
                 </div>
                 <div className="Box">
-                  <div className="CheckmarkIcon"><IoMdCheckmark /></div>
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
                   <p>Minimum experience required: 2 years</p>
                 </div>
                 <div className="Box">
-                  <div className="CheckmarkIcon"><IoMdCheckmark /></div>
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
                   <p>Total Questions: 150 MCQs</p>
                 </div>
                 <div className="Box">
-                  <div className="CheckmarkIcon"><IoMdCheckmark /></div>
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
                   <p>Time Allotted: 165 minutes (2 hours 45 minutes)</p>
                 </div>
                 <div className="Box">
-                  <div className="CheckmarkIcon"><IoMdCheckmark /></div>
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
                   <p>Passing Score: 60% (90 correct answers minimum)</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* BOX 2 - MOH UAE */}
           <div className="CourseBox">
             <div className="CourseIcon">
               <Image src={Logo2} alt="MOH UAE" />
@@ -79,16 +86,40 @@ const CourseList = () => {
                 <p>Eligibility Criteria</p>
               </div>
               <div className="CriteriaBox">
-                <div className="Box"><div className="CheckmarkIcon"><IoMdCheckmark /></div><p>D pharm/B pharm (Minimum)</p></div>
-                <div className="Box"><div className="CheckmarkIcon"><IoMdCheckmark /></div><p>Minimum experience required: 2 years</p></div>
-                <div className="Box"><div className="CheckmarkIcon"><IoMdCheckmark /></div><p>Passing Score: 60% of total marks</p></div>
-                <div className="Box"><div className="CheckmarkIcon"><IoMdCheckmark /></div><p>Total Questions: Around 100 MCQs</p></div>
-                <div className="Box"><div className="CheckmarkIcon"><IoMdCheckmark /></div><p>Duration: ~2 hours (computer-based Prometric exam)</p></div>
+                <div className="Box">
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
+                  <p>D pharm/B pharm (Minimum)</p>
+                </div>
+                <div className="Box">
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
+                  <p>Minimum experience required: 2 years</p>
+                </div>
+                <div className="Box">
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
+                  <p>Passing Score: 60% of total marks</p>
+                </div>
+                <div className="Box">
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
+                  <p>Total Questions: Around 100 MCQs</p>
+                </div>
+                <div className="Box">
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
+                  <p>Duration: ~2 hours (computer-based Prometric exam)</p>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* BOX 3 - KUWAIT MOH */}
           <div className="CourseBox">
             <div className="CourseIcon">
               <Image src={Logo3} alt="KUWAIT MOH" />
@@ -109,15 +140,34 @@ const CourseList = () => {
                 <p>Eligibility Criteria</p>
               </div>
               <div className="CriteriaBox">
-                <div className="Box"><div className="CheckmarkIcon"><IoMdCheckmark /></div><p>B pharm (Minimum)</p></div>
-                <div className="Box"><div className="CheckmarkIcon"><IoMdCheckmark /></div><p>Minimum experience required: 2 years</p></div>
-                <div className="Box"><div className="CheckmarkIcon"><IoMdCheckmark /></div><p>Total Questions: 50 MCQs (English - 30, Arabic - 20)</p></div>
-                <div className="Box"><div className="CheckmarkIcon"><IoMdCheckmark /></div><p>Passing Score: 60% with aural exam</p></div>
+                <div className="Box">
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
+                  <p>B pharm (Minimum)</p>
+                </div>
+                <div className="Box">
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
+                  <p>Minimum experience required: 2 years</p>
+                </div>
+                <div className="Box">
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
+                  <p>Total Questions: 50 MCQs (English - 30, Arabic - 20)</p>
+                </div>
+                <div className="Box">
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
+                  <p>Passing Score: 60% with aural exam</p>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* BOX 4 - DOH (HAAD) */}
           <div className="CourseBox">
             {/* <div className="CourseIcon">
               <Image src={Logo4} alt="SPLE" />
@@ -133,20 +183,46 @@ const CourseList = () => {
             </div>
 
             <div className="Eligibility">
-              <div className="EligibilityTitle"><p>Eligibility Criteria</p></div>
+              <div className="EligibilityTitle">
+                <p>Eligibility Criteria</p>
+              </div>
               <div className="CriteriaBox">
-                <div className="Box"><div className="CheckmarkIcon"><IoMdCheckmark /></div><p>B pharm (Minimum)</p></div>
-                <div className="Box"><div className="CheckmarkIcon"><IoMdCheckmark /></div><p>Minimum experience required: 2 years</p></div>
-                <div className="Box"><div className="CheckmarkIcon"><IoMdCheckmark /></div><p>Number of Questions: 150 MCQs</p></div>
-                <div className="Box"><div className="CheckmarkIcon"><IoMdCheckmark /></div><p>Duration: 3 hours</p></div>
-                <div className="Box"><div className="CheckmarkIcon"><IoMdCheckmark /></div><p>Passing Score: 55–60%</p></div>
+                <div className="Box">
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
+                  <p>B pharm (Minimum)</p>
+                </div>
+                <div className="Box">
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
+                  <p>Minimum experience required: 2 years</p>
+                </div>
+                <div className="Box">
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
+                  <p>Number of Questions: 150 MCQs</p>
+                </div>
+                <div className="Box">
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
+                  <p>Duration: 3 hours</p>
+                </div>
+                <div className="Box">
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
+                  <p>Passing Score: 55–60%</p>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* BOX 5 - SPLE SAUDI */}
           <div className="CourseBox">
-             <div className="CourseIcon">
+            <div className="CourseIcon">
               <Image src={Logo5} alt="SPLE" />
             </div>
             <div className="CourseTitle">
@@ -160,18 +236,44 @@ const CourseList = () => {
             </div>
 
             <div className="Eligibility">
-              <div className="EligibilityTitle"><p>Eligibility Criteria</p></div>
+              <div className="EligibilityTitle">
+                <p>Eligibility Criteria</p>
+              </div>
               <div className="CriteriaBox">
-                <div className="Box"><div className="CheckmarkIcon"><IoMdCheckmark /></div><p>B pharm (Minimum)</p></div>
-                <div className="Box"><div className="CheckmarkIcon"><IoMdCheckmark /></div><p>Minimum experience required: 2 years</p></div>
-                <div className="Box"><div className="CheckmarkIcon"><IoMdCheckmark /></div><p>Number of Questions: 150 MCQs</p></div>
-                <div className="Box"><div className="CheckmarkIcon"><IoMdCheckmark /></div><p>Duration: 2 hours</p></div>
-                <div className="Box"><div className="CheckmarkIcon"><IoMdCheckmark /></div><p>Passing Score: 55–60%</p></div>
+                <div className="Box">
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
+                  <p>B pharm (Minimum)</p>
+                </div>
+                <div className="Box">
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
+                  <p>Minimum experience required: 2 years</p>
+                </div>
+                <div className="Box">
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
+                  <p>Number of Questions: 150 MCQs</p>
+                </div>
+                <div className="Box">
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
+                  <p>Duration: 2 hours</p>
+                </div>
+                <div className="Box">
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
+                  <p>Passing Score: 55–60%</p>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* BOX 6 - BAHRAIN */}
           <div className="CourseBox">
             <div className="CourseIcon">
               <p className="text-logo">BPLE</p>
@@ -187,17 +289,43 @@ const CourseList = () => {
             </div>
 
             <div className="Eligibility">
-              <div className="EligibilityTitle"><p>Eligibility Criteria</p></div>
+              <div className="EligibilityTitle">
+                <p>Eligibility Criteria</p>
+              </div>
               <div className="CriteriaBox">
-                <div className="Box"><div className="CheckmarkIcon"><IoMdCheckmark /></div><p>B pharm (Minimum)</p></div>
-                <div className="Box"><div className="CheckmarkIcon"><IoMdCheckmark /></div><p>Minimum experience required: 2 years</p></div>
-                <div className="Box"><div className="CheckmarkIcon"><IoMdCheckmark /></div><p>Number of Questions: 150 MCQs</p></div>
-                <div className="Box"><div className="CheckmarkIcon"><IoMdCheckmark /></div><p>Duration: 2.5 hours</p></div>
-                <div className="Box"><div className="CheckmarkIcon"><IoMdCheckmark /></div><p>Passing Score: 60%</p></div>
+                <div className="Box">
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
+                  <p>B pharm (Minimum)</p>
+                </div>
+                <div className="Box">
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
+                  <p>Minimum experience required: 2 years</p>
+                </div>
+                <div className="Box">
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
+                  <p>Number of Questions: 150 MCQs</p>
+                </div>
+                <div className="Box">
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
+                  <p>Duration: 2.5 hours</p>
+                </div>
+                <div className="Box">
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
+                  <p>Passing Score: 60%</p>
+                </div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>

@@ -1800,7 +1800,7 @@
   top: 50%;
   left: 50%;
   width: 100%;
-  background: rgba(240, 239, 228, 0.6784313725);
+  background: rgba(0, 0, 0, 0.87);
   transform: translate(-50%, -50%);
   z-index: 999;
   animation: popupIn 0.3s ease;
@@ -1825,7 +1825,7 @@
   right: 12px;
   font-size: 32px;
   cursor: pointer;
-  color: #000;
+  color: #fff;
 }
 #Enquiry .EnquiryPopup form {
   display: flex;
@@ -1840,25 +1840,28 @@
 }
 #Enquiry .EnquiryPopup form .enquiryFieldBox input {
   border: none;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #fff;
   padding: 8px 0;
   font-size: 15px;
   background: transparent;
   outline: none;
 }
 #Enquiry .EnquiryPopup form .enquiryFieldBox input::-moz-placeholder {
-  color: #000;
+  color: #fff;
 }
 #Enquiry .EnquiryPopup form .enquiryFieldBox input::placeholder {
-  color: #000;
+  color: #fff;
 }
 #Enquiry .EnquiryPopup form .customDropdown {
   position: relative;
 }
 #Enquiry .EnquiryPopup form .customDropdown .dropdownHeader {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #fff;
   padding: 8px 0;
   cursor: pointer;
+}
+#Enquiry .EnquiryPopup form .customDropdown .dropdownHeader p {
+  color: #fff;
 }
 #Enquiry .EnquiryPopup form .customDropdown .dropdownList {
   background: #f0efe4;
@@ -1867,7 +1870,6 @@
   left: 0;
   width: 100%;
   border: 1px solid #ddd;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   z-index: 1000;
 }
 #Enquiry .EnquiryPopup form .customDropdown .dropdownList li {
@@ -2063,4 +2065,99 @@
 #HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamDetailsBox .OurTeamContactBox a svg {
   font-size: 20px;
   color: var(--primaryColor);
+}
+
+#SearchPopup {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+}
+#SearchPopup .SearchPopupOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.87);
+  z-index: 9998;
+}
+#SearchPopup .SearchPopupContainer {
+  position: relative;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#SearchPopup .SearchCloseIcon {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  background: transparent;
+  border: none;
+  font-size: 45px;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 5px;
+}
+#SearchPopup .SearchBarWrapper {
+  width: 55%;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  padding: 12px 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: fadeInDown 0.4s ease-in-out;
+}
+@media (max-width: 1024px) {
+  #SearchPopup .SearchBarWrapper {
+    width: 70%;
+  }
+}
+@media (max-width: 768px) {
+  #SearchPopup .SearchBarWrapper {
+    width: 85%;
+  }
+}
+@media (max-width: 480px) {
+  #SearchPopup .SearchBarWrapper {
+    width: 90%;
+    padding: 10px 20px;
+  }
+}
+#SearchPopup .SearchInput {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 20px;
+  font-family: MyFont1;
+}
+#SearchPopup .SearchInput::-moz-placeholder {
+  color: #fff;
+  opacity: 0.8;
+}
+#SearchPopup .SearchInput::placeholder {
+  color: #fff;
+  opacity: 0.8;
+}
+#SearchPopup .SearchBtn {
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }/*# sourceMappingURL=style.css.map */

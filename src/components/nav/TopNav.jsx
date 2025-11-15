@@ -35,14 +35,26 @@ const TopNav = () => {
 
             <div className="TopNavMainRight">
               <div className="TopNavSocialBox">
-                <a href="https://instagram.com" target="_blank" className="social-icon" >
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  className="social-icon"
+                >
                   <IoLogoInstagram />
                 </a>
-                <a href="https://facebook.com" target="_blank" className="social-icon" >
-                  <FaFacebookF/>
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  className="social-icon"
+                >
+                  <FaFacebookF />
                 </a>
-                <a href="https://youtube.com" target="_blank" className="social-icon" >
-                  <IoLogoYoutube/>
+                <a
+                  href="https://youtube.com"
+                  target="_blank"
+                  className="social-icon"
+                >
+                  <IoLogoYoutube />
                 </a>
               </div>
 
