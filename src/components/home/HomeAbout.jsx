@@ -24,9 +24,9 @@ const HomeAbout = () => {
                   Thinking insights, verified-driven research, and proven
                   learning strategies to help nurses achieve global success.
                 </p>
-                <div className="AboutRightArrow">
+                {/* <div className="AboutRightArrow">
                   <VscArrowRight />
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

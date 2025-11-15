@@ -127,7 +127,6 @@
 }
 #Nav .NavMain .NavLink {
   padding: 0 20px;
-  border-right: 1px solid #f0efe4;
 }
 #Nav .NavMain .NavLink ul {
   display: flex;
@@ -1495,7 +1494,8 @@
   flex-direction: column;
   gap: 12px;
 }
-#Footer .FooterMain .FooterBox ul li {
+#Footer .FooterMain .FooterBox ul li a {
+  text-decoration: none;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -1503,10 +1503,10 @@
   cursor: pointer;
   color: #fff;
 }
-#Footer .FooterMain .FooterBox ul li svg {
+#Footer .FooterMain .FooterBox ul li a svg {
   font-size: 12px;
 }
-#Footer .FooterMain .FooterBox ul li:hover {
+#Footer .FooterMain .FooterBox ul li a:hover {
   color: var(--secondaryColor);
 }
 #Footer .FooterMain .FooterBox .FooterSocialIcons {

@@ -1,5 +1,8 @@
+"use client"
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import FooterLogo from "../../assets/images/logo/logo-white.png";
 import DesignLogo from "../../assets/images/logo/design-logo.png";
@@ -11,6 +14,8 @@ import { HiOutlineLocationMarker, HiOutlineMail } from "react-icons/hi";
 import { HiOutlinePhone } from "react-icons/hi2";
 
 const Footer = () => {
+    const pathname = usePathname();
+  
   return (
     <div id="Footer">
       <div className="container">
@@ -41,18 +46,38 @@ const Footer = () => {
           <div className="FooterBox">
             <h4 className="FooterHead">Quicklinks</h4>
             <ul>
-              <li>
+              {/* <li>
                 <FaChevronRight /> Home
               </li>
               <li>
                 <FaChevronRight /> Course
-              </li>
+              </li> */}
               <li>
+              <Link
+                href="/"
+                className={pathname === "/" ? "active" : ""}
+                
+              >
+                 <FaChevronRight />
+                Home
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                href="/course"
+                className={pathname === "/course" ? "active" : ""}
+              >
+                 <FaChevronRight />
+                Course
+              </Link>
+            </li>
+              {/* <li>
                 <FaChevronRight /> About
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <FaChevronRight /> Contact
-              </li>
+              </li> */}
             </ul>
           </div>
 

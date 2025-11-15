@@ -4,6 +4,7 @@ import Image from "next/image";
 import { IoStar } from "react-icons/io5";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 import Student1 from "../../assets/images/Students/Divya Mariam(DHA).jpg";
@@ -53,8 +54,13 @@ const HomeTestimonial = () => {
         </div>
 
         <div className="TestimonialMain">
-          <Swiper
+           <Swiper
+            modules={[Autoplay]}                    
             loop={true}
+            autoplay={{
+              delay: 2500,                          
+              disableOnInteraction: false,
+            }}
             spaceBetween={20}
             className="testimonialSwiper"
             breakpoints={{

@@ -42,19 +42,19 @@ const Nav = () => {
                     Course
                   </Link>
                 </li>
-
+{/* 
                 <li>
                   <Link href="#HomeAbout">About</Link>
-                </li>
+                </li> */}
 
-                <li>
+                {/* <li>
                   <Link
-                    href="/contact"
-                    className={pathname === "/contact" ? "active" : ""}
+                    href="#"
+                    className={pathname === "#" ? "active" : ""}
                   >
                     Contact
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
 
