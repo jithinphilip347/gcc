@@ -4,6 +4,8 @@ import '../assets/css/style.css';
 import Nav from '@/components/nav/Nav';
 import Footer from '@/components/footer/Footer';
 import { Toaster } from "react-hot-toast";
+import WhatsappWidget from '@/components/support/WhatsappWidget';
+import MessageWidget from '@/components/support/MessageWidget';
 
 export const metadata = {
   title: "GCC Academy – Leading Online Coaching for DHA, HAAD, MOH, SPLE & Prometric Exams",
@@ -20,6 +22,7 @@ export default function RootLayout({ children }) {
       <body>
         <TopNav />
         <Nav />
+         <WhatsappWidget />
         {children}
         <Toaster position="top-right" reverseOrder={false} />
         <Footer />

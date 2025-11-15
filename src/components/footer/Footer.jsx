@@ -26,15 +26,15 @@ const Footer = () => {
             </p>
             <p className="FollowHead">Follow Us</p>
             <div className="FooterSocialIcons">
-              <a href="">
+              <a href="https://www.facebook.com/people/gccacademy/61552640540223/">
                 <FaFacebookF />
               </a>
-              <a href="">
+              <a href="https://www.instagram.com/gcc_gulfcoaching/">
                 <IoLogoInstagram />
               </a>
-              <a href="">
+              {/* <a href="">
                 <FaLinkedinIn />
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -68,14 +68,14 @@ const Footer = () => {
               <div className="ConnectBox">
                 <HiOutlinePhone />
                 <p className="numberBox">
-                  <a href=""> +91-79079 74340</a>
-                  <a href="">+91-70125 84203</a>
+                  <a href="tel:+917907974340"> +91 79079 74340</a>
+                  <a href="tel:+917012584203">+91 70125 84203</a>
                 </p>
               </div>
 
               <div className="ConnectBox">
                 <HiOutlineMail />
-                <a href="">info@gccacademy.net</a>
+                <a href="mailto:info@gccacademy.net">info@gccacademy.net</a>
               </div>
             </div>
           </div>

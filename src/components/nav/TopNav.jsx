@@ -36,26 +36,26 @@ const TopNav = () => {
             <div className="TopNavMainRight">
               <div className="TopNavSocialBox">
                 <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  className="social-icon"
-                >
-                  <IoLogoInstagram />
-                </a>
-                <a
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/people/gccacademy/61552640540223/"
                   target="_blank"
                   className="social-icon"
                 >
                   <FaFacebookF />
                 </a>
                 <a
+                  href="https://www.instagram.com/gcc_gulfcoaching/"
+                  target="_blank"
+                  className="social-icon"
+                >
+                  <IoLogoInstagram />
+                </a>
+                {/* <a
                   href="https://youtube.com"
                   target="_blank"
                   className="social-icon"
                 >
                   <IoLogoYoutube />
-                </a>
+                </a> */}
               </div>
 
               <div className="TopNavEnquiryBtn">
