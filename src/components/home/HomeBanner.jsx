@@ -14,29 +14,56 @@ const HomeBanner = () => {
     message: "",
   });
 
+  const [isSubmitting,setIsSubmitting] = useState(false);
+
   const handleChange = (e) => {
     setForm({
       ...form,
       [e.target.name]: e.target.value,
     });
   };
-
-  const handleSubmit = (e) => {
+  
+  const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbyWavRSb28rJqWs9ReBcOz28eYdnHZ-mrBb7_qLrihNvTCEq2xotni2J99g_KCBlH5g/exec";
+  
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (!form.name || !form.email || !form.phone || !form.message) {
+    setIsSubmitting(true)
+    if (!form.name || !form.email || !form.phone ) {
       toast.error("Please fill all fields!");
       return;
     }
 
-    toast.success("Booking Submitted Successfully!");
+    try {
+      const res = await fetch(GOOGLE_SHEET_URL, {
+        method: "POST",
+        body: JSON.stringify(form),
+      });
 
-    setForm({
-      name: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
+      const data = await res.json();
+      
+      if (data.success) {
+        toast.success("Booking Submitted Successfully!");
+        setForm({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      }
+    } catch (err) {
+      console.error(err)
+    } finally {
+      setIsSubmitting(false)
+      toast.success("Booking Submitted Successfully!");
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    }
+
+    
   };
 
   return (
@@ -133,7 +160,7 @@ const HomeBanner = () => {
                 </div>
 
                 <div className="FormBtn">
-                  <button type="submit">Book Now</button>
+                  <button type="submit"> {isSubmitting ? "Booking..." : "Book Now"}</button>
                 </div>
               </form>
             </div>

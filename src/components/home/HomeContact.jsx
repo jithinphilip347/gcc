@@ -1,8 +1,86 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { HiOutlineLocationMarker, HiOutlineMail } from "react-icons/hi";
 import { HiOutlinePhone } from "react-icons/hi2";
+import toast from "react-hot-toast";
+
+const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbz4XWLtGvFqCkeAcbiQcKnlg-YArvMlp2nr0WQrFhDcY40sprlR6czH1rrqsi31dOGg/exec";
 
 const HomeContact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [statusMessage, setStatusMessage] = useState("");
+
+  const handleChange = (e) => {
+    setErrors({});
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const validateForm = () => {
+    let newErrors = {};
+    if (!formData.name.trim()) newErrors.name = "Name is required";
+    if (!formData.email.trim()) newErrors.email = "Email is required";
+    if (!formData.phone.trim()) newErrors.phone = "Phone number is required";
+    
+    return newErrors;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const validation = validateForm();
+    setErrors(validation);
+
+    if (Object.keys(validation).length !== 0) return;
+
+    setIsSubmitting(true);
+    setStatusMessage("");
+
+    try {
+      const res = await fetch(GOOGLE_SHEET_URL, {
+        method: "POST",
+        body: JSON.stringify(formData),
+      });
+      
+
+      const data = await res.json();
+     
+      if (data.success) {
+        toast.success("")
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        setStatusMessage("Failed to send. Please try again!");
+      }
+    } catch (err) {
+       console.log(JSON.stringify(formData),err)
+
+      setStatusMessage("Something went wrong!");
+    } finally {
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+      toast.success("Message Sent Succesfully")
+    }
+
+    setIsSubmitting(false);
+  };
+
   return (
     <div id="HomeContact">
       <div className="container">
@@ -13,6 +91,7 @@ const HomeContact = () => {
         </div>
 
         <div className="ContactMain">
+          {/* LEFT SIDE */}
           <div className="ContactMainLeft">
             <p className="ContactTitle">Get in Touch With GCC Academy</p>
 
@@ -24,13 +103,13 @@ const HomeContact = () => {
             <div className="ContactAddressBox">
               <div className="ConnectBox">
                 <HiOutlineLocationMarker />
-                <a>Building No. 625/10Keezhillam, Pin - 683541, Kerala India</a>
+                <a>Building No. 625/10, Keezhillam, Pin - 683541, Kerala, India</a>
               </div>
 
               <div className="ConnectBox">
                 <HiOutlinePhone />
                 <p className="numberBox">
-                  <a href="tel:+917907974340"> +91-79079 74340</a>
+                  <a href="tel:+917907974340">+91-79079 74340</a>
                   <a href="tel:+917012584203">+91-70125 84203</a>
                 </p>
               </div>
@@ -42,27 +121,68 @@ const HomeContact = () => {
             </div>
           </div>
 
+          {/* RIGHT SIDE FORM */}
           <div className="ContactMainRight">
-            <form className="ContactFormGroup">
+            <form className="ContactFormGroup" onSubmit={handleSubmit}>
               <div className="ContactFormBox">
-                <input type="text" placeholder="Name" />
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                />
+                
               </div>
 
               <div className="ContactFormBox">
-                <input type="email" placeholder="Your Email" />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+               
               </div>
 
               <div className="ContactFormBox">
-                <input type="text" placeholder="Your Phone Number" />
+                <input
+                  type="text"
+                  name="phone"
+                  placeholder="Your Phone Number"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                />
+                
               </div>
 
               <div className="ContactFormBox">
-                <textarea placeholder="Additional Info"></textarea>
+                <textarea
+                  name="message"
+                  placeholder="Additional Info"
+                  value={formData.message}
+                  onChange={handleChange}
+                ></textarea>
+                
               </div>
 
               <div className="ContactBtn">
-                <button type="submit">Get Quote</button>
+                <button type="submit" disabled={isSubmitting}>
+                  {isSubmitting ? (
+                    <>
+                      <p>Submitting...</p>
+                    </>
+                  ) : (
+                    "Get Quote"
+                  )}
+                </button>
               </div>
+
+              
             </form>
           </div>
         </div>
