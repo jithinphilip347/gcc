@@ -47,7 +47,7 @@ const Enquiry = ({ show, onClose }) => {
 
             {courseOpen && (
               <ul className="dropdownList">
-                {["DHA", "MOH", "DOH"].map((item) => (
+                {["Pharmacy", "Radiology", "DHA", "MOH", "DOH"].map((item) => (
                   <li
                     key={item}
                     onClick={() => {

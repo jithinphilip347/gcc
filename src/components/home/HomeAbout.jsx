@@ -22,7 +22,7 @@ const HomeAbout = () => {
               <div className="ShortAboutContentBox">
                 <p>
                   Thinking insights, verified-driven research, and proven
-                  learning strategies to help nurses achieve global success.
+                  learning strategies to help  healthcare professionals achieve global success.
                 </p>
                 {/* <div className="AboutRightArrow">
                   <VscArrowRight />
@@ -34,13 +34,12 @@ const HomeAbout = () => {
           <div className="AboutMainRight">
             <div className="AboutContentBox">
               <div className="AboutTitle">
-                <h2>Leading Nursing Licensing Exam Coaching Academy in GCC</h2>
+                <h2>Leading Healthcare Licensing Exam Coaching Academy</h2>
               </div>
               <div className="AboutDesc">
                 <p>
-                  We specialize in providing comprehensive coaching for nurses
-                  and healthcare professionals preparing for DHA, HAAD,
-                  PROMETRIC, MOH, and other GCC licensing exams. With expert
+                  We specialize in providing comprehensive coaching for healthcare professionals preparing for 
+                   DHA, HAAD, PROMETRIC, MOH, and other GCC licensing exams. With expert
                   mentors, structured materials, and real-time mock sessions,
                   we’ve helped thousands of students secure their professional
                   licenses and build successful international careers in the

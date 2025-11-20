@@ -83,7 +83,7 @@ const HomeBanner = () => {
             </div>
 
             <div className="MainTitle">
-              <h1>Achieve Global Success in DHA, HAAD, PROMETRIC, MOH</h1>
+              <h1>Achieve Global Success in DHA, HAAD, PROMETRIC (SAUDI, OMAN, QATAR, KUWAIT & BAHRAIN), MOH</h1>
             </div>
 
             <div className="MainDesc">

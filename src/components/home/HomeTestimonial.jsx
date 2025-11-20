@@ -49,7 +49,7 @@ const HomeTestimonial = () => {
       <div className="container">
         <div className="HomeAboutHead">
           <h2>
-            Our <span>Testimonial</span>
+            Students <span>Speak</span>
           </h2>
         </div>
 
