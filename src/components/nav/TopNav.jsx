@@ -60,7 +60,7 @@ const TopNav = () => {
 
               <div className="TopNavEnquiryBtn">
                 <button onClick={() => setShowEnquiry(true)}>
-                  Get Enquiry
+                  Contact Us
                 </button>
               </div>
             </div>

@@ -47,7 +47,7 @@ const HomeAbout = () => {
                 </p>
               </div>
 
-              <div className="AboutStats">
+              {/* <div className="AboutStats">
                 <div className="StatBox">
                   <FaUserGraduate />
                   <h3>1000+</h3>
@@ -63,7 +63,7 @@ const HomeAbout = () => {
                   <h3>7+</h3>
                   <p>GCC Countries Covered</p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

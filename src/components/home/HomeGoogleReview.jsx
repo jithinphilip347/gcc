@@ -1,20 +1,46 @@
 "use client";
-import React, {useRef, useState , useEffect} from "react";
-import Image from "next/image";
-import BannerImg from "../../assets/images/bannerimg.jpg";
+import React, {useRef,  useState, useEffect } from "react";
+import BannerImg from "../../assets/images/review.jpg";
 import { VscArrowRight } from "react-icons/vsc";
 import toast from "react-hot-toast";
 import Link from "next/link";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-import HomeDemoPopup from "./HomeDemoPopup";
+import { FaStar } from "react-icons/fa";
+import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css"; 
 
 const programData = {
   Pharmacy: ["Diploma in Pharmacy", "Clinical Pharmacy", "Pharmacovigilance"],
   Radiology: ["CT Scan", "MRI Technology", "X-Ray Technician"],
 };
 
-const HomeBanner = () => {
-  const [form, setForm] = useState({
+const reviews = [
+  {
+    name: "Mohammad Faishal",
+    date: "6 months ago",
+    desc: "Hello, Everyone I feel very happy after Joining GCC academy, I would recommend it is very good Platform for many students who want to clear Prometric Exam, I would like to thanks Mrs Greeshma Ma'am.",
+  },
+  {
+    name: "Anjali Krishna",
+    date: "2 months ago",
+    desc: "Excellent coaching and support. The study materials provided were very helpful for my DHA exam preparation. Highly recommended!",
+  },
+  {
+    name: "Rahul R",
+    date: "1 month ago",
+    desc: "Great experience with GCC Academy. The faculties are very supportive and the classes are very interactive.",
+  },
+  {
+    name: "Sarah John",
+    date: "3 months ago",
+    desc: "I cleared my HAAD exam in the first attempt. Thank you GCC Academy for the guidance.",
+  },
+];
+
+const HomeGoogleReview = () => {
+
+  const [form, setForm] = useState({ 
     name: "",
     email: "",
     phone: "",
@@ -26,8 +52,6 @@ const HomeBanner = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [programOpen, setProgramOpen] = useState(false);
   const [courseOpen, setCourseOpen] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
-
   const programRef = useRef(null);
 const courseRef = useRef(null);
 
@@ -50,45 +74,6 @@ const courseRef = useRef(null);
   const GOOGLE_SHEET_URL =
     "https://script.google.com/macros/s/AKfycbyWavRSb28rJqWs9ReBcOz28eYdnHZ-mrBb7_qLrihNvTCEq2xotni2J99g_KCBlH5g/exec";
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   setIsSubmitting(true)
-  //   if (!form.name || !form.email || !form.phone ) {
-  //     toast.error("Please fill all fields!");
-  //     return;
-  //   }
-
-  //   try {
-  //     const res = await fetch(GOOGLE_SHEET_URL, {
-  //       method: "POST",
-  //       body: JSON.stringify(form),
-  //     });
-
-  //     const data = await res.json();
-
-  //     if (data.success) {
-  //       toast.success("Booking Submitted Successfully!");
-  //       setForm({
-  //         name: "",
-  //         email: "",
-  //         phone: "",
-  //         message: "",
-  //       });
-  //     }
-  //   } catch (err) {
-  //     console.error(err)
-  //   } finally {
-  //     setIsSubmitting(false)
-  //     toast.success("Booking Submitted Successfully!");
-  //     setForm({
-  //       name: "",
-  //       email: "",
-  //       phone: "",
-  //       message: "",
-  //     });
-  //   }
-
-  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -128,80 +113,93 @@ const courseRef = useRef(null);
     }
   };
 
-  useEffect(() => {
-  const handleClickOutside = (event) => {
-    if (programRef.current && !programRef.current.contains(event.target)) {
-      setProgramOpen(false);
-    }
-
-    if (courseRef.current && !courseRef.current.contains(event.target)) {
-      setCourseOpen(false);
-    }
-  };
-
-  document.addEventListener("mousedown", handleClickOutside);
-
-  return () => {
-    document.removeEventListener("mousedown", handleClickOutside);
-  };
-}, []);
-
+    useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (programRef.current && !programRef.current.contains(event.target)) {
+        setProgramOpen(false);
+      }
+  
+      if (courseRef.current && !courseRef.current.contains(event.target)) {
+        setCourseOpen(false);
+      }
+    };
+  
+    document.addEventListener("mousedown", handleClickOutside);
+  
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   return (
-    <>
-    <div
-      id="HomeBanner"
-      style={{
-        backgroundImage: `url(${BannerImg.src})`,
-      }}
-    >
+        <div
+        id="HomeReview"
+        style={{
+            backgroundImage: `url(${BannerImg.src})`,
+        }}
+        >
       <div className="overlay"></div>
-
       <div className="container">
-        <div className="BannerMain">
-          <div className="BannerMainLeft">
+        <div className="GoogleReviewMain">
+                 <div className="GoogleReviewLeft">
             <div className="MainShortTitle">
-              <p>ACE YOUR HEALTHCARE LICENSING EXAMS ABROAD!</p>
+              <p>gccacademy Reviews</p>
             </div>
-
-            <div className="MainTitle">
-              <h1>
-                Achieve Global Success in DHA, HAAD, PROMETRIC (SAUDI, OMAN,
-                QATAR, KUWAIT & BAHRAIN), MOH
-              </h1>
-            </div>
-
-            <div className="MainDesc">
-              <p>
-                Prepare confidently for your healthcare licensing exams across
-                <b>
-                  {" "}
-                  Oman, Qatar, Saudi Arabia, UAE, Bahrain, Kuwait, and
-                  Australia.
-                </b>
-                Access comprehensive study resources, regional language
-                guidance, and community support designed to help you succeed
-                globally.
-              </p>
-            </div>
-
-            <div className="MainBannerBtn">
-              <div className="MainCourseBtn">
-                <Link href="/course">
-                  <button>Explore Courses</button>
-                  <VscArrowRight />
-                </Link>
-              </div>
-
-              <div className="MainWhyChooseBtn">
-                <button onClick={() => setShowPopup(true)}>
-                  Free Demo Class
-                  <VscArrowRight />
-               </button>
-              </div>
+            
+            <div className="SwiperContainerBox">
+              <Swiper
+                spaceBetween={20}
+                slidesPerView={1}
+                grabCursor={true} // This enables "scroll in hand"
+                loop={true}
+                breakpoints={{
+                  640: {
+                    slidesPerView: 1,
+                  },
+                  768: {
+                    slidesPerView: 2,
+                  },
+                  1200: {
+                    slidesPerView: 2.2, // Shows a bit of the 3rd card
+                  },
+                }}
+                className="mySwiper"
+              >
+                {reviews.map((item, index) => (
+                  <SwiperSlide key={index}>
+                    <div className="GoogleReviewBox">
+                      <div className="ReviewerBox">
+                        <div className="ReviwerProfile">
+                          {/* Placeholder image if no src */}
+                          <div className="ProfilePlaceholder">
+                             {item.name.charAt(0)}
+                          </div>
+                        </div>
+                        <div className="ReviewerNameBox">
+                          <h4>{item.name}</h4>
+                        </div>
+                      </div>
+                      <div className="ReviewRateBox">
+                        <div className="StarBox">
+                          <FaStar />
+                          <FaStar />
+                          <FaStar />
+                          <FaStar />
+                          <FaStar />
+                        </div>
+                        <div className="ReviewUpload">
+                          <p>{item.date}</p>
+                        </div>
+                      </div>
+                      <div className="ReviewDescBox">
+                        <p>{item.desc}</p>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
           </div>
-
-          <div className="BannerMainRight">
+          <div className="GoogleReviewRight">
             <div className="FormTitle">
               <h2>Get Your Free Demo Class Now</h2>
             </div>
@@ -239,7 +237,7 @@ const courseRef = useRef(null);
                 </div>
 
                 {/* Choose Program */}
-                <div className="customDropdown" ref={programRef}  >
+                <div className="customDropdown"  ref={programRef} >
                   <div
                     className="dropdownHeader"
                     onClick={() => setProgramOpen(!programOpen)}
@@ -301,9 +299,8 @@ const courseRef = useRef(null);
         </div>
       </div>
     </div>
-    {showPopup && <HomeDemoPopup onClose={() => setShowPopup(false)} />}
-    </>
-  );
-};
+  )
+}
 
-export default HomeBanner;
+export default HomeGoogleReview
+

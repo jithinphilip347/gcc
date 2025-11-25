@@ -8,6 +8,8 @@ import {
   FaChalkboardTeacher,
   FaUsers,
   FaLaptopCode,
+   FaUserGraduate, 
+   FaGlobeAsia
 } from "react-icons/fa";
 
 const HomeWhyCoose = () => {
@@ -117,6 +119,39 @@ const HomeWhyCoose = () => {
                 Expert-led practice sessions with tips, strategies, and real
                 exam simulations.
               </p>
+            </div>
+          </div>
+          <div className="WhyChooseBox">
+             <div className="IconBox">
+            <FaUserGraduate />
+            </div>
+              <div className="WhyChooseTitle">
+            <h3>1000+</h3>
+            </div>
+             <div className="WhyChooseDesc">
+            <p>Successful Students</p>
+            </div>
+          </div>
+          <div className="WhyChooseBox">
+             <div className="IconBox">
+            <FaBookOpen />
+            </div>
+              <div className="WhyChooseTitle">
+            <h3>100+</h3>
+            </div>
+             <div className="WhyChooseDesc">
+            <p>Comprehensive Courses</p>
+            </div>
+          </div>
+          <div className="WhyChooseBox">
+             <div className="IconBox">
+            <FaGlobeAsia />
+            </div>
+              <div className="WhyChooseTitle">
+            <h3>7+</h3>
+            </div>
+             <div className="WhyChooseDesc">
+            <p>GCC Countries Covered</p>
             </div>
           </div>
         </div>
