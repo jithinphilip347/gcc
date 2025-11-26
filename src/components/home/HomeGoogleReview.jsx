@@ -11,30 +11,30 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 const programData = {
-  Pharmacy: ["Diploma in Pharmacy", "Clinical Pharmacy", "Pharmacovigilance"],
-  Radiology: ["CT Scan", "MRI Technology", "X-Ray Technician"],
+  Pharmacy: ["DHA (DUBAI)", "MOH (UAE)", "KUWAIT - MOH", "DOH (HAAD) – Abu Dhabi", "SPLE (Saudi Arabia)", "BAHRAIN (BPLE)"],
+  Radiology: ["DHA (DUBAI)", "OMSEB (OMAN)", "QCHP (QATAR)" , "MOH (UAE)", "DOH (HAAD) – Abu Dhabi", "SPLE (SAUDI)", "BAHRAIN (BPLE)"],
 };
 
 const reviews = [
   {
     name: "Mohammad Faishal",
-    date: "6 months ago",
-    desc: "Hello, Everyone I feel very happy after Joining GCC academy, I would recommend it is very good Platform for many students who want to clear Prometric Exam, I would like to thanks Mrs Greeshma Ma'am.",
+    date: "a year ago",
+    desc: "Hello, Everyone, I feel very happy after Joining GCC academy, I would recommend it is very good Platform for many students who want to clear Prometric Exam, I would like to thanks Mrs Greeshma Ma'am, she is very good teacher, she guide you very well. Her lectures are clear, Concise and easy to understand...",
   },
   {
-    name: "Anjali Krishna",
-    date: "2 months ago",
-    desc: "Excellent coaching and support. The study materials provided were very helpful for my DHA exam preparation. Highly recommended!",
+    name: "Shiblu Bhuiyan",
+    date: "a year ago",
+    desc: "very helpful to pass the exam... I genuinely appreciate to Ma'am, as her proper guidance and instructions have greatly assisted me. because prior to joining in this coaching, I attended another coaching but did not get proper guidelines.. that's why I think this is the best platform to lift up the career through following her proper guidelines...",
   },
   {
-    name: "Rahul R",
-    date: "1 month ago",
-    desc: "Great experience with GCC Academy. The faculties are very supportive and the classes are very interactive.",
+    name: "AYNA UNUS",
+    date: "a year ago",
+    desc: "Coaching was super ...Iam very satisfied with the classes.. especially the support of the mam was great and clears my doubts at anytime... practising questions in the last days to the exam was really helpful.Thankyou GCC academy",
   },
   {
-    name: "Sarah John",
-    date: "3 months ago",
-    desc: "I cleared my HAAD exam in the first attempt. Thank you GCC Academy for the guidance.",
+    name: "Thankeem Kowkab",
+    date: "a year ago",
+    desc: " recently cleared omam Pearson vue exam. I Thank greeshma ma'am and gcc academy for their tremendous support and supporting . students to pass the exam....Thank you 👍",
   },
 ];
 

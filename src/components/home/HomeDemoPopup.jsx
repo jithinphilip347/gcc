@@ -5,9 +5,10 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
 
 const programData = {
-  Pharmacy: ["Diploma in Pharmacy", "Clinical Pharmacy", "Pharmacovigilance"],
-  Radiology: ["CT Scan", "MRI Technology", "X-Ray Technician"],
+  Pharmacy: ["DHA (DUBAI)", "MOH (UAE)", "KUWAIT - MOH", "DOH (HAAD) – Abu Dhabi", "SPLE (Saudi Arabia)", "BAHRAIN (BPLE)"],
+  Radiology: ["DHA (DUBAI)", "OMSEB (OMAN)", "QCHP (QATAR)" , "MOH (UAE)", "DOH (HAAD) – Abu Dhabi", "SPLE (SAUDI)", "BAHRAIN (BPLE)"],
 };
+
 const HomeDemoPopup = ({ onClose }) => {
   const [form, setForm] = useState({
     name: "",
