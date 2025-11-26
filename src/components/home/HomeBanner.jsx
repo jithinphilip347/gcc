@@ -153,7 +153,7 @@ const HomeBanner = () => {
 
                 <div className="MainWhyChooseBtn">
                   <button onClick={() => setShowPopup(true)}>
-                    Free Demo Class
+                    Free Class
                     <VscArrowRight />
                   </button>
                 </div>
@@ -162,7 +162,7 @@ const HomeBanner = () => {
 
             <div className="BannerMainRight">
               <div className="FormTitle">
-                <h2>Get Your Free Demo Class Now</h2>
+                <h2>Get Your Free Class Now</h2>
               </div>
 
               <div className="FormGroup">

@@ -110,7 +110,7 @@ const HomeDemoPopup = ({ onClose }) => {
           <div className="DemoPopupBox" onClick={(e) => e.stopPropagation()}>
             <div className="popupDemoForm">
               <div className="FormTitle">
-                <h2>Get Your Free Demo Class Now</h2>
+                <h2>Get Your Free Class Now</h2>
               </div>
               <div className="FormGroup">
                 <form onSubmit={handleSubmit}>
