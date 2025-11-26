@@ -91,7 +91,6 @@ const HomeContact = () => {
         </div>
 
         <div className="ContactMain">
-          {/* LEFT SIDE */}
           <div className="ContactMainLeft">
             <p className="ContactTitle">Get in Touch With GCC Academy</p>
 
@@ -121,7 +120,6 @@ const HomeContact = () => {
             </div>
           </div>
 
-          {/* RIGHT SIDE FORM */}
           <div className="ContactMainRight">
             <form className="ContactFormGroup" onSubmit={handleSubmit}>
               <div className="ContactFormBox">

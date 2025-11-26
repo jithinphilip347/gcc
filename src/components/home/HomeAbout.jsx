@@ -1,8 +1,6 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { VscArrowRight } from "react-icons/vsc";
-import { FaUserGraduate, FaBookOpen, FaGlobeAsia } from "react-icons/fa";
 import AboutImg from "../../assets/images/about.jpg";
 
 const HomeAbout = () => {
@@ -22,11 +20,9 @@ const HomeAbout = () => {
               <div className="ShortAboutContentBox">
                 <p>
                   Thinking insights, verified-driven research, and proven
-                  learning strategies to help  healthcare professionals achieve global success.
+                  learning strategies to help healthcare professionals achieve
+                  global success.
                 </p>
-                {/* <div className="AboutRightArrow">
-                  <VscArrowRight />
-                </div> */}
               </div>
             </div>
           </div>
@@ -38,32 +34,16 @@ const HomeAbout = () => {
               </div>
               <div className="AboutDesc">
                 <p>
-                  We specialize in providing comprehensive coaching for healthcare professionals preparing for 
-                   DHA, HAAD, PROMETRIC, MOH, and other GCC licensing exams. With expert
-                  mentors, structured materials, and real-time mock sessions,
-                  we’ve helped thousands of students secure their professional
-                  licenses and build successful international careers in the
-                  healthcare industry.
+                  We specialize in providing comprehensive coaching for
+                  healthcare professionals preparing for <b>
+                    DHA, HAAD, PROMETRIC, MOH, and other GCC licensing exams.{" "}
+                  </b>{" "}
+                  With expert mentors, structured materials, and real-time mock
+                  sessions, we’ve helped thousands of students secure their
+                  professional licenses and build successful international
+                  careers in the healthcare industry.
                 </p>
               </div>
-
-              {/* <div className="AboutStats">
-                <div className="StatBox">
-                  <FaUserGraduate />
-                  <h3>1000+</h3>
-                  <p>Successful Students</p>
-                </div>
-                <div className="StatBox">
-                  <FaBookOpen />
-                  <h3>100+</h3>
-                  <p>Comprehensive Courses</p>
-                </div>
-                <div className="StatBox">
-                  <FaGlobeAsia />
-                  <h3>7+</h3>
-                  <p>GCC Countries Covered</p>
-                </div>
-              </div> */}
             </div>
           </div>
         </div>

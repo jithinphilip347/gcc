@@ -1,5 +1,5 @@
 "use client";
-import React, {useRef,  useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import BannerImg from "../../assets/images/review.jpg";
 import { VscArrowRight } from "react-icons/vsc";
 import toast from "react-hot-toast";
@@ -8,7 +8,7 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { FaStar } from "react-icons/fa";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css"; 
+import "swiper/css";
 
 const programData = {
   Pharmacy: ["Diploma in Pharmacy", "Clinical Pharmacy", "Pharmacovigilance"],
@@ -39,8 +39,7 @@ const reviews = [
 ];
 
 const HomeGoogleReview = () => {
-
-  const [form, setForm] = useState({ 
+  const [form, setForm] = useState({
     name: "",
     email: "",
     phone: "",
@@ -53,7 +52,7 @@ const HomeGoogleReview = () => {
   const [programOpen, setProgramOpen] = useState(false);
   const [courseOpen, setCourseOpen] = useState(false);
   const programRef = useRef(null);
-const courseRef = useRef(null);
+  const courseRef = useRef(null);
 
   const handleChange = (e) => {
     setForm({
@@ -73,7 +72,6 @@ const courseRef = useRef(null);
 
   const GOOGLE_SHEET_URL =
     "https://script.google.com/macros/s/AKfycbyWavRSb28rJqWs9ReBcOz28eYdnHZ-mrBb7_qLrihNvTCEq2xotni2J99g_KCBlH5g/exec";
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -113,43 +111,43 @@ const courseRef = useRef(null);
     }
   };
 
-    useEffect(() => {
+  useEffect(() => {
     const handleClickOutside = (event) => {
       if (programRef.current && !programRef.current.contains(event.target)) {
         setProgramOpen(false);
       }
-  
+
       if (courseRef.current && !courseRef.current.contains(event.target)) {
         setCourseOpen(false);
       }
     };
-  
+
     document.addEventListener("mousedown", handleClickOutside);
-  
+
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
   return (
-        <div
-        id="HomeReview"
-        style={{
-            backgroundImage: `url(${BannerImg.src})`,
-        }}
-        >
+    <div
+      id="HomeReview"
+      style={{
+        backgroundImage: `url(${BannerImg.src})`,
+      }}
+    >
       <div className="overlay"></div>
       <div className="container">
         <div className="GoogleReviewMain">
-                 <div className="GoogleReviewLeft">
+          <div className="GoogleReviewLeft">
             <div className="MainShortTitle">
               <p>gccacademy Reviews</p>
             </div>
-            
+
             <div className="SwiperContainerBox">
               <Swiper
                 spaceBetween={20}
                 slidesPerView={1}
-                grabCursor={true} // This enables "scroll in hand"
+                grabCursor={true}
                 loop={true}
                 breakpoints={{
                   640: {
@@ -159,7 +157,7 @@ const courseRef = useRef(null);
                     slidesPerView: 2,
                   },
                   1200: {
-                    slidesPerView: 2.2, // Shows a bit of the 3rd card
+                    slidesPerView: 2.2,
                   },
                 }}
                 className="mySwiper"
@@ -169,9 +167,8 @@ const courseRef = useRef(null);
                     <div className="GoogleReviewBox">
                       <div className="ReviewerBox">
                         <div className="ReviwerProfile">
-                          {/* Placeholder image if no src */}
                           <div className="ProfilePlaceholder">
-                             {item.name.charAt(0)}
+                            {item.name.charAt(0)}
                           </div>
                         </div>
                         <div className="ReviewerNameBox">
@@ -236,8 +233,7 @@ const courseRef = useRef(null);
                   />
                 </div>
 
-                {/* Choose Program */}
-                <div className="customDropdown"  ref={programRef} >
+                <div className="customDropdown" ref={programRef}>
                   <div
                     className="dropdownHeader"
                     onClick={() => setProgramOpen(!programOpen)}
@@ -257,7 +253,6 @@ const courseRef = useRef(null);
                   )}
                 </div>
 
-                {/* Choose Course */}
                 <div className="customDropdown" ref={courseRef}>
                   <div
                     className="dropdownHeader"
@@ -299,8 +294,7 @@ const courseRef = useRef(null);
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HomeGoogleReview
-
+export default HomeGoogleReview;

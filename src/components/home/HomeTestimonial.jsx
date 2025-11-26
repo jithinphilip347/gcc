@@ -54,11 +54,11 @@ const HomeTestimonial = () => {
         </div>
 
         <div className="TestimonialMain">
-           <Swiper
-            modules={[Autoplay]}                    
+          <Swiper
+            modules={[Autoplay]}
             loop={true}
             autoplay={{
-              delay: 2500,                          
+              delay: 2500,
               disableOnInteraction: false,
             }}
             spaceBetween={20}

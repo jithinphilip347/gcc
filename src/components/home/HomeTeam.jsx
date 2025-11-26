@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Team from "../../assets/images/team.jpg";
+import Team from "../../assets/images/team.jpeg";
 import { HiOutlineMail } from "react-icons/hi";
 import { HiOutlinePhone } from "react-icons/hi2";
 

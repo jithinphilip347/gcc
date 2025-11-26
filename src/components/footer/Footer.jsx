@@ -21,9 +21,14 @@ const Footer = () => {
       <div className="container">
         <div className="FooterMain">
           <div className="FooterBox">
-            <div className="FooterLogo">
+            {/* <div className="FooterLogo">
               <Image src={FooterLogo} alt="" />
-            </div>
+            </div> */}
+            <div className="FooterLogo">
+            <Link href="/">
+              <Image src={FooterLogo} alt="Footer Logo" />
+            </Link>
+          </div>
 
             <p className="FooterDesc">
               Providing trusted coaching for DHA, HAAD, PROMETRIC, OMAN, MOH,

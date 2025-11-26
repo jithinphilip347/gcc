@@ -1,12 +1,14 @@
 #TopNav {
   width: 100%;
   background: var(--primaryColor);
+  height: 50px;
 }
 #TopNav .TopNavMain {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 50px;
 }
 @media (max-width: 768px) {
   #TopNav .TopNavMain {
@@ -143,16 +145,16 @@
   font-weight: 500;
   font-family: myFont1;
   color: var(--primaryColor);
-  padding: 5px 10px 5px 0px;
+  padding: 5px 10px 5px;
   transition: all 0.3s ease;
 }
 #Nav .NavMain .NavLink ul li a:hover {
   color: var(--secondaryColor);
-  padding: 5px 10px 5px 0px;
+  padding: 5px 10px 5px;
 }
 #Nav .NavMain .NavLink ul li a.active {
   background: #f0efe4;
-  padding: 5px 10px 5px 0px;
+  padding: 5px 10px 5px;
   color: var(--secondaryColor);
 }
 @media (max-width: 1024px) {
@@ -210,6 +212,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 130px;
+}
+@media (max-width: 1024px) {
+  #HomeBanner {
+    padding: 50px 0px;
+  }
 }
 #HomeBanner .overlay {
   position: absolute;
@@ -236,7 +244,6 @@
 }
 #HomeBanner .BannerMain .BannerMainLeft {
   width: 70%;
-  padding-top: 80px;
 }
 @media (max-width: 1024px) {
   #HomeBanner .BannerMain .BannerMainLeft {
@@ -394,7 +401,6 @@
   padding: 40px 30px;
   position: relative;
   z-index: 3;
-  margin-top: 100px;
 }
 @media (max-width: 1024px) {
   #HomeBanner .BannerMain .BannerMainRight {
@@ -822,17 +828,18 @@
 }
 @media (max-width: 1024px) {
   #HomeCourse .CourseMain {
-    gap: 60px;
-  }
-}
-@media (max-width: 768px) {
-  #HomeCourse .CourseMain {
-    gap: 30px;
+    flex-direction: column;
   }
 }
 #HomeCourse .CourseMain .HomeCourseLeft {
   width: 50%;
   padding-right: 30px;
+}
+@media (max-width: 1024px) {
+  #HomeCourse .CourseMain .HomeCourseLeft {
+    width: 100%;
+    padding-right: 0px;
+  }
 }
 #HomeCourse .CourseMain .HomeCourseLeft .HomeCourseLeftHeadView {
   width: 100%;
@@ -869,7 +876,8 @@
   background: #f3f8f6;
   padding: 30px 25px;
   transition: all 0.3s ease;
-  height: 280px;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
 }
 #HomeCourse .CourseMain .HomeCourseLeft .HomeCourseLeftBox .CourseLink .CourseBox .CourseIcon {
   width: 100%;
@@ -950,6 +958,14 @@
   border-left: 5px solid var(--primaryColor);
   padding-left: 30px;
 }
+@media (max-width: 1024px) {
+  #HomeCourse .CourseMain .HomeCourseRight {
+    width: 100%;
+    padding-left: 0px;
+    border-left: none;
+    margin-top: 15px;
+  }
+}
 #HomeCourse .CourseMain .HomeCourseRight .HomeCourseRightHeadView {
   width: 100%;
   display: flex;
@@ -985,7 +1001,8 @@
   background: #f3f8f6;
   padding: 30px 25px;
   transition: all 0.3s ease;
-  height: 280px;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
 }
 #HomeCourse .CourseMain .HomeCourseRight .HomeCourseRightBox .CourseLink .CourseBox .CourseIcon {
   width: 100%;
@@ -1500,44 +1517,63 @@
     gap: 30px;
   }
 }
-#CourseList .CourseMain .CourseBox {
+#CourseList .CourseMain .CourseMainTopBox .CourseTopHeadBox {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+}
+#CourseList .CourseMain .CourseMainTopBox .CourseTopHeadBox h2 {
+  font-size: 26px;
+  font-family: MyFont1;
+  font-weight: 600;
+  color: var(--primaryColor);
+}
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox {
   width: calc(33.3333333333% - 20px);
   background: #f3f8f6;
   padding: 30px 25px;
   transition: all 0.3s ease;
-  height: 500px;
+  min-height: 500px;
+  position: relative;
 }
 @media (max-width: 1024px) {
-  #CourseList .CourseMain .CourseBox {
+  #CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox {
     width: calc(50% - 30px);
   }
 }
 @media (max-width: 768px) {
-  #CourseList .CourseMain .CourseBox {
+  #CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox {
     width: 100%;
   }
 }
-#CourseList .CourseMain .CourseBox .CourseIcon {
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .CourseIcon {
   width: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   margin-bottom: 20px;
 }
-#CourseList .CourseMain .CourseBox .CourseIcon img {
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .CourseIcon img {
   width: 180px;
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
 }
-#CourseList .CourseMain .CourseBox .CourseTitle p {
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .CourseTitle p {
   font-size: 20px;
   font-weight: 600;
   color: var(--primaryColor);
   text-align: start;
   margin-bottom: 10px;
 }
-#CourseList .CourseMain .CourseBox .CourseDesc p {
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .CourseDesc p {
   font-size: 15px;
   font-family: MyFont1;
   font-weight: 400;
@@ -1547,27 +1583,27 @@
   margin-bottom: 20px;
 }
 @media (max-width: 480px) {
-  #CourseList .CourseMain .CourseBox .CourseDesc p {
+  #CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .CourseDesc p {
     font-size: 14px;
   }
 }
-#CourseList .CourseMain .CourseBox .Eligibility .EligibilityTitle p {
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .Eligibility .EligibilityTitle p {
   font-size: 16px;
   font-weight: 600;
   color: #000;
   margin-bottom: 10px;
 }
-#CourseList .CourseMain .CourseBox .Eligibility .CriteriaBox {
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .Eligibility .CriteriaBox {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-#CourseList .CourseMain .CourseBox .Eligibility .CriteriaBox .Box {
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .Eligibility .CriteriaBox .Box {
   display: flex;
   align-items: flex-start;
   gap: 10px;
 }
-#CourseList .CourseMain .CourseBox .Eligibility .CriteriaBox .Box .CheckmarkIcon {
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .Eligibility .CriteriaBox .Box .CheckmarkIcon {
   width: 18px;
   height: 18px;
   min-width: 18px;
@@ -1577,16 +1613,159 @@
   align-items: center;
   justify-content: center;
 }
-#CourseList .CourseMain .CourseBox .Eligibility .CriteriaBox .Box .CheckmarkIcon svg {
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .Eligibility .CriteriaBox .Box .CheckmarkIcon svg {
   color: #fff;
   font-size: 12px;
 }
-#CourseList .CourseMain .CourseBox .Eligibility .CriteriaBox .Box p {
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .Eligibility .CriteriaBox .Box p {
   font-size: 14px;
   font-family: MyFont1;
   font-weight: 400;
   color: #444;
   line-height: 1.4;
+}
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .CourseBookBtn {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .CourseBookBtn button {
+  background: var(--primaryColor);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .CourseBookBtn button:hover {
+  background: #000;
+}
+#CourseList .CourseMain .CourseMainBottomBox .CourseBottomHeadBox {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+}
+#CourseList .CourseMain .CourseMainBottomBox .CourseBottomHeadBox h2 {
+  font-size: 26px;
+  font-family: MyFont1;
+  font-weight: 600;
+  color: var(--primaryColor);
+}
+#CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+#CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox {
+  width: calc(33.3333333333% - 20px);
+  background: #f3f8f6;
+  padding: 30px 25px;
+  transition: all 0.3s ease;
+  min-height: 500px;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  #CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox {
+    width: calc(50% - 30px);
+  }
+}
+@media (max-width: 768px) {
+  #CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox {
+    width: 100%;
+  }
+}
+#CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .CourseIcon {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+#CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .CourseIcon img {
+  width: 180px;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .CourseTitle p {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primaryColor);
+  text-align: start;
+  margin-bottom: 10px;
+}
+#CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .CourseDesc p {
+  font-size: 15px;
+  font-family: MyFont1;
+  font-weight: 400;
+  color: #555;
+  line-height: 1.6;
+  text-align: start;
+  margin-bottom: 20px;
+}
+@media (max-width: 480px) {
+  #CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .CourseDesc p {
+    font-size: 14px;
+  }
+}
+#CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .Eligibility .EligibilityTitle p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 10px;
+}
+#CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .Eligibility .CriteriaBox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .Eligibility .CriteriaBox .Box {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+#CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .Eligibility .CriteriaBox .Box .CheckmarkIcon {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  background: var(--primaryColor);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .Eligibility .CriteriaBox .Box .CheckmarkIcon svg {
+  color: #fff;
+  font-size: 12px;
+}
+#CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .Eligibility .CriteriaBox .Box p {
+  font-size: 14px;
+  font-family: MyFont1;
+  font-weight: 400;
+  color: #444;
+  line-height: 1.4;
+}
+#CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .CourseBookBtn {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+#CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .CourseBookBtn button {
+  background: var(--primaryColor);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+#CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .CourseBookBtn button:hover {
+  background: #000;
 }
 
 #Footer {
@@ -2121,7 +2300,7 @@
 }
 #HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamImgBox {
   width: 40%;
-  height: 400px;
+  height: 460px;
 }
 @media (max-width: 768px) {
   #HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamImgBox {
@@ -2334,24 +2513,24 @@
   position: fixed;
   right: 30px;
   bottom: 100px;
-  width: 40px;
-  height: 40px;
-  background: var(--primaryColor);
+  width: 44px;
+  height: 44px;
+  background: #fff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   z-index: 9999;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
   transition: all 0.3s ease;
 }
-.scrollTopBtn svg {
-  color: #fff;
-  font-size: 20px;
+.scrollTopBtn svg:not(.progressRing) {
+  position: absolute;
+  font-size: 22px;
+  color: var(--primaryColor);
 }
 
 .scrollTopBtn.show {
@@ -2360,260 +2539,24 @@
   transform: translateY(0);
 }
 
-.messageWidgetBtn {
-  position: fixed;
-  right: 25px;
-  bottom: 40px;
-  width: 52px;
-  height: 52px;
-  background: var(--primaryColor);
-  color: #fff;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 26px;
-  cursor: pointer;
-  z-index: 9999;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-  transition: 0.3s ease;
-}
-
-.messageWidgetBtn:hover {
-  transform: scale(1.1);
-}
-
-.messageWidgetBtn .msgCount {
+.progressRing {
   position: absolute;
-  top: -5px;
-  left: -5px;
-  background: red;
-  color: #fff;
-  font-size: 11px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.messagePopup {
-  position: fixed;
-  right: 25px;
-  bottom: 110px;
-  width: 300px;
-  background: #fff;
-  border-radius: 10px;
-  z-index: 9999;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  animation: msgFadeIn 0.3s ease;
-}
-
-@keyframes msgFadeIn {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-.msgPopupHeader {
-  background: var(--primaryColor);
-  color: #fff;
-  padding: 15px;
-  border-radius: 10px 10px 0 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.msgPopupHeader button {
-  background: transparent;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  font-size: 24px;
-}
-
-.msgPopupBody {
-  padding: 20px;
-}
-
-.msgBubble {
-  background: #f3f8f6;
-  padding: 12px 15px;
-  border-radius: 8px;
-}
-
-.msgTitle {
-  font-size: 12px;
-  color: var(--primaryColor);
-  margin-bottom: 4px;
-}
-
-.msgText {
-  font-size: 15px;
-  color: #444;
-}
-
-#HomeSpatilization {
-  width: 100%;
-  padding: 100px 0;
-}
-@media (max-width: 1024px) {
-  #HomeSpatilization {
-    padding: 80px 0;
-  }
-}
-@media (max-width: 768px) {
-  #HomeSpatilization {
-    padding: 60px 0;
-  }
-}
-@media (max-width: 480px) {
-  #HomeSpatilization {
-    padding: 40px 0;
-  }
-}
-#HomeSpatilization .HomeAboutHead {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-#HomeSpatilization .HomeAboutHead h2 {
-  font-size: 80px;
-  font-family: MyFont1;
-  font-weight: 600;
-  color: #000;
-  position: relative;
-}
-@media (max-width: 1024px) {
-  #HomeSpatilization .HomeAboutHead h2 {
-    font-size: 60px;
-  }
-}
-@media (max-width: 768px) {
-  #HomeSpatilization .HomeAboutHead h2 {
-    font-size: 40px;
-  }
-}
-@media (max-width: 480px) {
-  #HomeSpatilization .HomeAboutHead h2 {
-    font-size: 30px;
-  }
-}
-#HomeSpatilization .HomeAboutHead h2 span {
-  color: var(--primaryColor);
-}
-#HomeSpatilization .HomeAboutHead h2::after {
-  content: "";
-  width: 100%;
-  height: 4px;
-  background: var(--primaryColor);
-  position: absolute;
-  bottom: -6px;
+  top: 0;
   left: 0;
-  border-radius: 2px;
+  transform: rotate(-90deg);
 }
-#HomeSpatilization .HomeSpatilizationMain {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 40px;
+
+.progressBg {
+  fill: none;
+  stroke: #e0e0e0;
+  stroke-width: 3;
 }
-@media (max-width: 768px) {
-  #HomeSpatilization .HomeSpatilizationMain {
-    flex-direction: column;
-  }
-}
-#HomeSpatilization .HomeSpatilizationMain .HomeSpatilizationLeft,
-#HomeSpatilization .HomeSpatilizationMain .HomeSpatilizationRight {
-  width: 50%;
-  position: relative;
-  padding: 20px;
-  overflow: hidden;
-  background: var(--primaryColor);
-}
-@media (max-width: 768px) {
-  #HomeSpatilization .HomeSpatilizationMain .HomeSpatilizationLeft,
-  #HomeSpatilization .HomeSpatilizationMain .HomeSpatilizationRight {
-    width: 100%;
-  }
-}
-#HomeSpatilization .HomeSpatilizationMain .HomeSpatilizationLeft::after,
-#HomeSpatilization .HomeSpatilizationMain .HomeSpatilizationRight::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.2);
-  mix-blend-mode: multiply;
-}
-#HomeSpatilization .HomeSpatilizationMain .SpatilizationBox {
-  position: relative;
-  z-index: 5;
-  border-radius: 0;
-  transition: 0.4s;
-  cursor: pointer;
-}
-#HomeSpatilization .HomeSpatilizationMain .SpatilizationBox:hover {
-  transform: scale(1.03);
-}
-#HomeSpatilization .HomeSpatilizationMain .SpatilizationBox .SpatilizationIconBox {
-  width: 45px;
-  height: 45px;
-  background: #fff;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--primaryColor);
-  font-size: 22px;
-  margin-bottom: 15px;
-}
-#HomeSpatilization .HomeSpatilizationMain .SpatilizationBox .SpatilizationTitle h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-  color: #fff;
-  font-family: myFont1;
-}
-#HomeSpatilization .HomeSpatilizationMain .SpatilizationBox .SpatilizationDesc p {
-  font-size: 16px;
-  margin-bottom: 15px;
-  color: #fff;
-  font-family: myFont1;
-}
-#HomeSpatilization .HomeSpatilizationMain .SpatilizationBox .SpatilizationEligibility h4 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #fff;
-}
-#HomeSpatilization .HomeSpatilizationMain .SpatilizationBox .SpatilizationEligibility ul {
-  list-style: none;
-  padding: 0;
-}
-#HomeSpatilization .HomeSpatilizationMain .SpatilizationBox .SpatilizationEligibility ul li {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 6px;
-  font-size: 15px;
-  color: #fff;
-  font-family: myFont1;
-}
-#HomeSpatilization .HomeSpatilizationMain .SpatilizationBox .SpatilizationEligibility ul li .CheckmarkIcon {
-  width: 20px;
-  height: 20px;
-  background: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
-}
-#HomeSpatilization .HomeSpatilizationMain .SpatilizationBox .SpatilizationEligibility ul li svg {
-  color: var(--primaryColor);
+
+.progressBar {
+  fill: none;
+  stroke: var(--primaryColor);
+  stroke-width: 3;
+  transition: stroke-dashoffset 0.2s linear;
 }
 
 #HomeDemoPopup .DemoPopupOverlay {

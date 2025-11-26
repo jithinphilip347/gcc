@@ -1,562 +1,6 @@
-// "use client";
-// import Image from "next/image";
-// import React from "react";
-// import { IoMdCheckmark } from "react-icons/io";
-// import { VscArrowRight } from "react-icons/vsc";
-
-// import Logo1 from "../../assets/images/DHA.svg";
-// import Logo2 from "../../assets/images/moh-uae.webp";
-// import Logo3 from "../../assets/images/moh-kuwait.png";
-// import Link from "next/link";
-
-// const HomeCourse = () => {
-//   return (
-//     <div id="HomeCourse">
-//       <div className="container">
-//         <div className="HomeAboutHead">
-//           <h2>
-//             Our <span>Courses</span>
-//           </h2>
-//         </div>
-//         <div className="ViewAll">
-//           <Link href="/course">
-//             <p>View All</p>
-//             <VscArrowRight />
-//           </Link>
-//         </div>
-//         <div className="CourseMain">
-//           <div className="HomeCourseLeft">
-//             <div className="HomeCourseLeftHeadView">
-//               <div className="HomeCourseLeftHead">
-//                 <h2>Pharmacy</h2>
-//               </div>
-//             </div>
-   
-//             <div className="HomeCourseLeftBox">
-//           <div className="CourseBox">
-//             <div className="CourseIcon">
-//               <Image src={Logo1} alt="DHA Course" />
-//             </div>
-//             <div className="CourseTitle">
-//               <p>DHA (DUBAI)</p>
-//             </div>
-//             <div className="CourseDesc">
-//               <p>
-//                 Get the best coaching for the Dubai Health Authority (DHA) Exam
-//                 to become a licensed pharmacist in Dubai.
-//               </p>
-//             </div>
-
-//             <div className="Eligibility">
-//               <div className="EligibilityTitle">
-//                 <p>Eligibility Criteria</p>
-//               </div>
-//               <div className="CriteriaBox">
-//                 <div className="Box">
-//                   <div className="CheckmarkIcon">
-//                     <IoMdCheckmark />
-//                   </div>
-//                   <p>D pharm/B pharm (Minimum)</p>
-//                 </div>
-//                 <div className="Box">
-//                   <div className="CheckmarkIcon">
-//                     <IoMdCheckmark />
-//                   </div>
-//                   <p>Minimum experience required: 2 years</p>
-//                 </div>
-//                 <div className="Box">
-//                   <div className="CheckmarkIcon">
-//                     <IoMdCheckmark />
-//                   </div>
-//                   <p>Total Questions: 150 MCQs</p>
-//                 </div>
-//                 <div className="Box">
-//                   <div className="CheckmarkIcon">
-//                     <IoMdCheckmark />
-//                   </div>
-//                   <p>Time Allotted: 165 minutes (2 hours 45 minutes)</p>
-//                 </div>
-//                 <div className="Box">
-//                   <div className="CheckmarkIcon">
-//                     <IoMdCheckmark />
-//                   </div>
-//                   <p>Passing Score: 60% (90 correct answers minimum)</p>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//           <div className="CourseBox">
-//             <div className="CourseIcon">
-//               <Image src={Logo2} alt="MOH UAE" />
-//             </div>
-//             <div className="CourseTitle">
-//               <p>MOH (UAE)</p>
-//             </div>
-//             <div className="CourseDesc">
-//               <p>
-//                 Ace the MOH Pharmacy Technician Exam on your first attempt with
-//                 our all-in-one online coaching program – designed for guaranteed
-//                 success.
-//               </p>
-//             </div>
-
-//             <div className="Eligibility">
-//               <div className="EligibilityTitle">
-//                 <p>Eligibility Criteria</p>
-//               </div>
-//               <div className="CriteriaBox">
-//                 <div className="Box">
-//                   <div className="CheckmarkIcon">
-//                     <IoMdCheckmark />
-//                   </div>
-//                   <p>D pharm/B pharm (Minimum)</p>
-//                 </div>
-//                 <div className="Box">
-//                   <div className="CheckmarkIcon">
-//                     <IoMdCheckmark />
-//                   </div>
-//                   <p>Minimum experience required: 2 years</p>
-//                 </div>
-//                 <div className="Box">
-//                   <div className="CheckmarkIcon">
-//                     <IoMdCheckmark />
-//                   </div>
-//                   <p>Passing Score: 60% of total marks</p>
-//                 </div>
-//                 <div className="Box">
-//                   <div className="CheckmarkIcon">
-//                     <IoMdCheckmark />
-//                   </div>
-//                   <p>Total Questions: Around 100 MCQs</p>
-//                 </div>
-//                 <div className="Box">
-//                   <div className="CheckmarkIcon">
-//                     <IoMdCheckmark />
-//                   </div>
-//                   <p>Duration: ~2 hours (computer-based Prometric exam)</p>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//           <div className="CourseBox">
-//             <div className="CourseIcon">
-//               <Image src={Logo3} alt="KUWAIT MOH" />
-//             </div>
-//             <div className="CourseTitle">
-//               <p>KUWAIT - MOH</p>
-//             </div>
-//             <div className="CourseDesc">
-//               <p>
-//                 Prepare with confidence and pass the Kuwait MOH Pharmacist Exam
-//                 on your first attempt with the most trusted coaching program
-//                 available.
-//               </p>
-//             </div>
-
-//             <div className="Eligibility">
-//               <div className="EligibilityTitle">
-//                 <p>Eligibility Criteria</p>
-//               </div>
-//               <div className="CriteriaBox">
-//                 <div className="Box">
-//                   <div className="CheckmarkIcon">
-//                     <IoMdCheckmark />
-//                   </div>
-//                   <p>B pharm (Minimum)</p>
-//                 </div>
-//                 <div className="Box">
-//                   <div className="CheckmarkIcon">
-//                     <IoMdCheckmark />
-//                   </div>
-//                   <p>Minimum experience required: 2 years</p>
-//                 </div>
-//                 <div className="Box">
-//                   <div className="CheckmarkIcon">
-//                     <IoMdCheckmark />
-//                   </div>
-//                   <p>Total Questions: 50 MCQs (English - 30, Arabic - 20)</p>
-//                 </div>
-//                 <div className="Box">
-//                   <div className="CheckmarkIcon">
-//                     <IoMdCheckmark />
-//                   </div>
-//                   <p>Passing Score: 60% with aural exam</p>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//             </div>
-
-//           </div>
-//          <div className="HomeCourseRight">
-//           <div className="HomeCourseRightHeadView">
-//               <div className="HomeCourseRightHead">
-//                 <h2>Radiology</h2>
-//               </div>
-
-//             </div>
-//             <div className="HomeCourseRightBox">
-//           <div className="CourseBox">
-//             <div className="CourseIcon">
-//               <Image src={Logo1} alt="DHA Course" />
-//             </div>
-//             <div className="CourseTitle">
-//               <p>DHA (DUBAI)</p>
-//             </div>
-//             <div className="CourseDesc">
-//               <p>
-//                 Get the best coaching for the Dubai Health Authority (DHA) Exam
-//                 to become a licensed pharmacist in Dubai.
-//               </p>
-//             </div>
-
-//             <div className="Eligibility">
-//               <div className="EligibilityTitle">
-//                 <p>Eligibility Criteria</p>
-//               </div>
-//               <div className="CriteriaBox">
-//                 <div className="Box">
-//                   <div className="CheckmarkIcon">
-//                     <IoMdCheckmark />
-//                   </div>
-//                   <p>D pharm/B pharm (Minimum)</p>
-//                 </div>
-//                 <div className="Box">
-//                   <div className="CheckmarkIcon">
-//                     <IoMdCheckmark />
-//                   </div>
-//                   <p>Minimum experience required: 2 years</p>
-//                 </div>
-//                 <div className="Box">
-//                   <div className="CheckmarkIcon">
-//                     <IoMdCheckmark />
-//                   </div>
-//                   <p>Total Questions: 150 MCQs</p>
-//                 </div>
-//                 <div className="Box">
-//                   <div className="CheckmarkIcon">
-//                     <IoMdCheckmark />
-//                   </div>
-//                   <p>Time Allotted: 165 minutes (2 hours 45 minutes)</p>
-//                 </div>
-//                 <div className="Box">
-//                   <div className="CheckmarkIcon">
-//                     <IoMdCheckmark />
-//                   </div>
-//                   <p>Passing Score: 60% (90 correct answers minimum)</p>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//           <div className="CourseBox">
-//             <div className="CourseIcon">
-//               <Image src={Logo2} alt="MOH UAE" />
-//             </div>
-//             <div className="CourseTitle">
-//               <p>MOH (UAE)</p>
-//             </div>
-//             <div className="CourseDesc">
-//               <p>
-//                 Ace the MOH Pharmacy Technician Exam on your first attempt with
-//                 our all-in-one online coaching program – designed for guaranteed
-//                 success.
-//               </p>
-//             </div>
-
-//             <div className="Eligibility">
-//               <div className="EligibilityTitle">
-//                 <p>Eligibility Criteria</p>
-//               </div>
-//               <div className="CriteriaBox">
-//                 <div className="Box">
-//                   <div className="CheckmarkIcon">
-//                     <IoMdCheckmark />
-//                   </div>
-//                   <p>D pharm/B pharm (Minimum)</p>
-//                 </div>
-//                 <div className="Box">
-//                   <div className="CheckmarkIcon">
-//                     <IoMdCheckmark />
-//                   </div>
-//                   <p>Minimum experience required: 2 years</p>
-//                 </div>
-//                 <div className="Box">
-//                   <div className="CheckmarkIcon">
-//                     <IoMdCheckmark />
-//                   </div>
-//                   <p>Passing Score: 60% of total marks</p>
-//                 </div>
-//                 <div className="Box">
-//                   <div className="CheckmarkIcon">
-//                     <IoMdCheckmark />
-//                   </div>
-//                   <p>Total Questions: Around 100 MCQs</p>
-//                 </div>
-//                 <div className="Box">
-//                   <div className="CheckmarkIcon">
-//                     <IoMdCheckmark />
-//                   </div>
-//                   <p>Duration: ~2 hours (computer-based Prometric exam)</p>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//           <div className="CourseBox">
-//             <div className="CourseIcon">
-//               <Image src={Logo3} alt="KUWAIT MOH" />
-//             </div>
-//             <div className="CourseTitle">
-//               <p>KUWAIT - MOH</p>
-//             </div>
-//             <div className="CourseDesc">
-//               <p>
-//                 Prepare with confidence and pass the Kuwait MOH Pharmacist Exam
-//                 on your first attempt with the most trusted coaching program
-//                 available.
-//               </p>
-//             </div>
-
-//             <div className="Eligibility">
-//               <div className="EligibilityTitle">
-//                 <p>Eligibility Criteria</p>
-//               </div>
-//               <div className="CriteriaBox">
-//                 <div className="Box">
-//                   <div className="CheckmarkIcon">
-//                     <IoMdCheckmark />
-//                   </div>
-//                   <p>B pharm (Minimum)</p>
-//                 </div>
-//                 <div className="Box">
-//                   <div className="CheckmarkIcon">
-//                     <IoMdCheckmark />
-//                   </div>
-//                   <p>Minimum experience required: 2 years</p>
-//                 </div>
-//                 <div className="Box">
-//                   <div className="CheckmarkIcon">
-//                     <IoMdCheckmark />
-//                   </div>
-//                   <p>Total Questions: 50 MCQs (English - 30, Arabic - 20)</p>
-//                 </div>
-//                 <div className="Box">
-//                   <div className="CheckmarkIcon">
-//                     <IoMdCheckmark />
-//                   </div>
-//                   <p>Passing Score: 60% with aural exam</p>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//              </div>
-
-//          </div>
-
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default HomeCourse;
-
-
-// "use client";
-// import Image from "next/image";
-// import React from "react";
-// import { IoMdCheckmark } from "react-icons/io";
-// import { VscArrowRight } from "react-icons/vsc";
-// import Link from "next/link";
-
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import "swiper/css";
-
-// import Logo1 from "../../assets/images/DHA.svg";
-// import Logo2 from "../../assets/images/moh-uae.webp";
-// import Logo3 from "../../assets/images/moh-kuwait.png";
-
-// const HomeCourse = () => {
-//   return (
-//     <div id="HomeCourse">
-//       <div className="container">
-//         <div className="HomeAboutHead">
-//           <h2>
-//             Our <span>Courses</span>
-//           </h2>
-//         </div>
-
-//         <div className="ViewAll">
-//           <Link href="/course">
-//             <p>View All</p>
-//             <VscArrowRight />
-//           </Link>
-//         </div>
-
-//         <div className="CourseMain">
-
-// {/* ================= LEFT - PHARMACY ================= */}
-//           <div className="HomeCourseLeft">
-//             <div className="HomeCourseLeftHeadView">
-//               <div className="HomeCourseLeftHead">
-//                 <h2>Pharmacy</h2>
-//               </div>
-//             </div>
-
-//             <div className="HomeCourseLeftBox">
-
-//               <Swiper
-//                 slidesPerView={2}
-//                 spaceBetween={30}
-//                 loop={true}
-//                 grabCursor={true}
-//               >
-//                 {/* CARD 1 */}
-//                 <SwiperSlide>
-//                   <div className="CourseBox">
-//                     <div className="CourseIcon">
-//                       <Image src={Logo1} alt="DHA Course" />
-//                     </div>
-//                     <div className="CourseTitle">
-//                       <p>DHA (DUBAI)</p>
-//                     </div>
-//                     <div className="CourseDesc">
-//                       <p>
-//                         Get the best coaching for the Dubai Health Authority (DHA) Exam
-//                         to become a licensed pharmacist in Dubai.
-//                       </p>
-//                     </div>
-//                   </div>
-//                 </SwiperSlide>
-
-//                 {/* CARD 2 */}
-//                 <SwiperSlide>
-//                   <div className="CourseBox">
-//                     <div className="CourseIcon">
-//                       <Image src={Logo2} alt="MOH UAE" />
-//                     </div>
-//                     <div className="CourseTitle">
-//                       <p>MOH (UAE)</p>
-//                     </div>
-//                     <div className="CourseDesc">
-//                       <p>
-//                         Ace the MOH Pharmacy Technician Exam on your first attempt with
-//                         our all-in-one online coaching program – designed for guaranteed
-//                         success.
-//                       </p>
-//                     </div>
-//                   </div>
-//                 </SwiperSlide>
-
-//                 {/* CARD 3 */}
-//                 <SwiperSlide>
-//                   <div className="CourseBox">
-//                     <div className="CourseIcon">
-//                       <Image src={Logo3} alt="KUWAIT MOH" />
-//                     </div>
-//                     <div className="CourseTitle">
-//                       <p>KUWAIT - MOH</p>
-//                     </div>
-//                     <div className="CourseDesc">
-//                       <p>
-//                         Prepare with confidence and pass the Kuwait MOH Pharmacist Exam
-//                         on your first attempt with the most trusted coaching program
-//                         available.
-//                       </p>
-//                     </div>
-//                   </div>
-//                 </SwiperSlide>
-
-//               </Swiper>
-//             </div>
-//           </div>
-
-
-// {/* ================= RIGHT - RADIOLOGY ================= */}
-//           <div className="HomeCourseRight">
-//             <div className="HomeCourseRightHeadView">
-//               <div className="HomeCourseRightHead">
-//                 <h2>Radiology</h2>
-//               </div>
-//             </div>
-
-//             <div className="HomeCourseRightBox">
-
-//               <Swiper
-//                 slidesPerView={2}
-//                 spaceBetween={30}
-//                 loop={true}
-//                 grabCursor={true}
-//               >
-//                 <SwiperSlide>
-//                   <div className="CourseBox">
-//                     <div className="CourseIcon">
-//                       <Image src={Logo1} alt="DHA Course" />
-//                     </div>
-//                     <div className="CourseTitle">
-//                       <p>DHA (DUBAI)</p>
-//                     </div>
-//                     <div className="CourseDesc">
-//                       <p>
-//                         Get the best coaching for the Dubai Health Authority (DHA) Exam
-//                         to become a licensed pharmacist in Dubai.
-//                       </p>
-//                     </div>
-//                   </div>
-//                 </SwiperSlide>
-
-//                 <SwiperSlide>
-//                   <div className="CourseBox">
-//                     <div className="CourseIcon">
-//                       <Image src={Logo2} alt="MOH UAE" />
-//                     </div>
-//                     <div className="CourseTitle">
-//                       <p>MOH (UAE)</p>
-//                     </div>
-//                     <div className="CourseDesc">
-//                       <p>
-//                         Ace the MOH Pharmacy Technician Exam on your first attempt with
-//                         our all-in-one online coaching program – designed for guaranteed
-//                         success.
-//                       </p>
-//                     </div>
-//                   </div>
-//                 </SwiperSlide>
-
-//                 <SwiperSlide>
-//                   <div className="CourseBox">
-//                     <div className="CourseIcon">
-//                       <Image src={Logo3} alt="KUWAIT MOH" />
-//                     </div>
-//                     <div className="CourseTitle">
-//                       <p>KUWAIT - MOH</p>
-//                     </div>
-//                     <div className="CourseDesc">
-//                       <p>
-//                         Prepare with confidence and pass the Kuwait MOH Pharmacist Exam
-//                         on your first attempt with the most trusted coaching program
-//                         available.
-//                       </p>
-//                     </div>
-//                   </div>
-//                 </SwiperSlide>
-
-//               </Swiper>
-//             </div>
-//           </div>
-
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default HomeCourse;
-
-
 "use client";
 import Image from "next/image";
 import React from "react";
-import { IoMdCheckmark } from "react-icons/io";
 import { VscArrowRight } from "react-icons/vsc";
 import Link from "next/link";
 
@@ -566,6 +10,9 @@ import "swiper/css";
 import Logo1 from "../../assets/images/DHA.svg";
 import Logo2 from "../../assets/images/moh-uae.webp";
 import Logo3 from "../../assets/images/moh-kuwait.png";
+import Logo4 from "../../assets/images/doh.png";
+import Logo5 from "../../assets/images/sple-saudi.svg";
+import Logo6 from "../../assets/images/bple-beharin.png";
 
 const HomeCourse = () => {
   return (
@@ -585,8 +32,6 @@ const HomeCourse = () => {
         </div>
 
         <div className="CourseMain">
-
-{/* ================= LEFT - PHARMACY ================= */}
           <div className="HomeCourseLeft">
             <div className="HomeCourseLeftHeadView">
               <div className="HomeCourseLeftHead">
@@ -595,8 +40,23 @@ const HomeCourse = () => {
             </div>
 
             <div className="HomeCourseLeftBox">
-              <Swiper slidesPerView={2} spaceBetween={30} loop grabCursor>
-                
+              <Swiper
+                spaceBetween={30}
+                loop
+                grabCursor
+                breakpoints={{
+                  0: {
+                    slidesPerView: 1, // 0 - 767px ➜ 1 slide
+                  },
+                  768: {
+                    slidesPerView: 1, // 768px ➜ 1 slide
+                  },
+                  1024: {
+                    slidesPerView: 2, // 1024px & above ➜ 2 slides
+                  },
+                }}
+              >
+                {/* <Swiper slidesPerView={2} spaceBetween={30} loop grabCursor> */}
                 <SwiperSlide>
                   <Link href="/course" className="CourseLink">
                     <div className="CourseBox">
@@ -608,8 +68,8 @@ const HomeCourse = () => {
                       </div>
                       <div className="CourseDesc">
                         <p>
-                          Get the best coaching for the Dubai Health Authority (DHA) Exam
-                          to become a licensed pharmacist in Dubai.
+                          Get the best coaching for the Dubai Health Authority
+                          (DHA) Exam to become a licensed pharmacist in Dubai.
                         </p>
                       </div>
                     </div>
@@ -627,9 +87,9 @@ const HomeCourse = () => {
                       </div>
                       <div className="CourseDesc">
                         <p>
-                          Ace the MOH Pharmacy Technician Exam on your first attempt with
-                          our all-in-one online coaching program – designed for guaranteed
-                          success.
+                          Ace the MOH Pharmacy Technician Exam on your first
+                          attempt with our all-in-one online coaching program –
+                          designed for guaranteed success.
                         </p>
                       </div>
                     </div>
@@ -647,21 +107,80 @@ const HomeCourse = () => {
                       </div>
                       <div className="CourseDesc">
                         <p>
-                          Prepare with confidence and pass the Kuwait MOH Pharmacist Exam
-                          on your first attempt with the most trusted coaching program
-                          available.
+                          Prepare with confidence and pass the Kuwait MOH
+                          Pharmacist Exam on your first attempt with the most
+                          trusted coaching program available.
                         </p>
                       </div>
                     </div>
                   </Link>
                 </SwiperSlide>
 
+                <SwiperSlide>
+                  <Link href="/course" className="CourseLink">
+                    <div className="CourseBox">
+                      <div className="CourseIcon">
+                        <Image src={Logo4} alt="KUWAIT MOH" />
+                      </div>
+                      <div className="CourseTitle">
+                        <p>DOH (HAAD)-Abu Dhabi</p>
+                      </div>
+                      <div className="CourseDesc">
+                        <p>
+                          HAAD stands for Health Authority – Abu Dhabi.
+                          It&apos;s now officially part of the Department of
+                          Health – Abu Dhabi (DOH-Abu Dhabi). Get licensed as a
+                          Pharmacy Technician in Abu Dhabi, UAE with our
+                          comprehensive DOH Exam Preparation Course.
+                        </p>
+                      </div>
+                    </div>
+                  </Link>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <Link href="/course" className="CourseLink">
+                    <div className="CourseBox">
+                      <div className="CourseIcon">
+                        <Image src={Logo5} alt="KUWAIT MOH" />
+                      </div>
+                      <div className="CourseTitle">
+                        <p>SPLE (SAUDI)</p>
+                      </div>
+                      <div className="CourseDesc">
+                        <p>
+                          Saudi Pharmacist Licensure Examination is required for
+                          all pharmacists who want to practise in Saudi Arabia.
+                          Prepare successfully and take a major step toward your
+                          pharmacy career in Saudi Arabia
+                        </p>
+                      </div>
+                    </div>
+                  </Link>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <Link href="/course" className="CourseLink">
+                    <div className="CourseBox">
+                      <div className="CourseIcon">
+                        <Image src={Logo6} alt="KUWAIT MOH" />
+                      </div>
+                      <div className="CourseTitle">
+                        <p>BAHRAIN (BPLE)</p>
+                      </div>
+                      <div className="CourseDesc">
+                        <p>
+                          Bahrain Pharmacy Licensure Examination is administered
+                          by National Health Regulatory Authority (NHRA)
+                        </p>
+                      </div>
+                    </div>
+                  </Link>
+                </SwiperSlide>
               </Swiper>
             </div>
           </div>
 
-
-{/* ================= RIGHT - RADIOLOGY ================= */}
           <div className="HomeCourseRight">
             <div className="HomeCourseRightHeadView">
               <div className="HomeCourseRightHead">
@@ -670,8 +189,23 @@ const HomeCourse = () => {
             </div>
 
             <div className="HomeCourseRightBox">
-              <Swiper slidesPerView={2} spaceBetween={30} loop grabCursor>
-
+              <Swiper
+                spaceBetween={30}
+                loop
+                grabCursor
+                breakpoints={{
+                  0: {
+                    slidesPerView: 1, // 0 - 767px ➜ 1 slide
+                  },
+                  768: {
+                    slidesPerView: 1, // 768px ➜ 1 slide
+                  },
+                  1024: {
+                    slidesPerView: 2, // 1024px & above ➜ 2 slides
+                  },
+                }}
+              >
+                {/* <Swiper slidesPerView={2} spaceBetween={30} loop grabCursor> */}
                 <SwiperSlide>
                   <Link href="/course" className="CourseLink">
                     <div className="CourseBox">
@@ -683,8 +217,8 @@ const HomeCourse = () => {
                       </div>
                       <div className="CourseDesc">
                         <p>
-                          Get the best coaching for the Dubai Health Authority (DHA) Exam
-                          to become a licensed pharmacist in Dubai.
+                          Get the best coaching for the Dubai Health Authority
+                          (DHA) Exam to become a licensed Radiographer in Dubai.
                         </p>
                       </div>
                     </div>
@@ -695,16 +229,16 @@ const HomeCourse = () => {
                   <Link href="/course" className="CourseLink">
                     <div className="CourseBox">
                       <div className="CourseIcon">
-                        <Image src={Logo2} alt="MOH UAE" />
+                        <Image src={Logo2} alt="KUWAIT MOH" />
                       </div>
                       <div className="CourseTitle">
                         <p>MOH (UAE)</p>
                       </div>
                       <div className="CourseDesc">
                         <p>
-                          Ace the MOH Pharmacy Technician Exam on your first attempt with
-                          our all-in-one online coaching program – designed for guaranteed
-                          success.
+                          Ace the MOH radiographer Exam on your first attempt
+                          with our all-in-one online coaching program – designed
+                          for guaranteed success
                         </p>
                       </div>
                     </div>
@@ -715,26 +249,47 @@ const HomeCourse = () => {
                   <Link href="/course" className="CourseLink">
                     <div className="CourseBox">
                       <div className="CourseIcon">
-                        <Image src={Logo3} alt="KUWAIT MOH" />
+                        <Image src={Logo4} alt="KUWAIT MOH" />
                       </div>
                       <div className="CourseTitle">
-                        <p>KUWAIT - MOH</p>
+                        <p>DOH (HAAD)-Abu Dhabi</p>
                       </div>
                       <div className="CourseDesc">
                         <p>
-                          Prepare with confidence and pass the Kuwait MOH Pharmacist Exam
-                          on your first attempt with the most trusted coaching program
-                          available.
+                          HAAD stands for Health Authority – Abu Dhabi.
+                          It&apos;s now officially part of the Department of
+                          Health – Abu Dhabi (DOH-Abu Dhabi). Get licensed as a
+                          Pharmacy Technician in Abu Dhabi, UAE with our
+                          comprehensive DOH Exam Preparation Course.
                         </p>
                       </div>
                     </div>
                   </Link>
                 </SwiperSlide>
 
+                <SwiperSlide>
+                  <Link href="/course" className="CourseLink">
+                    <div className="CourseBox">
+                      <div className="CourseIcon">
+                        <Image src={Logo5} alt="KUWAIT MOH" />
+                      </div>
+                      <div className="CourseTitle">
+                        <p>SPLE (SAUDI)</p>
+                      </div>
+                      <div className="CourseDesc">
+                        <p>
+                          Saudi Radiographer Licensure Examination is required
+                          for all Radiographers who want to practise in Saudi
+                          Arabia. It is done by Saudi Commission for Health
+                          Specialties (SCFHS).
+                        </p>
+                      </div>
+                    </div>
+                  </Link>
+                </SwiperSlide>
               </Swiper>
             </div>
           </div>
-
         </div>
       </div>
     </div>

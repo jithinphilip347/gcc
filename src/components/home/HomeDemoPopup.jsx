@@ -1,5 +1,5 @@
 "use client";
-import React, {useRef,useEffect, useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
@@ -23,7 +23,7 @@ const HomeDemoPopup = ({ onClose }) => {
   const [showPopup, setShowPopup] = useState(false);
 
   const programRef = useRef(null);
-const courseRef = useRef(null);
+  const courseRef = useRef(null);
 
   const handleChange = (e) => {
     setForm({
@@ -82,30 +82,30 @@ const courseRef = useRef(null);
   };
 
   useEffect(() => {
-  const handleClickOutside = (event) => {
-    if (programRef.current && !programRef.current.contains(event.target)) {
-      setProgramOpen(false);
-    }
+    const handleClickOutside = (event) => {
+      if (programRef.current && !programRef.current.contains(event.target)) {
+        setProgramOpen(false);
+      }
 
-    if (courseRef.current && !courseRef.current.contains(event.target)) {
-      setCourseOpen(false);
-    }
-  };
+      if (courseRef.current && !courseRef.current.contains(event.target)) {
+        setCourseOpen(false);
+      }
+    };
 
-  document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
 
-  return () => {
-    document.removeEventListener("mousedown", handleClickOutside);
-  };
-}, []);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <div id="HomeDemoPopup">
       <div className="container">
         <div className="DemoPopupOverlay">
-        <span className="PopupClose" onClick={onClose}>
-              <IoClose />
-            </span>
+          <span className="PopupClose" onClick={onClose}>
+            <IoClose />
+          </span>
           <div className="DemoPopupBox" onClick={(e) => e.stopPropagation()}>
             <div className="popupDemoForm">
               <div className="FormTitle">
@@ -143,7 +143,6 @@ const courseRef = useRef(null);
                     />
                   </div>
 
-                  {/* Choose Program */}
                   <div className="customDropdown" ref={programRef}>
                     <div
                       className="dropdownHeader"
@@ -164,7 +163,6 @@ const courseRef = useRef(null);
                     )}
                   </div>
 
-                  {/* Choose Course */}
                   <div className="customDropdown" ref={courseRef}>
                     <div
                       className="dropdownHeader"
