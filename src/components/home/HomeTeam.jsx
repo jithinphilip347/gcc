@@ -20,24 +20,31 @@ const HomeTeam = () => {
             </div>
             <div className="OurTeamDetailsBox">
               <div className="OurTeamNameBox">
-                <h2>Greeshma Arun</h2>
-                <p>Pharmacist Educator / Gulf Licensing Exam Coach</p>
+                {/* <h2>Greeshma Arun</h2> */}
+                <h2>A Note from Our Founder</h2>
+                {/* <p>Pharmacist Educator / Gulf Licensing Exam Coach</p> */}
               </div>
 
               <div className="LearnMoreOurTeam">
                 <p>
-                  Greeshma Arun is a highly experienced pharmacy educator with
-                  over 8 years of expertise in coaching candidates for Gulf
-                  pharmacist licensing exams. She has successfully trained
-                  numerous students for DHA, MOH, HAAD/DOH, QCHP, and Prometric
-                  exams, helping them achieve high pass rates through her
-                  structured teaching approach and deep subject knowledge. Her
-                  commitment to student success and clear, exam-focused guidance
-                  has made her a trusted mentor for aspiring pharmacists
-                  pursuing careers in the Gulf region.
+                  I believe most professionals don’t need ‘more studying’ — they
+                  need focused guidance, clarity, and a mentor who shows them
+                  exactly what to learn to pass.
+                </p>
+                <p>
+                  For 8+ years, I’ve guided professionals who felt they’d
+                  ‘forgotten everything’ — and watched them clear their Gulf
+                  licensing exams with confidence.
+                </p>
+                <p>
+                  At GCC Academy, you’re not just learning… you’re building a
+                  future you once dreamed of. And I’m here to walk that journey
+                  with you.
                 </p>
               </div>
-
+                <div className="OwnerBox">
+                  <h2>— Greeshma Arun</h2>
+                </div>
               <div className="OurTeamContactBox">
                 <a href="mailto:greeshma@gccacademy.net">
                   <HiOutlineMail /> greeshma@gccacademy.net

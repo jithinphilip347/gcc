@@ -8,26 +8,44 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import HomeDemoPopup from "./HomeDemoPopup";
 
 const programData = {
-  Pharmacy: ["DHA (DUBAI)", "MOH (UAE)", "KUWAIT - MOH", "DOH (HAAD) – Abu Dhabi", "SPLE (Saudi Arabia)", "BAHRAIN (BPLE)"],
-  Radiology: ["DHA (DUBAI)", "OMSEB (OMAN)", "QCHP (QATAR)" , "MOH (UAE)", "DOH (HAAD) – Abu Dhabi", "SPLE (SAUDI)", "BAHRAIN (BPLE)"],
+  Pharmacy: [
+    "DHA (DUBAI)",
+    "MOH (UAE)",
+    "KUWAIT - MOH",
+    "DOH (HAAD) – Abu Dhabi",
+    "SPLE (Saudi Arabia)",
+    "BAHRAIN (BPLE)",
+  ],
+  Radiology: [
+    "DHA (DUBAI)",
+    "OMSEB (OMAN)",
+    "QCHP (QATAR)",
+    "MOH (UAE)",
+    "DOH (HAAD) – Abu Dhabi",
+    "SPLE (SAUDI)",
+    "BAHRAIN (BPLE)",
+  ],
 };
+
+// ✅ Combined single dropdown list with labels
+const combinedCourses = [
+  ...programData.Pharmacy.map((course) => `${course} (Pharmacy)`),
+  ...programData.Radiology.map((course) => `${course} (Radiology)`),
+];
 
 const HomeBanner = () => {
   const [form, setForm] = useState({
     name: "",
     email: "",
     phone: "",
-    program: "",
     course: "",
     message: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [programOpen, setProgramOpen] = useState(false);
   const [courseOpen, setCourseOpen] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
 
-  const programRef = useRef(null);
   const courseRef = useRef(null);
 
   const handleChange = (e) => {
@@ -35,15 +53,6 @@ const HomeBanner = () => {
       ...form,
       [e.target.name]: e.target.value,
     });
-  };
-  const selectProgram = (value) => {
-    setForm({ ...form, program: value, course: "" });
-    setProgramOpen(false);
-  };
-
-  const selectCourse = (value) => {
-    setForm({ ...form, course: value });
-    setCourseOpen(false);
   };
 
   const GOOGLE_SHEET_URL =
@@ -53,13 +62,7 @@ const HomeBanner = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    if (
-      !form.name ||
-      !form.email ||
-      !form.phone ||
-      !form.program ||
-      !form.course
-    ) {
+    if (!form.name || !form.email || !form.phone || !form.course) {
       toast.error("Please fill all fields!");
       setIsSubmitting(false);
       return;
@@ -76,7 +79,6 @@ const HomeBanner = () => {
         name: "",
         email: "",
         phone: "",
-        program: "",
         course: "",
         message: "",
       });
@@ -89,29 +91,20 @@ const HomeBanner = () => {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (programRef.current && !programRef.current.contains(event.target)) {
-        setProgramOpen(false);
-      }
-
       if (courseRef.current && !courseRef.current.contains(event.target)) {
         setCourseOpen(false);
       }
     };
 
     document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
     <>
       <div
         id="HomeBanner"
-        style={{
-          backgroundImage: `url(${BannerImg.src})`,
-        }}
+        style={{ backgroundImage: `url(${BannerImg.src})` }}
       >
         <div className="overlay"></div>
 
@@ -119,7 +112,7 @@ const HomeBanner = () => {
           <div className="BannerMain">
             <div className="BannerMainLeft">
               <div className="MainShortTitle">
-                <p>ACE YOUR HEALTHCARE LICENSING EXAMS ABROAD!</p>
+                <p>ACE YOUR Pharmacy/Radiology LICENSING EXAMS ABROAD!</p>
               </div>
 
               <div className="MainTitle">
@@ -132,11 +125,7 @@ const HomeBanner = () => {
               <div className="MainDesc">
                 <p>
                   Prepare confidently for your healthcare licensing exams across
-                  <b>
-                    {" "}
-                    Oman, Qatar, Saudi Arabia, UAE, Bahrain, Kuwait, and
-                    Australia.
-                  </b>
+                  <b> Oman, Qatar, Saudi Arabia, UAE, Bahrain, Kuwait, and Australia.</b>
                   Access comprehensive study resources, regional language
                   guidance, and community support designed to help you succeed
                   globally.
@@ -153,7 +142,7 @@ const HomeBanner = () => {
 
                 <div className="MainWhyChooseBtn">
                   <button onClick={() => setShowPopup(true)}>
-                    Free Class
+                    Book Free Demo
                     <VscArrowRight />
                   </button>
                 </div>
@@ -171,7 +160,7 @@ const HomeBanner = () => {
                     <input
                       type="text"
                       name="name"
-                      placeholder="Your Name"
+                      placeholder="Name"
                       value={form.name}
                       onChange={handleChange}
                     />
@@ -181,7 +170,7 @@ const HomeBanner = () => {
                     <input
                       type="email"
                       name="email"
-                      placeholder="Your Email"
+                      placeholder="Email"
                       value={form.email}
                       onChange={handleChange}
                     />
@@ -191,32 +180,13 @@ const HomeBanner = () => {
                     <input
                       type="number"
                       name="phone"
-                      placeholder="Your Phone Number"
+                      placeholder="Phone Number"
                       value={form.phone}
                       onChange={handleChange}
                     />
                   </div>
 
-                  <div className="customDropdown" ref={programRef}>
-                    <div
-                      className="dropdownHeader"
-                      onClick={() => setProgramOpen(!programOpen)}
-                    >
-                      <span>{form.program || "Choose Your Program"}</span>
-                      {programOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
-                    </div>
-
-                    {programOpen && (
-                      <ul className="dropdownList">
-                        {Object.keys(programData).map((item) => (
-                          <li key={item} onClick={() => selectProgram(item)}>
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-
+                  {/* ✅ SINGLE UPDATED DROPDOWN */}
                   <div className="customDropdown" ref={courseRef}>
                     <div
                       className="dropdownHeader"
@@ -226,10 +196,16 @@ const HomeBanner = () => {
                       {courseOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
                     </div>
 
-                    {courseOpen && form.program && (
+                    {courseOpen && (
                       <ul className="dropdownList">
-                        {programData[form.program].map((course) => (
-                          <li key={course} onClick={() => selectCourse(course)}>
+                        {combinedCourses.map((course) => (
+                          <li
+                            key={course}
+                            onClick={() => {
+                              setForm({ ...form, course });
+                              setCourseOpen(false);
+                            }}
+                          >
                             {course}
                           </li>
                         ))}
@@ -240,7 +216,7 @@ const HomeBanner = () => {
                   <div className="contactDetailGroup">
                     <textarea
                       name="message"
-                      placeholder="Enter your Message"
+                      placeholder="Message"
                       value={form.message}
                       onChange={handleChange}
                     ></textarea>
@@ -248,7 +224,6 @@ const HomeBanner = () => {
 
                   <div className="FormBtn">
                     <button type="submit">
-                      {" "}
                       {isSubmitting ? "Booking..." : "Book Now"}
                     </button>
                   </div>
@@ -258,6 +233,7 @@ const HomeBanner = () => {
           </div>
         </div>
       </div>
+
       {showPopup && <HomeDemoPopup onClose={() => setShowPopup(false)} />}
     </>
   );

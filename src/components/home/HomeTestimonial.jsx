@@ -4,7 +4,9 @@ import Image from "next/image";
 import { IoStar } from "react-icons/io5";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay , Pagination } from "swiper/modules";
+import "swiper/css/pagination";
+
 import "swiper/css";
 
 import Student1 from "../../assets/images/Students/Divya Mariam(DHA).jpg";
@@ -49,12 +51,12 @@ const HomeTestimonial = () => {
       <div className="container">
         <div className="HomeAboutHead">
           <h2>
-            Students <span>Speak</span>
+            Student <span>Testimonials</span>
           </h2>
         </div>
 
         <div className="TestimonialMain">
-          <Swiper
+          {/* <Swiper
             modules={[Autoplay]}
             loop={true}
             autoplay={{
@@ -70,7 +72,52 @@ const HomeTestimonial = () => {
               1024: { slidesPerView: 3 },
               1440: { slidesPerView: 4 },
             }}
-          >
+          > */}
+             <Swiper
+              modules={[Autoplay, Pagination]}
+              loop={true}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              spaceBetween={20}
+              className="testimonialSwiper"
+              pagination={{
+                clickable: true,
+              }}
+              breakpoints={{
+                0: {
+                  slidesPerView: 1,
+                  pagination: {
+                    enabled: true,
+                  },
+                },
+                480: {
+                  slidesPerView: 1,
+                  pagination: {
+                    enabled: true,
+                  },
+                },
+                768: {
+                  slidesPerView: 2,
+                  pagination: {
+                    enabled: true,
+                  },
+                },
+                1024: {
+                  slidesPerView: 3,
+                  pagination: {
+                    enabled: true,
+                  },
+                },
+                1200: {
+                  slidesPerView: 4,
+                  pagination: {
+                    enabled: false, // Desktop il dots OFF
+                  },
+                },
+              }}
+            >
             {testimonials.map((item, index) => (
               <SwiperSlide key={index}>
                 <div className="TestimonialBox">

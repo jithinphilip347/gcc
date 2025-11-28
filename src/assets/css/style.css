@@ -492,7 +492,8 @@
   left: 0;
   z-index: 9;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
+  overflow-y: scroll;
+  height: 235px;
 }
 #HomeBanner .BannerMain .BannerMainRight .FormGroup form .dropdownList li {
   padding: 12px 15px;
@@ -701,7 +702,7 @@
   font-family: MyFont1;
   color: #555;
   line-height: 1.7;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 #HomeAbout .AboutMain .AboutMainRight .AboutContentBox .AboutStats {
   display: flex;
@@ -863,6 +864,18 @@
 #HomeCourse .CourseMain .HomeCourseLeft .HomeCourseLeftBox .swiper {
   width: 100%;
 }
+#HomeCourse .CourseMain .HomeCourseLeft .HomeCourseLeftBox .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+  text-align: center;
+}
+#HomeCourse .CourseMain .HomeCourseLeft .HomeCourseLeftBox .swiper-pagination-bullet {
+  background: #ccc;
+  opacity: 1;
+}
+#HomeCourse .CourseMain .HomeCourseLeft .HomeCourseLeftBox .swiper-pagination-bullet-active {
+  background: var(--primaryColor);
+}
 #HomeCourse .CourseMain .HomeCourseLeft .HomeCourseLeftBox .swiper-slide {
   display: flex;
   justify-content: center;
@@ -988,6 +1001,18 @@
 #HomeCourse .CourseMain .HomeCourseRight .HomeCourseRightBox .swiper {
   width: 100%;
 }
+#HomeCourse .CourseMain .HomeCourseRight .HomeCourseRightBox .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+  text-align: center;
+}
+#HomeCourse .CourseMain .HomeCourseRight .HomeCourseRightBox .swiper-pagination-bullet {
+  background: #ccc;
+  opacity: 1;
+}
+#HomeCourse .CourseMain .HomeCourseRight .HomeCourseRightBox .swiper-pagination-bullet-active {
+  background: var(--primaryColor);
+}
 #HomeCourse .CourseMain .HomeCourseRight .HomeCourseRightBox .swiper-slide {
   display: flex;
   justify-content: center;
@@ -1105,6 +1130,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
+  flex-direction: column;
 }
 #HomeWhyCoose .HomeAboutHead h2 {
   font-size: 70px;
@@ -1132,6 +1158,14 @@
 }
 #HomeWhyCoose .HomeAboutHead h2 span {
   color: var(--primaryColor);
+}
+#HomeWhyCoose .HomeAboutHead p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 5px;
 }
 #HomeWhyCoose .HomeWhyCooseMain {
   width: 100%;
@@ -1247,6 +1281,17 @@
 }
 #HomeTestimonial .TestimonialMain .testimonialSwiper {
   width: 100%;
+}
+#HomeTestimonial .TestimonialMain .testimonialSwiper .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+#HomeTestimonial .TestimonialMain .testimonialSwiper .swiper-pagination-bullet {
+  background: #ccc;
+  opacity: 1;
+}
+#HomeTestimonial .TestimonialMain .testimonialSwiper .swiper-pagination-bullet-active {
+  background: var(--primaryColor);
 }
 #HomeTestimonial .TestimonialMain .TestimonialBox {
   width: 100%;
@@ -2324,16 +2369,19 @@
   width: 60%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 @media (max-width: 768px) {
   #HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamDetailsBox {
     width: 100%;
   }
 }
+#HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamDetailsBox .OurTeamNameBox {
+  width: 100%;
+  margin-bottom: 20px;
+}
 #HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamDetailsBox .OurTeamNameBox h2 {
-  font-size: 36px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 500;
   font-family: MyFont1;
   color: #000;
 }
@@ -2362,6 +2410,14 @@
     font-size: 16px;
   }
 }
+#HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamDetailsBox .LearnMoreOurTeam {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
 #HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamDetailsBox .LearnMoreOurTeam p {
   font-size: 16px;
   color: #444;
@@ -2373,10 +2429,22 @@
     font-size: 15px;
   }
 }
+#HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamDetailsBox .OwnerBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamDetailsBox .OwnerBox h2 {
+  font-size: 20px;
+  font-family: myFont1;
+  font-weight: 500;
+}
 #HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamDetailsBox .OurTeamContactBox {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  align-items: flex-end;
 }
 #HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamDetailsBox .OurTeamContactBox a {
   display: flex;
@@ -2663,7 +2731,8 @@
   left: 0;
   z-index: 9;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
+  overflow-y: scroll;
+  height: 200px;
 }
 #HomeDemoPopup .DemoPopupBox .popupDemoForm .FormGroup form .dropdownList li {
   padding: 12px 15px;
@@ -2780,6 +2849,17 @@
   width: 100%;
   padding-bottom: 30px;
 }
+#HomeReview .GoogleReviewMain .GoogleReviewLeft .SwiperContainerBox .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+#HomeReview .GoogleReviewMain .GoogleReviewLeft .SwiperContainerBox .swiper-pagination-bullet {
+  background: #ccc;
+  opacity: 1;
+}
+#HomeReview .GoogleReviewMain .GoogleReviewLeft .SwiperContainerBox .swiper-pagination-bullet-active {
+  background: var(--primaryColor);
+}
 #HomeReview .GoogleReviewMain .GoogleReviewLeft .SwiperContainerBox .GoogleReviewBox {
   background: #fff;
   padding: 25px;
@@ -2867,14 +2947,24 @@
 }
 #HomeReview .GoogleReviewMain .GoogleReviewRight .FormTitle {
   margin-bottom: 25px;
+  border-bottom: 1px solid #e1dfd7;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
 }
 #HomeReview .GoogleReviewMain .GoogleReviewRight .FormTitle h2 {
   font-size: 20px;
   font-family: myFont1;
   font-weight: 500;
   color: #fff;
-  border-bottom: 1px solid #e1dfd7;
-  padding-bottom: 10px;
+}
+#HomeReview .GoogleReviewMain .GoogleReviewRight .FormTitle p {
+  font-size: 15px;
+  font-family: myFont1;
+  font-weight: 500;
+  color: #fff;
 }
 #HomeReview .GoogleReviewMain .GoogleReviewRight .FormGroup {
   width: 100%;
@@ -2950,7 +3040,8 @@
   left: 0;
   z-index: 9;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
+  overflow-y: scroll;
+  height: 235px;
 }
 #HomeReview .GoogleReviewMain .GoogleReviewRight .FormGroup form .dropdownList li {
   padding: 12px 15px;

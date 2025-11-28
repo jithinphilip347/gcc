@@ -62,7 +62,7 @@ const ContactSideNav = ({ show, onClose }) => {
               </div>
 
               <div className="ContactBtn">
-                <button type="submit">Get Quote</button>
+                <button type="submit">Send</button>
               </div>
             </form>
           </div>

@@ -34,14 +34,25 @@ const HomeAbout = () => {
               </div>
               <div className="AboutDesc">
                 <p>
-                  We specialize in providing comprehensive coaching for
-                  healthcare professionals preparing for <b>
-                    DHA, HAAD, PROMETRIC, MOH, and other GCC licensing exams.{" "}
-                  </b>{" "}
-                  With expert mentors, structured materials, and real-time mock
-                  sessions, we’ve helped thousands of students secure their
-                  professional licenses and build successful international
-                  careers in the healthcare industry.
+                  Founded in 2021, GCC Academy is one of the best coaching
+                  institutes in Kerala for healthcare professionals preparing
+                  for licensing exams. We specialize in Gulf exam coaching,{" "}
+                  <b> DHA, MOH, HAAD/DOH, QCHP, and Prometric </b> exam
+                  preparation, and online exam training.
+                </p>
+                <p>
+                  Our mission is to help working healthcare professionals pass
+                  their licensing exams with confidence, even if they’ve been
+                  away from academics for years. Through one-on-one coaching,
+                  flexible schedules, structured lessons, and personalized
+                  guidance, we ensure each student gets the support they need
+                  until they succeed.
+                </p>
+                <p>
+                  Over the years, GCC Academy has earned a reputation for high
+                  pass rates, clear teaching, and personal attention, making us
+                  a trusted choice for professionals seeking exam success in
+                  Kerala and beyond.
                 </p>
               </div>
             </div>

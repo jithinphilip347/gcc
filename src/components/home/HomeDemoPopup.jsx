@@ -5,56 +5,57 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
 
 const programData = {
-  Pharmacy: ["DHA (DUBAI)", "MOH (UAE)", "KUWAIT - MOH", "DOH (HAAD) – Abu Dhabi", "SPLE (Saudi Arabia)", "BAHRAIN (BPLE)"],
-  Radiology: ["DHA (DUBAI)", "OMSEB (OMAN)", "QCHP (QATAR)" , "MOH (UAE)", "DOH (HAAD) – Abu Dhabi", "SPLE (SAUDI)", "BAHRAIN (BPLE)"],
+  Pharmacy: [
+    "DHA (DUBAI)",
+    "MOH (UAE)",
+    "KUWAIT - MOH",
+    "DOH (HAAD) – Abu Dhabi",
+    "SPLE (Saudi Arabia)",
+    "BAHRAIN (BPLE)",
+  ],
+  Radiology: [
+    "DHA (DUBAI)",
+    "OMSEB (OMAN)",
+    "QCHP (QATAR)",
+    "MOH (UAE)",
+    "DOH (HAAD) – Abu Dhabi",
+    "SPLE (SAUDI)",
+    "BAHRAIN (BPLE)",
+  ],
 };
+
+// ✅ Combined dropdown list
+const combinedCourses = [
+  ...programData.Pharmacy.map((course) => `${course} (Pharmacy)`),
+  ...programData.Radiology.map((course) => `${course} (Radiology)`),
+];
 
 const HomeDemoPopup = ({ onClose }) => {
   const [form, setForm] = useState({
     name: "",
     email: "",
     phone: "",
-    program: "",
     course: "",
     message: "",
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [programOpen, setProgramOpen] = useState(false);
-  const [courseOpen, setCourseOpen] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
 
-  const programRef = useRef(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [courseOpen, setCourseOpen] = useState(false);
+
   const courseRef = useRef(null);
 
   const handleChange = (e) => {
-    setForm({
-      ...form,
-      [e.target.name]: e.target.value,
-    });
-  };
-  const selectProgram = (value) => {
-    setForm({ ...form, program: value, course: "" });
-    setProgramOpen(false);
-  };
-
-  const selectCourse = (value) => {
-    setForm({ ...form, course: value });
-    setCourseOpen(false);
+    setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const GOOGLE_SHEET_URL =
     "https://script.google.com/macros/s/AKfycbyWavRSb28rJqWs9ReBcOz28eYdnHZ-mrBb7_qLrihNvTCEq2xotni2J99g_KCBlH5g/exec";
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    if (
-      !form.name ||
-      !form.email ||
-      !form.phone ||
-      !form.program ||
-      !form.course
-    ) {
+    if (!form.name || !form.email || !form.phone || !form.course) {
       toast.error("Please fill all fields!");
       setIsSubmitting(false);
       return;
@@ -71,7 +72,6 @@ const HomeDemoPopup = ({ onClose }) => {
         name: "",
         email: "",
         phone: "",
-        program: "",
         course: "",
         message: "",
       });
@@ -84,20 +84,13 @@ const HomeDemoPopup = ({ onClose }) => {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (programRef.current && !programRef.current.contains(event.target)) {
-        setProgramOpen(false);
-      }
-
       if (courseRef.current && !courseRef.current.contains(event.target)) {
         setCourseOpen(false);
       }
     };
 
     document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
@@ -107,18 +100,20 @@ const HomeDemoPopup = ({ onClose }) => {
           <span className="PopupClose" onClick={onClose}>
             <IoClose />
           </span>
+
           <div className="DemoPopupBox" onClick={(e) => e.stopPropagation()}>
             <div className="popupDemoForm">
               <div className="FormTitle">
                 <h2>Get Your Free Class Now</h2>
               </div>
+
               <div className="FormGroup">
                 <form onSubmit={handleSubmit}>
                   <div className="contactDetailGroup">
                     <input
                       type="text"
                       name="name"
-                      placeholder="Your Name"
+                      placeholder="Name"
                       value={form.name}
                       onChange={handleChange}
                     />
@@ -128,7 +123,7 @@ const HomeDemoPopup = ({ onClose }) => {
                     <input
                       type="email"
                       name="email"
-                      placeholder="Your Email"
+                      placeholder="Email"
                       value={form.email}
                       onChange={handleChange}
                     />
@@ -138,32 +133,13 @@ const HomeDemoPopup = ({ onClose }) => {
                     <input
                       type="number"
                       name="phone"
-                      placeholder="Your Phone Number"
+                      placeholder="Phone Number"
                       value={form.phone}
                       onChange={handleChange}
                     />
                   </div>
 
-                  <div className="customDropdown" ref={programRef}>
-                    <div
-                      className="dropdownHeader"
-                      onClick={() => setProgramOpen(!programOpen)}
-                    >
-                      <span>{form.program || "Choose Your Program"}</span>
-                      {programOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
-                    </div>
-
-                    {programOpen && (
-                      <ul className="dropdownList">
-                        {Object.keys(programData).map((item) => (
-                          <li key={item} onClick={() => selectProgram(item)}>
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-
+                  {/* ✅ SINGLE UPDATED DROPDOWN */}
                   <div className="customDropdown" ref={courseRef}>
                     <div
                       className="dropdownHeader"
@@ -173,10 +149,16 @@ const HomeDemoPopup = ({ onClose }) => {
                       {courseOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
                     </div>
 
-                    {courseOpen && form.program && (
+                    {courseOpen && (
                       <ul className="dropdownList">
-                        {programData[form.program].map((course) => (
-                          <li key={course} onClick={() => selectCourse(course)}>
+                        {combinedCourses.map((course) => (
+                          <li
+                            key={course}
+                            onClick={() => {
+                              setForm({ ...form, course });
+                              setCourseOpen(false);
+                            }}
+                          >
                             {course}
                           </li>
                         ))}
@@ -195,7 +177,6 @@ const HomeDemoPopup = ({ onClose }) => {
 
                   <div className="FormBtn">
                     <button type="submit">
-                      {" "}
                       {isSubmitting ? "Booking..." : "Book Now"}
                     </button>
                   </div>

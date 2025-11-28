@@ -138,7 +138,7 @@ const HomeContact = () => {
                 <input
                   type="email"
                   name="email"
-                  placeholder="Your Email"
+                  placeholder="Email"
                   value={formData.email}
                   onChange={handleChange}
                   required
@@ -150,7 +150,7 @@ const HomeContact = () => {
                 <input
                   type="text"
                   name="phone"
-                  placeholder="Your Phone Number"
+                  placeholder="Phone Number"
                   value={formData.phone}
                   onChange={handleChange}
                   required
@@ -161,7 +161,7 @@ const HomeContact = () => {
               <div className="ContactFormBox">
                 <textarea
                   name="message"
-                  placeholder="Additional Info"
+                  placeholder="Message"
                   value={formData.message}
                   onChange={handleChange}
                 ></textarea>
@@ -175,7 +175,7 @@ const HomeContact = () => {
                       <p>Submitting...</p>
                     </>
                   ) : (
-                    "Get Quote"
+                    "Send"
                   )}
                 </button>
               </div>

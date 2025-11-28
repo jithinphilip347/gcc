@@ -20,6 +20,13 @@ const HomeWhyCoose = () => {
           <h2>
             Why <span>Choose Us</span>
           </h2>
+          <p>
+           <b> Worried about your year gap? </b>
+           <span>Expert one-on-one coaching for working 
+          professionals who’ve lost touch with basics — 
+          we rebuild your foundation and support you till 
+          you pass.</span>
+          </p>
         </div>
 
         <div className="HomeWhyCooseMain">
@@ -32,8 +39,8 @@ const HomeWhyCoose = () => {
             </div>
             <div className="WhyChooseDesc">
               <p>
-                PDFs, Mock Tests, Notes & More — comprehensive resources to
-                boost your learning experience.
+                PDFs, Mock Tests, Notes & More Comprehensive 
+                Resources to build strong academic foundation.
               </p>
             </div>
           </div>
@@ -42,7 +49,7 @@ const HomeWhyCoose = () => {
               <FaLanguage />
             </div>
             <div className="WhyChooseTitle">
-              <h3>Regional Language Support</h3>
+              <h3>Additional Language Support</h3>
             </div>
             <div className="WhyChooseDesc">
               <p>

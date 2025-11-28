@@ -9,11 +9,16 @@ import Logo4 from "../../assets/images/doh.png";
 import Logo5 from "../../assets/images/sple-saudi.svg";
 import Logo6 from "../../assets/images/bple-beharin.png";
 import HomeDemoPopup from "../home/HomeDemoPopup";
+import { MdExpandCircleDown, MdExpandCircleUp } from "react-icons/md";
 
 
 const CourseList = () => {
 const [showPopup, setShowPopup] = useState(false);
+const [openIndex, setOpenIndex] = useState(null);
 
+const toggleCourse = (index) => {
+  setOpenIndex(openIndex === index ? null : index);
+};
 
   return (
     <>

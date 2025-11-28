@@ -6,6 +6,7 @@ import Link from "next/link";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { Pagination } from "swiper/modules";
 
 import Logo1 from "../../assets/images/DHA.svg";
 import Logo2 from "../../assets/images/moh-uae.webp";
@@ -26,7 +27,7 @@ const HomeCourse = () => {
 
         <div className="ViewAll">
           <Link href="/course">
-            <p>View All</p>
+            <p>know more</p>
             <VscArrowRight />
           </Link>
         </div>
@@ -41,21 +42,37 @@ const HomeCourse = () => {
 
             <div className="HomeCourseLeftBox">
               <Swiper
+                modules={[Pagination]}
                 spaceBetween={30}
                 loop
                 grabCursor
+                pagination={{
+                  clickable: true,
+                }}
                 breakpoints={{
                   0: {
-                    slidesPerView: 1, // 0 - 767px ➜ 1 slide
+                    slidesPerView: 1,
+                    pagination: { enabled: true },
+                  },
+                  480: {
+                    slidesPerView: 1,
+                    pagination: { enabled: true },
                   },
                   768: {
-                    slidesPerView: 1, // 768px ➜ 1 slide
+                    slidesPerView: 1,
+                    pagination: { enabled: true },
                   },
                   1024: {
-                    slidesPerView: 2, // 1024px & above ➜ 2 slides
+                    slidesPerView: 2,
+                    pagination: { enabled: true },
+                  },
+                  1200: {
+                    slidesPerView: 2,
+                    pagination: { enabled: false }, // ✅ Desktop - dots OFF
                   },
                 }}
               >
+
                 {/* <Swiper slidesPerView={2} spaceBetween={30} loop grabCursor> */}
                 <SwiperSlide>
                   <Link href="/course" className="CourseLink">
@@ -189,22 +206,38 @@ const HomeCourse = () => {
             </div>
 
             <div className="HomeCourseRightBox">
-              <Swiper
-                spaceBetween={30}
-                loop
-                grabCursor
-                breakpoints={{
-                  0: {
-                    slidesPerView: 1, // 0 - 767px ➜ 1 slide
-                  },
-                  768: {
-                    slidesPerView: 1, // 768px ➜ 1 slide
-                  },
-                  1024: {
-                    slidesPerView: 2, // 1024px & above ➜ 2 slides
-                  },
-                }}
-              >
+                    <Swiper
+                    modules={[Pagination]}
+                    spaceBetween={30}
+                    loop
+                    grabCursor
+                    pagination={{
+                      clickable: true,
+                    }}
+                    breakpoints={{
+                      0: {
+                        slidesPerView: 1,
+                        pagination: { enabled: true },
+                      },
+                      480: {
+                        slidesPerView: 1,
+                        pagination: { enabled: true },
+                      },
+                      768: {
+                        slidesPerView: 1,
+                        pagination: { enabled: true },
+                      },
+                      1024: {
+                        slidesPerView: 2,
+                        pagination: { enabled: true },
+                      },
+                      1200: {
+                        slidesPerView: 2,
+                        pagination: { enabled: false },
+                      },
+                    }}
+                  >
+
                 {/* <Swiper slidesPerView={2} spaceBetween={30} loop grabCursor> */}
                 <SwiperSlide>
                   <Link href="/course" className="CourseLink">

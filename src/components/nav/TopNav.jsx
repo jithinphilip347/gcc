@@ -7,10 +7,12 @@ import {
   IoLogoYoutube,
 } from "react-icons/io5";
 import { FaFacebookF } from "react-icons/fa";
-import Enquiry from "../enquiry/Enquiry";
+import ContactSideNav from "../nav/ContactSideNav";
+
 
 const TopNav = () => {
-  const [showEnquiry, setShowEnquiry] = useState(false);
+  const [showContact, setShowContact] = useState(false);
+  
 
   return (
     <>
@@ -59,7 +61,7 @@ const TopNav = () => {
               </div>
 
               <div className="TopNavEnquiryBtn">
-                <button onClick={() => setShowEnquiry(true)}>
+                <button onClick={() => setShowContact(true)}>
                   Contact Us
                 </button>
               </div>
@@ -67,7 +69,14 @@ const TopNav = () => {
           </div>
         </div>
       </div>
-      <Enquiry show={showEnquiry} onClose={() => setShowEnquiry(false)} />
+          {showContact && (
+        <div
+          className="MenuRightOverlay"
+          onClick={() => setShowContact(false)}
+        ></div>
+      )}
+      <ContactSideNav  show={showContact}
+        onClose={() => setShowContact(false)} />
     </>
   );
 };
