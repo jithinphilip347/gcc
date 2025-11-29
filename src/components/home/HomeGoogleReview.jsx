@@ -7,6 +7,7 @@ import toast from "react-hot-toast";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay, Pagination } from "swiper/modules";
+import { GOOLE_SHEET_ID } from "@/utilis/constants";
 
 
 const programData = {
@@ -76,7 +77,7 @@ const HomeGoogleReview = () => {
   };
 
   const GOOGLE_SHEET_URL =
-    "https://script.google.com/macros/s/AKfycbyWavRSb28rJqWs9ReBcOz28eYdnHZ-mrBb7_qLrihNvTCEq2xotni2J99g_KCBlH5g/exec";
+    `https://script.google.com/macros/s/${GOOLE_SHEET_ID}/exec`;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -101,6 +102,7 @@ const HomeGoogleReview = () => {
         phone: "",
         course: "",
         message: "",
+        source: "Book Demo Now!"
       });
     } catch (err) {
       console.error(err);

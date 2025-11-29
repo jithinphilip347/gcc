@@ -6,6 +6,7 @@ import toast from "react-hot-toast";
 import Link from "next/link";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import HomeDemoPopup from "./HomeDemoPopup";
+// import { GOOLE_SHEET_ID } from "@/utilis/constants";
 
 const programData = {
   Pharmacy: [
@@ -54,9 +55,9 @@ const HomeBanner = () => {
       [e.target.name]: e.target.value,
     });
   };
-
+  const GOOLE_SHEET_ID = 'AKfycby0UpvdXEFeYxsa71-8zLCJyzbSsjnZJOimTehR-0A4C0TsRHGNOEVgLnGZBwx3nX5i'
   const GOOGLE_SHEET_URL =
-    "https://script.google.com/macros/s/AKfycbyWavRSb28rJqWs9ReBcOz28eYdnHZ-mrBb7_qLrihNvTCEq2xotni2J99g_KCBlH5g/exec";
+    `https://script.google.com/macros/s/${GOOLE_SHEET_ID}/exec`;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -81,6 +82,7 @@ const HomeBanner = () => {
         phone: "",
         course: "",
         message: "",
+        source: "Book Demo Now!"
       });
     } catch (err) {
       console.error(err);

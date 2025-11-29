@@ -1,0 +1,3 @@
+
+export const GOOLE_SHEET_ID = 'AKfycby0UpvdXEFeYxsa71-8zLCJyzbSsjnZJOimTehR-0A4C0TsRHGNOEVgLnGZBwx3nX5i'
+export const CONTACT_FORM_ID = 'AKfycbz4XWLtGvFqCkeAcbiQcKnlg-YArvMlp2nr0WQrFhDcY40sprlR6czH1rrqsi31dOGg'

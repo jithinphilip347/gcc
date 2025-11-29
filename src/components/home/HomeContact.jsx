@@ -4,8 +4,9 @@ import React, { useState } from "react";
 import { HiOutlineLocationMarker, HiOutlineMail } from "react-icons/hi";
 import { HiOutlinePhone } from "react-icons/hi2";
 import toast from "react-hot-toast";
+import { CONTACT_FORM_ID, GOOLE_SHEET_ID } from "@/utilis/constants";
 
-const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbz4XWLtGvFqCkeAcbiQcKnlg-YArvMlp2nr0WQrFhDcY40sprlR6czH1rrqsi31dOGg/exec";
+const GOOGLE_SHEET_URL = `https://script.google.com/macros/s/${CONTACT_FORM_ID}/exec`;
 
 const HomeContact = () => {
   const [formData, setFormData] = useState({

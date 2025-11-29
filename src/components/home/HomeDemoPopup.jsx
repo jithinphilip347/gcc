@@ -1,4 +1,5 @@
 "use client";
+import { GOOLE_SHEET_ID } from "@/utilis/constants";
 import React, { useRef, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
@@ -30,13 +31,14 @@ const combinedCourses = [
   ...programData.Radiology.map((course) => `${course} (Radiology)`),
 ];
 
-const HomeDemoPopup = ({ onClose }) => {
+const HomeDemoPopup = ({ onClose,course = "" }) => {
   const [form, setForm] = useState({
     name: "",
     email: "",
     phone: "",
-    course: "",
+    course: course,
     message: "",
+    source: "Book Demo",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -49,7 +51,7 @@ const HomeDemoPopup = ({ onClose }) => {
   };
 
   const GOOGLE_SHEET_URL =
-    "https://script.google.com/macros/s/AKfycbyWavRSb28rJqWs9ReBcOz28eYdnHZ-mrBb7_qLrihNvTCEq2xotni2J99g_KCBlH5g/exec";
+    `https://script.google.com/macros/s/${GOOLE_SHEET_ID}/exec`;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -74,10 +76,12 @@ const HomeDemoPopup = ({ onClose }) => {
         phone: "",
         course: "",
         message: "",
+        source: "Course Page"
       });
     } catch (err) {
       console.error(err);
     } finally {
+      onClose()
       setIsSubmitting(false);
     }
   };
