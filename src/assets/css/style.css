@@ -1548,156 +1548,29 @@
 }
 #CourseList .CourseMain {
   display: flex;
-  align-items: flex-start;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-@media (max-width: 1024px) {
-  #CourseList .CourseMain {
-    gap: 60px;
-  }
-}
-@media (max-width: 768px) {
-  #CourseList .CourseMain {
-    gap: 30px;
-  }
-}
-#CourseList .CourseMain .CourseMainTopBox .CourseTopHeadBox {
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 15px;
-}
-#CourseList .CourseMain .CourseMainTopBox .CourseTopHeadBox h2 {
-  font-size: 26px;
-  font-family: MyFont1;
-  font-weight: 600;
-  color: var(--primaryColor);
-}
-#CourseList .CourseMain .CourseMainTopBox .CourseTopBox {
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox {
-  width: calc(33.3333333333% - 20px);
-  background: #f3f8f6;
-  padding: 30px 25px;
-  transition: all 0.3s ease;
-  min-height: 500px;
-  position: relative;
-}
-@media (max-width: 1024px) {
-  #CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox {
-    width: calc(50% - 30px);
-  }
-}
-@media (max-width: 768px) {
-  #CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox {
-    width: 100%;
-  }
-}
-#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .CourseIcon {
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  margin-bottom: 20px;
-}
-#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .CourseIcon img {
-  width: 180px;
-  height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .CourseTitle p {
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--primaryColor);
-  text-align: start;
-  margin-bottom: 10px;
-}
-#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .CourseDesc p {
-  font-size: 15px;
-  font-family: MyFont1;
-  font-weight: 400;
-  color: #555;
-  line-height: 1.6;
-  text-align: start;
-  margin-bottom: 20px;
-}
-@media (max-width: 480px) {
-  #CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .CourseDesc p {
-    font-size: 14px;
-  }
-}
-#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .Eligibility .EligibilityTitle p {
-  font-size: 16px;
-  font-weight: 600;
-  color: #000;
-  margin-bottom: 10px;
-}
-#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .Eligibility .CriteriaBox {
-  display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 60px;
 }
-#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .Eligibility .CriteriaBox .Box {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-}
-#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .Eligibility .CriteriaBox .Box .CheckmarkIcon {
-  width: 18px;
-  height: 18px;
-  min-width: 18px;
-  background: var(--primaryColor);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .Eligibility .CriteriaBox .Box .CheckmarkIcon svg {
-  color: #fff;
-  font-size: 12px;
-}
-#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .Eligibility .CriteriaBox .Box p {
-  font-size: 14px;
-  font-family: MyFont1;
-  font-weight: 400;
-  color: #444;
-  line-height: 1.4;
-}
-#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .CourseBookBtn {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-}
-#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .CourseBookBtn button {
-  background: var(--primaryColor);
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .CourseBookBtn button:hover {
-  background: #000;
-}
+#CourseList .CourseMain .CourseMainTopBox .CourseTopHeadBox,
+#CourseList .CourseMain .CourseMainTopBox .CourseBottomHeadBox,
+#CourseList .CourseMain .CourseMainBottomBox .CourseTopHeadBox,
 #CourseList .CourseMain .CourseMainBottomBox .CourseBottomHeadBox {
   display: flex;
   justify-content: flex-start;
   margin-bottom: 15px;
 }
+#CourseList .CourseMain .CourseMainTopBox .CourseTopHeadBox h2,
+#CourseList .CourseMain .CourseMainTopBox .CourseBottomHeadBox h2,
+#CourseList .CourseMain .CourseMainBottomBox .CourseTopHeadBox h2,
 #CourseList .CourseMain .CourseMainBottomBox .CourseBottomHeadBox h2 {
   font-size: 26px;
   font-family: MyFont1;
   font-weight: 600;
   color: var(--primaryColor);
 }
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox,
+#CourseList .CourseMain .CourseMainTopBox .CourseBottomBox,
+#CourseList .CourseMain .CourseMainBottomBox .CourseTopBox,
 #CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox {
   width: 100%;
   display: flex;
@@ -1705,24 +1578,36 @@
   gap: 30px;
   flex-wrap: wrap;
 }
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox,
+#CourseList .CourseMain .CourseMainTopBox .CourseBottomBox .CourseBox,
+#CourseList .CourseMain .CourseMainBottomBox .CourseTopBox .CourseBox,
 #CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox {
   width: calc(33.3333333333% - 20px);
   background: #f3f8f6;
-  padding: 30px 25px;
+  padding: 30px 25px 60px 25px;
   transition: all 0.3s ease;
-  min-height: 500px;
   position: relative;
+  border-radius: 10px;
 }
 @media (max-width: 1024px) {
+  #CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox,
+  #CourseList .CourseMain .CourseMainTopBox .CourseBottomBox .CourseBox,
+  #CourseList .CourseMain .CourseMainBottomBox .CourseTopBox .CourseBox,
   #CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox {
     width: calc(50% - 30px);
   }
 }
 @media (max-width: 768px) {
+  #CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox,
+  #CourseList .CourseMain .CourseMainTopBox .CourseBottomBox .CourseBox,
+  #CourseList .CourseMain .CourseMainBottomBox .CourseTopBox .CourseBox,
   #CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox {
     width: 100%;
   }
 }
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .CourseIcon,
+#CourseList .CourseMain .CourseMainTopBox .CourseBottomBox .CourseBox .CourseIcon,
+#CourseList .CourseMain .CourseMainBottomBox .CourseTopBox .CourseBox .CourseIcon,
 #CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .CourseIcon {
   width: 100%;
   display: flex;
@@ -1730,12 +1615,18 @@
   justify-content: flex-start;
   margin-bottom: 20px;
 }
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .CourseIcon img,
+#CourseList .CourseMain .CourseMainTopBox .CourseBottomBox .CourseBox .CourseIcon img,
+#CourseList .CourseMain .CourseMainBottomBox .CourseTopBox .CourseBox .CourseIcon img,
 #CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .CourseIcon img {
   width: 180px;
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
 }
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .CourseTitle p,
+#CourseList .CourseMain .CourseMainTopBox .CourseBottomBox .CourseBox .CourseTitle p,
+#CourseList .CourseMain .CourseMainBottomBox .CourseTopBox .CourseBox .CourseTitle p,
 #CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .CourseTitle p {
   font-size: 20px;
   font-weight: 600;
@@ -1743,6 +1634,15 @@
   text-align: start;
   margin-bottom: 10px;
 }
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .CourseDetailsFade,
+#CourseList .CourseMain .CourseMainTopBox .CourseBottomBox .CourseBox .CourseDetailsFade,
+#CourseList .CourseMain .CourseMainBottomBox .CourseTopBox .CourseBox .CourseDetailsFade,
+#CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .CourseDetailsFade {
+  animation: fadeIn 0.5s ease;
+}
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .CourseDesc p,
+#CourseList .CourseMain .CourseMainTopBox .CourseBottomBox .CourseBox .CourseDesc p,
+#CourseList .CourseMain .CourseMainBottomBox .CourseTopBox .CourseBox .CourseDesc p,
 #CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .CourseDesc p {
   font-size: 15px;
   font-family: MyFont1;
@@ -1753,26 +1653,47 @@
   margin-bottom: 20px;
 }
 @media (max-width: 480px) {
+  #CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .CourseDesc p,
+  #CourseList .CourseMain .CourseMainTopBox .CourseBottomBox .CourseBox .CourseDesc p,
+  #CourseList .CourseMain .CourseMainBottomBox .CourseTopBox .CourseBox .CourseDesc p,
   #CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .CourseDesc p {
     font-size: 14px;
   }
 }
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .Eligibility,
+#CourseList .CourseMain .CourseMainTopBox .CourseBottomBox .CourseBox .Eligibility,
+#CourseList .CourseMain .CourseMainBottomBox .CourseTopBox .CourseBox .Eligibility,
+#CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .Eligibility {
+  margin-bottom: 20px;
+}
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .Eligibility .EligibilityTitle p,
+#CourseList .CourseMain .CourseMainTopBox .CourseBottomBox .CourseBox .Eligibility .EligibilityTitle p,
+#CourseList .CourseMain .CourseMainBottomBox .CourseTopBox .CourseBox .Eligibility .EligibilityTitle p,
 #CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .Eligibility .EligibilityTitle p {
   font-size: 16px;
   font-weight: 600;
   color: #000;
   margin-bottom: 10px;
 }
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .Eligibility .CriteriaBox,
+#CourseList .CourseMain .CourseMainTopBox .CourseBottomBox .CourseBox .Eligibility .CriteriaBox,
+#CourseList .CourseMain .CourseMainBottomBox .CourseTopBox .CourseBox .Eligibility .CriteriaBox,
 #CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .Eligibility .CriteriaBox {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .Eligibility .CriteriaBox .Box,
+#CourseList .CourseMain .CourseMainTopBox .CourseBottomBox .CourseBox .Eligibility .CriteriaBox .Box,
+#CourseList .CourseMain .CourseMainBottomBox .CourseTopBox .CourseBox .Eligibility .CriteriaBox .Box,
 #CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .Eligibility .CriteriaBox .Box {
   display: flex;
   align-items: flex-start;
   gap: 10px;
 }
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .Eligibility .CriteriaBox .Box .CheckmarkIcon,
+#CourseList .CourseMain .CourseMainTopBox .CourseBottomBox .CourseBox .Eligibility .CriteriaBox .Box .CheckmarkIcon,
+#CourseList .CourseMain .CourseMainBottomBox .CourseTopBox .CourseBox .Eligibility .CriteriaBox .Box .CheckmarkIcon,
 #CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .Eligibility .CriteriaBox .Box .CheckmarkIcon {
   width: 18px;
   height: 18px;
@@ -1783,10 +1704,16 @@
   align-items: center;
   justify-content: center;
 }
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .Eligibility .CriteriaBox .Box .CheckmarkIcon svg,
+#CourseList .CourseMain .CourseMainTopBox .CourseBottomBox .CourseBox .Eligibility .CriteriaBox .Box .CheckmarkIcon svg,
+#CourseList .CourseMain .CourseMainBottomBox .CourseTopBox .CourseBox .Eligibility .CriteriaBox .Box .CheckmarkIcon svg,
 #CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .Eligibility .CriteriaBox .Box .CheckmarkIcon svg {
   color: #fff;
   font-size: 12px;
 }
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .Eligibility .CriteriaBox .Box p,
+#CourseList .CourseMain .CourseMainTopBox .CourseBottomBox .CourseBox .Eligibility .CriteriaBox .Box p,
+#CourseList .CourseMain .CourseMainBottomBox .CourseTopBox .CourseBox .Eligibility .CriteriaBox .Box p,
 #CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .Eligibility .CriteriaBox .Box p {
   font-size: 14px;
   font-family: MyFont1;
@@ -1794,25 +1721,70 @@
   color: #444;
   line-height: 1.4;
 }
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .CourseBookBtn,
+#CourseList .CourseMain .CourseMainTopBox .CourseBottomBox .CourseBox .CourseBookBtn,
+#CourseList .CourseMain .CourseMainBottomBox .CourseTopBox .CourseBox .CourseBookBtn,
 #CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .CourseBookBtn {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
 }
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .CourseBookBtn button,
+#CourseList .CourseMain .CourseMainTopBox .CourseBottomBox .CourseBox .CourseBookBtn button,
+#CourseList .CourseMain .CourseMainBottomBox .CourseTopBox .CourseBox .CourseBookBtn button,
 #CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .CourseBookBtn button {
   background: var(--primaryColor);
   color: #fff;
   border: none;
-  padding: 10px 15px;
+  padding: 10px 20px;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
   transition: 0.3s ease;
+  border-radius: 4px;
 }
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .CourseBookBtn button:hover,
+#CourseList .CourseMain .CourseMainTopBox .CourseBottomBox .CourseBox .CourseBookBtn button:hover,
+#CourseList .CourseMain .CourseMainBottomBox .CourseTopBox .CourseBox .CourseBookBtn button:hover,
 #CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .CourseBookBtn button:hover {
   background: #000;
 }
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .ToggleBtn,
+#CourseList .CourseMain .CourseMainTopBox .CourseBottomBox .CourseBox .ToggleBtn,
+#CourseList .CourseMain .CourseMainBottomBox .CourseTopBox .CourseBox .ToggleBtn,
+#CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .ToggleBtn {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background: transparent;
+  border: 1px solid var(--primaryColor);
+  color: var(--primaryColor);
+  padding: 5px 15px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 20px;
+}
+#CourseList .CourseMain .CourseMainTopBox .CourseTopBox .CourseBox .ToggleBtn:hover,
+#CourseList .CourseMain .CourseMainTopBox .CourseBottomBox .CourseBox .ToggleBtn:hover,
+#CourseList .CourseMain .CourseMainBottomBox .CourseTopBox .CourseBox .ToggleBtn:hover,
+#CourseList .CourseMain .CourseMainBottomBox .CourseBottomBox .CourseBox .ToggleBtn:hover {
+  background: var(--primaryColor);
+  color: #fff;
+}
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 #Footer {
   width: 100%;
   background: var(--primaryColor);
@@ -2555,10 +2527,17 @@
   }
 }
 
-.whatsappWidget {
+.floatingWidgetContainer {
   position: fixed;
   right: 25px;
   bottom: 40px;
+  z-index: 9999;
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+}
+
+.whatsappMainBtn {
   width: 52px;
   height: 52px;
   background: #25d366;
@@ -2567,20 +2546,71 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 26px;
+  font-size: 28px;
   cursor: pointer;
-  z-index: 9999;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
 }
-.whatsappWidget:hover {
+.whatsappMainBtn:hover {
   transform: scale(1.1);
+}
+.whatsappMainBtn.active {
+  transform: rotate(90deg);
+  background: #444;
+}
+
+.widgetOptions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-bottom: 5px;
+}
+.widgetOptions.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.widgetOptions .actionBtn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: var(--primaryColor);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  min-width: 140px;
+}
+.widgetOptions .actionBtn .icon {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.widgetOptions .actionBtn .text {
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.widgetOptions .actionBtn:hover {
+  transform: translateX(-5px);
+  background: #000;
 }
 
 .scrollTopBtn {
   position: fixed;
   right: 30px;
-  bottom: 100px;
+  bottom: 110px;
   width: 44px;
   height: 44px;
   background: #fff;
@@ -2589,11 +2619,12 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 9999;
+  z-index: 9998;
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 .scrollTopBtn svg:not(.progressRing) {
   position: absolute;

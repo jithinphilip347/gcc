@@ -1617,299 +1617,500 @@
     }
 }
 
+// #CourseList {
+//     width: 100%;
+//     padding: 100px 0;
+//     background: #fff;
+//     @media (max-width: 1024px) {
+//         padding: 80px 0;
+//     }
+//     @media (max-width: 768px) {
+//         padding: 60px 0;
+//     }
+//     @media (max-width: 480px) {
+//         padding: 30px 0;
+//     }
+//     .CourseMain {
+//         display: flex;
+//         align-items: flex-start;
+//         gap: 30px;
+//         flex-wrap: wrap;
+//         @media (max-width: 1024px) {
+//             gap: 60px;
+//         }
+//         @media (max-width: 768px) {
+//             gap: 30px;
+//         }
+//         .CourseMainTopBox{
+//             .CourseTopHeadBox{
+//             display: flex;
+//             justify-content: flex-start;
+//             margin-bottom: 15px;
+//             h2 {
+//                 font-size: 26px;
+//                 font-family: MyFont1;
+//                 font-weight: 600;
+//                 color: var(--primaryColor);
+//                 }
+//             }
+//             .CourseTopBox{
+//                 width: 100%;
+//                 display: flex;
+//                 align-items: flex-start;
+//                 gap: 30px;
+//                 flex-wrap: wrap;
+//             .CourseBox {
+//             width: calc(100% / 3 - 20px);
+//             background: #f3f8f6;
+//             padding: 30px 25px;
+//             transition: all 0.3s ease;
+//             min-height: 500px;
+//             position: relative;
+//             @media (max-width: 1024px) {
+//                 width: calc(100% / 2 - 30px);
+//             }
+//             @media (max-width: 768px) {
+//                 width: 100%;
+//             }
+//             .CourseIcon {
+//                 width: 100%;
+//                 display: flex;
+//                 align-items: flex-start;
+//                 justify-content: flex-start;
+//                 margin-bottom: 20px;
+
+//                 img {
+//                     width: 180px;
+//                     height: auto;
+//                     object-fit: contain;
+//                 }
+//             }
+
+//             .CourseTitle p {
+//                 font-size: 20px;
+//                 font-weight: 600;
+//                 color: var(--primaryColor);
+//                 text-align: start;
+//                 margin-bottom: 10px;
+//             }
+
+//             .CourseDesc p {
+//                 font-size: 15px;
+//                 font-family: MyFont1;
+//                 font-weight: 400;
+//                 color: #555;
+//                 line-height: 1.6;
+//                 text-align: start;
+//                 margin-bottom: 20px;
+//                 @media (max-width: 480px) {
+//                     font-size: 14px;
+//                 }
+//             }
+
+//             .Eligibility {
+//                 .EligibilityTitle p {
+//                     font-size: 16px;
+//                     font-weight: 600;
+//                     color: #000;
+//                     margin-bottom: 10px;
+//                 }
+
+//                 .CriteriaBox {
+//                     display: flex;
+//                     flex-direction: column;
+//                     gap: 8px;
+
+//                     .Box {
+//                         display: flex;
+//                         align-items: flex-start;
+//                         gap: 10px;
+
+//                         .CheckmarkIcon {
+//                             width: 18px;
+//                             height: 18px;
+//                             min-width: 18px;
+//                             background: var(--primaryColor);
+//                             border-radius: 50%;
+//                             display: flex;
+//                             align-items: center;
+//                             justify-content: center;
+
+//                             svg {
+//                                 color: #fff;
+//                                 font-size: 12px;
+//                             }
+//                         }
+
+//                         p {
+//                             font-size: 14px;
+//                             font-family: MyFont1;
+//                             font-weight: 400;
+//                             color: #444;
+//                             line-height: 1.4;
+//                         }
+//                     }
+//                 }
+//             }
+//             .CourseBookBtn {
+//                 position: absolute;
+//                 right: 20px;
+//                 bottom: 20px;
+
+//                 button {
+//                 background: var(--primaryColor);
+//                 color: #fff;
+//                 border: none;
+//                 padding: 10px 15px;
+//                 font-size: 14px;
+//                 font-weight: 500;
+//                 // border-radius: 4px;
+//                 cursor: pointer;
+//                 transition: 0.3s ease;
+
+//                 &:hover {
+//                     background: #000;
+//                 }
+//                 }
+//             }
+//            }
+//             }
+//         }
+//         .CourseMainBottomBox{
+//             .CourseBottomHeadBox{
+//             display: flex;
+//             justify-content: flex-start;
+//             margin-bottom: 15px;
+//             h2 {
+//                 font-size: 26px;
+//                 font-family: MyFont1;
+//                 font-weight: 600;
+//                 color: var(--primaryColor);
+//                 }
+//             }
+//             .CourseBottomBox{
+//                 width: 100%;
+//                 display: flex;
+//                 align-items: flex-start;
+//                 gap: 30px;
+//                 flex-wrap: wrap;
+//             .CourseBox {
+//             width: calc(100% / 3 - 20px);
+//             background: #f3f8f6;
+//             padding: 30px 25px;
+//             transition: all 0.3s ease;
+//             min-height: 500px;
+//             position: relative;
+//             @media (max-width: 1024px) {
+//                 width: calc(100% / 2 - 30px);
+//             }
+//             @media (max-width: 768px) {
+//                 width: 100%;
+//             }
+//             .CourseIcon {
+//                 width: 100%;
+//                 display: flex;
+//                 align-items: flex-start;
+//                 justify-content: flex-start;
+//                 margin-bottom: 20px;
+
+//                 img {
+//                     width: 180px;
+//                     height: auto;
+//                     object-fit: contain;
+//                 }
+//             }
+
+//             .CourseTitle p {
+//                 font-size: 20px;
+//                 font-weight: 600;
+//                 color: var(--primaryColor);
+//                 text-align: start;
+//                 margin-bottom: 10px;
+//             }
+
+//             .CourseDesc p {
+//                 font-size: 15px;
+//                 font-family: MyFont1;
+//                 font-weight: 400;
+//                 color: #555;
+//                 line-height: 1.6;
+//                 text-align: start;
+//                 margin-bottom: 20px;
+//                 @media (max-width: 480px) {
+//                     font-size: 14px;
+//                 }
+//             }
+
+//             .Eligibility {
+//                 .EligibilityTitle p {
+//                     font-size: 16px;
+//                     font-weight: 600;
+//                     color: #000;
+//                     margin-bottom: 10px;
+//                 }
+
+//                 .CriteriaBox {
+//                     display: flex;
+//                     flex-direction: column;
+//                     gap: 8px;
+
+//                     .Box {
+//                         display: flex;
+//                         align-items: flex-start;
+//                         gap: 10px;
+
+//                         .CheckmarkIcon {
+//                             width: 18px;
+//                             height: 18px;
+//                             min-width: 18px;
+//                             background: var(--primaryColor);
+//                             border-radius: 50%;
+//                             display: flex;
+//                             align-items: center;
+//                             justify-content: center;
+
+//                             svg {
+//                                 color: #fff;
+//                                 font-size: 12px;
+//                             }
+//                         }
+
+//                         p {
+//                             font-size: 14px;
+//                             font-family: MyFont1;
+//                             font-weight: 400;
+//                             color: #444;
+//                             line-height: 1.4;
+//                         }
+//                     }
+//                 }
+//             }
+//             .CourseBookBtn {
+//     position: absolute;
+//     right: 20px;
+//     bottom: 20px;
+
+//     button {
+//       background: var(--primaryColor);
+//       color: #fff;
+//       border: none;
+//       padding: 10px 15px;
+//       font-size: 14px;
+//       font-weight: 500;
+//       cursor: pointer;
+//       transition: 0.3s ease;
+
+//       &:hover {
+//         background: #000;
+//       }
+//     }
+//   }
+//         }
+//             }
+//         }
+
+//     }
+// }
+
 #CourseList {
-    width: 100%;
-    padding: 100px 0;
-    background: #fff;
-    @media (max-width: 1024px) {
-        padding: 80px 0;
-    }
-    @media (max-width: 768px) {
-        padding: 60px 0;
-    }
-    @media (max-width: 480px) {
-        padding: 30px 0;
-    }
-    .CourseMain {
+  width: 100%;
+  padding: 100px 0;
+  background: #fff;
+
+  @media (max-width: 1024px) {
+    padding: 80px 0;
+  }
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+  @media (max-width: 480px) {
+    padding: 30px 0;
+  }
+
+  .CourseMain {
+    display: flex;
+    flex-direction: column; // Changed to column to stack TopBox and BottomBox cleanly
+    gap: 60px;
+
+    .CourseMainTopBox,
+    .CourseMainBottomBox {
+      .CourseTopHeadBox,
+      .CourseBottomHeadBox {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 15px;
+        h2 {
+          font-size: 26px;
+          font-family: MyFont1;
+          font-weight: 600;
+          color: var(--primaryColor);
+        }
+      }
+
+      .CourseTopBox,
+      .CourseBottomBox {
+        width: 100%;
         display: flex;
         align-items: flex-start;
         gap: 30px;
         flex-wrap: wrap;
-        @media (max-width: 1024px) {
-            gap: 60px;
-        }
-        @media (max-width: 768px) {
-            gap: 30px;
-        }
-        .CourseMainTopBox{
-            .CourseTopHeadBox{
+
+        .CourseBox {
+          width: calc(100% / 3 - 20px);
+          background: #f3f8f6;
+          padding: 30px 25px 60px 25px; // Added bottom padding for the absolute button
+          transition: all 0.3s ease;
+          position: relative;
+          border-radius: 10px;
+          
+          // Removed fixed min-height to allow collapsing
+          // min-height: 500px; 
+
+          @media (max-width: 1024px) {
+            width: calc(100% / 2 - 30px);
+          }
+          @media (max-width: 768px) {
+            width: 100%;
+          }
+
+          .CourseIcon {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+
+            img {
+              width: 180px;
+              height: auto;
+              object-fit: contain;
+            }
+          }
+
+          .CourseTitle p {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--primaryColor);
+            text-align: start;
+            margin-bottom: 10px;
+          }
+
+          // Animation container for details
+          .CourseDetailsFade {
+            animation: fadeIn 0.5s ease;
+          }
+
+          .CourseDesc p {
+            font-size: 15px;
+            font-family: MyFont1;
+            font-weight: 400;
+            color: #555;
+            line-height: 1.6;
+            text-align: start;
+            margin-bottom: 20px;
+            @media (max-width: 480px) {
+              font-size: 14px;
+            }
+          }
+
+          .Eligibility {
+            margin-bottom: 20px;
+            .EligibilityTitle p {
+              font-size: 16px;
+              font-weight: 600;
+              color: #000;
+              margin-bottom: 10px;
+            }
+
+            .CriteriaBox {
+              display: flex;
+              flex-direction: column;
+              gap: 8px;
+
+              .Box {
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+
+                .CheckmarkIcon {
+                  width: 18px;
+                  height: 18px;
+                  min-width: 18px;
+                  background: var(--primaryColor);
+                  border-radius: 50%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+
+                  svg {
+                    color: #fff;
+                    font-size: 12px;
+                  }
+                }
+
+                p {
+                  font-size: 14px;
+                  font-family: MyFont1;
+                  font-weight: 400;
+                  color: #444;
+                  line-height: 1.4;
+                }
+              }
+            }
+          }
+
+          .CourseBookBtn {
+            width: 100%;
             display: flex;
             justify-content: flex-start;
-            margin-bottom: 15px;
-            h2 {
-                font-size: 26px;
-                font-family: MyFont1;
-                font-weight: 600;
-                color: var(--primaryColor);
-                }
+            margin-top: 20px;
+
+            button {
+              background: var(--primaryColor);
+              color: #fff;
+              border: none;
+              padding: 10px 20px;
+              font-size: 14px;
+              font-weight: 500;
+              cursor: pointer;
+              transition: 0.3s ease;
+              border-radius: 4px;
+
+              &:hover {
+                background: #000;
+              }
             }
-            .CourseTopBox{
-                width: 100%;
-                display: flex;
-                align-items: flex-start;
-                gap: 30px;
-                flex-wrap: wrap;
-            .CourseBox {
-            width: calc(100% / 3 - 20px);
-            background: #f3f8f6;
-            padding: 30px 25px;
-            transition: all 0.3s ease;
-            min-height: 500px;
-            position: relative;
-            @media (max-width: 1024px) {
-                width: calc(100% / 2 - 30px);
-            }
-            @media (max-width: 768px) {
-                width: 100%;
-            }
-            .CourseIcon {
-                width: 100%;
-                display: flex;
-                align-items: flex-start;
-                justify-content: flex-start;
-                margin-bottom: 20px;
+          }
 
-                img {
-                    width: 180px;
-                    height: auto;
-                    object-fit: contain;
-                }
-            }
+          // The Expand/Collapse Button
+          .ToggleBtn {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            background: transparent;
+            border: 1px solid var(--primaryColor);
+            color: var(--primaryColor);
+            padding: 5px 15px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 20px;
 
-            .CourseTitle p {
-                font-size: 20px;
-                font-weight: 600;
-                color: var(--primaryColor);
-                text-align: start;
-                margin-bottom: 10px;
-            }
-
-            .CourseDesc p {
-                font-size: 15px;
-                font-family: MyFont1;
-                font-weight: 400;
-                color: #555;
-                line-height: 1.6;
-                text-align: start;
-                margin-bottom: 20px;
-                @media (max-width: 480px) {
-                    font-size: 14px;
-                }
-            }
-
-            .Eligibility {
-                .EligibilityTitle p {
-                    font-size: 16px;
-                    font-weight: 600;
-                    color: #000;
-                    margin-bottom: 10px;
-                }
-
-                .CriteriaBox {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 8px;
-
-                    .Box {
-                        display: flex;
-                        align-items: flex-start;
-                        gap: 10px;
-
-                        .CheckmarkIcon {
-                            width: 18px;
-                            height: 18px;
-                            min-width: 18px;
-                            background: var(--primaryColor);
-                            border-radius: 50%;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-
-                            svg {
-                                color: #fff;
-                                font-size: 12px;
-                            }
-                        }
-
-                        p {
-                            font-size: 14px;
-                            font-family: MyFont1;
-                            font-weight: 400;
-                            color: #444;
-                            line-height: 1.4;
-                        }
-                    }
-                }
-            }
-            .CourseBookBtn {
-                position: absolute;
-                right: 20px;
-                bottom: 20px;
-
-                button {
+            &:hover {
                 background: var(--primaryColor);
                 color: #fff;
-                border: none;
-                padding: 10px 15px;
-                font-size: 14px;
-                font-weight: 500;
-                // border-radius: 4px;
-                cursor: pointer;
-                transition: 0.3s ease;
-
-                &:hover {
-                    background: #000;
-                }
-                }
             }
-           }
-            }
+          }
         }
-        .CourseMainBottomBox{
-            .CourseBottomHeadBox{
-            display: flex;
-            justify-content: flex-start;
-            margin-bottom: 15px;
-            h2 {
-                font-size: 26px;
-                font-family: MyFont1;
-                font-weight: 600;
-                color: var(--primaryColor);
-                }
-            }
-            .CourseBottomBox{
-                width: 100%;
-                display: flex;
-                align-items: flex-start;
-                gap: 30px;
-                flex-wrap: wrap;
-            .CourseBox {
-            width: calc(100% / 3 - 20px);
-            background: #f3f8f6;
-            padding: 30px 25px;
-            transition: all 0.3s ease;
-            min-height: 500px;
-            position: relative;
-            @media (max-width: 1024px) {
-                width: calc(100% / 2 - 30px);
-            }
-            @media (max-width: 768px) {
-                width: 100%;
-            }
-            .CourseIcon {
-                width: 100%;
-                display: flex;
-                align-items: flex-start;
-                justify-content: flex-start;
-                margin-bottom: 20px;
-
-                img {
-                    width: 180px;
-                    height: auto;
-                    object-fit: contain;
-                }
-            }
-
-            .CourseTitle p {
-                font-size: 20px;
-                font-weight: 600;
-                color: var(--primaryColor);
-                text-align: start;
-                margin-bottom: 10px;
-            }
-
-            .CourseDesc p {
-                font-size: 15px;
-                font-family: MyFont1;
-                font-weight: 400;
-                color: #555;
-                line-height: 1.6;
-                text-align: start;
-                margin-bottom: 20px;
-                @media (max-width: 480px) {
-                    font-size: 14px;
-                }
-            }
-
-            .Eligibility {
-                .EligibilityTitle p {
-                    font-size: 16px;
-                    font-weight: 600;
-                    color: #000;
-                    margin-bottom: 10px;
-                }
-
-                .CriteriaBox {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 8px;
-
-                    .Box {
-                        display: flex;
-                        align-items: flex-start;
-                        gap: 10px;
-
-                        .CheckmarkIcon {
-                            width: 18px;
-                            height: 18px;
-                            min-width: 18px;
-                            background: var(--primaryColor);
-                            border-radius: 50%;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-
-                            svg {
-                                color: #fff;
-                                font-size: 12px;
-                            }
-                        }
-
-                        p {
-                            font-size: 14px;
-                            font-family: MyFont1;
-                            font-weight: 400;
-                            color: #444;
-                            line-height: 1.4;
-                        }
-                    }
-                }
-            }
-            .CourseBookBtn {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-
-    button {
-      background: var(--primaryColor);
-      color: #fff;
-      border: none;
-      padding: 10px 15px;
-      font-size: 14px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: 0.3s ease;
-
-      &:hover {
-        background: #000;
       }
     }
   }
-        }
-            }
-        }
+}
 
-    }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 #Footer {
@@ -2689,32 +2890,177 @@
 }
 
 
-.whatsappWidget {
+// .whatsappWidget {
+//   position: fixed;
+//   right: 25px;
+//   bottom: 40px;
+//   width: 52px;
+//   height: 52px;
+//   background: #25d366;
+//   color: #fff;
+//   border-radius: 50%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   font-size: 26px;
+//   cursor: pointer;
+//   z-index: 9999;
+//   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+//   transition: 0.3s ease;
+
+//   &:hover {
+//     transform: scale(1.1);
+//   }
+// }
+// .scrollTopBtn {
+//   position: fixed;
+//   right: 30px;
+//   bottom: 100px;
+//   width: 44px;
+//   height: 44px;
+//   background: #fff;
+//   border-radius: 50%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   cursor: pointer;
+//   z-index: 9999;
+
+//   opacity: 0;
+//   visibility: hidden;
+//   transform: translateY(10px);
+//   transition: all 0.3s ease;
+
+//   svg:not(.progressRing) {
+//     position: absolute;
+//     font-size: 22px;
+//     color: var(--primaryColor);
+//   }
+// }
+// .scrollTopBtn.show {
+//   opacity: 1;
+//   visibility: visible;
+//   transform: translateY(0);
+// }
+// .progressRing {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   transform: rotate(-90deg);
+// }
+// .progressBg {
+//   fill: none;
+//   stroke: #e0e0e0;
+//   stroke-width: 3;
+// }
+// .progressBar {
+//   fill: none;
+//   stroke: var(--primaryColor);
+//   stroke-width: 3;
+//   transition: stroke-dashoffset 0.2s linear;
+// }
+
+
+// Main Container to hold everything relative to bottom-right
+.floatingWidgetContainer {
   position: fixed;
   right: 25px;
   bottom: 40px;
+  z-index: 9999;
+  display: flex;
+//   flex-direction: column;
+  align-items: flex-end; // Aligns items to the right side
+  gap: 15px;
+}
+
+// The Main Circular Button (WhatsApp/Close Toggle)
+.whatsappMainBtn {
   width: 52px;
   height: 52px;
-  background: #25d366;
+  background: #25d366; // Standard WhatsApp Green
   color: #fff;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 26px;
+  font-size: 28px;
   cursor: pointer;
-  z-index: 9999;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
 
   &:hover {
     transform: scale(1.1);
   }
+
+  // When menu is open, rotate the Close icon
+  &.active {
+    transform: rotate(90deg);
+    background: #444; // Optional: Change color when open (e.g., to dark grey)
+  }
 }
+
+// Container for the hidden options
+.widgetOptions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-bottom: 5px; // Space between options and main button
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  // The individual "Call" and "WhatsApp Me" buttons
+  .actionBtn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: var(--primaryColor);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 30px; // Pill shape
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    min-width: 140px; // Ensure consistent width
+
+    // Icon Styles
+    .icon {
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+    }
+
+    // Text Styles
+    .text {
+      font-size: 14px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    &:hover {
+      transform: translateX(-5px); // Slight slide effect on hover
+      background: #000; // Optional darken on hover
+    }
+  }
+}
+
+// --- Keeping Scroll Top Button Logic Same ---
 .scrollTopBtn {
   position: fixed;
   right: 30px;
-  bottom: 100px;
+  bottom: 110px; // Moved up slightly to avoid overlapping with new menu if needed
   width: 44px;
   height: 44px;
   background: #fff;
@@ -2723,12 +3069,13 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 9999;
+  z-index: 9998; // Lower than widget
 
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 
   svg:not(.progressRing) {
     position: absolute;
@@ -2736,29 +3083,32 @@
     color: var(--primaryColor);
   }
 }
+
 .scrollTopBtn.show {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
+
 .progressRing {
   position: absolute;
   top: 0;
   left: 0;
   transform: rotate(-90deg);
 }
+
 .progressBg {
   fill: none;
   stroke: #e0e0e0;
   stroke-width: 3;
 }
+
 .progressBar {
   fill: none;
   stroke: var(--primaryColor);
   stroke-width: 3;
   transition: stroke-dashoffset 0.2s linear;
 }
-
 
 #HomeDemoPopup {
     .DemoPopupOverlay {
