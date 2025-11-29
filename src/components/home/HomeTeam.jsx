@@ -27,13 +27,13 @@ const HomeTeam = () => {
 
               <div className="LearnMoreOurTeam">
                 <p>
-                  I believe most professionals don’t need ‘more studying’ — they
+                  I believe most professionals don’t need ‘more studying’ , they
                   need focused guidance, clarity, and a mentor who shows them
                   exactly what to learn to pass.
                 </p>
                 <p>
                   For 8+ years, I’ve guided professionals who felt they’d
-                  ‘forgotten everything’ — and watched them clear their Gulf
+                  ‘forgotten everything’ ,  and watched them clear their Gulf
                   licensing exams with confidence.
                 </p>
                 <p>
@@ -43,7 +43,7 @@ const HomeTeam = () => {
                 </p>
               </div>
                 <div className="OwnerBox">
-                  <h2>— Greeshma Arun</h2>
+                  <h2>Greeshma Arun</h2>
                 </div>
               <div className="OurTeamContactBox">
                 <a href="mailto:greeshma@gccacademy.net">
