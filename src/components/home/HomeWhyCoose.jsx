@@ -23,7 +23,7 @@ const HomeWhyCoose = () => {
           <p>
            <b> Worried about your year gap? </b>
            <span>Expert one-on-one coaching for working 
-          professionals who’ve lost touch with basics — 
+          professionals who’ve lost touch with basics.
           we rebuild your foundation and support you till 
           you pass.</span>
           </p>
