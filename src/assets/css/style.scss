@@ -3375,6 +3375,7 @@
                     min-height: 250px;
                     cursor: grab; // Shows the hand icon
 
+                    
                     .ReviewerBox {
                         display: flex;
                         align-items: center;
@@ -3393,7 +3394,7 @@
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
-                                background: var(--primaryColor, #0a74da);
+                                background: var(--primaryColor);
                                 color: #fff;
                                 font-weight: bold;
                                 font-size: 20px;

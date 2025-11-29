@@ -2919,7 +2919,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--primaryColor, #0a74da);
+  background: var(--primaryColor);
   color: #fff;
   font-weight: bold;
   font-size: 20px;

@@ -185,11 +185,16 @@ const HomeGoogleReview = () => {
                   <SwiperSlide key={index}>
                     <div className="GoogleReviewBox">
                       <div className="ReviewerBox">
+                        <div className="ReviwerProfile">
                         <div className="ProfilePlaceholder">
                           {item.name.charAt(0)}
                         </div>
-                        <h4>{item.name}</h4>
+                      
                       </div>
+                        <div className="ReviewerNameBox">
+                        <h4>{item.name}</h4>
+                        </div>
+                        </div>
                       <div className="ReviewRateBox">
                         <div className="StarBox">
                           {[...Array(5)].map((_, i) => (
