@@ -118,10 +118,10 @@ const Footer = () => {
               <p>copyright© 2025 all rights reserved</p>
             </div>
 
-            <div className="DesignWith">
+            <a href='https://varixialabs.com' target="_blank" className="DesignWith">
               <p>Design By</p>
               <Image src={DesignLogo} alt="" className="DesignLogo" />
-            </div>
+            </a>
           </div>
         </div>
       </div>

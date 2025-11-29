@@ -2265,6 +2265,8 @@
                 display: flex;
                 align-items: center;
                 cursor: pointer;
+                height: fit-content;
+                text-decoration: none;
 
                 p {
                     color: #fff;
@@ -2968,6 +2970,7 @@
   bottom: 40px;
   z-index: 9999;
   display: flex;
+  width: fit-content;
 //   flex-direction: column;
   align-items: flex-end; // Aligns items to the right side
   gap: 15px;
@@ -3003,7 +3006,7 @@
 
 // Container for the hidden options
 .widgetOptions {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: flex-end;
   gap: 12px;

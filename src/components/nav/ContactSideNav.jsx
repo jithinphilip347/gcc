@@ -54,7 +54,6 @@ const ContactSideNav = ({ show, onClose }) => {
       const data = await res.json();
       toast.success("Message Sent Successfully!");
       if (data.success) {
-       
         setFormData({
           name: "",
           email: "",
