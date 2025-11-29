@@ -1958,6 +1958,24 @@
 #ContactSideNav.active {
   right: 0;
 }
+@media (max-width: 425px) {
+  #ContactSideNav {
+    padding: 18px;
+    width: 400px;
+  }
+}
+@media (max-width: 375px) {
+  #ContactSideNav {
+    padding: 15px;
+    width: 350px;
+  }
+}
+@media (max-width: 325px) {
+  #ContactSideNav {
+    padding: 18px;
+    width: 315px;
+  }
+}
 #ContactSideNav .SideNavContainer {
   position: relative;
   height: 100%;
@@ -1989,11 +2007,31 @@
   font-weight: 600;
   color: #000;
 }
+@media (max-width: 375px) {
+  #ContactSideNav .ContactMain .ContactMainTop .ContactTitle {
+    font-size: 24px;
+  }
+}
+@media (max-width: 325px) {
+  #ContactSideNav .ContactMain .ContactMainTop .ContactTitle {
+    font-size: 22px;
+  }
+}
 #ContactSideNav .ContactMain .ContactMainTop .ContactDesc {
   font-size: 15px;
   font-family: MyFont1;
   color: #555;
   line-height: 1.5;
+}
+@media (max-width: 375px) {
+  #ContactSideNav .ContactMain .ContactMainTop .ContactDesc {
+    font-size: 14px;
+  }
+}
+@media (max-width: 325px) {
+  #ContactSideNav .ContactMain .ContactMainTop .ContactDesc {
+    font-size: 13px;
+  }
 }
 #ContactSideNav .ContactMain .ContactMainTop .ContactAddressBox {
   display: flex;
@@ -2019,6 +2057,16 @@
   color: #000;
   font-family: MyFont1;
   text-decoration: none;
+}
+@media (max-width: 375px) {
+  #ContactSideNav .ContactMain .ContactMainTop .ContactAddressBox .ConnectBox a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 325px) {
+  #ContactSideNav .ContactMain .ContactMainTop .ContactAddressBox .ConnectBox a {
+    font-size: 13px;
+  }
 }
 #ContactSideNav .ContactMain .ContactMainBottom {
   width: 100%;
@@ -2049,6 +2097,18 @@
   font-size: 15px;
   font-family: MyFont1;
   outline: none;
+}
+@media (max-width: 375px) {
+  #ContactSideNav .ContactMain .ContactMainBottom .ContactFormGroup .ContactFormBox input,
+  #ContactSideNav .ContactMain .ContactMainBottom .ContactFormGroup .ContactFormBox textarea {
+    font-size: 14px;
+  }
+}
+@media (max-width: 325px) {
+  #ContactSideNav .ContactMain .ContactMainBottom .ContactFormGroup .ContactFormBox input,
+  #ContactSideNav .ContactMain .ContactMainBottom .ContactFormGroup .ContactFormBox textarea {
+    font-size: 13px;
+  }
 }
 #ContactSideNav .ContactMain .ContactMainBottom .ContactFormGroup .ContactFormBox textarea {
   height: 100px;

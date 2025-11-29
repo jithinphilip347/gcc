@@ -2297,6 +2297,27 @@
         right: 0;
     }
 
+    @media (max-width : 425px) {
+        &{
+            padding: 18px;
+            width: 400px;
+        }
+    }
+    
+    @media (max-width : 375px) {
+        &{
+            padding: 15px;
+            width: 350px;
+        }
+    }
+
+    @media (max-width : 325px) {
+        &{
+            padding: 18px;
+            width: 315px;
+        }
+    }
+
     .SideNavContainer {
         position: relative;
         height: 100%;
@@ -2326,6 +2347,18 @@
                 font-family: MyFont1;
                 font-weight: 600;
                 color: #000;
+
+                    @media (max-width : 375px) {
+                        &{
+                            font-size: 24px;
+                        }
+                    }
+
+                    @media (max-width : 325px) {
+                        &{
+                            font-size: 22px;
+                        }
+                    }
             }
 
             .ContactDesc {
@@ -2333,6 +2366,18 @@
                 font-family: MyFont1;
                 color: #555;
                 line-height: 1.5;
+
+                @media (max-width : 375px) {
+                    &{
+                        font-size: 14px;
+                    }
+                }
+
+                @media (max-width : 325px) {
+                    &{
+                        font-size: 13px;
+                    }
+                }
             }
 
             .ContactAddressBox {
@@ -2359,6 +2404,18 @@
                         color: #000;
                         font-family: MyFont1;
                         text-decoration: none;
+
+                        @media (max-width : 375px) {
+                            &{
+                                font-size: 14px;
+                            }
+                        }
+
+                        @media (max-width : 325px) {
+                            &{
+                                font-size: 13px;
+                            }
+                        }
                     }
                 }
             }
@@ -2392,6 +2449,18 @@
                         font-size: 15px;
                         font-family: MyFont1;
                         outline: none;
+
+                        @media (max-width : 375px) {
+                            &{
+                                font-size: 14px;
+                            }
+                        }
+
+                        @media (max-width : 325px) {
+                            &{
+                                font-size: 13px;
+                            }
+                        }
                     }
 
                     textarea {
