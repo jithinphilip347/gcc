@@ -18,7 +18,7 @@ const HomeWhyCoose = () => {
       <div className="container">
         <div className="HomeAboutHead">
           <h2>
-            Why <span>Choose Us</span>
+            Worried<span> about...</span>
           </h2>
           <p>
            <b> Worried about your year gap? </b>
@@ -144,7 +144,7 @@ const HomeWhyCoose = () => {
               <FaBookOpen />
             </div>
             <div className="WhyChooseTitle">
-              <h3>100+</h3>
+              <h3>30+</h3>
             </div>
             <div className="WhyChooseDesc">
               <p>Comprehensive Courses</p>

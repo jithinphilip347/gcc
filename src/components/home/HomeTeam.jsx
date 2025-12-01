@@ -9,7 +9,7 @@ const HomeTeam = () => {
     <div id="HomeTeam">
       <div className="HomeAboutHead">
         <h2>
-          Our <span>Team</span>
+         Founder&apos;s <span>Note</span>
         </h2>
       </div>
       <div className="HomeTeamMain">

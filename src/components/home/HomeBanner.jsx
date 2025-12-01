@@ -28,7 +28,7 @@ const programData = {
   ],
 };
 
-// ✅ Combined single dropdown list with labels
+
 const combinedCourses = [
   ...programData.Pharmacy.map((course) => `${course} (Pharmacy)`),
   ...programData.Radiology.map((course) => `${course} (Radiology)`),
@@ -75,7 +75,7 @@ const HomeBanner = () => {
         body: JSON.stringify(form),
       });
 
-      toast.success("You Have Successfully Booked 1 Free Demo Class");
+      toast.success("THANKS! We will get back to you");
       setForm({
         name: "",
         email: "",
@@ -120,7 +120,7 @@ const HomeBanner = () => {
               <div className="MainTitle">
                 <h1>
                   Achieve Global Success in DHA, HAAD, PROMETRIC (SAUDI, OMAN,
-                  QATAR, KUWAIT & BAHRAIN), MOH
+                  QATAR, KUWAIT & BAHRAIN), MOH & OPRA
                 </h1>
               </div>
 

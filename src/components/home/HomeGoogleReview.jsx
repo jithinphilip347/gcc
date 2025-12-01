@@ -57,6 +57,26 @@ const reviews = [
     date: "a year ago",
     desc: "recently cleared omam Pearson vue exam. I Thank greeshma ma'am and gcc academy for their tremendous support...",
   },
+    {
+    name: "Yadhukrishnan Tu",
+    date: "a year ago",
+    desc: "Excellent coaching with 24*7 support, study materials are upto date and I'm happy to get support till my exam",
+  },
+      {
+    name: "WaSim",
+    date: "a year ago",
+    desc: "Nice institute with great coaching and study materials",
+  },
+  {
+    name: "RAHUL M DAS",
+    date: "a year ago",
+    desc: "Excellent tutoring, well experienced",
+  },
+  {
+    name: "Deepika Ratna",
+    date: "a year ago",
+    desc: "Complete guidance with updated information. Good support and Stand along with us until we succeed",
+  },
 ];
 
 const HomeGoogleReview = () => {

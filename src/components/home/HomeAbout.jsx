@@ -30,7 +30,7 @@ const HomeAbout = () => {
           <div className="AboutMainRight">
             <div className="AboutContentBox">
               <div className="AboutTitle">
-                <h2>Leading Healthcare Licensing Exam Coaching Academy</h2>
+                <h2>Leading Healthcare Licensing Exam Coaching Academy in kerala</h2>
               </div>
               <div className="AboutDesc">
                 <p>

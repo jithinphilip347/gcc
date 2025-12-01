@@ -97,7 +97,7 @@ const HomeContact = () => {
 
             <p className="ContactDesc">
               Kerala’s leading institute for DHA, HAAD, PROMETRIC, SPLE, OMAN,
-              and MOH exam preparation.
+              and MOH  and other healthcare licensing exam preparation..
             </p>
 
             <div className="ContactAddressBox">

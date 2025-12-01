@@ -13,6 +13,7 @@ import Student1 from "../../assets/images/Students/Divya Mariam(DHA).jpg";
 import Student2 from "../../assets/images/Students/Karthikeyan A.jpg";
 import Student3 from "../../assets/images/Students/Maham Shakoor(DHA).jpg";
 import Student4 from "../../assets/images/Students/Binish (DHA).jpg";
+import Student5 from "../../assets/images/Students/Ratna Deepka Manda.jpg";
 
 const testimonials = [
   {
@@ -42,6 +43,13 @@ const testimonials = [
     date: "13 November 2025",
     title: "Amazing coaching!",
     desc: "The instructors were knowledgeable and approachable. The practice tests and quizzes were invaluable. Passed DHA with confidence!",
+  },
+    {
+    img: Student5,
+    name: "DEEPIKA RATNA",
+    date: "13 November 2025",
+    title: "Exceptional Guidance & Support",
+    desc: "Complete guidance with updated information. Good support and Stand along with us until we succeed",
   },
 ];
 
