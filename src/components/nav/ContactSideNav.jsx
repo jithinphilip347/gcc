@@ -54,20 +54,22 @@ const ContactSideNav = ({ show, onClose }) => {
       const data = await res.json();
       toast.success("Message Sent Successfully!");
       if (data.success) {
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          message: "",
-        });
+        
       } else {
         // toast.error("Failed to send. Please try again!");
       }
     } catch (err) {
       console.log("Error submitting form:", err);
-      toast.error("Something went wrong!");
     } finally {
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+      toast.success("THANKS! We will get back to you");
       setIsSubmitting(false);
+
     }
   };
 
@@ -108,7 +110,6 @@ const ContactSideNav = ({ show, onClose }) => {
               </div>
             </div>
           </div>
-
           {/* Bottom Contact Form */}
           <div className="ContactMainBottom">
             <form className="ContactFormGroup" onSubmit={handleSubmit}>

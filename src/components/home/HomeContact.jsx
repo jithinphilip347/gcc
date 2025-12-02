@@ -54,17 +54,7 @@ const HomeContact = () => {
 
       const data = await res.json();
      
-      if (data.success) {
-        toast.success("")
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          message: "",
-        });
-      } else {
-        setStatusMessage("Failed to send. Please try again!");
-      }
+      
     } catch (err) {
        console.log(JSON.stringify(formData),err)
 
@@ -76,10 +66,11 @@ const HomeContact = () => {
         phone: "",
         message: "",
       });
-      toast.success("Message Sent Succesfully")
+      toast.success("THANKS! We will get back to you");
+      setIsSubmitting(false);
     }
 
-    setIsSubmitting(false);
+    
   };
 
   return (

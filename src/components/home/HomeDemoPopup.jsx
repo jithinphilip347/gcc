@@ -38,7 +38,7 @@ const HomeDemoPopup = ({ onClose,course = "" }) => {
     phone: "",
     course: course,
     message: "",
-    source: "Book Demo",
+    source: "Course Page"
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -69,6 +69,10 @@ const HomeDemoPopup = ({ onClose,course = "" }) => {
         body: JSON.stringify(form),
       });
 
+      
+    } catch (err) {
+      console.error(err);
+    } finally {
       toast.success("You Have Successfully Booked 1 Free Demo Class");
       setForm({
         name: "",
@@ -78,9 +82,6 @@ const HomeDemoPopup = ({ onClose,course = "" }) => {
         message: "",
         source: "Course Page"
       });
-    } catch (err) {
-      console.error(err);
-    } finally {
       onClose()
       setIsSubmitting(false);
     }

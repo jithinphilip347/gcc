@@ -86,6 +86,7 @@ const HomeGoogleReview = () => {
     phone: "",
     course: "",
     message: "",
+    source: "Book Demo Now!"
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -115,7 +116,11 @@ const HomeGoogleReview = () => {
         body: JSON.stringify(form),
       });
 
-      toast.success("You Have Successfully Booked 1 Free Demo Class");
+      
+      
+    } catch (err) {
+      console.error(err);
+    } finally {
       setForm({
         name: "",
         email: "",
@@ -124,9 +129,7 @@ const HomeGoogleReview = () => {
         message: "",
         source: "Book Demo Now!"
       });
-    } catch (err) {
-      console.error(err);
-    } finally {
+      toast.success("You Have Successfully Booked 1 Free Demo Class");
       setIsSubmitting(false);
     }
   };

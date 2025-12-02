@@ -6,6 +6,7 @@ import toast from "react-hot-toast";
 import Link from "next/link";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import HomeDemoPopup from "./HomeDemoPopup";
+import { GOOLE_SHEET_ID } from "@/utilis/constants";
 // import { GOOLE_SHEET_ID } from "@/utilis/constants";
 
 const programData = {
@@ -55,7 +56,7 @@ const HomeBanner = () => {
       [e.target.name]: e.target.value,
     });
   };
-  const GOOLE_SHEET_ID = 'AKfycby0UpvdXEFeYxsa71-8zLCJyzbSsjnZJOimTehR-0A4C0TsRHGNOEVgLnGZBwx3nX5i'
+  
   const GOOGLE_SHEET_URL =
     `https://script.google.com/macros/s/${GOOLE_SHEET_ID}/exec`;
 
@@ -75,7 +76,11 @@ const HomeBanner = () => {
         body: JSON.stringify(form),
       });
 
-      toast.success("THANKS! We will get back to you");
+      
+      
+    } catch (err) {
+      console.error(err);
+    } finally {
       setForm({
         name: "",
         email: "",
@@ -84,9 +89,7 @@ const HomeBanner = () => {
         message: "",
         source: "Book Demo Now!"
       });
-    } catch (err) {
-      console.error(err);
-    } finally {
+      toast.success("THANKS! We will get back to you");
       setIsSubmitting(false);
     }
   };
