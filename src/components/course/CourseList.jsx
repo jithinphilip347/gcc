@@ -183,8 +183,8 @@ const CourseList = () => {
       ],
     },
     {
-      logo: Logo2,
-      title: "OMSEB (OMAN)",
+      logo: Logo7,
+      title: "OMSEB (Oman Medical Specialty Board)",
       desc: "Oman Medical Specialty Board exam preparation for Radiographers.", // Note: Description added based on title context or you can update it
       eligibility: [
         "Diploma or Bachelor’s degree in Radiologic Technology / Medical Imaging / Radiography",
