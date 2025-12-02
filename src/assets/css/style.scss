@@ -3036,7 +3036,7 @@
 .floatingWidgetContainer {
   position: fixed;
   right: 25px;
-  bottom: 40px;
+  bottom: 100px;
   z-index: 9999;
   display: flex;
   width: fit-content;
@@ -3133,7 +3133,7 @@ display: flex;
 .scrollTopBtn {
   position: fixed;
   right: 30px;
-  bottom: 110px; // Moved up slightly to avoid overlapping with new menu if needed
+  bottom: 170px; // Moved up slightly to avoid overlapping with new menu if needed
   width: 44px;
   height: 44px;
   background: #fff;

@@ -13,6 +13,7 @@ const programData = {
     "DOH (HAAD) – Abu Dhabi",
     "SPLE (Saudi Arabia)",
     "BAHRAIN (BPLE)",
+    "OMSEB (OMAN)",
   ],
   Radiology: [
     "DHA (DUBAI)",

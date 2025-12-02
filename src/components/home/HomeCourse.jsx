@@ -14,6 +14,7 @@ import Logo3 from "../../assets/images/moh-kuwait.png";
 import Logo4 from "../../assets/images/doh.png";
 import Logo5 from "../../assets/images/sple-saudi.svg";
 import Logo6 from "../../assets/images/bple-beharin.png";
+import Logo7 from "../../assets/images/omsb.png";
 
 const HomeCourse = () => {
   return (
@@ -189,6 +190,24 @@ const HomeCourse = () => {
                         <p>
                           Bahrain Pharmacy Licensure Examination is administered
                           by National Health Regulatory Authority (NHRA)
+                        </p>
+                      </div>
+                    </div>
+                  </Link>
+                </SwiperSlide>
+
+                   <SwiperSlide>
+                  <Link href="/course" className="CourseLink">
+                    <div className="CourseBox">
+                      <div className="CourseIcon">
+                        <Image src={Logo7} alt="KUWAIT MOH" />
+                      </div>
+                      <div className="CourseTitle">
+                        <p>OMSEB (OMAN)</p>
+                      </div>
+                      <div className="CourseDesc">
+                        <p>
+                          Get the best coaching for the OMSB / OMSEB Pharmacist Licensing Exam to become a licensed pharmacist in the Sultanate of Oman.
                         </p>
                       </div>
                     </div>

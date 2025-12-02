@@ -1,39 +1,48 @@
-
 "use client";
 import React, { useState } from "react";
 import { IoMdCheckmark } from "react-icons/io";
 import Image from "next/image";
+
 import Logo1 from "../../assets/images/DHA.svg";
 import Logo2 from "../../assets/images/moh-uae.webp";
 import Logo3 from "../../assets/images/moh-kuwait.png";
 import Logo4 from "../../assets/images/doh.png";
 import Logo5 from "../../assets/images/sple-saudi.svg";
 import Logo6 from "../../assets/images/bple-beharin.png";
+import Logo7 from "../../assets/images/omsb.png";
 import HomeDemoPopup from "../home/HomeDemoPopup";
 
-// Reusable Card Component to handle individual state
-const SingleCourseCard = ({ logo, title, desc, eligibility, onBook, setCourse }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-  
+const SingleCourseCard = ({
+  logo,
+  title,
+  desc,
+  eligibility,
+  onBook,
+  setCourse,
+  isExpanded,
+  onToggle,
+}) => {
   return (
     <div className={`CourseBox ${isExpanded ? "expanded" : ""}`}>
       <div className="CourseIcon">
         <Image src={logo} alt={title} />
       </div>
+
       <div className="CourseTitle">
         <p>{title}</p>
       </div>
 
-      {/* Details Section - Only visible if expanded */}
       {isExpanded && (
         <div className="CourseDetailsFade">
           <div className="CourseDesc">
             <p>{desc}</p>
           </div>
+
           <div className="Eligibility">
             <div className="EligibilityTitle">
               <p>Eligibility Criteria</p>
             </div>
+
             <div className="CriteriaBox">
               {eligibility.map((item, index) => (
                 <div className="Box" key={index}>
@@ -45,21 +54,22 @@ const SingleCourseCard = ({ logo, title, desc, eligibility, onBook, setCourse })
               ))}
             </div>
           </div>
+
           <div className="CourseBookBtn">
-            <button onClick={() => {
-              onBook()
-              setCourse(title)
-            }}>BOOK NOW</button>
+            <button
+              onClick={() => {
+                setCourse(title);
+                onBook();
+              }}
+            >
+              BOOK NOW
+            </button>
           </div>
         </div>
       )}
 
-      {/* Toggle Button */}
-      <button
-        className="ToggleBtn"
-        onClick={() => setIsExpanded(!isExpanded)}
-      >
-        {isExpanded ? "LESS" : "KNOW MORE"}
+      <button className="ToggleBtn" onClick={onToggle}>
+        {isExpanded ? "SHOW LESS" : "KNOW MORE"}
       </button>
     </div>
   );
@@ -67,8 +77,10 @@ const SingleCourseCard = ({ logo, title, desc, eligibility, onBook, setCourse })
 
 const CourseList = () => {
   const [showPopup, setShowPopup] = useState(false);
-  const [course,setCourse] = useState("");
-  // Data for Pharmacy Courses
+  const [course, setCourse] = useState("");
+
+  const [expandedIndex, setExpandedIndex] = useState(null);
+
   const pharmacyCourses = [
     {
       logo: Logo1,
@@ -141,10 +153,21 @@ const CourseList = () => {
         "Passing Score: 60%",
       ],
     },
+     {
+      logo: Logo7,
+      title: "OMSEB (Oman Medical Specialty Board)",
+      desc: "Get the best coaching for the OMSB / OMSEB Pharmacist Licensing Exam to become a licensed pharmacist in the Sultanate of Oman.",
+      eligibility: [
+        "B Pharm / M Pharm / PharmD (Minimum)",
+        "Minimum experience required: 3 years of pharmacy work experience (hospital or community), continuous and documented",
+        "Number of Questions: 150 MCQs (computer-based exam)",
+        "Time Allotted: 180 minutes (3 hours)",
+        "Attempts Allowed: Up to 3 attempts; if unsuccessful, usually need additional experience or a cooling-off period before reattempt",
+        "Passing Score: 60% (i.e., at least 90 correct answers)",
+      ],
+    },
   ];
 
-  // Data for Radiology Courses
-// Data for Radiology Courses (Full List)
   const radiologyCourses = [
     {
       logo: Logo1,
@@ -242,45 +265,59 @@ const CourseList = () => {
       <div id="CourseList">
         <div className="container">
           <div className="CourseMain">
-            {/* PHARMACY SECTION */}
             <div className="CourseMainTopBox">
               <div className="CourseTopHeadBox">
                 <h2>Pharmacy</h2>
               </div>
+
               <div className="CourseTopBox">
                 {pharmacyCourses.map((course, index) => (
                   <SingleCourseCard
                     key={index}
                     {...course}
+                    isExpanded={expandedIndex === index}
+                    onToggle={() =>
+                      setExpandedIndex(index === expandedIndex ? null : index)
+                    }
                     onBook={() => setShowPopup(true)}
-                     setCourse={setCourse}
-                  />
-                ))}
-              </div>
-            </div>
-
-            {/* RADIOLOGY SECTION */}
-            <div className="CourseMainBottomBox">
-              <div className="CourseBottomHeadBox">
-                <h2>Radiology</h2>
-              </div>
-              <div className="CourseBottomBox">
-                {radiologyCourses.map((course, index) => (
-                  <SingleCourseCard
-                    key={index}
-                    {...course}
-                    onBook={() => {
-                      setShowPopup(true)
-                    }}
                     setCourse={setCourse}
                   />
                 ))}
               </div>
             </div>
+
+            <div className="CourseMainBottomBox">
+              <div className="CourseBottomHeadBox">
+                <h2>Radiology</h2>
+              </div>
+
+              <div className="CourseBottomBox">
+                {radiologyCourses.map((course, index) => {
+                  const globalIndex = index + pharmacyCourses.length;
+                  return (
+                    <SingleCourseCard
+                      key={globalIndex}
+                      {...course}
+                      isExpanded={expandedIndex === globalIndex}
+                      onToggle={() =>
+                        setExpandedIndex(
+                          expandedIndex === globalIndex ? null : globalIndex
+                        )
+                      }
+                      onBook={() => setShowPopup(true)}
+                      setCourse={setCourse}
+                    />
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      {showPopup && <HomeDemoPopup onClose={() => setShowPopup(false)} course={course} />}
+
+      {showPopup && (
+        <HomeDemoPopup onClose={() => setShowPopup(false)} course={course} />
+      )}
     </>
   );
 };
