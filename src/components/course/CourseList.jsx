@@ -10,7 +10,8 @@ import Logo4 from "../../assets/images/doh.png";
 import Logo5 from "../../assets/images/sple-saudi.svg";
 import Logo6 from "../../assets/images/bple-beharin.png";
 import Logo7 from "../../assets/images/omsb.png";
-import HomeDemoPopup from "../home/HomeDemoPopup";
+import HomeCoursePopup from "../home/HomeCoursePopup";
+// import HomeDemoPopup from "../home/HomeDemoPopup";
 
 const SingleCourseCard = ({
   logo,
@@ -316,7 +317,7 @@ const CourseList = () => {
       </div>
 
       {showPopup && (
-        <HomeDemoPopup onClose={() => setShowPopup(false)} course={course} />
+        <HomeCoursePopup onClose={() => setShowPopup(false)} course={course} />
       )}
     </>
   );

@@ -66,7 +66,7 @@ const HomeContact = () => {
         phone: "",
         message: "",
       });
-      toast.success("THANKS! We will get back to you");
+      toast.success("THANKS! We will get back to you soon");
       setIsSubmitting(false);
     }
 

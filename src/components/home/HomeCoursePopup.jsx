@@ -26,13 +26,13 @@ const programData = {
   ],
 };
 
-// ✅ Combined dropdown list
+
 const combinedCourses = [
   ...programData.Pharmacy.map((course) => `${course} (Pharmacy)`),
   ...programData.Radiology.map((course) => `${course} (Radiology)`),
 ];
 
-const HomeDemoPopup = ({ onClose,course = "" }) => {
+const HomeCoursePopup = ({ onClose,course = "" }) => {
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -74,7 +74,7 @@ const HomeDemoPopup = ({ onClose,course = "" }) => {
     } catch (err) {
       console.error(err);
     } finally {
-      toast.success("You Have Successfully Booked 1 Free Demo Class");
+      toast.success("You have successfully booked the course, we will contact you shortly.");
       setForm({
         name: "",
         email: "",
@@ -118,7 +118,7 @@ const HomeDemoPopup = ({ onClose,course = "" }) => {
           <div className="DemoPopupBox" onClick={(e) => e.stopPropagation()}>
             <div className="popupDemoForm">
               <div className="FormTitle">
-                <h2>Get Your Free Class Now</h2>
+                <h2>Book Your Course Now</h2>
               </div>
 
               <div className="FormGroup">
@@ -204,4 +204,4 @@ const HomeDemoPopup = ({ onClose,course = "" }) => {
   );
 };
 
-export default HomeDemoPopup;
+export default HomeCoursePopup;

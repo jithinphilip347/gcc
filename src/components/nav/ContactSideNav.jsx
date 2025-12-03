@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { HiOutlineLocationMarker, HiOutlineMail } from "react-icons/hi";
 import { HiOutlinePhone } from "react-icons/hi2";
 import { IoCloseOutline } from "react-icons/io5";
@@ -67,11 +67,23 @@ const ContactSideNav = ({ show, onClose }) => {
         phone: "",
         message: "",
       });
-      toast.success("THANKS! We will get back to you");
+      toast.success("THANKS! We will get back to you soon");
       setIsSubmitting(false);
 
     }
   };
+
+    useEffect(() => {
+    if (show) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [show]);
 
   return (
     <div id="ContactSideNav" className={show ? "active" : ""}>
