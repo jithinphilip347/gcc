@@ -855,8 +855,20 @@
   font-size: 26px;
   font-family: MyFont1;
   font-weight: 600;
-  color: #000;
-  text-transform: capitalize;
+  color: var(--primaryColor);
+  text-align: center;
+  position: relative;
+}
+#HomeCourse .CourseMain .HomeCourseLeft .HomeCourseLeftHeadView .HomeCourseLeftHead h2::after {
+  content: "";
+  width: 130px;
+  height: 3px;
+  background: var(--primaryColor);
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+  border-radius: 5px;
 }
 #HomeCourse .CourseMain .HomeCourseLeft .HomeCourseLeftBox {
   width: 100%;
@@ -992,8 +1004,20 @@
   font-size: 26px;
   font-family: MyFont1;
   font-weight: 600;
-  color: #000;
-  text-transform: capitalize;
+  color: var(--primaryColor);
+  text-align: center;
+  position: relative;
+}
+#HomeCourse .CourseMain .HomeCourseRight .HomeCourseRightHeadView .HomeCourseRightHead h2::after {
+  content: "";
+  width: 130px;
+  height: 3px;
+  background: var(--primaryColor);
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+  border-radius: 5px;
 }
 #HomeCourse .CourseMain .HomeCourseRight .HomeCourseRightBox {
   width: 100%;
@@ -1555,9 +1579,11 @@
 #CourseList .CourseMain .CourseMainTopBox .CourseBottomHeadBox,
 #CourseList .CourseMain .CourseMainBottomBox .CourseTopHeadBox,
 #CourseList .CourseMain .CourseMainBottomBox .CourseBottomHeadBox {
+  width: 100%;
   display: flex;
-  justify-content: flex-start;
-  margin-bottom: 15px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
 #CourseList .CourseMain .CourseMainTopBox .CourseTopHeadBox h2,
 #CourseList .CourseMain .CourseMainTopBox .CourseBottomHeadBox h2,
@@ -1567,6 +1593,22 @@
   font-family: MyFont1;
   font-weight: 600;
   color: var(--primaryColor);
+  text-align: center;
+  position: relative;
+}
+#CourseList .CourseMain .CourseMainTopBox .CourseTopHeadBox h2::after,
+#CourseList .CourseMain .CourseMainTopBox .CourseBottomHeadBox h2::after,
+#CourseList .CourseMain .CourseMainBottomBox .CourseTopHeadBox h2::after,
+#CourseList .CourseMain .CourseMainBottomBox .CourseBottomHeadBox h2::after {
+  content: "";
+  width: 130px;
+  height: 3px;
+  background: var(--primaryColor);
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+  border-radius: 5px;
 }
 #CourseList .CourseMain .CourseMainTopBox .CourseTopBox,
 #CourseList .CourseMain .CourseMainTopBox .CourseBottomBox,
@@ -2593,7 +2635,7 @@
 .floatingWidgetContainer {
   position: fixed;
   right: 25px;
-  bottom: 40px;
+  bottom: 100px;
   z-index: 9999;
   display: flex;
   width: -moz-fit-content;
@@ -2675,7 +2717,7 @@
 .scrollTopBtn {
   position: fixed;
   right: 30px;
-  bottom: 110px;
+  bottom: 170px;
   width: 44px;
   height: 44px;
   background: #fff;
