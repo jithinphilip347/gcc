@@ -1997,6 +1997,8 @@
   transition: all 0.4s ease;
   padding: 30px;
   overflow-y: auto;
+  touch-action: auto;
+  -webkit-overflow-scrolling: touch;
 }
 #ContactSideNav.active {
   right: 0;

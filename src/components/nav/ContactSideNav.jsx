@@ -73,17 +73,22 @@ const ContactSideNav = ({ show, onClose }) => {
     }
   };
 
-    useEffect(() => {
-    if (show) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+useEffect(() => {
+  const contactNav = document.getElementById("ContactSideNav");
 
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [show]);
+  if (show) {
+    document.body.style.overflow = "hidden";
+    contactNav.style.overflowY = "auto"; // allow scrolling popup content
+    contactNav.style.touchAction = "auto"; // mobile scrolling fix
+  } else {
+    document.body.style.overflow = "auto";
+  }
+
+  return () => {
+    document.body.style.overflow = "auto";
+  };
+}, [show]);
+
 
   return (
     <div id="ContactSideNav" className={show ? "active" : ""}>

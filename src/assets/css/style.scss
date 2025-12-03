@@ -1977,6 +1977,8 @@
     transition: all 0.4s ease;
     padding: 30px;
     overflow-y: auto;
+    touch-action: auto; 
+  -webkit-overflow-scrolling: touch; // smooth scrolling in iOS & Brave
     &.active {
         right: 0;
     }
