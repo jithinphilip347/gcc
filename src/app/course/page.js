@@ -11,10 +11,13 @@
 
 // export default page
 
-"use client"; 
+"use client";
 
-import CourseList from "@/components/course/CourseList";
-import React from "react";
+import dynamic from "next/dynamic";
+
+const CourseList = dynamic(() => import("@/components/course/CourseList"), {
+  ssr: false,
+});
 
 export default function CoursePage() {
   return (
