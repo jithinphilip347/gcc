@@ -218,21 +218,32 @@ const SingleCourseCard = ({
           </div>
 
           <div className="Eligibility">
-            {eligibility.map((item, index) => (
-              <div className="Box" key={index}>
-                <div className="CheckmarkIcon"><IoMdCheckmark /></div>
-                <p>{item}</p>
-              </div>
-            ))}
+            <div className="EligibilityTitle">
+              <p>Eligibility Criteria</p>
+            </div>
+
+            <div className="CriteriaBox">
+              {eligibility.map((item, index) => (
+                <div className="Box" key={index}>
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
+                  <p>{item}</p>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <button className="CourseBookBtn"
-            onClick={() => {
-              setCourse(title);
-              onBook();
-            }}>
-            BOOK NOW
-          </button>
+          <div className="CourseBookBtn">
+            <button
+              onClick={() => {
+                setCourse(title);
+                onBook();
+              }}
+            >
+              BOOK NOW
+            </button>
+          </div>
         </div>
       )}
 
@@ -242,7 +253,6 @@ const SingleCourseCard = ({
     </div>
   );
 };
-
 
 const CourseList = () => {
   const [showPopup, setShowPopup] = useState(false);
