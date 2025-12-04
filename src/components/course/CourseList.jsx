@@ -258,32 +258,66 @@ const CourseList = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [course, setCourse] = useState("");
   const [expandedIndex, setExpandedIndex] = useState(null);
+   const [targetIndex, setTargetIndex] = useState(null);
 
 const searchParams = useSearchParams();
-  const selectedSection = searchParams.get("section");
-  const selectedCourse = searchParams.get("expand");
+  // const selectedSection = searchParams.get("section");
+  // const selectedCourse = searchParams.get("expand");
 
+// useEffect(() => {
+//   const section = searchParams.get("section");
+//   const course = searchParams.get("expand");
+
+//   if (!section || !course) return;
+
+//   const courseArray =
+//     section === "pharmacy" ? pharmacyCourses : radiologyCourses;
+
+//   const foundIndex = courseArray.findIndex((c) => c.title === course);
+//   if (foundIndex === -1) return;
+
+//   const globalIndex =
+//     section === "pharmacy"
+//       ? foundIndex
+//       : foundIndex + pharmacyCourses.length;
+
+//   setTargetIndex(globalIndex);
+// }, [searchParams]);
+
+
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react-hooks/set-state-in-effect */
 useEffect(() => {
-  const selectedSection = searchParams.get("section");
-  const selectedCourse = searchParams.get("expand");
+  const section = searchParams.get("section");
+  const course = searchParams.get("expand");
+  if (!section || !course) return;
 
-  if (selectedSection) {
-    setTimeout(() => {
-      const el = document.getElementById(selectedSection);
-      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 300);
+  const courseArray =
+    section === "pharmacy" ? pharmacyCourses : radiologyCourses;
+
+  const foundIndex = courseArray.findIndex((c) => c.title === course);
+  if (foundIndex === -1) return;
+
+  const globalIndex =
+    section === "pharmacy"
+      ? foundIndex
+      : foundIndex + pharmacyCourses.length;
+
+  setExpandedIndex(globalIndex);
+
+// Scroll expanded course into view
+setTimeout(() => {
+  const card = document.querySelector(`.CourseBox.expanded`);
+  if (card) {
+    card.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+    });
   }
-
-  if (selectedCourse) {
-    setTimeout(() => {
-      const index = [...pharmacyCourses, ...radiologyCourses]
-        .findIndex((c) => c.title === selectedCourse);
-
-      if (index !== -1) setExpandedIndex(index);
-    }, 400);
-  }
+}, 300);
 
 }, [searchParams]);
+
 
 
   return (
