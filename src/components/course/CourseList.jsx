@@ -1,8 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IoMdCheckmark } from "react-icons/io";
 import Image from "next/image";
-
+import { useSearchParams } from "next/navigation";
 import Logo1 from "../../assets/images/DHA.svg";
 import Logo2 from "../../assets/images/moh-uae.webp";
 import Logo3 from "../../assets/images/moh-kuwait.png";
@@ -11,8 +11,7 @@ import Logo5 from "../../assets/images/sple-saudi.svg";
 import Logo6 from "../../assets/images/bple-beharin.png";
 import Logo7 from "../../assets/images/omsb.png";
 import HomeCoursePopup from "../home/HomeCoursePopup";
-import { useSearchParams } from "next/navigation";
-import { useEffect } from "react";
+
 
   const pharmacyCourses = [
     {
@@ -219,32 +218,21 @@ const SingleCourseCard = ({
           </div>
 
           <div className="Eligibility">
-            <div className="EligibilityTitle">
-              <p>Eligibility Criteria</p>
-            </div>
-
-            <div className="CriteriaBox">
-              {eligibility.map((item, index) => (
-                <div className="Box" key={index}>
-                  <div className="CheckmarkIcon">
-                    <IoMdCheckmark />
-                  </div>
-                  <p>{item}</p>
-                </div>
-              ))}
-            </div>
+            {eligibility.map((item, index) => (
+              <div className="Box" key={index}>
+                <div className="CheckmarkIcon"><IoMdCheckmark /></div>
+                <p>{item}</p>
+              </div>
+            ))}
           </div>
 
-          <div className="CourseBookBtn">
-            <button
-              onClick={() => {
-                setCourse(title);
-                onBook();
-              }}
-            >
-              BOOK NOW
-            </button>
-          </div>
+          <button className="CourseBookBtn"
+            onClick={() => {
+              setCourse(title);
+              onBook();
+            }}>
+            BOOK NOW
+          </button>
         </div>
       )}
 
@@ -255,6 +243,7 @@ const SingleCourseCard = ({
   );
 };
 
+
 const CourseList = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [course, setCourse] = useState("");
@@ -264,29 +253,28 @@ const searchParams = useSearchParams();
   const selectedSection = searchParams.get("section");
   const selectedCourse = searchParams.get("expand");
 
-  // 🔹 Auto scroll + auto expand based on query params
-  useEffect(() => {
+useEffect(() => {
+  const selectedSection = searchParams.get("section");
+  const selectedCourse = searchParams.get("expand");
 
   if (selectedSection) {
-    document.getElementById(selectedSection)?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+    setTimeout(() => {
+      const el = document.getElementById(selectedSection);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 300);
   }
 
   if (selectedCourse) {
     setTimeout(() => {
-      const index = [
-        ...pharmacyCourses,
-        ...radiologyCourses,
-      ].findIndex((c) => c.title === selectedCourse);
+      const index = [...pharmacyCourses, ...radiologyCourses]
+        .findIndex((c) => c.title === selectedCourse);
 
-      if (index !== -1) {
-        setExpandedIndex(index);
-      }
-    }, 0);
+      if (index !== -1) setExpandedIndex(index);
+    }, 400);
   }
-  }, []);
+
+}, [searchParams]);
+
 
   return (
     <>
