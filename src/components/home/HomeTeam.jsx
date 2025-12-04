@@ -20,9 +20,6 @@ const HomeTeam = () => {
             </div>
             <div className="OurTeamDetailsBox">
               <div className="OurTeamNameBox">
-                {/* <h2>Greeshma Arun</h2> */}
-                {/* <h2>A Note from Our Founder</h2> */}
-                {/* <p>Pharmacist Educator / Gulf Licensing Exam Coach</p> */}
               </div>
 
               <div className="LearnMoreOurTeam">

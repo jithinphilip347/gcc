@@ -11,76 +11,8 @@ import Logo5 from "../../assets/images/sple-saudi.svg";
 import Logo6 from "../../assets/images/bple-beharin.png";
 import Logo7 from "../../assets/images/omsb.png";
 import HomeCoursePopup from "../home/HomeCoursePopup";
-// import HomeDemoPopup from "../home/HomeDemoPopup";
-
-const SingleCourseCard = ({
-  logo,
-  title,
-  desc,
-  eligibility,
-  onBook,
-  setCourse,
-  isExpanded,
-  onToggle,
-}) => {
-  return (
-    <div className={`CourseBox ${isExpanded ? "expanded" : ""}`}>
-      <div className="CourseIcon">
-        <Image src={logo} alt={title} />
-      </div>
-
-      <div className="CourseTitle">
-        <p>{title}</p>
-      </div>
-
-      {isExpanded && (
-        <div className="CourseDetailsFade">
-          <div className="CourseDesc">
-            <p>{desc}</p>
-          </div>
-
-          <div className="Eligibility">
-            <div className="EligibilityTitle">
-              <p>Eligibility Criteria</p>
-            </div>
-
-            <div className="CriteriaBox">
-              {eligibility.map((item, index) => (
-                <div className="Box" key={index}>
-                  <div className="CheckmarkIcon">
-                    <IoMdCheckmark />
-                  </div>
-                  <p>{item}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="CourseBookBtn">
-            <button
-              onClick={() => {
-                setCourse(title);
-                onBook();
-              }}
-            >
-              BOOK NOW
-            </button>
-          </div>
-        </div>
-      )}
-
-      <button className="ToggleBtn" onClick={onToggle}>
-        {isExpanded ? "SHOW LESS" : "KNOW MORE"}
-      </button>
-    </div>
-  );
-};
-
-const CourseList = () => {
-  const [showPopup, setShowPopup] = useState(false);
-  const [course, setCourse] = useState("");
-
-  const [expandedIndex, setExpandedIndex] = useState(null);
+import { useSearchParams } from "next/navigation";
+import { useEffect } from "react";
 
   const pharmacyCourses = [
     {
@@ -168,7 +100,6 @@ const CourseList = () => {
       ],
     },
   ];
-
   const radiologyCourses = [
     {
       logo: Logo1,
@@ -261,12 +192,108 @@ const CourseList = () => {
     },
   ];
 
+const SingleCourseCard = ({
+  logo,
+  title,
+  desc,
+  eligibility,
+  onBook,
+  setCourse,
+  isExpanded,
+  onToggle,
+}) => {
+  return (
+    <div className={`CourseBox ${isExpanded ? "expanded" : ""}`}>
+      <div className="CourseIcon">
+        <Image src={logo} alt={title} />
+      </div>
+
+      <div className="CourseTitle">
+        <p>{title}</p>
+      </div>
+
+      {isExpanded && (
+        <div className="CourseDetailsFade">
+          <div className="CourseDesc">
+            <p>{desc}</p>
+          </div>
+
+          <div className="Eligibility">
+            <div className="EligibilityTitle">
+              <p>Eligibility Criteria</p>
+            </div>
+
+            <div className="CriteriaBox">
+              {eligibility.map((item, index) => (
+                <div className="Box" key={index}>
+                  <div className="CheckmarkIcon">
+                    <IoMdCheckmark />
+                  </div>
+                  <p>{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="CourseBookBtn">
+            <button
+              onClick={() => {
+                setCourse(title);
+                onBook();
+              }}
+            >
+              BOOK NOW
+            </button>
+          </div>
+        </div>
+      )}
+
+      <button className="ToggleBtn" onClick={onToggle}>
+        {isExpanded ? "SHOW LESS" : "KNOW MORE"}
+      </button>
+    </div>
+  );
+};
+
+const CourseList = () => {
+  const [showPopup, setShowPopup] = useState(false);
+  const [course, setCourse] = useState("");
+  const [expandedIndex, setExpandedIndex] = useState(null);
+
+const searchParams = useSearchParams();
+  const selectedSection = searchParams.get("section");
+  const selectedCourse = searchParams.get("expand");
+
+  // 🔹 Auto scroll + auto expand based on query params
+  useEffect(() => {
+
+  if (selectedSection) {
+    document.getElementById(selectedSection)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+
+  if (selectedCourse) {
+    setTimeout(() => {
+      const index = [
+        ...pharmacyCourses,
+        ...radiologyCourses,
+      ].findIndex((c) => c.title === selectedCourse);
+
+      if (index !== -1) {
+        setExpandedIndex(index);
+      }
+    }, 0);
+  }
+  }, []);
+
   return (
     <>
       <div id="CourseList">
         <div className="container">
           <div className="CourseMain">
-            <div className="CourseMainTopBox">
+            <div id="pharmacy"  className="CourseMainTopBox">
               <div className="CourseTopHeadBox">
                 <h2>Pharmacy</h2>
               </div>
@@ -287,7 +314,7 @@ const CourseList = () => {
               </div>
             </div>
 
-            <div className="CourseMainBottomBox">
+            <div id="radiology" className="CourseMainBottomBox">
               <div className="CourseBottomHeadBox">
                 <h2>Radiology</h2>
               </div>

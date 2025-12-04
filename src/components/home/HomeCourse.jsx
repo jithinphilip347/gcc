@@ -25,14 +25,6 @@ const HomeCourse = () => {
             Our <span>Courses</span>
           </h2>
         </div>
-
-        <div className="ViewAll">
-          <Link href="/course">
-            <p>know more</p>
-            <VscArrowRight />
-          </Link>
-        </div>
-
         <div className="CourseMain">
           <div className="HomeCourseLeft">
             <div className="HomeCourseLeftHeadView">
@@ -69,14 +61,13 @@ const HomeCourse = () => {
                   },
                   1200: {
                     slidesPerView: 2,
-                    pagination: { enabled: false }, // ✅ Desktop - dots OFF
+                    pagination: { enabled: false }, 
                   },
                 }}
               >
 
-                {/* <Swiper slidesPerView={2} spaceBetween={30} loop grabCursor> */}
                 <SwiperSlide>
-                  <Link href="/course" className="CourseLink">
+                  <Link href={`/course?section=pharmacy&expand=${encodeURIComponent("DHA (DUBAI)")}`} className="CourseLink">
                     <div className="CourseBox">
                       <div className="CourseIcon">
                         <Image src={Logo1} alt="DHA Course" />
@@ -95,7 +86,7 @@ const HomeCourse = () => {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <Link href="/course" className="CourseLink">
+                  <Link href={`/course?section=pharmacy&expand=${encodeURIComponent("MOH (UAE)")}`} className="CourseLink">
                     <div className="CourseBox">
                       <div className="CourseIcon">
                         <Image src={Logo2} alt="MOH UAE" />
@@ -115,7 +106,7 @@ const HomeCourse = () => {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <Link href="/course" className="CourseLink">
+                  <Link href={`/course?section=pharmacy&expand=${encodeURIComponent("KUWAIT - MOH")}`} className="CourseLink">
                     <div className="CourseBox">
                       <div className="CourseIcon">
                         <Image src={Logo3} alt="KUWAIT MOH" />
@@ -135,7 +126,7 @@ const HomeCourse = () => {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <Link href="/course" className="CourseLink">
+                  <Link href={`/course?section=pharmacy&expand=${encodeURIComponent("DOH (HAAD)-Abu Dhabi")}`} className="CourseLink">
                     <div className="CourseBox">
                       <div className="CourseIcon">
                         <Image src={Logo4} alt="KUWAIT MOH" />
@@ -157,7 +148,7 @@ const HomeCourse = () => {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <Link href="/course" className="CourseLink">
+                  <Link href={`/course?section=pharmacy&expand=${encodeURIComponent("SPLE (SAUDI)")}`} className="CourseLink">
                     <div className="CourseBox">
                       <div className="CourseIcon">
                         <Image src={Logo5} alt="KUWAIT MOH" />
@@ -178,7 +169,7 @@ const HomeCourse = () => {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <Link href="/course" className="CourseLink">
+                  <Link href={`/course?section=pharmacy&expand=${encodeURIComponent("BAHRAIN (BPLE)")}`} className="CourseLink">
                     <div className="CourseBox">
                       <div className="CourseIcon">
                         <Image src={Logo6} alt="KUWAIT MOH" />
@@ -197,7 +188,7 @@ const HomeCourse = () => {
                 </SwiperSlide>
 
                    <SwiperSlide>
-                  <Link href="/course" className="CourseLink">
+                  <Link href={`/course?section=pharmacy&expand=${encodeURIComponent("OMSEB (OMAN)")}`} className="CourseLink">
                     <div className="CourseBox">
                       <div className="CourseIcon">
                         <Image src={Logo7} alt="KUWAIT MOH" />
@@ -215,6 +206,9 @@ const HomeCourse = () => {
                 </SwiperSlide>
               </Swiper>
             </div>
+             <Link href="/course?section=pharmacy" className="ViewMoreBtn">
+                      View More <VscArrowRight />
+                    </Link>
           </div>
 
           <div className="HomeCourseRight">
@@ -259,7 +253,7 @@ const HomeCourse = () => {
 
                 {/* <Swiper slidesPerView={2} spaceBetween={30} loop grabCursor> */}
                 <SwiperSlide>
-                  <Link href="/course" className="CourseLink">
+                  <Link href={`/course?section=radiology&expand=${encodeURIComponent("DHA (DUBAI)")}`} className="CourseLink">
                     <div className="CourseBox">
                       <div className="CourseIcon">
                         <Image src={Logo1} alt="DHA Course" />
@@ -278,7 +272,7 @@ const HomeCourse = () => {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <Link href="/course" className="CourseLink">
+                  <Link href={`/course?section=radiology&expand=${encodeURIComponent("MOH (UAE)")}`} className="CourseLink">
                     <div className="CourseBox">
                       <div className="CourseIcon">
                         <Image src={Logo2} alt="KUWAIT MOH" />
@@ -298,7 +292,7 @@ const HomeCourse = () => {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <Link href="/course" className="CourseLink">
+                  <Link href={`/course?section=radiology&expand=${encodeURIComponent("DOH (HAAD)-Abu Dhabi")}`} className="CourseLink">
                     <div className="CourseBox">
                       <div className="CourseIcon">
                         <Image src={Logo4} alt="KUWAIT MOH" />
@@ -320,7 +314,7 @@ const HomeCourse = () => {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <Link href="/course" className="CourseLink">
+                  <Link href={`/course?section=radiology&expand=${encodeURIComponent("SPLE (SAUDI)")}`} className="CourseLink">
                     <div className="CourseBox">
                       <div className="CourseIcon">
                         <Image src={Logo5} alt="KUWAIT MOH" />
@@ -341,6 +335,9 @@ const HomeCourse = () => {
                 </SwiperSlide>
               </Swiper>
             </div>
+             <Link href="/course?section=radiology" className="ViewMoreBtn">
+                      View More <VscArrowRight />
+                    </Link>
           </div>
         </div>
       </div>

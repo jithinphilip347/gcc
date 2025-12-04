@@ -143,9 +143,9 @@
                     }
                 }
             }
-            @media (max-width: 1024px) {
-                display: none;
-            }
+            // @media (max-width: 1024px) {
+            //     display: none;
+            // }
         }
         .NavSearcTooglehMenu {
             display: flex;
@@ -515,7 +515,7 @@
                         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
                         // overflow: hidden;
                         overflow-y: scroll;
-                         height: 235px;
+                        height: 235px;
                     }
 
                     .dropdownList li {
@@ -810,51 +810,24 @@
             }
         }
     }
-    .ViewAll {
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        margin-bottom: 20px;
-        a {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            transition: 0.3s;
-            background: var(--primaryColor);
-            padding: 10px 20px;
-            p {
-                font-size: 16px;
-                font-weight: 500;
-                font-family: MyFont1;
-                color: #fff;
-            }
-            svg {
-                font-size: 18px;
-                color: #fff;
-            }
-
-            &:hover {
-                color: var(--secondaryColor);
-            }
-        }
-    }
-
     .CourseMain {
         display: flex;
         align-items: stretch;
         gap: 0;
         width: 100%;
         @media (max-width: 1024px) {
-           flex-direction: column;
+            flex-direction: column;
         }
         .HomeCourseLeft {
             width: 50%;
             padding-right: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             @media (max-width: 1024px) {
-             width: 100%;
-            padding-right: 0px;
+                width: 100%;
+                padding-right: 0px;
             }
             .HomeCourseLeftHeadView {
                 width: 100%;
@@ -864,29 +837,30 @@
                 .HomeCourseLeftHead {
                     margin-bottom: 20px;
                     h2 {
-                            font-size: 26px;
-                            font-family: MyFont1;
-                            font-weight: 600;
-                            color: var(--primaryColor);
-                            text-align: center;
-                            position: relative; 
+                        font-size: 26px;
+                        font-family: MyFont1;
+                        font-weight: 600;
+                        color: var(--primaryColor);
+                        text-align: center;
+                        position: relative;
 
-                            &::after {
+                        &::after {
                             content: "";
-                            width: 130px; 
-                            height: 3px; 
+                            width: 130px;
+                            height: 3px;
                             background: var(--primaryColor);
                             position: absolute;
                             left: 50%;
-                            bottom: -6px; 
+                            bottom: -6px;
                             transform: translateX(-50%);
-                            border-radius: 5px; 
-                            }
+                            border-radius: 5px;
                         }
+                    }
                 }
             }
             .HomeCourseLeftBox {
                 width: 100%;
+                margin-bottom: 25px;
                 .swiper {
                     width: 100%;
                 }
@@ -894,16 +868,16 @@
                     margin-top: 20px;
                     position: relative;
                     text-align: center;
-                    }
+                }
 
-                    .swiper-pagination-bullet {
+                .swiper-pagination-bullet {
                     background: #ccc;
                     opacity: 1;
-                    }
+                }
 
-                    .swiper-pagination-bullet-active {
+                .swiper-pagination-bullet-active {
                     background: var(--primaryColor);
-                    }
+                }
 
                 .swiper-slide {
                     display: flex;
@@ -912,92 +886,68 @@
                 .CourseLink {
                     text-decoration: none;
                     display: block;
+                    
                     .CourseBox {
                         width: 100%;
                         background: #f3f8f6;
-                        padding: 30px 25px;
-                        transition: all 0.3s ease;
-                          min-height: fit-content;
-                        .CourseIcon {
-                            width: 100%;
-                            display: flex;
-                            align-items: flex-start;
-                            justify-content: flex-start;
-                            margin-bottom: 20px;
-
-                            img {
-                                width: 180px;
-                                height: auto;
-                                object-fit: contain;
-                            }
+                        padding: 20px;
+                        border-radius: 10px;
+                        height: 270px; 
+                        display: flex;
+                        flex-direction: column;
+                         gap: 15px;
+                        .CourseIcon img {
+                            width: 150px;
+                            height: auto;
+                            object-fit: contain;
                         }
 
-                        .CourseTitle p {
+                        .CourseTitle {
                             font-size: 18px;
                             font-weight: 600;
                             color: var(--primaryColor);
-                            text-align: start;
-                            margin-bottom: 10px;
+                            margin: 5px 0 10px;
                         }
 
-                        .CourseDesc p {
-                            font-size: 14px;
-                            font-family: MyFont1;
-                            font-weight: 400;
-                            color: #555;
-                            line-height: 1.6;
-                            text-align: start;
-                            margin-bottom: 20px;
-                            @media (max-width: 480px) {
+                        .CourseDesc {
+                            height: 105px; 
+                            overflow-y: auto;
+                            padding-right: 5px;
+
+                            p {
                                 font-size: 14px;
+                                color: #555;
+                                line-height: 1.45;
                             }
-                        }
-
-                        .Eligibility {
-                            display: none;
-                            .EligibilityTitle p {
-                                font-size: 16px;
-                                font-weight: 600;
-                                color: #000;
-                                margin-bottom: 10px;
+                            &::-webkit-scrollbar {
+                                width: 4px;
                             }
-                            .CriteriaBox {
-                                display: flex;
-                                flex-direction: column;
-                                gap: 8px;
-
-                                .Box {
-                                    display: flex;
-                                    align-items: flex-start;
-                                    gap: 10px;
-
-                                    .CheckmarkIcon {
-                                        width: 18px;
-                                        height: 18px;
-                                        min-width: 18px;
-                                        background: var(--primaryColor);
-                                        border-radius: 50%;
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: center;
-
-                                        svg {
-                                            color: #fff;
-                                            font-size: 12px;
-                                        }
-                                    }
-
-                                    p {
-                                        font-size: 14px;
-                                        font-family: MyFont1;
-                                        font-weight: 400;
-                                        color: #444;
-                                        line-height: 1.4;
-                                    }
-                                }
+                            &::-webkit-scrollbar-thumb {
+                                background: var(--primaryColor);
+                                border-radius: 10px;
                             }
                         }
                     }
+                }
+            }
+            .ViewMoreBtn {
+                display: flex;
+                gap: 6px;
+                align-items: center;
+                font-size: 14px;
+                color: #fff;
+                padding: 8px 15px;
+                background: var(--primaryColor);
+                width: max-content;
+                text-decoration: none;
+                //   border-radius: 6px;
+                transition: 0.3s;
+
+                &:hover {
+                    background: #0e6850;
+                }
+                svg {
+                    font-size: 16px;
                 }
             }
         }
@@ -1005,11 +955,15 @@
             width: 50%;
             border-left: 5px solid var(--primaryColor);
             padding-left: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             @media (max-width: 1024px) {
-             width: 100%;
-            padding-left: 0px;
-            border-left: none;
-            margin-top: 15px;
+                width: 100%;
+                padding-left: 0px;
+                border-left: none;
+                margin-top: 15px;
             }
             .HomeCourseRightHeadView {
                 width: 100%;
@@ -1019,47 +973,45 @@
                 .HomeCourseRightHead {
                     margin-bottom: 20px;
                     h2 {
-                            font-size: 26px;
-                            font-family: MyFont1;
-                            font-weight: 600;
-                            color: var(--primaryColor);
-                            text-align: center;
-                            position: relative; 
+                        font-size: 26px;
+                        font-family: MyFont1;
+                        font-weight: 600;
+                        color: var(--primaryColor);
+                        text-align: center;
+                        position: relative;
 
-                            &::after {
+                        &::after {
                             content: "";
-                            width: 130px; 
-                            height: 3px; 
+                            width: 130px;
+                            height: 3px;
                             background: var(--primaryColor);
                             position: absolute;
                             left: 50%;
-                            bottom: -6px; 
+                            bottom: -6px;
                             transform: translateX(-50%);
-                            border-radius: 5px; 
-                            }
+                            border-radius: 5px;
                         }
+                    }
                 }
             }
             .HomeCourseRightBox {
                 width: 100%;
+                margin-bottom: 25px;
                 .swiper {
                     width: 100%;
                 }
-               .swiper-pagination {
+                .swiper-pagination {
                     margin-top: 20px;
                     position: relative;
                     text-align: center;
-                    }
-
-                    .swiper-pagination-bullet {
+                }
+                .swiper-pagination-bullet {
                     background: #ccc;
                     opacity: 1;
-                    }
-
-                    .swiper-pagination-bullet-active {
+                }
+                .swiper-pagination-bullet-active {
                     background: var(--primaryColor);
-                    }
-
+                }
                 .swiper-slide {
                     display: flex;
                     justify-content: center;
@@ -1070,90 +1022,66 @@
                     .CourseBox {
                         width: 100%;
                         background: #f3f8f6;
-                        padding: 30px 25px;
-                        transition: all 0.3s ease;
-                        min-height: fit-content;
-          
-                        .CourseIcon {
-                            width: 100%;
-                            display: flex;
-                            align-items: flex-start;
-                            justify-content: flex-start;
-                            margin-bottom: 20px;
-
-                            img {
-                                width: 180px;
-                                height: auto;
-                                object-fit: contain;
-                            }
+                        padding: 20px;
+                        border-radius: 10px;
+                        height: 270px; 
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+                        .CourseIcon img {
+                            width: 150px;
+                            height: auto;
+                            object-fit: contain;
                         }
 
-                        .CourseTitle p {
+                        .CourseTitle {
                             font-size: 18px;
                             font-weight: 600;
                             color: var(--primaryColor);
-                            text-align: start;
-                            margin-bottom: 10px;
+                            margin: 5px 0 10px;
                         }
 
-                        .CourseDesc p {
-                            font-size: 14px;
-                            font-family: MyFont1;
-                            font-weight: 400;
-                            color: #555;
-                            line-height: 1.6;
-                            text-align: start;
-                            margin-bottom: 20px;
-                            @media (max-width: 480px) {
+                        .CourseDesc {
+                            height: 105px; // Visible height for 3 lines
+                            overflow-y: auto;
+                            padding-right: 5px;
+
+                            p {
                                 font-size: 14px;
+                                color: #555;
+                                line-height: 1.45;
                             }
-                        }
 
-                        .Eligibility {
-                            display: none;
-                            .EligibilityTitle p {
-                                font-size: 16px;
-                                font-weight: 600;
-                                color: #000;
-                                margin-bottom: 10px;
+                            // Custom scrollbar
+                            &::-webkit-scrollbar {
+                                width: 4px;
                             }
-                            .CriteriaBox {
-                                display: flex;
-                                flex-direction: column;
-                                gap: 8px;
-
-                                .Box {
-                                    display: flex;
-                                    align-items: flex-start;
-                                    gap: 10px;
-
-                                    .CheckmarkIcon {
-                                        width: 18px;
-                                        height: 18px;
-                                        min-width: 18px;
-                                        background: var(--primaryColor);
-                                        border-radius: 50%;
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: center;
-
-                                        svg {
-                                            color: #fff;
-                                            font-size: 12px;
-                                        }
-                                    }
-
-                                    p {
-                                        font-size: 14px;
-                                        font-family: MyFont1;
-                                        font-weight: 400;
-                                        color: #444;
-                                        line-height: 1.4;
-                                    }
-                                }
+                            &::-webkit-scrollbar-thumb {
+                                background: var(--primaryColor);
+                                border-radius: 10px;
                             }
                         }
                     }
+                }
+            }
+            .ViewMoreBtn {
+                display: flex;
+                gap: 6px;
+                align-items: center;
+                font-size: 14px;
+                color: #fff;
+                padding: 8px 15px;
+                background: var(--primaryColor);
+                width: max-content;
+                text-decoration: none;
+                //   border-radius: 6px;
+                transition: 0.3s;
+
+                &:hover {
+                    background: #0e6850;
+                }
+                svg {
+                    font-size: 16px;
                 }
             }
         }
@@ -1202,7 +1130,7 @@
                 color: var(--primaryColor);
             }
         }
-        p{
+        p {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1442,16 +1370,6 @@
             span {
                 color: var(--primaryColor);
             }
-            // &::after {
-            //     content: "";
-            //     width: 100%;
-            //     height: 4px;
-            //     background: var(--primaryColor);
-            //     position: absolute;
-            //     bottom: -6px;
-            //     left: 0;
-            //     border-radius: 2px;
-            // }
         }
     }
 
@@ -1581,219 +1499,224 @@
     }
 }
 
-
 #CourseList {
-  width: 100%;
-  padding: 100px 0;
-  background: #fff;
-
-  @media (max-width: 1024px) {
-    padding: 80px 0;
-  }
-  @media (max-width: 768px) {
-    padding: 60px 0;
-  }
-  @media (max-width: 480px) {
-    padding: 30px 0;
-  }
-
-  .CourseMain {
-    display: flex;
-    flex-direction: column; // Changed to column to stack TopBox and BottomBox cleanly
-    gap: 60px;
-
-    .CourseMainTopBox,
-    .CourseMainBottomBox {
-    .CourseTopHeadBox,
-    .CourseBottomHeadBox {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
+    padding: 100px 0;
+    background: #fff;
 
-    h2 {
-        font-size: 26px;
-        font-family: MyFont1;
-        font-weight: 600;
-        color: var(--primaryColor);
-        text-align: center;
-        position: relative; 
-
-        &::after {
-        content: "";
-        width: 130px; 
-        height: 3px; 
-        background: var(--primaryColor);
-        position: absolute;
-        left: 50%;
-        bottom: -6px; 
-        transform: translateX(-50%);
-        border-radius: 5px; 
-        }
+    @media (max-width: 1024px) {
+        padding: 80px 0;
     }
+    @media (max-width: 768px) {
+        padding: 60px 0;
+    }
+    @media (max-width: 480px) {
+        padding: 30px 0;
     }
 
-      .CourseTopBox,
-      .CourseBottomBox {
-        width: 100%;
+    .CourseMain {
         display: flex;
-        align-items: flex-start;
-        gap: 30px;
-        flex-wrap: wrap;
+        flex-direction: column; // Changed to column to stack TopBox and BottomBox cleanly
+        gap: 60px;
 
-        .CourseBox {
-          width: calc(100% / 3 - 20px);
-          background: #f3f8f6;
-          padding: 30px 25px 60px 25px; // Added bottom padding for the absolute button
-          transition: all 0.3s ease;
-          position: relative;
-          border-radius: 10px;
-          @media (max-width: 1024px) {
-            width: calc(100% / 2 - 30px);
-          }
-          @media (max-width: 768px) {
-            width: 100%;
-          }
+        .CourseMainTopBox,
+        .CourseMainBottomBox {
+            .CourseTopHeadBox,
+            .CourseBottomHeadBox {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 20px;
 
-          .CourseIcon {
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
-            margin-bottom: 20px;
+                h2 {
+                    font-size: 26px;
+                    font-family: MyFont1;
+                    font-weight: 600;
+                    color: var(--primaryColor);
+                    text-align: center;
+                    position: relative;
 
-            img {
-              width: 180px;
-              height: auto;
-              object-fit: contain;
-            }
-          }
-
-          .CourseTitle p {
-            font-size: 20px;
-            font-weight: 600;
-            color: var(--primaryColor);
-            text-align: start;
-            margin-bottom: 10px;
-          }
-
-          // Animation container for details
-          .CourseDetailsFade {
-            animation: fadeIn 0.5s ease;
-          }
-
-          .CourseDesc p {
-            font-size: 15px;
-            font-family: MyFont1;
-            font-weight: 400;
-            color: #555;
-            line-height: 1.6;
-            text-align: start;
-            margin-bottom: 20px;
-            @media (max-width: 480px) {
-              font-size: 14px;
-            }
-          }
-
-          .Eligibility {
-            margin-bottom: 20px;
-            .EligibilityTitle p {
-              font-size: 16px;
-              font-weight: 600;
-              color: #000;
-              margin-bottom: 10px;
+                    &::after {
+                        content: "";
+                        width: 130px;
+                        height: 3px;
+                        background: var(--primaryColor);
+                        position: absolute;
+                        left: 50%;
+                        bottom: -6px;
+                        transform: translateX(-50%);
+                        border-radius: 5px;
+                    }
+                }
             }
 
-            .CriteriaBox {
-              display: flex;
-              flex-direction: column;
-              gap: 8px;
-
-              .Box {
+            .CourseTopBox,
+            .CourseBottomBox {
+                width: 100%;
                 display: flex;
                 align-items: flex-start;
-                gap: 10px;
+                gap: 30px;
+                flex-wrap: wrap;
 
-                .CheckmarkIcon {
-                  width: 18px;
-                  height: 18px;
-                  min-width: 18px;
-                  background: var(--primaryColor);
-                  border-radius: 50%;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
+                .CourseBox {
+                    width: calc(100% / 3 - 20px);
+                    background: #f3f8f6;
+                    padding: 30px 25px 60px 25px; // Added bottom padding for the absolute button
+                    transition: all 0.3s ease;
+                    position: relative;
+                    border-radius: 10px;
+                    @media (max-width: 1024px) {
+                        width: calc(100% / 2 - 30px);
+                    }
+                    @media (max-width: 768px) {
+                        width: 100%;
+                    }
 
-                  svg {
-                    color: #fff;
-                    font-size: 12px;
-                  }
+                    .CourseIcon {
+                        width: 100%;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        margin-bottom: 20px;
+
+                        img {
+                            width: 180px;
+                            height: auto;
+                            object-fit: contain;
+                        }
+                    }
+
+                    .CourseTitle p {
+                        font-size: 20px;
+                        font-weight: 600;
+                        color: var(--primaryColor);
+                        text-align: start;
+                        margin-bottom: 10px;
+                    }
+
+                    // Animation container for details
+                    .CourseDetailsFade {
+                        animation: fadeIn 0.5s ease;
+                    }
+
+                    .CourseDesc p {
+                        font-size: 15px;
+                        font-family: MyFont1;
+                        font-weight: 400;
+                        color: #555;
+                        line-height: 1.6;
+                        text-align: start;
+                        margin-bottom: 20px;
+                        @media (max-width: 480px) {
+                            font-size: 14px;
+                        }
+                    }
+
+                    .Eligibility {
+                        margin-bottom: 20px;
+                        .EligibilityTitle p {
+                            font-size: 16px;
+                            font-weight: 600;
+                            color: #000;
+                            margin-bottom: 10px;
+                        }
+
+                        .CriteriaBox {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 8px;
+
+                            .Box {
+                                display: flex;
+                                align-items: flex-start;
+                                gap: 10px;
+
+                                .CheckmarkIcon {
+                                    width: 18px;
+                                    height: 18px;
+                                    min-width: 18px;
+                                    background: var(--primaryColor);
+                                    border-radius: 50%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+
+                                    svg {
+                                        color: #fff;
+                                        font-size: 12px;
+                                    }
+                                }
+
+                                p {
+                                    font-size: 14px;
+                                    font-family: MyFont1;
+                                    font-weight: 400;
+                                    color: #444;
+                                    line-height: 1.4;
+                                }
+                            }
+                        }
+                    }
+
+                    .CourseBookBtn {
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-start;
+                        margin-top: 20px;
+
+                        button {
+                            background: var(--primaryColor);
+                            color: #fff;
+                            border: none;
+                            padding: 10px 20px;
+                            font-size: 14px;
+                            font-weight: 500;
+                            cursor: pointer;
+                            transition: 0.3s ease;
+                            border-radius: 4px;
+
+                            &:hover {
+                                background: #000;
+                            }
+                        }
+                    }
+
+                    // The Expand/Collapse Button
+                    .ToggleBtn {
+                        position: absolute;
+                        right: 20px;
+                        bottom: 20px;
+                        background: transparent;
+                        border: 1px solid var(--primaryColor);
+                        color: var(--primaryColor);
+                        padding: 5px 15px;
+                        font-size: 12px;
+                        font-weight: 600;
+                        cursor: pointer;
+                        transition: 0.3s;
+                        border-radius: 20px;
+
+                        &:hover {
+                            background: var(--primaryColor);
+                            color: #fff;
+                        }
+                    }
                 }
-
-                p {
-                  font-size: 14px;
-                  font-family: MyFont1;
-                  font-weight: 400;
-                  color: #444;
-                  line-height: 1.4;
-                }
-              }
             }
-          }
-
-          .CourseBookBtn {
-            width: 100%;
-            display: flex;
-            justify-content: flex-start;
-            margin-top: 20px;
-
-            button {
-              background: var(--primaryColor);
-              color: #fff;
-              border: none;
-              padding: 10px 20px;
-              font-size: 14px;
-              font-weight: 500;
-              cursor: pointer;
-              transition: 0.3s ease;
-              border-radius: 4px;
-
-              &:hover {
-                background: #000;
-              }
-            }
-          }
-
-          // The Expand/Collapse Button
-          .ToggleBtn {
-            position: absolute;
-            right: 20px;
-            bottom: 20px;
-            background: transparent;
-            border: 1px solid var(--primaryColor);
-            color: var(--primaryColor);
-            padding: 5px 15px;
-            font-size: 12px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.3s;
-            border-radius: 20px;
-
-            &:hover {
-                background: var(--primaryColor);
-                color: #fff;
-            }
-          }
         }
-      }
     }
-  }
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 #Footer {
@@ -1977,28 +1900,28 @@
     transition: all 0.4s ease;
     padding: 30px;
     overflow-y: auto;
-    touch-action: auto; 
-  -webkit-overflow-scrolling: touch; // smooth scrolling in iOS & Brave
+    touch-action: auto;
+    -webkit-overflow-scrolling: touch; // smooth scrolling in iOS & Brave
     &.active {
         right: 0;
     }
 
-    @media (max-width : 425px) {
-        &{
+    @media (max-width: 425px) {
+        & {
             padding: 18px;
             width: 400px;
         }
     }
-    
-    @media (max-width : 375px) {
-        &{
+
+    @media (max-width: 375px) {
+        & {
             padding: 15px;
             width: 350px;
         }
     }
 
-    @media (max-width : 325px) {
-        &{
+    @media (max-width: 325px) {
+        & {
             padding: 18px;
             width: 315px;
         }
@@ -2034,17 +1957,17 @@
                 font-weight: 600;
                 color: #000;
 
-                    @media (max-width : 375px) {
-                        &{
-                            font-size: 24px;
-                        }
+                @media (max-width: 375px) {
+                    & {
+                        font-size: 24px;
                     }
+                }
 
-                    @media (max-width : 325px) {
-                        &{
-                            font-size: 22px;
-                        }
+                @media (max-width: 325px) {
+                    & {
+                        font-size: 22px;
                     }
+                }
             }
 
             .ContactDesc {
@@ -2053,14 +1976,14 @@
                 color: #555;
                 line-height: 1.5;
 
-                @media (max-width : 375px) {
-                    &{
+                @media (max-width: 375px) {
+                    & {
                         font-size: 14px;
                     }
                 }
 
-                @media (max-width : 325px) {
-                    &{
+                @media (max-width: 325px) {
+                    & {
                         font-size: 13px;
                     }
                 }
@@ -2091,14 +2014,14 @@
                         font-family: MyFont1;
                         text-decoration: none;
 
-                        @media (max-width : 375px) {
-                            &{
+                        @media (max-width: 375px) {
+                            & {
                                 font-size: 14px;
                             }
                         }
 
-                        @media (max-width : 325px) {
-                            &{
+                        @media (max-width: 325px) {
+                            & {
                                 font-size: 13px;
                             }
                         }
@@ -2136,14 +2059,14 @@
                         font-family: MyFont1;
                         outline: none;
 
-                        @media (max-width : 375px) {
-                            &{
+                        @media (max-width: 375px) {
+                            & {
                                 font-size: 14px;
                             }
                         }
 
-                        @media (max-width : 325px) {
-                            &{
+                        @media (max-width: 325px) {
+                            & {
                                 font-size: 13px;
                             }
                         }
@@ -2512,12 +2435,12 @@
                         }
                     }
                 }
-                .OwnerBox{
+                .OwnerBox {
                     width: 100%;
                     display: flex;
                     align-items: center;
                     justify-content: flex-end;
-                    h2{
+                    h2 {
                         font-size: 20px;
                         font-family: myFont1;
                         font-weight: 500;
@@ -2528,7 +2451,6 @@
                     flex-direction: column;
                     gap: 10px;
                     align-items: flex-end;
-
 
                     a {
                         display: flex;
@@ -2647,149 +2569,149 @@
 }
 
 .floatingWidgetContainer {
-  position: fixed;
-  right: 10px;
-  bottom: 40px;
-  z-index: 9999;
-  display: flex;
-  width: fit-content;
-  align-items: flex-end; 
-  gap: 15px;
+    position: fixed;
+    right: 10px;
+    bottom: 40px;
+    z-index: 9999;
+    display: flex;
+    width: fit-content;
+    align-items: flex-end;
+    gap: 15px;
 }
 
 .whatsappMainBtn {
-  width: 52px;
-  height: 52px;
-  background: #25d366; // Standard WhatsApp Green
-  color: #fff;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 28px;
-  cursor: pointer;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-  position: relative;
-  z-index: 2;
+    width: 52px;
+    height: 52px;
+    background: #25d366; // Standard WhatsApp Green
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
 
-  &:hover {
-    transform: scale(1.1);
-  }
+    &:hover {
+        transform: scale(1.1);
+    }
 
-  // When menu is open, rotate the Close icon
-  &.active {
-    transform: rotate(90deg);
-    background: #444; // Optional: Change color when open (e.g., to dark grey)
-  }
+    // When menu is open, rotate the Close icon
+    &.active {
+        transform: rotate(90deg);
+        background: #444; // Optional: Change color when open (e.g., to dark grey)
+    }
 }
 
 .widgetOptions {
-//   display: none;
-display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 12px;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(20px);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  margin-bottom: 5px; // Space between options and main button
-
-  &.open {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-
-  // The individual "Call" and "WhatsApp Me" buttons
-  .actionBtn {
+    //   display: none;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    background: var(--primaryColor);
-    color: #fff;
-    padding: 10px 18px;
-    border-radius: 30px; // Pill shape
-    text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.2s ease;
-    cursor: pointer;
-    min-width: 140px; // Ensure consistent width
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    margin-bottom: 5px; // Space between options and main button
 
-    // Icon Styles
-    .icon {
-      font-size: 18px;
-      display: flex;
-      align-items: center;
-      margin-right: 10px;
+    &.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
 
-    // Text Styles
-    .text {
-      font-size: 14px;
-      font-weight: 500;
-      white-space: nowrap;
-    }
+    // The individual "Call" and "WhatsApp Me" buttons
+    .actionBtn {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background: var(--primaryColor);
+        color: #fff;
+        padding: 10px 18px;
+        border-radius: 30px; // Pill shape
+        text-decoration: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: all 0.2s ease;
+        cursor: pointer;
+        min-width: 140px; // Ensure consistent width
 
-    &:hover {
-      transform: translateX(-5px); // Slight slide effect on hover
-      background: #000; // Optional darken on hover
+        // Icon Styles
+        .icon {
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        // Text Styles
+        .text {
+            font-size: 14px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        &:hover {
+            transform: translateX(-5px); // Slight slide effect on hover
+            background: #000; // Optional darken on hover
+        }
     }
-  }
 }
 
 .scrollTopBtn {
-  position: fixed;
-  right: 14px;
-  bottom: 100px; 
-  width: 44px;
-  height: 44px;
-  background: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 10000; 
+    position: fixed;
+    right: 14px;
+    bottom: 100px;
+    width: 44px;
+    height: 44px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10000;
 
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
-  svg:not(.progressRing) {
-    position: absolute;
-    font-size: 22px;
-    color: var(--primaryColor);
-  }
+    svg:not(.progressRing) {
+        position: absolute;
+        font-size: 22px;
+        color: var(--primaryColor);
+    }
 }
 
 .scrollTopBtn.show {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 .progressRing {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: rotate(-90deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg);
 }
 
 .progressBg {
-  fill: none;
-  stroke: #e0e0e0;
-  stroke-width: 3;
+    fill: none;
+    stroke: #e0e0e0;
+    stroke-width: 3;
 }
 
 .progressBar {
-  fill: none;
-  stroke: var(--primaryColor);
-  stroke-width: 3;
-  transition: stroke-dashoffset 0.2s linear;
+    fill: none;
+    stroke: var(--primaryColor);
+    stroke-width: 3;
+    transition: stroke-dashoffset 0.2s linear;
 }
 
 #HomeDemoPopup {
@@ -3033,20 +2955,20 @@ display: flex;
                     width: 100%;
                     padding-bottom: 30px; // Space for shadow if needed
                 }
-                 .swiper-pagination {
+                .swiper-pagination {
                     margin-top: 20px;
                     position: relative;
-                    }
+                }
 
-                    .swiper-pagination-bullet {
+                .swiper-pagination-bullet {
                     background: #ccc;
                     opacity: 1;
-                    }
+                }
 
-                    .swiper-pagination-bullet-active {
+                .swiper-pagination-bullet-active {
                     background: var(--primaryColor);
-                    }
-                                    .GoogleReviewBox {
+                }
+                .GoogleReviewBox {
                     background: #fff;
                     padding: 25px;
                     // border-radius: 15px;
@@ -3057,7 +2979,6 @@ display: flex;
                     min-height: 250px;
                     cursor: grab; // Shows the hand icon
 
-                    
                     .ReviewerBox {
                         display: flex;
                         align-items: center;
@@ -3157,7 +3078,7 @@ display: flex;
                 align-items: center;
                 flex-direction: column;
                 gap: 5px;
-                
+
                 h2 {
                     font-size: 20px;
                     font-family: myFont1;
@@ -3165,7 +3086,7 @@ display: flex;
                     color: #fff;
                     // border-bottom: 1px solid #e1dfd7;
                 }
-                p{
+                p {
                     font-size: 15px;
                     font-family: myFont1;
                     font-weight: 500;
@@ -3253,7 +3174,7 @@ display: flex;
                         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
                         // overflow: hidden;
                         overflow-y: scroll;
-                         height: 235px;
+                        height: 235px;
                     }
 
                     .dropdownList li {
