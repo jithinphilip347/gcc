@@ -130,7 +130,7 @@ const HomeGoogleReview = () => {
         message: "",
         source: "Book Demo Now!"
       });
-      toast.success("You Have Successfully Booked 1 Free Demo Class");
+      toast.success("THANKS! We will get back to you");
       setIsSubmitting(false);
     }
   };
@@ -241,7 +241,7 @@ const HomeGoogleReview = () => {
 
           <div className="GoogleReviewRight">
             <div className="FormTitle">
-              <h2>Book Demo Now!</h2>
+              <h2>Get Your Free Class Now</h2>
               <p>Experience a regular class before you join</p>
             </div>
 
