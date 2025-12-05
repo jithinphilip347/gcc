@@ -1108,8 +1108,17 @@
         justify-content: center;
         margin-bottom: 50px;
         flex-direction: column;
-
-        h2 {
+         .HomeWhyTitle{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            @media(max-width:768px){
+                flex-direction: column;
+                gap: 0;
+            }
+            p{
             font-size: 70px;
             font-family: MyFont1;
             font-weight: 600;
@@ -1126,10 +1135,27 @@
             @media (max-width: 480px) {
                 font-size: 30px;
             }
-            span {
-                color: var(--primaryColor);
             }
-        }
+            span {
+            font-size: 70px;
+            font-family: MyFont1;
+            font-weight: 600;
+            color: var(--primaryColor);
+            text-transform: capitalize;
+            position: relative;
+            display: inline-block;
+            @media (max-width: 1024px) {
+                font-size: 60px;
+            }
+            @media (max-width: 768px) {
+                font-size: 40px;
+            }
+            @media (max-width: 480px) {
+                font-size: 30px;
+            }
+              
+            }
+         }                
         p {
             display: flex;
             align-items: center;

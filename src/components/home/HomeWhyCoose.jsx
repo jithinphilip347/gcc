@@ -17,11 +17,11 @@ const HomeWhyCoose = () => {
     <div id="HomeWhyCoose">
       <div className="container">
         <div className="HomeAboutHead">
-          <h2>
-            Worried<span> about...</span>
+          <h2 className="HomeWhyTitle">
+            <p>Worried About</p>
+           <span> Your Year Gap?</span>
           </h2>
           <p>
-           <b> Worried about your year gap? </b>
            <span>Expert one-on-one coaching for working 
           professionals who’ve lost touch with basics.
           we rebuild your foundation and support you till 
