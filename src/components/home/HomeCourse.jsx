@@ -207,7 +207,7 @@ const HomeCourse = () => {
               </Swiper>
             </div>
             <Link href="/course?section=pharmacy" className="ViewMoreBtn">
-            View More <VscArrowRight />
+              View More <VscArrowRight />
             </Link>
           </div>
 

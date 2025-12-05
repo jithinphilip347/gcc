@@ -287,14 +287,61 @@ const searchParams = useSearchParams();
 
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react-hooks/set-state-in-effect */
+
+
+// useEffect(() => {
+//   const section = searchParams.get("section");
+//   const course = searchParams.get("expand");
+//   if (!section || !course) return;
+
+//   const courseArray =
+//     section === "pharmacy" ? pharmacyCourses : radiologyCourses;
+
+//   const foundIndex = courseArray.findIndex((c) => c.title === course);
+//   if (foundIndex === -1) return;
+
+//   const globalIndex =
+//     section === "pharmacy"
+//       ? foundIndex
+//       : foundIndex + pharmacyCourses.length;
+
+//   setExpandedIndex(globalIndex);
+
+// // Scroll expanded course into view
+// setTimeout(() => {
+//   const card = document.querySelector(`.CourseBox.expanded`);
+//   if (card) {
+//     card.scrollIntoView({
+//       behavior: "smooth",
+//       block: "center",
+//     });
+//   }
+// }, 300);
+
+// }, [searchParams]);
+
 useEffect(() => {
   const section = searchParams.get("section");
   const course = searchParams.get("expand");
-  if (!section || !course) return;
+
+  if (!section) return;
+
+  if (!course) {
+    // Scroll only to the selected section when clicking View More
+    const sectionElement = document.getElementById(section);
+    if (sectionElement) {
+      setTimeout(() => {
+        sectionElement.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }, 300);
+    }
+    return;
+  }
 
   const courseArray =
     section === "pharmacy" ? pharmacyCourses : radiologyCourses;
-
   const foundIndex = courseArray.findIndex((c) => c.title === course);
   if (foundIndex === -1) return;
 
@@ -305,17 +352,15 @@ useEffect(() => {
 
   setExpandedIndex(globalIndex);
 
-// Scroll expanded course into view
-setTimeout(() => {
-  const card = document.querySelector(`.CourseBox.expanded`);
-  if (card) {
-    card.scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-    });
-  }
-}, 300);
-
+  setTimeout(() => {
+    const card = document.querySelector(".CourseBox.expanded");
+    if (card) {
+      card.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+  }, 300);
 }, [searchParams]);
 
 
