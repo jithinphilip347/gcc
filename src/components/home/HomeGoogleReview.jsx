@@ -40,42 +40,42 @@ const combinedCourses = [
 const reviews = [
   {
     name: "Mohammad Faishal",
-    date: "a year ago",
+    date: "09 November 2025",
     desc: "Hello, Everyone, I feel very happy after Joining GCC academy, I would recommend it is very good Platform for many students who want to clear Prometric Exam, I would like to thanks Mrs Greeshma Ma'am, she is very good teacher...",
   },
   {
     name: "Shiblu Bhuiyan",
-    date: "a year ago",
+    date: "09 March 2025",
     desc: "very helpful to pass the exam... I genuinely appreciate to Ma'am, as her proper guidance and instructions have greatly assisted me...",
   },
   {
     name: "AYNA UNUS",
-    date: "a year ago",
+    date: "25 November 2023",
     desc: "Coaching was super ...Iam very satisfied with the classes.. especially the support of the mam was great...",
   },
   {
     name: "Thankeem Kowkab",
-    date: "a year ago",
+    date: "13 December 2024",
     desc: "recently cleared omam Pearson vue exam. I Thank greeshma ma'am and gcc academy for their tremendous support...",
   },
     {
     name: "Yadhukrishnan Tu",
-    date: "a year ago",
+    date: "13 March 2024",
     desc: "Excellent coaching with 24*7 support, study materials are upto date and I'm happy to get support till my exam",
   },
       {
     name: "WaSim",
-    date: "a year ago",
+    date: "13 December 2022",
     desc: "Nice institute with great coaching and study materials",
   },
   {
     name: "RAHUL M DAS",
-    date: "a year ago",
+    date: "13 June 2024",
     desc: "Excellent tutoring, well experienced",
   },
   {
     name: "Deepika Ratna",
-    date: "a year ago",
+    date: "13 June 2025",
     desc: "Complete guidance with updated information. Good support and Stand along with us until we succeed",
   },
 ];
