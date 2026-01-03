@@ -39,7 +39,7 @@ const HomeCoursePopup = ({ onClose,course = "" }) => {
     phone: "",
     course: course,
     message: "",
-    source: "Course Page"
+    source: "Book Course Now!"
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
