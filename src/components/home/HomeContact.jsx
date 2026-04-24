@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState , useRef, useEffect} from "react";
 import { HiOutlineLocationMarker, HiOutlineMail } from "react-icons/hi";
 import { HiOutlinePhone } from "react-icons/hi2";
 import toast from "react-hot-toast";
 import { CONTACT_FORM_ID, GOOLE_SHEET_ID } from "@/utilis/constants";
-
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
+import countryCodes  from '@/data/CountryCodes.json'
 const GOOGLE_SHEET_URL = `https://script.google.com/macros/s/${CONTACT_FORM_ID}/exec`;
 
 const HomeContact = () => {
@@ -19,6 +20,12 @@ const HomeContact = () => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [statusMessage, setStatusMessage] = useState("");
+
+    const [codeOpen, setCodeOpen] = useState(false);
+    const [selectedCode, setSelectedCode] = useState("+91");
+    const codeRef = useRef(null);
+  
+    const [search, setSearch] = useState("");
 
   const handleChange = (e) => {
     setErrors({});
@@ -73,6 +80,28 @@ const HomeContact = () => {
     
   };
 
+  const filteredCountries = countryCodes.filter((item) =>
+    item.dial_code.includes(search) ||
+    item.name.toLowerCase().includes(search.toLowerCase())
+  );
+  
+  const handlePhoneChange = (e) => {
+    // Allow only numbers
+    const value = e.target.value.replace(/\D/g, "");
+    setFormData({ ...formData, phone: value });
+  };
+
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (codeRef.current && !codeRef.current.contains(event.target)) {
+        setCodeOpen(false);
+      }
+    };
+  
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
   return (
     <div id="HomeContact">
       <div className="container">
@@ -138,7 +167,7 @@ const HomeContact = () => {
                
               </div>
 
-              <div className="ContactFormBox">
+              {/* <div className="ContactFormBox">
                 <input
                   type="text"
                   name="phone"
@@ -148,7 +177,56 @@ const HomeContact = () => {
                   required
                 />
                 
-              </div>
+              </div> */}
+
+                  <div className="ContactFormBox ContactphoneGroup" ref={codeRef}>
+                    <div className="phoneInputWrapper">
+                      
+                      
+                      <div
+                        className="codeDropdownHeader"
+                        onClick={() => setCodeOpen(!codeOpen)}
+                      >
+                        <span>{selectedCode}</span>
+                        {codeOpen ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
+                      </div>
+
+                      {codeOpen && (
+                        <ul className="codeDropdownList">
+                          <li className="search-li" onClick={(e) => e.stopPropagation()}>
+                            <input
+                              type="text"
+                              placeholder="Search country..."
+                              value={search}
+                              onChange={(e) => setSearch(e.target.value)}
+                              autoFocus
+                            />
+                          </li>
+                          {filteredCountries.map((item) => (
+                            <li
+                              key={item.code} 
+                              onClick={() => {
+                                setSelectedCode(item.dial_code);
+                                setCodeOpen(false);
+                                setSearch("");
+                              }}
+                            >
+                              {item.dial_code} {item.name}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+
+                      
+                      <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Phone Number"
+                        value={formData.phone}
+                        onChange={handlePhoneChange}
+                      />
+                    </div>
+                  </div>
 
               <div className="ContactFormBox">
                 <textarea

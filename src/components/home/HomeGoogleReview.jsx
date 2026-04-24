@@ -8,7 +8,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay, Pagination } from "swiper/modules";
 import { GOOLE_SHEET_ID } from "@/utilis/constants";
-
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
+import countryCodes  from '@/data/CountryCodes.json'
 
 const programData = {
   Pharmacy: [
@@ -94,6 +95,14 @@ const HomeGoogleReview = () => {
   const [courseOpen, setCourseOpen] = useState(false);
   const courseRef = useRef(null);
 
+  const [codeOpen, setCodeOpen] = useState(false);
+  const [selectedCode, setSelectedCode] = useState("+91");
+  const codeRef = useRef(null);
+
+  const [search, setSearch] = useState("");
+  
+
+
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -135,6 +144,18 @@ const HomeGoogleReview = () => {
     }
   };
 
+
+  const filteredCountries = countryCodes.filter((item) =>
+    item.dial_code.includes(search) ||
+    item.name.toLowerCase().includes(search.toLowerCase())
+  );
+  
+  const handlePhoneChange = (e) => {
+    // Allow only numbers
+    const value = e.target.value.replace(/\D/g, "");
+    setForm({ ...form, phone: value });
+  };
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (courseRef.current && !courseRef.current.contains(event.target)) {
@@ -142,6 +163,21 @@ const HomeGoogleReview = () => {
       }
     };
 
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (courseRef.current && !courseRef.current.contains(event.target)) {
+        setCourseOpen(false);
+      }
+  
+      if (codeRef.current && !codeRef.current.contains(event.target)) {
+        setCodeOpen(false);
+      }
+    };
+  
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
@@ -267,7 +303,7 @@ const HomeGoogleReview = () => {
                     />
                   </div>
 
-                  <div className="contactDetailGroup">
+                  {/* <div className="contactDetailGroup">
                     <input
                       type="number"
                       name="phone"
@@ -275,6 +311,54 @@ const HomeGoogleReview = () => {
                       value={form.phone}
                       onChange={handleChange}
                     />
+                  </div> */}
+    <div className="contactDetailGroup phoneGroup" ref={codeRef}>
+                    <div className="phoneInputWrapper">
+                      
+                     
+                      <div
+                        className="codeDropdownHeader"
+                        onClick={() => setCodeOpen(!codeOpen)}
+                      >
+                        <span>{selectedCode}</span>
+                        {codeOpen ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
+                      </div>
+
+                      {codeOpen && (
+                        <ul className="codeDropdownList">
+                          <li className="search-li" onClick={(e) => e.stopPropagation()}>
+                            <input
+                              type="text"
+                              placeholder="Search country..."
+                              value={search}
+                              onChange={(e) => setSearch(e.target.value)}
+                              autoFocus
+                            />
+                          </li>
+                          {filteredCountries.map((item) => (
+                            <li
+                              key={item.code} 
+                              onClick={() => {
+                                setSelectedCode(item.dial_code);
+                                setCodeOpen(false);
+                                setSearch("");
+                              }}
+                            >
+                              {item.dial_code} {item.name}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+
+                      
+                      <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Phone Number"
+                        value={form.phone}
+                        onChange={handlePhoneChange}
+                      />
+                    </div>
                   </div>
 
                 {/* ✅ SINGLE UPDATED DROPDOWN */}

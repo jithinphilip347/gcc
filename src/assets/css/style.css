@@ -1492,6 +1492,81 @@
   height: 100px;
   resize: none;
 }
+#HomeContact .ContactMain .ContactMainRight .ContactFormGroup .ContactphoneGroup {
+  position: relative;
+}
+#HomeContact .ContactMain .ContactMainRight .ContactFormGroup .ContactphoneGroup .phoneInputWrapper {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+#HomeContact .ContactMain .ContactMainRight .ContactFormGroup .ContactphoneGroup .codeDropdownHeader {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-right: 10px;
+  cursor: pointer;
+  color: #555 !important;
+  font-size: 15px !important;
+  font-family: MyFont1;
+}
+#HomeContact .ContactMain .ContactMainRight .ContactFormGroup .ContactphoneGroup input {
+  border: none !important;
+  flex: 1;
+  padding-left: 10px !important;
+}
+#HomeContact .ContactMain .ContactMainRight .ContactFormGroup .ContactphoneGroup .codeDropdownList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  width: 250px;
+  z-index: 10;
+  max-height: 250px;
+  overflow-y: auto;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+#HomeContact .ContactMain .ContactMainRight .ContactFormGroup .ContactphoneGroup .codeDropdownList .search-li {
+  position: sticky;
+  top: 0;
+  background: #fff !important;
+  z-index: 11;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: default !important;
+}
+#HomeContact .ContactMain .ContactMainRight .ContactFormGroup .ContactphoneGroup .codeDropdownList .search-li:hover {
+  background: #fff !important;
+}
+#HomeContact .ContactMain .ContactMainRight .ContactFormGroup .ContactphoneGroup .codeDropdownList .search-li input {
+  width: 100%;
+  padding: 8px 10px !important;
+  border: 1px solid #ccc !important;
+  border-radius: 4px !important;
+  font-size: 13px !important;
+  color: #333 !important;
+  background: #f9f9f9 !important;
+}
+#HomeContact .ContactMain .ContactMainRight .ContactFormGroup .ContactphoneGroup .codeDropdownList .search-li input::-moz-placeholder {
+  color: #888 !important;
+}
+#HomeContact .ContactMain .ContactMainRight .ContactFormGroup .ContactphoneGroup .codeDropdownList .search-li input::placeholder {
+  color: #888 !important;
+}
+#HomeContact .ContactMain .ContactMainRight .ContactFormGroup .ContactphoneGroup .codeDropdownList .search-li input:focus {
+  border-color: var(--primaryColor) !important;
+  outline: none !important;
+}
+#HomeContact .ContactMain .ContactMainRight .ContactFormGroup .ContactphoneGroup .codeDropdownList li {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--primaryColor);
+}
+#HomeContact .ContactMain .ContactMainRight .ContactFormGroup .ContactphoneGroup .codeDropdownList li:hover {
+  background: var(--secondaryColor);
+  color: #fff;
+}
 #HomeContact .ContactMain .ContactMainRight .ContactFormGroup .ContactBtn {
   margin-top: 10px;
 }
@@ -2372,8 +2447,6 @@
   display: flex;
   align-items: center;
   gap: 40px;
-  /* LEFT IMAGE BOX */
-  /* RIGHT DETAILS BOX */
 }
 @media (max-width: 1024px) {
   #HomeTeam .HomeTeamMain .HomeTeamMainBox {
@@ -2385,6 +2458,9 @@
     flex-direction: column;
     gap: 20px;
   }
+}
+#HomeTeam .HomeTeamMain .HomeTeamMainBox {
+  /* LEFT IMAGE BOX */
 }
 #HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamImgBox {
   width: 40%;
@@ -2405,6 +2481,9 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+#HomeTeam .HomeTeamMain .HomeTeamMainBox {
+  /* RIGHT DETAILS BOX */
 }
 #HomeTeam .HomeTeamMain .HomeTeamMainBox .OurTeamDetailsBox {
   width: 60%;
@@ -2807,6 +2886,81 @@
   height: 100px;
   line-height: 1.5;
 }
+#HomeDemoPopup .DemoPopupBox .popupDemoForm .FormGroup form .phoneGroup {
+  position: relative;
+}
+#HomeDemoPopup .DemoPopupBox .popupDemoForm .FormGroup form .phoneGroup .phoneInputWrapper {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+#HomeDemoPopup .DemoPopupBox .popupDemoForm .FormGroup form .phoneGroup .codeDropdownHeader {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-right: 10px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 14px;
+  font-family: myFont1;
+}
+#HomeDemoPopup .DemoPopupBox .popupDemoForm .FormGroup form .phoneGroup input {
+  border: none !important;
+  flex: 1;
+  padding-left: 10px !important;
+}
+#HomeDemoPopup .DemoPopupBox .popupDemoForm .FormGroup form .phoneGroup .codeDropdownList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  width: 250px;
+  z-index: 10;
+  max-height: 250px;
+  overflow-y: auto;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+#HomeDemoPopup .DemoPopupBox .popupDemoForm .FormGroup form .phoneGroup .codeDropdownList .search-li {
+  position: sticky;
+  top: 0;
+  background: #fff !important;
+  z-index: 11;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: default !important;
+}
+#HomeDemoPopup .DemoPopupBox .popupDemoForm .FormGroup form .phoneGroup .codeDropdownList .search-li:hover {
+  background: #fff !important;
+}
+#HomeDemoPopup .DemoPopupBox .popupDemoForm .FormGroup form .phoneGroup .codeDropdownList .search-li input {
+  width: 100%;
+  padding: 8px 10px !important;
+  border: 1px solid #ccc !important;
+  border-radius: 4px !important;
+  font-size: 13px !important;
+  color: #333 !important;
+  background: #f9f9f9 !important;
+}
+#HomeDemoPopup .DemoPopupBox .popupDemoForm .FormGroup form .phoneGroup .codeDropdownList .search-li input::-moz-placeholder {
+  color: #888 !important;
+}
+#HomeDemoPopup .DemoPopupBox .popupDemoForm .FormGroup form .phoneGroup .codeDropdownList .search-li input::placeholder {
+  color: #888 !important;
+}
+#HomeDemoPopup .DemoPopupBox .popupDemoForm .FormGroup form .phoneGroup .codeDropdownList .search-li input:focus {
+  border-color: var(--primaryColor) !important;
+  outline: none !important;
+}
+#HomeDemoPopup .DemoPopupBox .popupDemoForm .FormGroup form .phoneGroup .codeDropdownList li {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--primaryColor);
+}
+#HomeDemoPopup .DemoPopupBox .popupDemoForm .FormGroup form .phoneGroup .codeDropdownList li:hover {
+  background: var(--secondaryColor);
+  color: #fff;
+}
 #HomeDemoPopup .DemoPopupBox .popupDemoForm .FormGroup form .customDropdown {
   position: relative;
   width: 100%;
@@ -3175,6 +3329,82 @@
   transition: all 0.3s ease;
 }
 #HomeReview .GoogleReviewMain .GoogleReviewRight .FormGroup form .FormBtn button:hover {
+  background: var(--secondaryColor);
+  color: #fff;
+}
+
+.phoneGroup {
+  position: relative;
+}
+.phoneGroup .phoneInputWrapper {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+.phoneGroup .codeDropdownHeader {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-right: 10px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 14px;
+  font-family: myFont1;
+}
+.phoneGroup input {
+  border: none !important;
+  flex: 1;
+  padding-left: 10px !important;
+}
+.phoneGroup .codeDropdownList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  width: 250px;
+  z-index: 10;
+  max-height: 250px;
+  overflow-y: auto;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+.phoneGroup .codeDropdownList .search-li {
+  position: sticky;
+  top: 0;
+  background: #fff !important;
+  z-index: 11;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: default !important;
+}
+.phoneGroup .codeDropdownList .search-li:hover {
+  background: #fff !important;
+}
+.phoneGroup .codeDropdownList .search-li input {
+  width: 100%;
+  padding: 8px 10px !important;
+  border: 1px solid #ccc !important;
+  border-radius: 4px !important;
+  font-size: 13px !important;
+  color: #333 !important;
+  background: #f9f9f9 !important;
+}
+.phoneGroup .codeDropdownList .search-li input::-moz-placeholder {
+  color: #888 !important;
+}
+.phoneGroup .codeDropdownList .search-li input::placeholder {
+  color: #888 !important;
+}
+.phoneGroup .codeDropdownList .search-li input:focus {
+  border-color: var(--primaryColor) !important;
+  outline: none !important;
+}
+.phoneGroup .codeDropdownList li {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--primaryColor);
+}
+.phoneGroup .codeDropdownList li:hover {
   background: var(--secondaryColor);
   color: #fff;
 }/*# sourceMappingURL=style.css.map */

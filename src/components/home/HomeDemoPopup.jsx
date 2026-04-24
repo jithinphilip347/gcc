@@ -4,6 +4,8 @@ import React, { useRef, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
+import countryCodes  from '@/data/CountryCodes.json'
 
 const programData = {
   Pharmacy: [
@@ -26,7 +28,7 @@ const programData = {
   ],
 };
 
-// ✅ Combined dropdown list
+
 const combinedCourses = [
   ...programData.Pharmacy.map((course) => `${course} (Pharmacy)`),
   ...programData.Radiology.map((course) => `${course} (Radiology)`),
@@ -44,8 +46,14 @@ const HomeDemoPopup = ({ onClose,course = "" }) => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [courseOpen, setCourseOpen] = useState(false);
-
   const courseRef = useRef(null);
+
+  const [codeOpen, setCodeOpen] = useState(false);
+  const [selectedCode, setSelectedCode] = useState("+91");
+  const codeRef = useRef(null);
+
+  const [search, setSearch] = useState("");
+
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -67,7 +75,10 @@ const HomeDemoPopup = ({ onClose,course = "" }) => {
     try {
       await fetch(GOOGLE_SHEET_URL, {
         method: "POST",
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          ...form,
+          phone: `${selectedCode} ${form.phone}`
+        }),
       });
 
       
@@ -88,6 +99,18 @@ const HomeDemoPopup = ({ onClose,course = "" }) => {
     }
   };
 
+const filteredCountries = countryCodes.filter((item) =>
+  item.dial_code.includes(search) ||
+  item.name.toLowerCase().includes(search.toLowerCase())
+);
+
+const handlePhoneChange = (e) => {
+  // Allow only numbers
+  const value = e.target.value.replace(/\D/g, "");
+  setForm({ ...form, phone: value });
+};
+
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (courseRef.current && !courseRef.current.contains(event.target)) {
@@ -105,6 +128,22 @@ const HomeDemoPopup = ({ onClose,course = "" }) => {
   return () => {
     document.body.style.overflow = "auto";
   };
+}, []);
+
+
+useEffect(() => {
+  const handleClickOutside = (event) => {
+    if (courseRef.current && !courseRef.current.contains(event.target)) {
+      setCourseOpen(false);
+    }
+
+    if (codeRef.current && !codeRef.current.contains(event.target)) {
+      setCodeOpen(false);
+    }
+  };
+
+  document.addEventListener("mousedown", handleClickOutside);
+  return () => document.removeEventListener("mousedown", handleClickOutside);
 }, []);
 
   return (
@@ -143,17 +182,57 @@ const HomeDemoPopup = ({ onClose,course = "" }) => {
                     />
                   </div>
 
-                  <div className="contactDetailGroup">
-                    <input
-                      type="number"
-                      name="phone"
-                      placeholder="Phone Number"
-                      value={form.phone}
-                      onChange={handleChange}
-                    />
-                  </div>
+           
+                  <div className="contactDetailGroup phoneGroup" ref={codeRef}>
+                    <div className="phoneInputWrapper">
+                      
+                     
+                      <div
+                        className="codeDropdownHeader"
+                        onClick={() => setCodeOpen(!codeOpen)}
+                      >
+                        <span>{selectedCode}</span>
+                        {codeOpen ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
+                      </div>
 
-                  {/* ✅ SINGLE UPDATED DROPDOWN */}
+                      {codeOpen && (
+                        <ul className="codeDropdownList">
+                          <li className="search-li" onClick={(e) => e.stopPropagation()}>
+                            <input
+                              type="text"
+                              placeholder="Search country..."
+                              value={search}
+                              onChange={(e) => setSearch(e.target.value)}
+                              autoFocus
+                            />
+                          </li>
+                          {filteredCountries.map((item) => (
+                            <li
+                              key={item.code} 
+                              onClick={() => {
+                                setSelectedCode(item.dial_code);
+                                setCodeOpen(false);
+                                setSearch("");
+                              }}
+                            >
+                              {item.dial_code} {item.name}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+
+                      
+                      <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Phone Number"
+                        value={form.phone}
+                        onChange={handlePhoneChange}
+                      />
+                    </div>
+                  </div>
+                 
+
                   <div className="customDropdown" ref={courseRef}>
                     <div
                       className="dropdownHeader"
