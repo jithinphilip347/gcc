@@ -84,7 +84,10 @@ const HomeBanner = () => {
     try {
       await fetch(GOOGLE_SHEET_URL, {
         method: "POST",
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          ...form,
+          phone: `${selectedCode.replace('+', '')}${form.phone}`
+        }),
       });
 
       

@@ -55,7 +55,10 @@ const HomeContact = () => {
     try {
       const res = await fetch(GOOGLE_SHEET_URL, {
         method: "POST",
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          phone: `${selectedCode.replace('+', '')}${formData.phone}`
+        }),
       });
       
 

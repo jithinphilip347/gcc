@@ -77,7 +77,7 @@ const HomeDemoPopup = ({ onClose,course = "" }) => {
         method: "POST",
         body: JSON.stringify({
           ...form,
-          phone: `${selectedCode} ${form.phone}`
+          phone: `${selectedCode.replace('+', '')}${form.phone}`
         }),
       });
 
