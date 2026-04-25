@@ -2197,6 +2197,81 @@
   height: 100px;
   resize: none;
 }
+#ContactSideNav .ContactMain .ContactMainBottom .ContactFormGroup .ContactphoneGroup {
+  position: relative;
+}
+#ContactSideNav .ContactMain .ContactMainBottom .ContactFormGroup .ContactphoneGroup .phoneInputWrapper {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+#ContactSideNav .ContactMain .ContactMainBottom .ContactFormGroup .ContactphoneGroup .codeDropdownHeader {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-right: 10px;
+  cursor: pointer;
+  color: #555 !important;
+  font-size: 15px !important;
+  font-family: MyFont1;
+}
+#ContactSideNav .ContactMain .ContactMainBottom .ContactFormGroup .ContactphoneGroup input {
+  border: none !important;
+  flex: 1;
+  padding-left: 10px !important;
+}
+#ContactSideNav .ContactMain .ContactMainBottom .ContactFormGroup .ContactphoneGroup .codeDropdownList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  width: 250px;
+  z-index: 10;
+  max-height: 250px;
+  overflow-y: auto;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+#ContactSideNav .ContactMain .ContactMainBottom .ContactFormGroup .ContactphoneGroup .codeDropdownList .search-li {
+  position: sticky;
+  top: 0;
+  background: #fff !important;
+  z-index: 11;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: default !important;
+}
+#ContactSideNav .ContactMain .ContactMainBottom .ContactFormGroup .ContactphoneGroup .codeDropdownList .search-li:hover {
+  background: #fff !important;
+}
+#ContactSideNav .ContactMain .ContactMainBottom .ContactFormGroup .ContactphoneGroup .codeDropdownList .search-li input {
+  width: 100%;
+  padding: 8px 10px !important;
+  border: 1px solid #ccc !important;
+  border-radius: 4px !important;
+  font-size: 13px !important;
+  color: #333 !important;
+  background: #f9f9f9 !important;
+}
+#ContactSideNav .ContactMain .ContactMainBottom .ContactFormGroup .ContactphoneGroup .codeDropdownList .search-li input::-moz-placeholder {
+  color: #888 !important;
+}
+#ContactSideNav .ContactMain .ContactMainBottom .ContactFormGroup .ContactphoneGroup .codeDropdownList .search-li input::placeholder {
+  color: #888 !important;
+}
+#ContactSideNav .ContactMain .ContactMainBottom .ContactFormGroup .ContactphoneGroup .codeDropdownList .search-li input:focus {
+  border-color: var(--primaryColor) !important;
+  outline: none !important;
+}
+#ContactSideNav .ContactMain .ContactMainBottom .ContactFormGroup .ContactphoneGroup .codeDropdownList li {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--primaryColor);
+}
+#ContactSideNav .ContactMain .ContactMainBottom .ContactFormGroup .ContactphoneGroup .codeDropdownList li:hover {
+  background: var(--secondaryColor);
+  color: #fff;
+}
 #ContactSideNav .ContactMain .ContactMainBottom .ContactFormGroup .ContactBtn {
   margin-top: 10px;
 }
